@@ -1,4 +1,4 @@
-![icon-small](https://user-images.githubusercontent.com/84018133/121269280-d9019380-c8bf-11eb-8650-d6a5ef6a9157.png)
+![icon-small](https://user-images.githubusercontent.com/84018133/121270201-87f29f00-c8c1-11eb-8bb1-1bd4d8076a93.png)
 
 This is a gamma utility mod that should greatly benefit all players, making it much easier to see in the dark. 
 It's a really basic mod that allows you to change the gamma value in game, way higher than the in game brightness setting allows. 
