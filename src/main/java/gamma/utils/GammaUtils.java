@@ -1,15 +1,12 @@
 package gamma.utils;
 
 import net.fabricmc.api.ModInitializer;
-import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
+import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
+import me.sargunvohra.mcmods.autoconfig1u.serializer.JanksonConfigSerializer;
 import gamma.utils.config.ModConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.BaseText;
 import net.minecraft.text.LiteralText;
-import net.minecraft.util.Formatting;
-
-import static net.minecraft.text.Style.EMPTY;
 
 public class GammaUtils implements ModInitializer {
     private ModConfig config;
@@ -65,15 +62,6 @@ public class GammaUtils implements ModInitializer {
 
     private void sendMessage() {
         BaseText message = new LiteralText("Gamma: " + Math.round(minecraft.options.gamma * 100) + "%");
-        if (Math.round(minecraft.options.gamma * 100) < 0) {
-            message.setStyle(EMPTY.withColor(Formatting.DARK_RED));
-        }
-        else if (Math.round(minecraft.options.gamma * 100) > 100) {
-            message.setStyle(EMPTY.withColor(Formatting.GOLD));
-        }
-        else {
-            message.setStyle(EMPTY.withColor(Formatting.DARK_GREEN));
-        }
         minecraft.inGameHud.setOverlayMessage(message, false);
     }
 

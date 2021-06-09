@@ -37,8 +37,9 @@ Gamma percentage change for every increase or decrease.
 ## **Dependencies**
 
 **Included:**  
-[Cloth Config API Fabric](https://github.com/shedaniel/cloth-config) (Is required to make the config work)
- 		
+[Auto Config Updated API](https://github.com/shedaniel/AutoConfig) (Is needed to make the config work)  
+[Cloth Config API Fabric](https://github.com/shedaniel/cloth-config) (Required for Auto Config)
+
 **Required:**  
 [Fabric API](https://github.com/FabricMC/fabric)
 
