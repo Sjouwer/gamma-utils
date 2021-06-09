@@ -14,39 +14,31 @@ minecraft {
 }
 
 repositories {
-	maven {
-		name = 'ModMenu'
-		url = 'https://maven.terraformersmc.com/releases/'
-	}
-	maven {
-		name = 'CottonMC'
-		url = 'https://server.bbkr.space/artifactory/libs-release'
-	}
 }
 
 dependencies {
-	minecraft "com.mojang:minecraft:1.15.2"
-	mappings "net.fabricmc:yarn:1.15.2+build.17:v2"
+	minecraft "com.mojang:minecraft:1.14.4"
+	mappings "net.fabricmc:yarn:1.14.4+build.18:v2"
 	modImplementation "net.fabricmc:fabric-loader:0.11.3"
 
-	//Fabric API
-	modImplementation "net.fabricmc.fabric-api:fabric-api:0.28.5+1.15"
+	//Fabric api
+	modImplementation "net.fabricmc.fabric-api:fabric-api:0.28.5+1.14"
 
 	//Mod Menu
-	modImplementation "com.terraformersmc:modmenu:1.10.6"
+	modImplementation "io.github.prospector:modmenu:1.7.16.1.14.4+build.128"
 
 	//Cloth Config
-	modApi("me.shedaniel.cloth:config-2:2.14.2") {
+	modApi("me.shedaniel.cloth:config-2:1.8") {
 		exclude(group: "net.fabricmc.fabric-api")
 		exclude(group: "io.github.prospector")
 	}
-	include "me.shedaniel.cloth:config-2:2.14.2"
+	include "me.shedaniel.cloth:config-2:1.8"
 
 	//Auto Config
-	modApi("me.sargunvohra.mcmods:autoconfig1u:2.2.0") {
+	modApi("me.sargunvohra.mcmods:autoconfig1u:1.2.6") {
 		exclude(group: "net.fabricmc.fabric-api")
 	}
-	include "me.sargunvohra.mcmods:autoconfig1u:2.2.0"
+	include "me.sargunvohra.mcmods:autoconfig1u:1.2.6"
 }
 
 processResources {
