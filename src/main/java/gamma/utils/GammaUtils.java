@@ -64,11 +64,13 @@ public class GammaUtils implements ModInitializer {
     }
 
     private void sendMessage() {
-        BaseText message = new LiteralText("Gamma: " + Math.round(minecraft.options.gamma * 100) + "%");
-        if (Math.round(minecraft.options.gamma * 100) < 0) {
+        int gamma = (int)Math.round(minecraft.options.gamma * 100);
+        BaseText message = new LiteralText("Gamma: " + gamma + "%");
+
+        if (gamma < 0) {
             message.setStyle(EMPTY.withColor(Formatting.DARK_RED));
         }
-        else if (Math.round(minecraft.options.gamma * 100) > 100) {
+        else if (gamma > 100) {
             message.setStyle(EMPTY.withColor(Formatting.GOLD));
         }
         else {
