@@ -44,7 +44,6 @@ public class GammaUtils implements ModInitializer {
             minecraft.options.gamma = maxGamma;
         }
         sendMessage();
-
     }
 
     public void decreaseGamma() {
@@ -68,6 +67,12 @@ public class GammaUtils implements ModInitializer {
     private void loadConfig() {
         if (config == null) {
             config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
+        }
+    }
+
+    public void saveOptions() {
+        if (config.saveEnabled()) {
+            minecraft.options.write();
         }
     }
 }
