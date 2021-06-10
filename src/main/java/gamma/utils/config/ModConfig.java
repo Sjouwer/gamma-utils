@@ -12,6 +12,8 @@ public class ModConfig implements ConfigData {
     private int toggledGamma = 1500;
     @ConfigEntry.Gui.Tooltip
     private int gammaStep = 10;
+    @ConfigEntry.Gui.Tooltip
+    private boolean saveOptions = true;
 
     public double defaultGamma() {
         return defaultGamma / 100.0;
@@ -23,5 +25,9 @@ public class ModConfig implements ConfigData {
 
     public double gammaStep() {
         return gammaStep / 100.0;
+    }
+
+    public boolean saveEnabled() {
+        return saveOptions;
     }
 }

@@ -7,7 +7,9 @@
     "text.autoconfig.gamma_utils.option.defaultGamma": "Default Gamma Percentage",
     "text.autoconfig.gamma_utils.option.toggledGamma": "Toggled Gamma Percentage",
     "text.autoconfig.gamma_utils.option.gammaStep": "Gamma Percentage Step",
+    "text.autoconfig.gamma_utils.option.saveOptions": "Save Client Options",
     "text.autoconfig.gamma_utils.option.defaultGamma.@Tooltip": "Gamma percentage for when the mod is toggled off",
     "text.autoconfig.gamma_utils.option.toggledGamma.@Tooltip": "Gamma percentage for when the mod is toggled on",
-    "text.autoconfig.gamma_utils.option.gammaStep.@Tooltip": "Gamma percentage change for every increase or decrease"
+    "text.autoconfig.gamma_utils.option.gammaStep.@Tooltip": "Gamma percentage change for every increase or decrease",
+    "text.autoconfig.gamma_utils.option.saveOptions.@Tooltip": "Disabling this will reset the gamma value set by the mod everytime Minecraft closes"
 }
