@@ -9,6 +9,9 @@ import org.lwjgl.glfw.GLFW;
 public class KeyBindings {
     private final GammaUtils gammaUtils = new GammaUtils();
     private static final String CATEGORY = "key.categories.gamma_utils";
+    private boolean toggleWasPressed = false;
+    private boolean increaseWasPressed = false;
+    private boolean decreaseWasPressed = false;
 
     public void setKeyBindings() {
         setKeyBindingGammaToggle();
@@ -23,6 +26,12 @@ public class KeyBindings {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (gammaToggleKey.wasPressed()) {
                 gammaUtils.toggleGamma();
+                toggleWasPressed = true;
+            }
+            //only save the options once the key has been released.
+            if (toggleWasPressed && !gammaToggleKey.isPressed()) {
+                gammaUtils.saveOptions();
+                toggleWasPressed = false;
             }
         });
     }
@@ -34,6 +43,12 @@ public class KeyBindings {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (increaseGammaKey.wasPressed()) {
                 gammaUtils.increaseGamma();
+                increaseWasPressed = true;
+            }
+            //only save the options once the key has been released.
+            if (increaseWasPressed && !increaseGammaKey.isPressed()) {
+                gammaUtils.saveOptions();
+                increaseWasPressed = false;
             }
         });
     }
@@ -45,6 +60,12 @@ public class KeyBindings {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (decreaseGammaKey.wasPressed()) {
                 gammaUtils.decreaseGamma();
+                decreaseWasPressed = true;
+            }
+            //only save the options once the key has been released.
+            if (decreaseWasPressed && !decreaseGammaKey.isPressed()) {
+                gammaUtils.saveOptions();
+                decreaseWasPressed = false;
             }
         });
     }
