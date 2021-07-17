@@ -20,9 +20,9 @@
   "environment": "client",
   "entrypoints": {
     "main": [
-      "io.github.sjouwer.GammaUtils"
+      "io.github.sjouwer.gammautils.GammaUtils"
     ],
-    "modmenu": [ "io.github.sjouwer.config.ModMenuApiImpl" ]
+    "modmenu": [ "io.github.sjouwer.gammautils.config.ModMenuApiImpl" ]
   },
 
   "depends": {
