@@ -1,9 +1,9 @@
-package gamma.utils;
+package io.github.sjouwer.gammautils;
 
+import io.github.sjouwer.gammautils.config.ModConfig;
 import net.fabricmc.api.ModInitializer;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
-import gamma.utils.config.ModConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.BaseText;
 import net.minecraft.text.LiteralText;
