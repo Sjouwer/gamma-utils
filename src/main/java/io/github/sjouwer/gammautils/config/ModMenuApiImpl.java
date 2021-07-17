@@ -1,4 +1,4 @@
-package gamma.utils.config;
+package io.github.sjouwer.gammautils.config;
 
 import io.github.prospector.modmenu.api.ConfigScreenFactory;
 import io.github.prospector.modmenu.api.ModMenuApi;
