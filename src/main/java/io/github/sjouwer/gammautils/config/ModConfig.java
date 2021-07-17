@@ -1,4 +1,4 @@
-package gamma.utils.config;
+package io.github.sjouwer.gammautils.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
