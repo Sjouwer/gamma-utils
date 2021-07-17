@@ -1,4 +1,4 @@
-package gamma.utils.config;
+package io.github.sjouwer.gammautils.config;
 
 import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
 import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
