@@ -51,7 +51,6 @@ public class GammaUtils implements ModInitializer {
 
         if (minecraft.options.gamma > minGamma) {
             minecraft.options.gamma -= config.gammaStep();
-
         }
         if (minecraft.options.gamma < minGamma) {
             minecraft.options.gamma = minGamma;

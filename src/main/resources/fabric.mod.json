@@ -14,7 +14,7 @@
     "issues": "https://github.com/Sjouwer/gamma-utils/issues"
   },
 
-  "license": "GNU General Public License v3.0",
+  "license": "GNU LGPLv3",
   "icon": "assets/gammautils/icon.png",
 
   "environment": "client",
@@ -30,6 +30,6 @@
     "fabricloader": ">=0.4.0",
     "fabric": ">=0.14.0",
     "cloth-config2": ">=1.0.0",
-    "autoconfig1u": ">=1.2.6"
+    "autoconfig1u": ">=1.0.0"
   }
 }
