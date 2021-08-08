@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.5-SNAPSHOT'
+	id 'fabric-loom' version '0.7-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -15,21 +15,21 @@ minecraft {
 
 repositories {
 	maven {
-		name = 'ModMenu'
-		url = 'https://maven.terraformersmc.com/releases/'
+		name = 'ClothConfig'
+		url = 'https://maven.shedaniel.me/'
 	}
 	maven {
-		name = 'CottonMC'
-		url = 'https://server.bbkr.space/artifactory/libs-release'
+		name = 'ModMenu'
+		url = 'https://maven.terraformersmc.com/releases/'
 	}
 }
 
 dependencies {
 	minecraft "com.mojang:minecraft:1.15.2"
 	mappings "net.fabricmc:yarn:1.15.2+build.17:v2"
-	modImplementation "net.fabricmc:fabric-loader:0.11.3"
+	modImplementation "net.fabricmc:fabric-loader:0.11.6"
 
-	//Fabric API
+	//Fabric api
 	modImplementation "net.fabricmc.fabric-api:fabric-api:0.28.5+1.15"
 
 	//Mod Menu

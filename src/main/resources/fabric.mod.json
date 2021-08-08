@@ -14,7 +14,7 @@
     "issues": "https://github.com/Sjouwer/gamma-utils/issues"
   },
 
-  "license": "GNU General Public License v3.0",
+  "license": "GNU LGPLv3",
   "icon": "assets/gammautils/icon.png",
 
   "environment": "client",
