@@ -17,10 +17,13 @@
 
     "text.autoconfig.gamma_utils.option.advancedOptions": "Advanced Options",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions.minGamma": "Minimum Gamma Percentage",
+    "text.autoconfig.gamma_utils.option.advancedOptions.limitCheck": "Limit Check",
+    "text.autoconfig.gamma_utils.option.advancedOptions.limitCheck.@Tooltip": "Should the mod force the minimum and maximum gamma limits",
+
+    "text.autoconfig.gamma_utils.option.advancedOptions.minGamma": "Minimum Gamma Limit",
     "text.autoconfig.gamma_utils.option.advancedOptions.minGamma.@Tooltip": "Minimum gamma percentage the mod should allow",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions.maxGamma": "Maximum Gamma Percentage",
+    "text.autoconfig.gamma_utils.option.advancedOptions.maxGamma": "Maximum Gamma Limit",
     "text.autoconfig.gamma_utils.option.advancedOptions.maxGamma.@Tooltip": "Maximum gamma percentage the mod should allow",
 
     "text.autoconfig.gamma_utils.option.advancedOptions.saveOptions": "Save Client Options",

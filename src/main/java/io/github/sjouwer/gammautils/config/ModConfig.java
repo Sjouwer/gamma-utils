@@ -8,6 +8,8 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 public class ModConfig implements ConfigData {
     static class AdvancedObj {
         @ConfigEntry.Gui.Tooltip
+        private boolean limitCheck = true;
+        @ConfigEntry.Gui.Tooltip
         private int minGamma = -750;
         @ConfigEntry.Gui.Tooltip
         private int maxGamma = 1500;
@@ -34,6 +36,10 @@ public class ModConfig implements ConfigData {
 
     public double gammaStep() {
         return gammaStep / 100.0;
+    }
+
+    public boolean limitCheck() {
+        return advancedOptions.limitCheck;
     }
 
     public double minGamma() {

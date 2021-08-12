@@ -39,7 +39,13 @@ public class GammaOptions {
     }
 
     public void setGamma(double value) {
-        minecraft.options.gamma = Math.max(config.minGamma(), Math.min(value, config.maxGamma()));
+        if (config.maxGamma() < config.minGamma() || !config.limitCheck()) {
+            minecraft.options.gamma = value;
+        }
+        else {
+            minecraft.options.gamma = Math.max(config.minGamma(), Math.min(value, config.maxGamma()));
+        }
+
         sendMessage();
     }
 
