@@ -7,7 +7,7 @@ import net.minecraft.client.util.InputUtil;
 import org.lwjgl.glfw.GLFW;
 
 public class KeyBindings {
-    private final GammaUtils gammaUtils = new GammaUtils();
+    private final GammaOptions gammaOptions = new GammaOptions();
     private static final String CATEGORY = "key.categories.gamma_utils";
     private boolean toggleWasPressed = false;
     private boolean increaseWasPressed = false;
@@ -25,12 +25,12 @@ public class KeyBindings {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (gammaToggleKey.wasPressed()) {
-                gammaUtils.toggleGamma();
+                gammaOptions.toggleGamma();
                 toggleWasPressed = true;
             }
             //only save the options once the key has been released.
             if (toggleWasPressed && !gammaToggleKey.isPressed()) {
-                gammaUtils.saveOptions();
+                gammaOptions.saveOptions();
                 toggleWasPressed = false;
             }
         });
@@ -42,12 +42,12 @@ public class KeyBindings {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (increaseGammaKey.wasPressed()) {
-                gammaUtils.increaseGamma();
+                gammaOptions.increaseGamma();
                 increaseWasPressed = true;
             }
             //only save the options once the key has been released.
             if (increaseWasPressed && !increaseGammaKey.isPressed()) {
-                gammaUtils.saveOptions();
+                gammaOptions.saveOptions();
                 increaseWasPressed = false;
             }
         });
@@ -59,12 +59,12 @@ public class KeyBindings {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (decreaseGammaKey.wasPressed()) {
-                gammaUtils.decreaseGamma();
+                gammaOptions.decreaseGamma();
                 decreaseWasPressed = true;
             }
             //only save the options once the key has been released.
             if (decreaseWasPressed && !decreaseGammaKey.isPressed()) {
-                gammaUtils.saveOptions();
+                gammaOptions.saveOptions();
                 decreaseWasPressed = false;
             }
         });

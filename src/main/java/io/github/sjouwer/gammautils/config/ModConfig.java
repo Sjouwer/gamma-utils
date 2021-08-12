@@ -6,14 +6,23 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
 @Config(name = "gamma_utils")
 public class ModConfig implements ConfigData {
+    static class AdvancedObj {
+        @ConfigEntry.Gui.Tooltip
+        private int minGamma = -750;
+        @ConfigEntry.Gui.Tooltip
+        private int maxGamma = 1500;
+        @ConfigEntry.Gui.Tooltip
+        private boolean saveOptions = true;
+    }
+
     @ConfigEntry.Gui.Tooltip
     private int defaultGamma = 100;
     @ConfigEntry.Gui.Tooltip
     private int toggledGamma = 1500;
     @ConfigEntry.Gui.Tooltip
     private int gammaStep = 10;
-    @ConfigEntry.Gui.Tooltip
-    private boolean saveOptions = true;
+    @ConfigEntry.Gui.CollapsibleObject
+    private AdvancedObj advancedOptions = new AdvancedObj();
 
     public double defaultGamma() {
         return defaultGamma / 100.0;
@@ -27,7 +36,15 @@ public class ModConfig implements ConfigData {
         return gammaStep / 100.0;
     }
 
+    public double minGamma() {
+        return advancedOptions.minGamma / 100.0;
+    }
+
+    public double maxGamma() {
+        return advancedOptions.maxGamma / 100.0;
+    }
+
     public boolean saveEnabled() {
-        return saveOptions;
+        return advancedOptions.saveOptions;
     }
 }
