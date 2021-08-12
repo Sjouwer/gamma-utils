@@ -42,7 +42,7 @@ public class KeyBindings {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (increaseGammaKey.wasPressed()) {
-                gammaOptions.increaseGamma();
+                gammaOptions.increaseGamma(0);
                 increaseWasPressed = true;
             }
             //only save the options once the key has been released.
@@ -59,7 +59,7 @@ public class KeyBindings {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (decreaseGammaKey.wasPressed()) {
-                gammaOptions.decreaseGamma();
+                gammaOptions.decreaseGamma(0);
                 decreaseWasPressed = true;
             }
             //only save the options once the key has been released.

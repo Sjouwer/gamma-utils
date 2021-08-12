@@ -28,14 +28,34 @@ public class GammaOptions {
         setGamma(value);
     }
 
-    public void increaseGamma() {
-        double value = minecraft.options.gamma + config.gammaStep();
-        setGamma(value);
+    public void increaseGamma(double value) {
+        double newValue;
+        if (value == 0) {
+            newValue = minecraft.options.gamma + config.gammaStep();
+        }
+        else {
+            newValue = minecraft.options.gamma + value;
+        }
+        setGamma(newValue);
     }
 
-    public void decreaseGamma() {
-        double value = minecraft.options.gamma - config.gammaStep();
-        setGamma(value);
+    public void decreaseGamma(double value) {
+        double newValue;
+        if (value == 0) {
+            newValue = minecraft.options.gamma - config.gammaStep();
+        }
+        else {
+            newValue = minecraft.options.gamma - value;
+        }
+        setGamma(newValue);
+    }
+
+    public void minGamma() {
+        setGamma(config.minGamma());
+    }
+
+    public void maxGamma() {
+        setGamma(config.maxGamma());
     }
 
     public void setGamma(double value) {
