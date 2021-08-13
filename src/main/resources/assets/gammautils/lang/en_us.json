@@ -18,16 +18,16 @@
     "text.autoconfig.gamma_utils.option.advancedOptions": "Advanced Options",
 
     "text.autoconfig.gamma_utils.option.advancedOptions.limitCheck": "Limit Check",
-    "text.autoconfig.gamma_utils.option.advancedOptions.limitCheck.@Tooltip": "Should the mod force the minimum and maximum gamma limits",
+    "text.autoconfig.gamma_utils.option.advancedOptions.limitCheck.@Tooltip": "Should the mod enforce the minimum and maximum gamma limits",
 
     "text.autoconfig.gamma_utils.option.advancedOptions.minGamma": "Minimum Gamma Limit",
-    "text.autoconfig.gamma_utils.option.advancedOptions.minGamma.@Tooltip": "Minimum gamma percentage the mod should allow",
+    "text.autoconfig.gamma_utils.option.advancedOptions.minGamma.@Tooltip": "Minimum gamma percentage the mod will allow if the Limit Check is enabled",
 
     "text.autoconfig.gamma_utils.option.advancedOptions.maxGamma": "Maximum Gamma Limit",
-    "text.autoconfig.gamma_utils.option.advancedOptions.maxGamma.@Tooltip": "Maximum gamma percentage the mod should allow",
+    "text.autoconfig.gamma_utils.option.advancedOptions.maxGamma.@Tooltip": "Maximum gamma percentage the mod will allow if the Limit Check is enabled",
 
     "text.autoconfig.gamma_utils.option.advancedOptions.saveOptions": "Save Client Options",
-    "text.autoconfig.gamma_utils.option.advancedOptions.saveOptions.@Tooltip": "Disabling this will reset the gamma value set by the mod everytime Minecraft closes",
+    "text.autoconfig.gamma_utils.option.advancedOptions.saveOptions.@Tooltip": "Disabling this will reset the gamma value set by the mod every time Minecraft closes",
 
     "text.gamma_utils.message.gamma": "Gamma: %d%%"
 }
