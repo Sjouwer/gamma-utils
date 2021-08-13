@@ -2,22 +2,34 @@
 
 This is a gamma/brightness utility mod, making it much easier to see in the dark. 
 It's a really basic mod that allows you to change the gamma value in game way higher than the in game brightness setting allows. 
-Nights will look like day and caves will look like they're fully lit up.  
+Nights will look like day and caves will look like they're fully lit up. 
 Basically Gammabright but for fabric.
 
 ## **Functions**
 
 **Toggle Gamma**  
-*Usage: Keybind (default: G)*  
-Toggle between the default gamma percentage and the set toggled percentage.
+*Usage: Keybind (default: G) or /gamma toggle*  
+Toggle between the default gamma percentage and the configured toggled percentage.
 
 **Increase Gamma**  
-*Usage: Keybind (default: arrow up)*  
-Increase the gamma percentage by the set step percentage.
+*Usage: Keybind (default: arrow up) or /gamma increase <value> (value is optional)*  
+Increase the gamma percentage by the configured step percentage or the given value.
 
 **Decrease Gamma**  
-*Usage: Keybind (default: arrow down)*  
-Decrease the gamma percentage by the set step percentage.
+*Usage: Keybind (default: arrow down) or /gamma decrease <value> (value is optional)*  
+Decrease the gamma percentage by the configured step percentage or the given value.
+
+**Set Gamma**  
+*Usage: /gamma set <value>*  
+Set the gamma to a specific percentage.
+ 
+**Min Gamma**  
+*Usage: /gamma min*  
+Sets the gamma to the configured minimum limit. 
+ 
+**Max Gamma**  
+*Usage: /gamma max*  
+Sets the gamma to the configured maximum limit. 
 
 ## **Configuration (File / Mod Menu)**
 
@@ -35,28 +47,19 @@ Gamma percentage change for every increase or decrease.
 
 **Limit Check**  
 *Default: true*  
-Should the mod force the minimum and maximum gamma limits.
+Should the mod enforce the minimum and maximum gamma limits.
 
 **Minimum Gamma Limit**  
 *Default: -750%*  
-Minimum gamma percentage the mod should allow.
+Minimum gamma percentage the mod will allow if the Limit Check is enabled.
 
 **Maximum Gamma Limit**  
 *Default: 1500%*  
-Maximum gamma percentage the mod should allow.
+Maximum gamma percentage the mod will allow if the Limit Check is enabled.
 
 **Save Client Options**  
 *Default: true*  
-Disabling this will reset the gamma value set by the mod everytime Minecraft closes.
-
-## **Commands**
-
-/gamma toggle  
-/gamma min  
-/gamma max  
-/gamma set \<value>  
-/gamma increase \<value>   (value is optional)  
-/gamma decrease \<value>   (value is optional)
+Disabling this will reset the gamma value set by the mod every time Minecraft closes.
 
 ## **Dependencies**
 
