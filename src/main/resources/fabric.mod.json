@@ -8,6 +8,10 @@
   "authors": [
     "Sjouwer"
   ],
+  "contributors": [
+    "pt-br: Percario"
+  ],
+
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/gamma-utils",
     "sources": "https://github.com/Sjouwer/gamma-utils",
