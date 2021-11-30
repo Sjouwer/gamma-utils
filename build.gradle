@@ -3,15 +3,12 @@ plugins {
     id 'maven-publish'
 }
 
-sourceCompatibility = JavaVersion.VERSION_16
-targetCompatibility = JavaVersion.VERSION_16
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
-
-minecraft {
-}
 
 repositories {
     maven {
@@ -25,12 +22,12 @@ repositories {
 }
 
 dependencies {
-    minecraft "com.mojang:minecraft:21w44a"
-    mappings "net.fabricmc:yarn:21w44a+build.1:v2"
-    modImplementation "net.fabricmc:fabric-loader:0.12.4"
+    minecraft "com.mojang:minecraft:1.18"
+    mappings "net.fabricmc:yarn:1.18+build.1:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.12.6"
 
     //Fabric api
-    modImplementation "net.fabricmc.fabric-api:fabric-api:0.41.4+1.18"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.43.1+1.18"
 
     //Mod Menu
     modImplementation("com.terraformersmc:modmenu:3.0.0") {
@@ -39,11 +36,11 @@ dependencies {
     }
 
     //Cloth Config
-    modApi("me.shedaniel.cloth:cloth-config-fabric:6.0.39") {
+    modApi("me.shedaniel.cloth:cloth-config-fabric:6.0.42") {
         exclude(group: "net.fabricmc")
         exclude(group: "net.fabricmc.fabric-api")
     }
-    include "me.shedaniel.cloth:cloth-config-fabric:6.0.39"
+    include "me.shedaniel.cloth:cloth-config-fabric:6.0.42"
 }
 
 processResources {
@@ -55,8 +52,7 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-    it.options.encoding = "UTF-8"
-    it.options.release = 16
+    it.options.release = 17
 }
 
 java {
@@ -76,13 +72,7 @@ jar {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            // add all the jars that should be included when publishing to maven
-            artifact(remapJar) {
-                builtBy remapJar
-            }
-            artifact(sourcesJar) {
-                builtBy remapSourcesJar
-            }
+            from components.java
         }
     }
 
