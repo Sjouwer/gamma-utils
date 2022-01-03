@@ -2,29 +2,30 @@ package io.github.sjouwer.gammautils.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
-import me.shedaniel.autoconfig.annotation.ConfigEntry;
+import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.Tooltip;
+import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.CollapsibleObject;
 
 @Config(name = "gamma_utils")
 public class ModConfig implements ConfigData {
-    static class AdvancedObj {
-        @ConfigEntry.Gui.Tooltip
+    static class AdvancedOptionsObj {
+        @Tooltip
         private boolean limitCheck = true;
-        @ConfigEntry.Gui.Tooltip
+        @Tooltip
         private int minGamma = -750;
-        @ConfigEntry.Gui.Tooltip
+        @Tooltip
         private int maxGamma = 1500;
-        @ConfigEntry.Gui.Tooltip
+        @Tooltip
         private boolean saveOptions = true;
     }
 
-    @ConfigEntry.Gui.Tooltip
+    @Tooltip
     private int defaultGamma = 100;
-    @ConfigEntry.Gui.Tooltip
+    @Tooltip
     private int toggledGamma = 1500;
-    @ConfigEntry.Gui.Tooltip
+    @Tooltip
     private int gammaStep = 10;
-    @ConfigEntry.Gui.CollapsibleObject
-    private AdvancedObj advancedOptions = new AdvancedObj();
+    @CollapsibleObject
+    private AdvancedOptionsObj advancedOptions = new AdvancedOptionsObj();
 
     public double defaultGamma() {
         return defaultGamma / 100.0;
