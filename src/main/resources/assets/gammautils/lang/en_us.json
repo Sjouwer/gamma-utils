@@ -15,6 +15,9 @@
     "text.autoconfig.gamma_utils.option.gammaStep": "Gamma Percentage Step",
     "text.autoconfig.gamma_utils.option.gammaStep.@Tooltip": "Gamma percentage change for every increase or decrease",
 
+    "text.autoconfig.gamma_utils.option.updateToggle": "Update Toggle Value",
+    "text.autoconfig.gamma_utils.option.updateToggle.@Tooltip": "Enabling this will make the toggle value remember the last non default value you've used",
+
     "text.autoconfig.gamma_utils.option.advancedOptions": "Advanced Options",
 
     "text.autoconfig.gamma_utils.option.advancedOptions.limitCheck": "Limit Check",
@@ -25,6 +28,9 @@
 
     "text.autoconfig.gamma_utils.option.advancedOptions.maxGamma": "Maximum Gamma Limit",
     "text.autoconfig.gamma_utils.option.advancedOptions.maxGamma.@Tooltip": "Maximum gamma percentage the mod will allow if the Limit Check is enabled",
+
+    "text.autoconfig.gamma_utils.option.advancedOptions.showMessage": "Show Gamma Message",
+    "text.autoconfig.gamma_utils.option.advancedOptions.showMessage.@Tooltip": "Show a message with the new gamma value",
 
     "text.autoconfig.gamma_utils.option.advancedOptions.saveOptions": "Save Client Options",
     "text.autoconfig.gamma_utils.option.advancedOptions.saveOptions.@Tooltip": "Disabling this will reset the gamma value set by the mod every time Minecraft closes",
