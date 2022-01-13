@@ -48,6 +48,7 @@ public class KeyBindings {
             //only save the options once the key has been released.
             if (increaseWasPressed && !increaseGammaKey.isPressed()) {
                 gammaOptions.saveOptions();
+                gammaOptions.updateToggledGamma();
                 increaseWasPressed = false;
             }
         });
@@ -65,6 +66,7 @@ public class KeyBindings {
             //only save the options once the key has been released.
             if (decreaseWasPressed && !decreaseGammaKey.isPressed()) {
                 gammaOptions.saveOptions();
+                gammaOptions.updateToggledGamma();
                 decreaseWasPressed = false;
             }
         });

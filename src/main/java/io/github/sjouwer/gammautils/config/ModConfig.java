@@ -15,6 +15,8 @@ public class ModConfig implements ConfigData {
         @Tooltip
         private int maxGamma = 1500;
         @Tooltip
+        private boolean showMessage = true;
+        @Tooltip
         private boolean saveOptions = true;
     }
 
@@ -24,34 +26,48 @@ public class ModConfig implements ConfigData {
     private int toggledGamma = 1500;
     @Tooltip
     private int gammaStep = 10;
+    @Tooltip
+    private boolean updateToggle = false;
     @CollapsibleObject
     private AdvancedOptionsObj advancedOptions = new AdvancedOptionsObj();
 
-    public double defaultGamma() {
+    public double getDefaultGamma() {
         return defaultGamma / 100.0;
     }
 
-    public double toggledGamma() {
+    public double getToggledGamma() {
         return toggledGamma / 100.0;
     }
 
-    public double gammaStep() {
+    public void setToggledGamma(double gamma) {
+        toggledGamma = (int)Math.round(gamma * 100) ;
+    }
+
+    public double getGammaStep() {
         return gammaStep / 100.0;
     }
 
-    public boolean limitCheck() {
+    public boolean updateToggleEnabled() {
+        return updateToggle;
+    }
+
+    public boolean limitCheckEnabled() {
         return advancedOptions.limitCheck;
     }
 
-    public double minGamma() {
+    public double getMinGamma() {
         return advancedOptions.minGamma / 100.0;
     }
 
-    public double maxGamma() {
+    public double getMaxGamma() {
         return advancedOptions.maxGamma / 100.0;
     }
 
-    public boolean saveEnabled() {
+    public boolean gammaMessageEnabled() {
+        return advancedOptions.showMessage;
+    }
+
+    public boolean optionsSaveEnabled() {
         return advancedOptions.saveOptions;
     }
 }

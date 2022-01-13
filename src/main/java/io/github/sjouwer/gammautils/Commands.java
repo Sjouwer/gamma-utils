@@ -40,6 +40,7 @@ public class Commands {
                                 .executes(ctx -> {
                                             gammaOptions.setGamma(getInteger(ctx, "value") / 100.0);
                                             gammaOptions.saveOptions();
+                                            gammaOptions.updateToggledGamma();
                                             return 1;
                                         }
                                 )))
@@ -48,6 +49,7 @@ public class Commands {
                         .executes(ctx -> {
                                     gammaOptions.increaseGamma(0);
                                     gammaOptions.saveOptions();
+                                    gammaOptions.updateToggledGamma();
                                     return 1;
                                 }
                         )
@@ -55,6 +57,7 @@ public class Commands {
                                 .executes(ctx -> {
                                             gammaOptions.increaseGamma(getInteger(ctx, "value") / 100.0);
                                             gammaOptions.saveOptions();
+                                            gammaOptions.updateToggledGamma();
                                             return 1;
                                         }
                                 )))
@@ -63,6 +66,7 @@ public class Commands {
                         .executes(ctx -> {
                                     gammaOptions.decreaseGamma(0);
                                     gammaOptions.saveOptions();
+                                    gammaOptions.updateToggledGamma();
                                     return 1;
                                 }
                         )
@@ -70,6 +74,7 @@ public class Commands {
                                 .executes(ctx -> {
                                             gammaOptions.decreaseGamma(getInteger(ctx, "value") / 100.0);
                                             gammaOptions.saveOptions();
+                                            gammaOptions.updateToggledGamma();
                                             return 1;
                                         }
                                 ))));

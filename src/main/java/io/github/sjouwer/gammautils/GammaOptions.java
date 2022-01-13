@@ -19,11 +19,11 @@ public class GammaOptions {
 
     public void toggleGamma() {
         double value = minecraft.options.gamma;
-        if (value == config.defaultGamma()) {
-            value = config.toggledGamma();
+        if (value == config.getDefaultGamma()) {
+            value = config.getToggledGamma();
         }
         else {
-            value = config.defaultGamma();
+            value = config.getDefaultGamma();
         }
         setGamma(value);
     }
@@ -31,7 +31,7 @@ public class GammaOptions {
     public void increaseGamma(double value) {
         double newValue;
         if (value == 0) {
-            newValue = minecraft.options.gamma + config.gammaStep();
+            newValue = minecraft.options.gamma + config.getGammaStep();
         }
         else {
             newValue = minecraft.options.gamma + value;
@@ -42,7 +42,7 @@ public class GammaOptions {
     public void decreaseGamma(double value) {
         double newValue;
         if (value == 0) {
-            newValue = minecraft.options.gamma - config.gammaStep();
+            newValue = minecraft.options.gamma - config.getGammaStep();
         }
         else {
             newValue = minecraft.options.gamma - value;
@@ -51,25 +51,29 @@ public class GammaOptions {
     }
 
     public void minGamma() {
-        setGamma(config.minGamma());
+        setGamma(config.getMinGamma());
     }
 
     public void maxGamma() {
-        setGamma(config.maxGamma());
+        setGamma(config.getMaxGamma());
     }
 
     public void setGamma(double value) {
-        if (config.maxGamma() < config.minGamma() || !config.limitCheck()) {
+        if (config.getMaxGamma() < config.getMinGamma() || !config.limitCheckEnabled()) {
             minecraft.options.gamma = value;
         }
         else {
-            minecraft.options.gamma = Math.max(config.minGamma(), Math.min(value, config.maxGamma()));
+            minecraft.options.gamma = Math.max(config.getMinGamma(), Math.min(value, config.getMaxGamma()));
         }
 
         sendMessage();
     }
 
     private void sendMessage() {
+        if (!config.gammaMessageEnabled()) {
+            return;
+        }
+
         int gamma = (int)Math.round(minecraft.options.gamma * 100);
         BaseText message = new TranslatableText("text.gamma_utils.message.gamma", gamma);
 
@@ -85,8 +89,16 @@ public class GammaOptions {
         minecraft.inGameHud.setOverlayMessage(message, false);
     }
 
+    public void updateToggledGamma() {
+        double gamma = minecraft.options.gamma;
+        if (config.updateToggleEnabled() && gamma != config.getDefaultGamma()) {
+            config.setToggledGamma(gamma);
+            AutoConfig.getConfigHolder(ModConfig.class).save();
+        }
+    }
+
     public void saveOptions() {
-        if (config.saveEnabled()) {
+        if (config.optionsSaveEnabled()) {
             minecraft.options.write();
         }
     }
