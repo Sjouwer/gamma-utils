@@ -14,7 +14,6 @@ public class Commands {
                 .then(literal("toggle")
                         .executes(ctx -> {
                                     gammaOptions.toggleGamma();
-                                    gammaOptions.saveOptions();
                                     return 1;
                                 }
                         ))
@@ -22,7 +21,6 @@ public class Commands {
                 .then(literal("min")
                         .executes(ctx -> {
                                     gammaOptions.minGamma();
-                                    gammaOptions.saveOptions();
                                     return 1;
                                 }
                         ))
@@ -30,7 +28,6 @@ public class Commands {
                 .then(literal("max")
                         .executes(ctx -> {
                                     gammaOptions.maxGamma();
-                                    gammaOptions.saveOptions();
                                     return 1;
                                 }
                         ))
@@ -39,8 +36,6 @@ public class Commands {
                         .then(argument("value", integer())
                                 .executes(ctx -> {
                                             gammaOptions.setGamma(getInteger(ctx, "value") / 100.0);
-                                            gammaOptions.saveOptions();
-                                            gammaOptions.updateToggledGamma();
                                             return 1;
                                         }
                                 )))
@@ -48,16 +43,12 @@ public class Commands {
                 .then(literal("increase")
                         .executes(ctx -> {
                                     gammaOptions.increaseGamma(0);
-                                    gammaOptions.saveOptions();
-                                    gammaOptions.updateToggledGamma();
                                     return 1;
                                 }
                         )
                         .then(argument("value", integer())
                                 .executes(ctx -> {
                                             gammaOptions.increaseGamma(getInteger(ctx, "value") / 100.0);
-                                            gammaOptions.saveOptions();
-                                            gammaOptions.updateToggledGamma();
                                             return 1;
                                         }
                                 )))
@@ -65,16 +56,12 @@ public class Commands {
                 .then(literal("decrease")
                         .executes(ctx -> {
                                     gammaOptions.decreaseGamma(0);
-                                    gammaOptions.saveOptions();
-                                    gammaOptions.updateToggledGamma();
                                     return 1;
                                 }
                         )
                         .then(argument("value", integer())
                                 .executes(ctx -> {
                                             gammaOptions.decreaseGamma(getInteger(ctx, "value") / 100.0);
-                                            gammaOptions.saveOptions();
-                                            gammaOptions.updateToggledGamma();
                                             return 1;
                                         }
                                 ))));

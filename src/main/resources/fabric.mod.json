@@ -30,6 +30,10 @@
     "modmenu": [ "io.github.sjouwer.gammautils.config.ModMenuApiImpl" ]
   },
 
+  "mixins": [
+    "gammautils.mixins.json"
+  ],
+
   "custom": {
     "modmanager": {
       "modrinth": "wdLuzzEP"

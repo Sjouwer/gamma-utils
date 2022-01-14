@@ -29,23 +29,23 @@ public class GammaOptions {
     }
 
     public void increaseGamma(double value) {
-        double newValue;
+        double newValue = minecraft.options.gamma;
         if (value == 0) {
-            newValue = minecraft.options.gamma + config.getGammaStep();
+            newValue += config.getGammaStep();
         }
         else {
-            newValue = minecraft.options.gamma + value;
+            newValue += value;
         }
         setGamma(newValue);
     }
 
     public void decreaseGamma(double value) {
-        double newValue;
+        double newValue = minecraft.options.gamma;
         if (value == 0) {
-            newValue = minecraft.options.gamma - config.getGammaStep();
+            newValue -= config.getGammaStep();
         }
         else {
-            newValue = minecraft.options.gamma - value;
+            newValue -= value;
         }
         setGamma(newValue);
     }
@@ -59,11 +59,13 @@ public class GammaOptions {
     }
 
     public void setGamma(double value) {
-        if (config.getMaxGamma() < config.getMinGamma() || !config.limitCheckEnabled()) {
-            minecraft.options.gamma = value;
+        if (config.getMaxGamma() > config.getMinGamma() && config.limitCheckEnabled()) {
+            value = Math.max(config.getMinGamma(), Math.min(value, config.getMaxGamma()));
         }
-        else {
-            minecraft.options.gamma = Math.max(config.getMinGamma(), Math.min(value, config.getMaxGamma()));
+        minecraft.options.gamma = value;
+
+        if (config.updateToggleEnabled() && value != config.getDefaultGamma() && value != config.getToggledGamma()) {
+            config.setToggledGamma(value);
         }
 
         sendMessage();
@@ -87,19 +89,5 @@ public class GammaOptions {
             message.setStyle(EMPTY.withColor(Formatting.DARK_GREEN));
         }
         minecraft.inGameHud.setOverlayMessage(message, false);
-    }
-
-    public void updateToggledGamma() {
-        double gamma = minecraft.options.gamma;
-        if (config.updateToggleEnabled() && gamma != config.getDefaultGamma()) {
-            config.setToggledGamma(gamma);
-            AutoConfig.getConfigHolder(ModConfig.class).save();
-        }
-    }
-
-    public void saveOptions() {
-        if (config.optionsSaveEnabled()) {
-            minecraft.options.write();
-        }
     }
 }

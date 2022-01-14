@@ -25,9 +25,9 @@ public class ModConfig implements ConfigData {
     @Tooltip
     private int toggledGamma = 1500;
     @Tooltip
-    private int gammaStep = 10;
-    @Tooltip
     private boolean updateToggle = false;
+    @Tooltip
+    private int gammaStep = 10;
     @CollapsibleObject
     private AdvancedOptionsObj advancedOptions = new AdvancedOptionsObj();
 
