@@ -9,6 +9,8 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.CollapsibleObject;
 public class ModConfig implements ConfigData {
     static class AdvancedOptionsObj {
         @Tooltip
+        private int transitionSpeed = 4500;
+        @Tooltip
         private boolean limitCheck = true;
         @Tooltip
         private int minGamma = -750;
@@ -26,6 +28,8 @@ public class ModConfig implements ConfigData {
     private int toggledGamma = 1500;
     @Tooltip
     private boolean updateToggle = false;
+    @Tooltip
+    private boolean smoothTransition = false;
     @Tooltip
     private int gammaStep = 10;
     @CollapsibleObject
@@ -49,6 +53,14 @@ public class ModConfig implements ConfigData {
 
     public boolean updateToggleEnabled() {
         return updateToggle;
+    }
+
+    public boolean smoothTransitionEnabled() {
+        return smoothTransition;
+    }
+
+    public double getTransitionSpeed() {
+        return advancedOptions.transitionSpeed / 100.0;
     }
 
     public boolean limitCheckEnabled() {
