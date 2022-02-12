@@ -7,8 +7,12 @@ import net.minecraft.client.util.InputUtil;
 import org.lwjgl.glfw.GLFW;
 
 public class KeyBindings {
-    private final GammaOptions gammaOptions = new GammaOptions();
+    private final GammaOptions gammaOptions;
     private static final String CATEGORY = "key.categories.gamma_utils";
+
+    public KeyBindings(GammaOptions gammaOptions) {
+        this.gammaOptions = gammaOptions;
+    }
 
     public void setKeyBindings() {
         setKeyBindingGammaToggle();

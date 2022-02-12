@@ -7,7 +7,11 @@ import static net.fabricmc.fabric.api.client.command.v1.ClientCommandManager.*;
 import static com.mojang.brigadier.arguments.IntegerArgumentType.*;
 
 public class Commands {
-    private final GammaOptions gammaOptions = new GammaOptions();
+    private final GammaOptions gammaOptions;
+
+    public Commands(GammaOptions gammaOptions) {
+        this.gammaOptions = gammaOptions;
+    }
 
     public void registerCommands(CommandDispatcher<FabricClientCommandSource> dispatcher) {
         dispatcher.register(literal("gamma")
@@ -35,7 +39,7 @@ public class Commands {
                 .then(literal("set")
                         .then(argument("value", integer())
                                 .executes(ctx -> {
-                                            gammaOptions.setGamma(getInteger(ctx, "value") / 100.0);
+                                            gammaOptions.setGamma(getInteger(ctx, "value") / 100.0, true);
                                             return 1;
                                         }
                                 )))

@@ -12,10 +12,12 @@ public class GammaUtils implements ModInitializer {
     public void onInitialize() {
         AutoConfig.register(ModConfig.class, JanksonConfigSerializer::new);
 
-        KeyBindings keyBindings = new KeyBindings();
+        GammaOptions gammaOptions = new GammaOptions();
+
+        KeyBindings keyBindings = new KeyBindings(gammaOptions);
         keyBindings.setKeyBindings();
 
-        Commands commands = new Commands();
+        Commands commands = new Commands(gammaOptions);
         commands.registerCommands(ClientCommandManager.DISPATCHER);
     }
 }
