@@ -38,8 +38,8 @@
     "text.autoconfig.gamma_utils.option.advancedOptions.showMessage": "Show Gamma Message",
     "text.autoconfig.gamma_utils.option.advancedOptions.showMessage.@Tooltip": "Show a message with the new gamma value",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions.saveOptions": "Save Client Options",
-    "text.autoconfig.gamma_utils.option.advancedOptions.saveOptions.@Tooltip": "Disabling this will reset the gamma value set by the mod every time Minecraft closes",
+    "text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose": "Reset On Close",
+    "text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose.@Tooltip": "Reset the gamma value to default when Minecraft closes",
 
     "text.gamma_utils.message.gamma": "Gamma: %d%%"
 }

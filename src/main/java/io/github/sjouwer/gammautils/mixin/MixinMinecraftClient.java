@@ -19,9 +19,10 @@ public class MixinMinecraftClient {
     @Inject(method = "close", at = @At("HEAD"))
     private void close(CallbackInfo info) {
         ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
-        if (config.optionsSaveEnabled()) {
-            options.write();
+        if (config.resetOnCloseEnabled()) {
+            options.gamma = config.getDefaultGamma();
         }
+        options.write();
         AutoConfig.getConfigHolder(ModConfig.class).save();
     }
 }

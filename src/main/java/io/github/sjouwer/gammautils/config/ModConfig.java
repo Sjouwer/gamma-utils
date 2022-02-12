@@ -19,7 +19,7 @@ public class ModConfig implements ConfigData {
         @Tooltip
         private boolean showMessage = true;
         @Tooltip
-        private boolean saveOptions = true;
+        private boolean resetOnClose = false;
     }
 
     @Tooltip
@@ -79,7 +79,7 @@ public class ModConfig implements ConfigData {
         return advancedOptions.showMessage;
     }
 
-    public boolean optionsSaveEnabled() {
-        return advancedOptions.saveOptions;
+    public boolean resetOnCloseEnabled() {
+        return advancedOptions.resetOnClose;
     }
 }
