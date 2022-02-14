@@ -1,6 +1,6 @@
 ![icon-small](https://user-images.githubusercontent.com/84018133/121270201-87f29f00-c8c1-11eb-8bb1-1bd4d8076a93.png)
 
-This is a gamma/brightness utility mod, making it much easier to see in the dark. 
+This is a fully configurable gamma/brightness utility mod, making it much easier to see in the dark. 
 It's a really basic mod that allows you to change the gamma value in game way higher than the in game brightness setting allows. 
 Nights will look like day and caves will look like they're fully lit up. 
 Basically Gammabright but for fabric.
@@ -41,6 +41,18 @@ Gamma percentage for when the mod is toggled off.
 *Default: 1500%*  
 Gamma percentage for when the mod is toggled on.
 
+**Smooth Transition**  
+*Default: false*  
+Make the transition when toggling gamma smoother.
+ 
+**Transition Speed**  
+*Default: 4500*  
+Speed in gamma percentage per second
+
+**Update Toggle Value**  
+*Default: false*  
+Enabling this will make the toggle value remember the last non default value you've used.
+
 **Gamma Percentage Step**  
 *Default: 10%*  
 Gamma percentage change for every increase or decrease.
@@ -57,9 +69,13 @@ Minimum gamma percentage the mod will allow if the Limit Check is enabled.
 *Default: 1500%*  
 Maximum gamma percentage the mod will allow if the Limit Check is enabled.
 
-**Save Client Options**  
+**Show Gamma Message**  
 *Default: true*  
-Disabling this will reset the gamma value set by the mod every time Minecraft closes.
+Show a message with the new gamma value.
+
+**Reset on Close**  
+*Default: false*  
+Reset the gamma value to default when Minecraft closes.
 
 ## **Dependencies**
 
