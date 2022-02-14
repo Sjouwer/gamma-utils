@@ -8,6 +8,11 @@
   "authors": [
     "Sjouwer"
   ],
+  "contributors": [
+    "pt-br: Percario",
+    "zh-cn: buiawpkgew1"
+  ],
+
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/gamma-utils",
     "sources": "https://github.com/Sjouwer/gamma-utils",
@@ -23,6 +28,23 @@
       "io.github.sjouwer.gammautils.GammaUtils"
     ],
     "modmenu": [ "io.github.sjouwer.gammautils.config.ModMenuApiImpl" ]
+  },
+
+  "mixins": [
+    "gammautils.mixins.json"
+  ],
+
+  "custom": {
+    "modmanager": {
+      "modrinth": "wdLuzzEP"
+    },
+    "modmenu": {
+      "updates": {
+        "provider": "modrinth",
+        "projectId": "wdLuzzEP",
+        "channel": "release"
+      }
+    }
   },
 
   "depends": {
