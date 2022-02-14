@@ -41,6 +41,14 @@ Gamma percentage for when the mod is toggled off.
 *Default: 1500%*  
 Gamma percentage for when the mod is toggled on.
 
+**Smooth Transition**  
+*Default: false*  
+Make the transition when toggling gamma smoother.
+ 
+**Transition Speed**  
+*Default: 4500*  
+Speed in gamma percentage per second
+
 **Update Toggle Value**  
 *Default: false*  
 Enabling this will make the toggle value remember the last non default value you've used.
@@ -65,9 +73,9 @@ Maximum gamma percentage the mod will allow if the Limit Check is enabled.
 *Default: true*  
 Show a message with the new gamma value.
 
-**Save Client Options**  
-*Default: true*  
-Disabling this will reset the gamma value set by the mod every time Minecraft closes.
+**Reset on Close**  
+*Default: false*  
+Reset the gamma value to default when Minecraft closes.
 
 ## **Dependencies**
 
