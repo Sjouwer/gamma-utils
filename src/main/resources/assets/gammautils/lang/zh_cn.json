@@ -11,6 +11,9 @@
 
     "text.autoconfig.gamma_utils.option.toggledGamma": "切换伽玛百分比",
     "text.autoconfig.gamma_utils.option.toggledGamma.@Tooltip": "开启模组时的伽马百分比",
+	
+	"text.autoconfig.gamma_utils.option.smoothTransition": "平稳过渡",
+    "text.autoconfig.gamma_utils.option.smoothTransition.@Tooltip": "使切换伽马时的过渡更平滑",
 
     "text.autoconfig.gamma_utils.option.gammaStep": "伽玛百分比步长",
     "text.autoconfig.gamma_utils.option.gammaStep.@Tooltip": "每次增加或减少的伽马百分比变化",
@@ -19,6 +22,9 @@
     "text.autoconfig.gamma_utils.option.updateToggle.@Tooltip": "启用此功能将使切换值记住你最后使用的非默认值",
 
     "text.autoconfig.gamma_utils.option.advancedOptions": "高级选项",
+	
+	"text.autoconfig.gamma_utils.option.advancedOptions.transitionSpeed": "过渡速度",
+    "text.autoconfig.gamma_utils.option.advancedOptions.transitionSpeed.@Tooltip": "每秒伽马百分比的速度（启用平滑过渡时每秒伽马百分比的速度（启用平滑过渡时）",
 
     "text.autoconfig.gamma_utils.option.advancedOptions.limitCheck": "限制检查",
     "text.autoconfig.gamma_utils.option.advancedOptions.limitCheck.@Tooltip": "mod是否应该强制执行最小和最大伽马限制",
@@ -32,8 +38,8 @@
     "text.autoconfig.gamma_utils.option.advancedOptions.showMessage": "显示伽马信息",
     "text.autoconfig.gamma_utils.option.advancedOptions.showMessage.@Tooltip": "显示带有新伽马值的信息",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions.saveOptions": "保存客户端选项",
-    "text.autoconfig.gamma_utils.option.advancedOptions.saveOptions.@Tooltip": "禁用此项将在每次Minecraft关闭时重置模组设置的伽玛值",
+    "text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose": "关闭时重置",
+    "text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose.@Tooltip": "Minecraft 关闭时将伽玛值重置为默认值",
 
     "text.gamma_utils.message.gamma": "伽玛: %d%%"
 }
