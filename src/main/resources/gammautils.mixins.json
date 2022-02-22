@@ -4,7 +4,9 @@
   "package": "io.github.sjouwer.gammautils.mixin",
   "compatibilityLevel": "JAVA_8",
   "client": [
-    "MixinMinecraftClient"
+    "MixinMinecraftClient",
+    "MixinStatusEffectUtil",
+    "MixinClientPlayNetworkHandler"
   ],
   "injectors": {
     "defaultRequire": 1
