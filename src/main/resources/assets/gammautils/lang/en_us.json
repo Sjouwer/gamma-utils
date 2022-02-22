@@ -15,11 +15,11 @@
     "text.autoconfig.gamma_utils.option.smoothTransition": "Smooth Transition",
     "text.autoconfig.gamma_utils.option.smoothTransition.@Tooltip": "Make the transition when toggling gamma smoother",
 
-    "text.autoconfig.gamma_utils.option.gammaStep": "Gamma Percentage Step",
-    "text.autoconfig.gamma_utils.option.gammaStep.@Tooltip": "Gamma percentage change for every increase or decrease",
-
     "text.autoconfig.gamma_utils.option.updateToggle": "Update Toggle Value",
     "text.autoconfig.gamma_utils.option.updateToggle.@Tooltip": "Enabling this will make the toggle value remember the last non default value you've used",
+
+    "text.autoconfig.gamma_utils.option.showStatusEffect": "Show Status Effect",
+    "text.autoconfig.gamma_utils.option.showStatusEffect.@Tooltip": "Show a status effect when the gamma percentage is outside normal range \n(\"Low Gamma\" below 0% and \"High Gamma\" above 100%)",
 
     "text.autoconfig.gamma_utils.option.advancedOptions": "Advanced Options",
 
@@ -35,11 +35,17 @@
     "text.autoconfig.gamma_utils.option.advancedOptions.maxGamma": "Maximum Gamma Limit",
     "text.autoconfig.gamma_utils.option.advancedOptions.maxGamma.@Tooltip": "Maximum gamma percentage the mod will allow if the Limit Check is enabled",
 
+    "text.autoconfig.gamma_utils.option.advancedOptions.gammaStep": "Gamma Percentage Step",
+    "text.autoconfig.gamma_utils.option.advancedOptions.gammaStep.@Tooltip": "Gamma percentage change for every increase or decrease",
+
     "text.autoconfig.gamma_utils.option.advancedOptions.showMessage": "Show Gamma Message",
     "text.autoconfig.gamma_utils.option.advancedOptions.showMessage.@Tooltip": "Show a message with the new gamma value",
 
     "text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose": "Reset On Close",
     "text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose.@Tooltip": "Reset the gamma value to default when Minecraft closes",
 
-    "text.gamma_utils.message.gamma": "Gamma: %d%%"
+    "text.gamma_utils.message.gamma": "Gamma: %d%%",
+
+    "effect.gammautils.bright": "High Gamma",
+    "effect.gammautils.dim": "Low Gamma"
 }

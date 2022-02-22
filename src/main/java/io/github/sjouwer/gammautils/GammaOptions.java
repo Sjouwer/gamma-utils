@@ -1,16 +1,12 @@
 package io.github.sjouwer.gammautils;
 
 import io.github.sjouwer.gammautils.config.ModConfig;
+import io.github.sjouwer.gammautils.util.InfoProvider;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.text.BaseText;
-import net.minecraft.text.TranslatableText;
-import net.minecraft.util.Formatting;
 
 import java.util.Timer;
 import java.util.TimerTask;
-
-import static net.minecraft.text.Style.EMPTY;
 
 public class GammaOptions {
     private final ModConfig config;
@@ -80,7 +76,8 @@ public class GammaOptions {
         }
         else {
             minecraft.options.gamma = newValue;
-            sendMessage();
+            InfoProvider.updateStatusEffect();
+            InfoProvider.showHudMessage();
         }
 
         if (config.updateToggleEnabled() && newValue != config.getDefaultGamma() && newValue != config.getToggledGamma()) {
@@ -98,35 +95,13 @@ public class GammaOptions {
                         (valueChangePerTick < 0 && nextValue <= newValue)) {
                     timer.cancel();
                     minecraft.options.gamma = newValue;
+                    InfoProvider.updateStatusEffect();
                 }
                 else {
                     minecraft.options.gamma = nextValue;
                 }
-                sendMessage();
+                InfoProvider.showHudMessage();
             }
         }, 0, 10);
-    }
-
-    private void sendMessage() {
-        if (!config.gammaMessageEnabled()) {
-            return;
-        }
-
-        int gamma = (int)Math.round(minecraft.options.gamma * 100);
-        BaseText message = new TranslatableText("text.gamma_utils.message.gamma", gamma);
-
-        Formatting format;
-        if (gamma < 0) {
-            format = Formatting.DARK_RED;
-        }
-        else if (gamma > 100) {
-            format = Formatting.GOLD;
-        }
-        else {
-            format = Formatting.DARK_GREEN;
-        }
-
-        message.setStyle(EMPTY.withColor(format));
-        minecraft.inGameHud.setOverlayMessage(message, false);
     }
 }
