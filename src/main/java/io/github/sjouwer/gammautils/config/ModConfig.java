@@ -17,6 +17,8 @@ public class ModConfig implements ConfigData {
         @Tooltip
         private int maxGamma = 1500;
         @Tooltip
+        private int gammaStep = 10;
+        @Tooltip
         private boolean showMessage = true;
         @Tooltip
         private boolean resetOnClose = false;
@@ -31,7 +33,8 @@ public class ModConfig implements ConfigData {
     @Tooltip
     private boolean smoothTransition = false;
     @Tooltip
-    private int gammaStep = 10;
+    private boolean showStatusEffect = false;
+
     @CollapsibleObject
     private AdvancedOptionsObj advancedOptions = new AdvancedOptionsObj();
 
@@ -48,7 +51,7 @@ public class ModConfig implements ConfigData {
     }
 
     public double getGammaStep() {
-        return gammaStep / 100.0;
+        return advancedOptions.gammaStep / 100.0;
     }
 
     public boolean updateToggleEnabled() {
@@ -77,6 +80,10 @@ public class ModConfig implements ConfigData {
 
     public boolean gammaMessageEnabled() {
         return advancedOptions.showMessage;
+    }
+
+    public boolean statusEffectEnabled() {
+        return showStatusEffect;
     }
 
     public boolean resetOnCloseEnabled() {
