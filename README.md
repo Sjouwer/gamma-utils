@@ -40,6 +40,10 @@ Gamma percentage for when the mod is toggled off.
 **Toggled Gamma Percentage**  
 *Default: 1500%*  
 Gamma percentage for when the mod is toggled on.
+ 
+**Update Toggle Value**  
+*Default: false*  
+Enabling this will make the toggle value remember the last non default value you've used.
 
 **Smooth Transition**  
 *Default: false*  
@@ -47,16 +51,13 @@ Make the transition when toggling gamma smoother.
  
 **Transition Speed**  
 *Default: 4500*  
-Speed in gamma percentage per second
-
-**Update Toggle Value**  
+Speed in gamma percentage per second.
+ 
+**Show Status Effect**  
 *Default: false*  
-Enabling this will make the toggle value remember the last non default value you've used.
-
-**Gamma Percentage Step**  
-*Default: 10%*  
-Gamma percentage change for every increase or decrease.
-
+Show a status effect when the gamma percentage is outside normal range.  
+("Low Gamma" below 0% and "High Gamma" above 100%)
+ 
 **Limit Check**  
 *Default: true*  
 Should the mod enforce the minimum and maximum gamma limits.
@@ -68,6 +69,10 @@ Minimum gamma percentage the mod will allow if the Limit Check is enabled.
 **Maximum Gamma Limit**  
 *Default: 1500%*  
 Maximum gamma percentage the mod will allow if the Limit Check is enabled.
+ 
+**Gamma Percentage Step**  
+*Default: 10%*  
+Gamma percentage change for every increase or decrease.
 
 **Show Gamma Message**  
 *Default: true*  
