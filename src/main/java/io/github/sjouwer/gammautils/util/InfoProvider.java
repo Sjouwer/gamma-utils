@@ -5,6 +5,7 @@ import io.github.sjouwer.gammautils.config.ModConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.text.BaseText;
 import net.minecraft.text.TranslatableText;
@@ -25,23 +26,31 @@ public final class InfoProvider {
             return;
         }
 
-        player.removeStatusEffect(GammaUtils.BRIGHT);
+        if (config.statusEffectEnabled()) {
+            int gamma = (int)Math.round(minecraft.options.gamma * 100);
+            if (gamma > 100) {
+                if (!player.hasStatusEffect(GammaUtils.BRIGHT)) {
+                    player.removeStatusEffect(GammaUtils.DIM);
+                    addPermEffect(player, GammaUtils.BRIGHT);
+                }
+                return;
+            }
+            else if (gamma < 0) {
+                if (!player.hasStatusEffect(GammaUtils.DIM)) {
+                    player.removeStatusEffect(GammaUtils.BRIGHT);
+                    addPermEffect(player, GammaUtils.DIM);
+                }
+                return;
+            }
+        }
         player.removeStatusEffect(GammaUtils.DIM);
-        if (!config.statusEffectEnabled()) {
-            return;
-        }
+        player.removeStatusEffect(GammaUtils.BRIGHT);
+    }
 
-        int gamma = (int)Math.round(minecraft.options.gamma * 100);
-        if (gamma > 100) {
-            StatusEffectInstance brightStatus = new StatusEffectInstance(GammaUtils.BRIGHT, 999999);
-            brightStatus.setPermanent(true);
-            player.addStatusEffect(brightStatus);
-        }
-        else if (gamma < 0) {
-            StatusEffectInstance dimStatus = new StatusEffectInstance(GammaUtils.DIM, 999999);
-            dimStatus.setPermanent(true);
-            player.addStatusEffect(dimStatus);
-        }
+    private static void addPermEffect(ClientPlayerEntity player, StatusEffect effect) {
+        StatusEffectInstance brightStatus = new StatusEffectInstance(effect, 999999);
+        brightStatus.setPermanent(true);
+        player.addStatusEffect(brightStatus);
     }
 
     public static void showHudMessage() {
