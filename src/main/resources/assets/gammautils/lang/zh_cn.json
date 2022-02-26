@@ -41,5 +41,11 @@
     "text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose": "关闭时重置",
     "text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose.@Tooltip": "Minecraft 关闭时将伽玛值重置为默认值",
 
-    "text.gamma_utils.message.gamma": "伽玛: %d%%"
+    "text.gamma_utils.message.gamma": "伽玛: %d%%",
+	
+    "text.autoconfig.gamma_utils.option.showStatusEffect": "显示状态效果",
+    "text.autoconfig.gamma_utils.option.showStatusEffect.@Tooltip": "当 gamma 百分比超出正常范围时显示状态效果 \n(\"低伽马\" 低于 0% 和 \"高伽马\" 100% 以上)",
+
+    "effect.gammautils.bright": "高伽马",
+    "effect.gammautils.dim": "低伽马"
 }
