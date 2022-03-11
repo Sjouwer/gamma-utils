@@ -2,23 +2,18 @@ package io.github.sjouwer.gammautils;
 
 import io.github.sjouwer.gammautils.config.ModConfig;
 import io.github.sjouwer.gammautils.util.InfoProvider;
-import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.MinecraftClient;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class GammaOptions {
-    private final ModConfig config;
-    private final MinecraftClient minecraft = MinecraftClient.getInstance();
+    private final MinecraftClient client = MinecraftClient.getInstance();
+    private final ModConfig config = GammaUtils.getConfig();
     private Timer timer = null;
 
-    public GammaOptions() {
-        config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
-    }
-
     public void toggleGamma() {
-        double value = minecraft.options.gamma;
+        double value = client.options.gamma;
         if (value == config.getDefaultGamma()) {
             value = config.getToggledGamma();
         }
@@ -29,7 +24,7 @@ public class GammaOptions {
     }
 
     public void increaseGamma(double value) {
-        double newValue = minecraft.options.gamma;
+        double newValue = client.options.gamma;
         if (value == 0) {
             newValue += config.getGammaStep();
         }
@@ -40,7 +35,7 @@ public class GammaOptions {
     }
 
     public void decreaseGamma(double value) {
-        double newValue = minecraft.options.gamma;
+        double newValue = client.options.gamma;
         if (value == 0) {
             newValue -= config.getGammaStep();
         }
@@ -69,13 +64,13 @@ public class GammaOptions {
 
         if (smoothTransition && config.smoothTransitionEnabled()) {
             double valueChangePerTick = config.getTransitionSpeed() / 100;
-            if (newValue < minecraft.options.gamma) {
+            if (newValue < client.options.gamma) {
                 valueChangePerTick *= -1;
             }
             startTimer(newValue, valueChangePerTick);
         }
         else {
-            minecraft.options.gamma = newValue;
+            client.options.gamma = newValue;
             InfoProvider.updateStatusEffect();
             InfoProvider.showHudMessage();
         }
@@ -90,15 +85,15 @@ public class GammaOptions {
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                double nextValue = minecraft.options.gamma + valueChangePerTick;
+                double nextValue = client.options.gamma + valueChangePerTick;
                 if ((valueChangePerTick > 0 && nextValue >= newValue) ||
                         (valueChangePerTick < 0 && nextValue <= newValue)) {
                     timer.cancel();
-                    minecraft.options.gamma = newValue;
+                    client.options.gamma = newValue;
                     InfoProvider.updateStatusEffect();
                 }
                 else {
-                    minecraft.options.gamma = nextValue;
+                    client.options.gamma = nextValue;
                 }
                 InfoProvider.showHudMessage();
             }

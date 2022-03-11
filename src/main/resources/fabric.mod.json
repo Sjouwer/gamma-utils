@@ -24,10 +24,12 @@
 
   "environment": "client",
   "entrypoints": {
-    "main": [
+    "client": [
       "io.github.sjouwer.gammautils.GammaUtils"
     ],
-    "modmenu": [ "io.github.sjouwer.gammautils.config.ModMenuApiImpl" ]
+    "modmenu": [
+      "io.github.sjouwer.gammautils.config.ModMenuApiImpl"
+    ]
   },
 
   "mixins": [
