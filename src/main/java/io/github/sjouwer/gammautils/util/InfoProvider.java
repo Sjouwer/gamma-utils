@@ -2,7 +2,6 @@ package io.github.sjouwer.gammautils.util;
 
 import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.config.ModConfig;
-import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.effect.StatusEffect;
@@ -14,20 +13,20 @@ import net.minecraft.util.Formatting;
 import static net.minecraft.text.Style.EMPTY;
 
 public final class InfoProvider {
-    private static final MinecraftClient minecraft = MinecraftClient.getInstance();
-    private static final ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
+    private static final MinecraftClient client = MinecraftClient.getInstance();
+    private static final ModConfig config = GammaUtils.getConfig();
 
     private InfoProvider() {
     }
 
     public static void updateStatusEffect() {
-        ClientPlayerEntity player = minecraft.player;
+        ClientPlayerEntity player = client.player;
         if (player == null) {
             return;
         }
 
         if (config.statusEffectEnabled()) {
-            int gamma = (int)Math.round(minecraft.options.gamma * 100);
+            int gamma = (int)Math.round(client.options.gamma * 100);
             if (gamma > 100) {
                 if (!player.hasStatusEffect(GammaUtils.BRIGHT)) {
                     player.removeStatusEffect(GammaUtils.DIM);
@@ -58,7 +57,7 @@ public final class InfoProvider {
             return;
         }
 
-        int gamma = (int)Math.round(minecraft.options.gamma * 100);
+        int gamma = (int)Math.round(client.options.gamma * 100);
         BaseText message = new TranslatableText("text.gamma_utils.message.gamma", gamma);
 
         Formatting format;
@@ -73,6 +72,6 @@ public final class InfoProvider {
         }
 
         message.setStyle(EMPTY.withColor(format));
-        minecraft.inGameHud.setOverlayMessage(message, false);
+        client.inGameHud.setOverlayMessage(message, false);
     }
 }
