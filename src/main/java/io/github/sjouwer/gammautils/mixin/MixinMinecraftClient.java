@@ -28,6 +28,9 @@ public class MixinMinecraftClient {
         if (config.resetOnCloseEnabled()) {
             config.setCurrentGamma(config.getDefaultGamma());
         }
+        else {
+            config.setCurrentGamma(options.method_42473().getValue());
+        }
         AutoConfig.getConfigHolder(ModConfig.class).save();
     }
 }
