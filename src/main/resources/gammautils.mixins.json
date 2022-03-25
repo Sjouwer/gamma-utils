@@ -4,6 +4,7 @@
   "package": "io.github.sjouwer.gammautils.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
+    "MixinSimpleOption",
     "MixinMinecraftClient",
     "MixinStatusEffectUtil",
     "MixinClientPlayNetworkHandler"

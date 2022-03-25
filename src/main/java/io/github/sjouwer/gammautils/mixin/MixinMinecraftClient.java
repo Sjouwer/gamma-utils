@@ -1,5 +1,6 @@
 package io.github.sjouwer.gammautils.mixin;
 
+import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.config.ModConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.MinecraftClient;
@@ -16,13 +17,17 @@ public class MixinMinecraftClient {
     @Shadow
     private GameOptions options;
 
+    @Inject(method = "run", at = @At("HEAD"))
+    private void run (CallbackInfo info) {
+        options.method_42473().setValue(GammaUtils.getConfig().getCurrentGamma());
+    }
+
     @Inject(method = "close", at = @At("HEAD"))
     private void close(CallbackInfo info) {
-        ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
+        ModConfig config = GammaUtils.getConfig();
         if (config.resetOnCloseEnabled()) {
-            options.gamma = config.getDefaultGamma();
+            config.setCurrentGamma(config.getDefaultGamma());
         }
-        options.write();
         AutoConfig.getConfigHolder(ModConfig.class).save();
     }
 }

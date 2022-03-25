@@ -2,6 +2,7 @@ package io.github.sjouwer.gammautils.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.Excluded;
 import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.Tooltip;
 import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.CollapsibleObject;
 
@@ -24,6 +25,8 @@ public class ModConfig implements ConfigData {
         private boolean resetOnClose = false;
     }
 
+    @Excluded
+    private int currentGamma = 100;
     @Tooltip
     private int defaultGamma = 100;
     @Tooltip
@@ -37,6 +40,14 @@ public class ModConfig implements ConfigData {
 
     @CollapsibleObject
     private AdvancedOptionsObj advancedOptions = new AdvancedOptionsObj();
+
+    public double getCurrentGamma() {
+        return currentGamma / 100.0;
+    }
+
+    public void setCurrentGamma(double gamma) {
+        currentGamma = (int)Math.round(gamma * 100) ;
+    }
 
     public double getDefaultGamma() {
         return defaultGamma / 100.0;
