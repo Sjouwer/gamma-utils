@@ -13,7 +13,7 @@ public class GammaOptions {
     private Timer timer = null;
 
     public void toggleGamma() {
-        double value = client.options.method_42473().getValue();
+        double value = client.options.getGamma().getValue();
         if (value == config.getDefaultGamma()) {
             value = config.getToggledGamma();
         }
@@ -24,7 +24,7 @@ public class GammaOptions {
     }
 
     public void increaseGamma(double value) {
-        double newValue = client.options.method_42473().getValue();
+        double newValue = client.options.getGamma().getValue();
         if (value == 0) {
             newValue += config.getGammaStep();
         }
@@ -35,7 +35,7 @@ public class GammaOptions {
     }
 
     public void decreaseGamma(double value) {
-        double newValue = client.options.method_42473().getValue();
+        double newValue = client.options.getGamma().getValue();
         if (value == 0) {
             newValue -= config.getGammaStep();
         }
@@ -64,13 +64,13 @@ public class GammaOptions {
 
         if (smoothTransition && config.smoothTransitionEnabled()) {
             double valueChangePerTick = config.getTransitionSpeed() / 100;
-            if (newValue < client.options.method_42473().getValue()) {
+            if (newValue < client.options.getGamma().getValue()) {
                 valueChangePerTick *= -1;
             }
             startTimer(newValue, valueChangePerTick);
         }
         else {
-            client.options.method_42473().setValue(newValue);
+            client.options.getGamma().setValue(newValue);
             InfoProvider.updateStatusEffect();
             InfoProvider.showHudMessage();
         }
@@ -85,15 +85,15 @@ public class GammaOptions {
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                double nextValue = client.options.method_42473().getValue() + valueChangePerTick;
+                double nextValue = client.options.getGamma().getValue() + valueChangePerTick;
                 if ((valueChangePerTick > 0 && nextValue >= newValue) ||
                         (valueChangePerTick < 0 && nextValue <= newValue)) {
                     timer.cancel();
-                    client.options.method_42473().setValue(newValue);
+                    client.options.getGamma().setValue(newValue);
                     InfoProvider.updateStatusEffect();
                 }
                 else {
-                    client.options.method_42473().setValue(nextValue);
+                    client.options.getGamma().setValue(nextValue);
                 }
                 InfoProvider.showHudMessage();
             }

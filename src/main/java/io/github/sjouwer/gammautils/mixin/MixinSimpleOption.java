@@ -12,15 +12,15 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(SimpleOption.class)
 public class MixinSimpleOption<T> {
     @Shadow @Final
-    private Text key;
+    private Text text;
 
     @Shadow
     T value;
 
     @Inject(method = "setValue", at = @At("HEAD"), cancellable = true)
-    private void setValue(T object, CallbackInfo info) {
-        if (key.getString().equals("Brightness")) {
-            value = object;
+    private void setValue(T value, CallbackInfo info) {
+        if (text.getString().equals("Brightness")) {
+            this.value = value;
             info.cancel();
         }
     }

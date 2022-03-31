@@ -5,6 +5,7 @@ import io.github.sjouwer.gammautils.config.ModConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.GameOptions;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -14,12 +15,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(MinecraftClient.class)
 public class MixinMinecraftClient {
 
-    @Shadow
+    @Shadow @Final
     private GameOptions options;
 
     @Inject(method = "run", at = @At("HEAD"))
     private void run (CallbackInfo info) {
-        options.method_42473().setValue(GammaUtils.getConfig().getCurrentGamma());
+        options.getGamma().setValue(GammaUtils.getConfig().getCurrentGamma());
     }
 
     @Inject(method = "close", at = @At("HEAD"))
@@ -29,7 +30,7 @@ public class MixinMinecraftClient {
             config.setCurrentGamma(config.getDefaultGamma());
         }
         else {
-            config.setCurrentGamma(options.method_42473().getValue());
+            config.setCurrentGamma(options.getGamma().getValue());
         }
         AutoConfig.getConfigHolder(ModConfig.class).save();
     }

@@ -26,7 +26,7 @@ public final class InfoProvider {
         }
 
         if (config.statusEffectEnabled()) {
-            int gamma = (int)Math.round(client.options.method_42473().getValue() * 100);
+            int gamma = (int)Math.round(client.options.getGamma().getValue() * 100);
             if (gamma > 100) {
                 if (!player.hasStatusEffect(GammaUtils.BRIGHT)) {
                     player.removeStatusEffect(GammaUtils.DIM);
@@ -57,7 +57,7 @@ public final class InfoProvider {
             return;
         }
 
-        int gamma = (int)Math.round(client.options.method_42473().getValue() * 100);
+        int gamma = (int)Math.round(client.options.getGamma().getValue() * 100);
         BaseText message = new TranslatableText("text.gamma_utils.message.gamma", gamma);
 
         Formatting format;
