@@ -6,7 +6,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.text.BaseText;
+import net.minecraft.text.MutableText;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 
@@ -58,7 +58,8 @@ public final class InfoProvider {
         }
 
         int gamma = (int)Math.round(client.options.getGamma().getValue() * 100);
-        BaseText message = new TranslatableText("text.gamma_utils.message.gamma", gamma);
+        TranslatableText translatableMessage = new TranslatableText("text.gamma_utils.message.gamma", gamma);
+        MutableText message = MutableText.method_43477(translatableMessage);
 
         Formatting format;
         if (gamma < 0) {
