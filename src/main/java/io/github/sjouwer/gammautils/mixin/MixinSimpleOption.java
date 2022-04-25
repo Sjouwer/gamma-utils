@@ -1,6 +1,7 @@
 package io.github.sjouwer.gammautils.mixin;
 
 import net.minecraft.client.option.SimpleOption;
+import net.minecraft.client.resource.language.I18n;
 import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -19,7 +20,7 @@ public class MixinSimpleOption<T> {
 
     @Inject(method = "setValue", at = @At("HEAD"), cancellable = true)
     private void setValue(T value, CallbackInfo info) {
-        if (text.getString().equals("Brightness")) {
+        if (text.getString().equals(I18n.translate("options.gamma"))) {
             this.value = value;
             info.cancel();
         }
