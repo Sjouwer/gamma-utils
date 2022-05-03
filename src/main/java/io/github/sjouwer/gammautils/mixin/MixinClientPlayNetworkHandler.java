@@ -1,6 +1,6 @@
 package io.github.sjouwer.gammautils.mixin;
 
-import io.github.sjouwer.gammautils.util.InfoProvider;
+import io.github.sjouwer.gammautils.statuseffect.StatusEffectManager;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.network.packet.s2c.play.PlayerAbilitiesS2CPacket;
 import org.spongepowered.asm.mixin.Mixin;
@@ -13,6 +13,6 @@ public class MixinClientPlayNetworkHandler {
 
     @Inject(method = "onPlayerAbilities", at = @At("TAIL"))
     private void onPlayerAbilities(PlayerAbilitiesS2CPacket packet, CallbackInfo info) {
-        InfoProvider.updateStatusEffect();
+        StatusEffectManager.updateGammaStatusEffect();
     }
 }
