@@ -1,5 +1,6 @@
 package io.github.sjouwer.gammautils;
 
+import io.github.sjouwer.gammautils.statuseffect.StatusEffectManager;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.option.KeyBinding;
@@ -18,6 +19,7 @@ public class KeyBindings {
         setKeyBindingGammaToggle();
         setKeyBindingIncreaseGamma();
         setKeyBindingDecreaseGamma();
+        setKeyBindingNightVisionToggle();
     }
 
     private void setKeyBindingGammaToggle() {
@@ -49,6 +51,17 @@ public class KeyBindings {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (decreaseGammaKey.wasPressed()) {
                 gammaOptions.decreaseGamma(0);
+            }
+        });
+    }
+
+    private void setKeyBindingNightVisionToggle() {
+        KeyBinding nightVisionToggleKey = new KeyBinding("key.gamma_utils.night_vision_toggle", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_H, CATEGORY);
+        KeyBindingHelper.registerKeyBinding(nightVisionToggleKey);
+
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            while (nightVisionToggleKey.wasPressed()) {
+                StatusEffectManager.toggleNightVision();
             }
         });
     }
