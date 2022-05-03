@@ -1,6 +1,7 @@
 package io.github.sjouwer.gammautils;
 
 import com.mojang.brigadier.CommandDispatcher;
+import io.github.sjouwer.gammautils.statuseffect.StatusEffectManager;
 import net.fabricmc.fabric.api.client.command.v1.FabricClientCommandSource;
 
 import static net.fabricmc.fabric.api.client.command.v1.ClientCommandManager.*;
@@ -68,6 +69,13 @@ public class Commands {
                                             gammaOptions.decreaseGamma(getInteger(ctx, "value") / 100.0);
                                             return 1;
                                         }
-                                ))));
+                                )))
+
+                .then(literal("nightvision")
+                        .executes(ctx -> {
+                                    StatusEffectManager.toggleNightVision();
+                                    return 1;
+                                }
+                        )));
     }
 }
