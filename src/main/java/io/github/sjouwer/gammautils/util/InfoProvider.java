@@ -3,9 +3,6 @@ package io.github.sjouwer.gammautils.util;
 import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.config.ModConfig;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.network.ClientPlayerEntity;
-import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
@@ -19,40 +16,7 @@ public final class InfoProvider {
     private InfoProvider() {
     }
 
-    public static void updateStatusEffect() {
-        ClientPlayerEntity player = client.player;
-        if (player == null) {
-            return;
-        }
-
-        if (config.statusEffectEnabled()) {
-            int gamma = (int)Math.round(client.options.getGamma().getValue() * 100);
-            if (gamma > 100) {
-                if (!player.hasStatusEffect(GammaUtils.BRIGHT)) {
-                    player.removeStatusEffect(GammaUtils.DIM);
-                    addPermEffect(player, GammaUtils.BRIGHT);
-                }
-                return;
-            }
-            else if (gamma < 0) {
-                if (!player.hasStatusEffect(GammaUtils.DIM)) {
-                    player.removeStatusEffect(GammaUtils.BRIGHT);
-                    addPermEffect(player, GammaUtils.DIM);
-                }
-                return;
-            }
-        }
-        player.removeStatusEffect(GammaUtils.DIM);
-        player.removeStatusEffect(GammaUtils.BRIGHT);
-    }
-
-    private static void addPermEffect(ClientPlayerEntity player, StatusEffect effect) {
-        StatusEffectInstance brightStatus = new StatusEffectInstance(effect, 999999);
-        brightStatus.setPermanent(true);
-        player.addStatusEffect(brightStatus);
-    }
-
-    public static void showHudMessage() {
+    public static void showGammaHudMessage() {
         if (!config.gammaMessageEnabled()) {
             return;
         }
@@ -72,6 +36,24 @@ public final class InfoProvider {
         }
 
         message.setStyle(EMPTY.withColor(format));
+        client.inGameHud.setOverlayMessage(message, false);
+    }
+
+    public static void showNightVisionHudMessage(boolean enabled) {
+        if (!config.gammaMessageEnabled()) {
+            return;
+        }
+
+        MutableText message;
+        if (enabled) {
+            message = Text.translatable("text.gamma_utils.message.nightvision.enabled");
+            message.setStyle(EMPTY.withColor(Formatting.DARK_GREEN));
+        }
+        else {
+            message = Text.translatable("text.gamma_utils.message.nightvision.disabled");
+            message.setStyle(EMPTY.withColor(Formatting.DARK_RED));
+        }
+
         client.inGameHud.setOverlayMessage(message, false);
     }
 }

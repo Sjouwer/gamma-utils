@@ -2,7 +2,6 @@ package io.github.sjouwer.gammautils;
 
 import io.github.sjouwer.gammautils.config.ModConfig;
 import io.github.sjouwer.gammautils.statuseffect.*;
-import io.github.sjouwer.gammautils.util.InfoProvider;
 import me.shedaniel.autoconfig.ConfigHolder;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
@@ -27,7 +26,7 @@ public class GammaUtils implements ClientModInitializer {
     public void onInitializeClient() {
         configHolder = AutoConfig.register(ModConfig.class, JanksonConfigSerializer::new);
         configHolder.registerSaveListener((manager, data) -> {
-            InfoProvider.updateStatusEffect();
+            StatusEffectManager.updateGammaStatusEffect();
             return ActionResult.SUCCESS;
         });
 

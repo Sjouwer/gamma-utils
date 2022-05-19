@@ -3,6 +3,7 @@
     "key.gamma_utils.gamma_toggle": "Gamma Toggle",
     "key.gamma_utils.increase_gamma": "Increase Gamma",
     "key.gamma_utils.decrease_gamma": "Decrease Gamma",
+    "key.gamma_utils.night_vision_toggle": "Night Vision Toggle",
 
     "text.autoconfig.gamma_utils.title": "Gamma Utils Config",
 
@@ -45,6 +46,8 @@
     "text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose.@Tooltip": "Reset the gamma value to default when Minecraft closes",
 
     "text.gamma_utils.message.gamma": "Gamma: %d%%",
+    "text.gamma_utils.message.nightvision.enabled": "Night Vision: Enabled",
+    "text.gamma_utils.message.nightvision.disabled": "Night Vision: Disabled",
 
     "effect.gammautils.bright": "High Gamma",
     "effect.gammautils.dim": "Low Gamma"
