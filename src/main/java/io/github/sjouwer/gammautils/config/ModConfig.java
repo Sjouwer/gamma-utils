@@ -27,6 +27,8 @@ public class ModConfig implements ConfigData {
 
     @Excluded
     private int currentGamma = 100;
+    @Excluded
+    private boolean nightVisionEnabled = false;
     @Tooltip
     private int defaultGamma = 100;
     @Tooltip
@@ -47,6 +49,14 @@ public class ModConfig implements ConfigData {
 
     public void setCurrentGamma(double gamma) {
         currentGamma = (int)Math.round(gamma * 100) ;
+    }
+
+    public boolean isNightVisionEnabled() {
+        return nightVisionEnabled;
+    }
+
+    public void setNightVision(boolean status) {
+        nightVisionEnabled = status;
     }
 
     public double getDefaultGamma() {

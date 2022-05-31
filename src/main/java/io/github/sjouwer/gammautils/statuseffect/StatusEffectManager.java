@@ -23,13 +23,42 @@ public class StatusEffectManager {
         }
 
         if (player.hasStatusEffect(StatusEffects.NIGHT_VISION)) {
-            player.removeStatusEffect(StatusEffects.NIGHT_VISION);
+            disableNightVision();
             InfoProvider.showNightVisionHudMessage(false);
         }
         else {
-            addPermEffect(player, StatusEffects.NIGHT_VISION);
+            enableNightVision();
             InfoProvider.showNightVisionHudMessage(true);
         }
+    }
+
+    public static void updateNightVision() {
+        if (config.isNightVisionEnabled()) {
+            enableNightVision();
+        }
+        else {
+            disableNightVision();
+        }
+    }
+
+    private static void enableNightVision() {
+        ClientPlayerEntity player = client.player;
+        if (player == null) {
+            return;
+        }
+
+        addPermEffect(player, StatusEffects.NIGHT_VISION);
+        config.setNightVision(true);
+    }
+
+    private static void disableNightVision() {
+        ClientPlayerEntity player = client.player;
+        if (player == null) {
+            return;
+        }
+
+        player.removeStatusEffect(StatusEffects.NIGHT_VISION);
+        config.setNightVision(false);
     }
 
     public static void updateGammaStatusEffect() {

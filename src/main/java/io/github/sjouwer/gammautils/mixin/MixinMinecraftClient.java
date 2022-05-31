@@ -28,6 +28,7 @@ public class MixinMinecraftClient {
         ModConfig config = GammaUtils.getConfig();
         if (config.resetOnCloseEnabled()) {
             config.setCurrentGamma(config.getDefaultGamma());
+            config.setNightVision(false);
         }
         else {
             config.setCurrentGamma(options.getGamma().getValue());
