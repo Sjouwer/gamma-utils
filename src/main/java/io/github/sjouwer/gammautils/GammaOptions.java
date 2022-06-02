@@ -9,11 +9,14 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class GammaOptions {
-    private final MinecraftClient client = MinecraftClient.getInstance();
-    private final ModConfig config = GammaUtils.getConfig();
-    private Timer timer = null;
+    private static final MinecraftClient client = MinecraftClient.getInstance();
+    private static final ModConfig config = GammaUtils.getConfig();
+    private static Timer timer = null;
 
-    public void toggleGamma() {
+    private GammaOptions() {
+    }
+
+    public static void toggleGamma() {
         double value = client.options.gamma;
         if (value == config.getDefaultGamma()) {
             value = config.getToggledGamma();
@@ -24,7 +27,7 @@ public class GammaOptions {
         setGamma(value, true);
     }
 
-    public void increaseGamma(double value) {
+    public static void increaseGamma(double value) {
         double newValue = client.options.gamma;
         if (value == 0) {
             newValue += config.getGammaStep();
@@ -35,7 +38,7 @@ public class GammaOptions {
         setGamma(newValue, false);
     }
 
-    public void decreaseGamma(double value) {
+    public static void decreaseGamma(double value) {
         double newValue = client.options.gamma;
         if (value == 0) {
             newValue -= config.getGammaStep();
@@ -46,15 +49,15 @@ public class GammaOptions {
         setGamma(newValue, false);
     }
 
-    public void minGamma() {
+    public static void minGamma() {
         setGamma(config.getMinGamma(), true);
     }
 
-    public void maxGamma() {
+    public static void maxGamma() {
         setGamma(config.getMaxGamma(), true);
     }
 
-    public void setGamma(double newValue, boolean smoothTransition) {
+    public static void setGamma(double newValue, boolean smoothTransition) {
         if (timer != null) {
             timer.cancel();
         }
@@ -81,7 +84,7 @@ public class GammaOptions {
         }
     }
 
-    private void startTimer(double newValue, double valueChangePerTick) {
+    private static void startTimer(double newValue, double valueChangePerTick) {
         timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
