@@ -14,5 +14,6 @@ public class MixinClientPlayNetworkHandler {
     @Inject(method = "onPlayerAbilities", at = @At("TAIL"))
     private void onPlayerAbilities(PlayerAbilitiesS2CPacket packet, CallbackInfo info) {
         StatusEffectManager.updateGammaStatusEffect();
+        StatusEffectManager.updateNightVision();
     }
 }
