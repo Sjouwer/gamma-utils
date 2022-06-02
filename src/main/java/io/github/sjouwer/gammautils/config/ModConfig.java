@@ -2,9 +2,11 @@ package io.github.sjouwer.gammautils.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.Excluded;
 import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.Tooltip;
 import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.CollapsibleObject;
 
+@SuppressWarnings("FieldMayBeFinal")
 @Config(name = "gamma_utils")
 public class ModConfig implements ConfigData {
     static class AdvancedOptionsObj {
@@ -24,6 +26,8 @@ public class ModConfig implements ConfigData {
         private boolean resetOnClose = false;
     }
 
+    @Excluded
+    private boolean nightVisionEnabled = false;
     @Tooltip
     private int defaultGamma = 100;
     @Tooltip
@@ -37,6 +41,14 @@ public class ModConfig implements ConfigData {
 
     @CollapsibleObject
     private AdvancedOptionsObj advancedOptions = new AdvancedOptionsObj();
+
+    public boolean isNightVisionEnabled() {
+        return nightVisionEnabled;
+    }
+
+    public void setNightVision(boolean status) {
+        nightVisionEnabled = status;
+    }
 
     public double getDefaultGamma() {
         return defaultGamma / 100.0;
