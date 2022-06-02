@@ -8,54 +8,52 @@ import net.minecraft.client.util.InputUtil;
 import org.lwjgl.glfw.GLFW;
 
 public class KeyBindings {
-    private final GammaOptions gammaOptions;
     private static final String CATEGORY = "key.categories.gamma_utils";
 
-    public KeyBindings(GammaOptions gammaOptions) {
-        this.gammaOptions = gammaOptions;
+    private KeyBindings() {
     }
 
-    public void setKeyBindings() {
-        setKeyBindingGammaToggle();
-        setKeyBindingIncreaseGamma();
-        setKeyBindingDecreaseGamma();
-        setKeyBindingNightVisionToggle();
+    public static void registerBindings() {
+        registerGammaToggleKey();
+        registerIncreaseGammaKey();
+        registerDecreaseGammaKey();
+        registerNightVisionToggleKey();
     }
 
-    private void setKeyBindingGammaToggle() {
+    private static void registerGammaToggleKey() {
         KeyBinding gammaToggleKey = new KeyBinding("key.gamma_utils.gamma_toggle", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_G, CATEGORY);
         KeyBindingHelper.registerKeyBinding(gammaToggleKey);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (gammaToggleKey.wasPressed()) {
-                gammaOptions.toggleGamma();
+                GammaOptions.toggleGamma();
             }
         });
     }
 
-    private void setKeyBindingIncreaseGamma() {
+    private static void registerIncreaseGammaKey() {
         KeyBinding increaseGammaKey = new KeyBinding("key.gamma_utils.increase_gamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UP, CATEGORY);
         KeyBindingHelper.registerKeyBinding(increaseGammaKey);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (increaseGammaKey.wasPressed()) {
-                gammaOptions.increaseGamma(0);
+                GammaOptions.increaseGamma(0);
             }
         });
     }
 
-    private void setKeyBindingDecreaseGamma() {
+    private static void registerDecreaseGammaKey() {
         KeyBinding decreaseGammaKey = new KeyBinding("key.gamma_utils.decrease_gamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_DOWN, CATEGORY);
         KeyBindingHelper.registerKeyBinding(decreaseGammaKey);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (decreaseGammaKey.wasPressed()) {
-                gammaOptions.decreaseGamma(0);
+                GammaOptions.decreaseGamma(0);
             }
         });
     }
 
-    private void setKeyBindingNightVisionToggle() {
+    private static void registerNightVisionToggleKey() {
         KeyBinding nightVisionToggleKey = new KeyBinding("key.gamma_utils.night_vision_toggle", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_H, CATEGORY);
         KeyBindingHelper.registerKeyBinding(nightVisionToggleKey);
 
