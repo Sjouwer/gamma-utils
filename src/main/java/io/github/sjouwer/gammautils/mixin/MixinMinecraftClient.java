@@ -21,6 +21,7 @@ public class MixinMinecraftClient {
         ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
         if (config.resetOnCloseEnabled()) {
             options.gamma = config.getDefaultGamma();
+            config.setNightVision(false);
         }
         options.write();
         AutoConfig.getConfigHolder(ModConfig.class).save();
