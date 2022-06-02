@@ -11,14 +11,14 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class GammaUtils implements ClientModInitializer {
     public static final StatusEffect BRIGHT = new BrightStatusEffect();
     public static final StatusEffect DIM = new DimStatusEffect();
 
-    public static final Logger LOGGER = LoggerFactory.getLogger("Gamma Utils");
+    public static final Logger LOGGER = LogManager.getLogger("Gamma Utils");
     private static ConfigHolder<ModConfig> configHolder;
 
     public static ModConfig getConfig() {
