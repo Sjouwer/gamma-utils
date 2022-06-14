@@ -1,5 +1,6 @@
 package io.github.sjouwer.gammautils.mixin;
 
+import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.config.ModConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.MinecraftClient;
@@ -18,9 +19,9 @@ public class MixinMinecraftClient {
 
     @Inject(method = "close", at = @At("HEAD"))
     private void close(CallbackInfo info) {
-        ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
+        ModConfig config = GammaUtils.getConfig();
         if (config.resetOnCloseEnabled()) {
-            options.gamma = config.getDefaultGamma();
+            options.getGamma().setValue(config.getDefaultGamma());
             config.setNightVision(false);
         }
         options.write();

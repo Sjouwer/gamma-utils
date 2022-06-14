@@ -6,7 +6,6 @@ import me.shedaniel.autoconfig.ConfigHolder;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.command.v1.ClientCommandManager;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
@@ -34,7 +33,7 @@ public class GammaUtils implements ClientModInitializer {
         });
 
         KeyBindings.registerBindings();
-        Commands.registerCommands(ClientCommandManager.DISPATCHER);
+        Commands.registerCommands();
 
         Registry.register(Registry.STATUS_EFFECT, new Identifier("gammautils", "bright"), BRIGHT);
         Registry.register(Registry.STATUS_EFFECT, new Identifier("gammautils", "dim"), DIM);

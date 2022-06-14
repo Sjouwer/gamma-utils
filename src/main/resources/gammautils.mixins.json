@@ -6,7 +6,8 @@
   "client": [
     "MixinMinecraftClient",
     "MixinStatusEffectUtil",
-    "MixinClientPlayNetworkHandler"
+    "MixinClientPlayNetworkHandler",
+    "MixinSimpleOption"
   ],
   "injectors": {
     "defaultRequire": 1

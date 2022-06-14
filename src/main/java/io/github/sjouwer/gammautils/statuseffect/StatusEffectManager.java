@@ -36,9 +36,6 @@ public class StatusEffectManager {
         if (config.isNightVisionEnabled()) {
             enableNightVision();
         }
-        else {
-            disableNightVision();
-        }
     }
 
     private static void enableNightVision() {
@@ -68,7 +65,7 @@ public class StatusEffectManager {
         }
 
         if (config.statusEffectEnabled()) {
-            int gamma = (int)Math.round(client.options.gamma * 100);
+            int gamma = (int)Math.round(client.options.getGamma().getValue() * 100);
             if (gamma > 100) {
                 if (!player.hasStatusEffect(GammaUtils.BRIGHT)) {
                     player.removeStatusEffect(GammaUtils.DIM);

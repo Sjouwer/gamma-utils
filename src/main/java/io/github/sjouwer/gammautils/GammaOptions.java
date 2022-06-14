@@ -17,7 +17,7 @@ public class GammaOptions {
     }
 
     public static void toggleGamma() {
-        double value = client.options.gamma;
+        double value = client.options.getGamma().getValue();
         if (value == config.getDefaultGamma()) {
             value = config.getToggledGamma();
         }
@@ -28,7 +28,7 @@ public class GammaOptions {
     }
 
     public static void increaseGamma(double value) {
-        double newValue = client.options.gamma;
+        double newValue = client.options.getGamma().getValue();
         if (value == 0) {
             newValue += config.getGammaStep();
         }
@@ -39,7 +39,7 @@ public class GammaOptions {
     }
 
     public static void decreaseGamma(double value) {
-        double newValue = client.options.gamma;
+        double newValue = client.options.getGamma().getValue();
         if (value == 0) {
             newValue -= config.getGammaStep();
         }
@@ -68,13 +68,13 @@ public class GammaOptions {
 
         if (smoothTransition && config.smoothTransitionEnabled()) {
             double valueChangePerTick = config.getTransitionSpeed() / 100;
-            if (newValue < client.options.gamma) {
+            if (newValue < client.options.getGamma().getValue()) {
                 valueChangePerTick *= -1;
             }
             startTimer(newValue, valueChangePerTick);
         }
         else {
-            client.options.gamma = newValue;
+            client.options.getGamma().setValue(newValue);
             StatusEffectManager.updateGammaStatusEffect();
             InfoProvider.showGammaHudMessage();
         }
@@ -89,15 +89,15 @@ public class GammaOptions {
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                double nextValue = client.options.gamma + valueChangePerTick;
+                double nextValue = client.options.getGamma().getValue() + valueChangePerTick;
                 if ((valueChangePerTick > 0 && nextValue >= newValue) ||
                         (valueChangePerTick < 0 && nextValue <= newValue)) {
                     timer.cancel();
-                    client.options.gamma = newValue;
+                    client.options.getGamma().setValue(newValue);
                     StatusEffectManager.updateGammaStatusEffect();
                 }
                 else {
-                    client.options.gamma = nextValue;
+                    client.options.getGamma().setValue(nextValue);
                 }
                 InfoProvider.showGammaHudMessage();
             }

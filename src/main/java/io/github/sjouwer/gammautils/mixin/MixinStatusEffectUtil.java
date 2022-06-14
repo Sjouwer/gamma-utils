@@ -15,7 +15,7 @@ public class MixinStatusEffectUtil {
     @Inject(method = "durationToString", at = @At("HEAD"), cancellable = true)
     private static void durationToString(StatusEffectInstance effect, float multiplier, CallbackInfoReturnable<String> info) {
         if (effect.getEffectType().equals(GammaUtils.BRIGHT) || effect.getEffectType().equals(GammaUtils.DIM)) {
-            int gamma = (int)Math.round(MinecraftClient.getInstance().options.gamma * 100);
+            int gamma = (int)Math.round(MinecraftClient.getInstance().options.getGamma().getValue() * 100);
             info.setReturnValue(gamma + "%");
         }
     }

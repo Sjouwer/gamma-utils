@@ -3,8 +3,8 @@ package io.github.sjouwer.gammautils.util;
 import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.config.ModConfig;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.text.BaseText;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.MutableText;
+import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
 import static net.minecraft.text.Style.EMPTY;
@@ -21,8 +21,8 @@ public final class InfoProvider {
             return;
         }
 
-        int gamma = (int)Math.round(client.options.gamma * 100);
-        BaseText message = new TranslatableText("text.gamma_utils.message.gamma", gamma);
+        int gamma = (int)Math.round(client.options.getGamma().getValue() * 100);
+        MutableText message = Text.translatable("text.gamma_utils.message.gamma", gamma);
 
         Formatting format;
         if (gamma < 0) {
@@ -44,13 +44,13 @@ public final class InfoProvider {
             return;
         }
 
-        BaseText message;
+        MutableText message;
         if (enabled) {
-            message = new TranslatableText("text.gamma_utils.message.nightvision.enabled");
+            message = Text.translatable("text.gamma_utils.message.nightvision.enabled");
             message.setStyle(EMPTY.withColor(Formatting.DARK_GREEN));
         }
         else {
-            message = new TranslatableText("text.gamma_utils.message.nightvision.disabled");
+            message = Text.translatable("text.gamma_utils.message.nightvision.disabled");
             message.setStyle(EMPTY.withColor(Formatting.DARK_RED));
         }
 
