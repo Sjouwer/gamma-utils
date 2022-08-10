@@ -3,6 +3,8 @@
     "key.gamma_utils.gamma_toggle": "Gamma Toggle",
     "key.gamma_utils.increase_gamma": "Increase Gamma",
     "key.gamma_utils.decrease_gamma": "Decrease Gamma",
+    "key.gamma_utils.max_gamma": "Max Gamma",
+    "key.gamma_utils.min_gamma": "Min Gamma",
     "key.gamma_utils.night_vision_toggle": "Night Vision Toggle",
 
     "text.autoconfig.gamma_utils.title": "Gamma Utils Config",

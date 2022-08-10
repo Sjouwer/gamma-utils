@@ -17,6 +17,8 @@ public class KeyBindings {
         registerGammaToggleKey();
         registerIncreaseGammaKey();
         registerDecreaseGammaKey();
+        registerMaxGammaKey();
+        registerMinGammaKey();
         registerNightVisionToggleKey();
     }
 
@@ -49,6 +51,28 @@ public class KeyBindings {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (decreaseGammaKey.wasPressed()) {
                 GammaOptions.decreaseGamma(0);
+            }
+        });
+    }
+
+    private static void registerMaxGammaKey() {
+        KeyBinding maxGammaKey = new KeyBinding("key.gamma_utils.max_gamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, CATEGORY);
+        KeyBindingHelper.registerKeyBinding(maxGammaKey);
+
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            while (maxGammaKey.wasPressed()) {
+                GammaOptions.maxGamma();
+            }
+        });
+    }
+
+    private static void registerMinGammaKey() {
+        KeyBinding minGammaKey = new KeyBinding("key.gamma_utils.min_gamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, CATEGORY);
+        KeyBindingHelper.registerKeyBinding(minGammaKey);
+
+        ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            while (minGammaKey.wasPressed()) {
+                GammaOptions.minGamma();
             }
         });
     }
