@@ -51,9 +51,9 @@
   },
 
   "depends": {
-    "minecraft": "1.19.x",
+    "minecraft": "~1.19.3-beta",
     "fabricloader": ">=0.14.0",
-    "fabric": ">=0.54.0",
-    "cloth-config": ">=7.0.0"
+    "fabric": ">=0.67.1",
+    "cloth-config": ">=8.0.0"
   }
 }

@@ -4,6 +4,7 @@ import io.github.sjouwer.gammautils.GammaUtils;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffectUtil;
+import net.minecraft.entity.effect.StatusEffects;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -17,6 +18,10 @@ public class MixinStatusEffectUtil {
         if (effect.getEffectType().equals(GammaUtils.BRIGHT) || effect.getEffectType().equals(GammaUtils.DIM)) {
             int gamma = (int)Math.round(MinecraftClient.getInstance().options.getGamma().getValue() * 100);
             info.setReturnValue(gamma + "%");
+        }
+
+        if (effect.getEffectType().equals(StatusEffects.NIGHT_VISION) && GammaUtils.getConfig().isNightVisionEnabled()) {
+            info.setReturnValue("⁎⁎:⁎⁎");
         }
     }
 }

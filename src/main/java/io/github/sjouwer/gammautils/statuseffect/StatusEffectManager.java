@@ -87,7 +87,6 @@ public class StatusEffectManager {
 
     private static void addPermEffect(ClientPlayerEntity player, StatusEffect effect) {
         StatusEffectInstance statusEffect = new StatusEffectInstance(effect, 999999);
-        statusEffect.setPermanent(true);
         player.addStatusEffect(statusEffect);
     }
 }
