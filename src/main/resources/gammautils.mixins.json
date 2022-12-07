@@ -7,7 +7,8 @@
     "MixinMinecraftClient",
     "MixinStatusEffectUtil",
     "MixinClientPlayNetworkHandler",
-    "MixinSimpleOption"
+    "MixinSimpleOption",
+    "MixinLightmapTextureManager"
   ],
   "injectors": {
     "defaultRequire": 1
