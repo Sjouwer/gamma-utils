@@ -62,11 +62,11 @@ public class GammaOptions {
             timer.cancel();
         }
 
-        if (config.getMaxGamma() > config.getMinGamma() && config.limitCheckEnabled()) {
+        if (config.getMaxGamma() > config.getMinGamma() && config.isLimitCheckEnabled()) {
             newValue = Math.max(config.getMinGamma(), Math.min(newValue, config.getMaxGamma()));
         }
 
-        if (smoothTransition && config.smoothTransitionEnabled()) {
+        if (smoothTransition && config.isSmoothTransitionEnabled()) {
             double valueChangePerTick = config.getTransitionSpeed() / 100;
             if (newValue < client.options.getGamma().getValue()) {
                 valueChangePerTick *= -1;
@@ -79,7 +79,7 @@ public class GammaOptions {
             InfoProvider.showGammaHudMessage();
         }
 
-        if (config.updateToggleEnabled() && newValue != config.getDefaultGamma() && newValue != config.getToggledGamma()) {
+        if (config.isUpdateToggleEnabled() && newValue != config.getDefaultGamma() && newValue != config.getToggledGamma()) {
             config.setToggledGamma(newValue);
         }
     }

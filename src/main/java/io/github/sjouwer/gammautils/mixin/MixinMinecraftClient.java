@@ -20,7 +20,7 @@ public class MixinMinecraftClient {
     @Inject(method = "close", at = @At("HEAD"))
     private void close(CallbackInfo info) {
         ModConfig config = GammaUtils.getConfig();
-        if (config.resetOnCloseEnabled()) {
+        if (config.isResetOnCloseEnabled()) {
             options.getGamma().setValue(config.getDefaultGamma());
             config.setNightVision(false);
         }

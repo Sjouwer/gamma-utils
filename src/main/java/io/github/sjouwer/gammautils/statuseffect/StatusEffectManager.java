@@ -64,7 +64,7 @@ public class StatusEffectManager {
             return;
         }
 
-        if (config.statusEffectEnabled()) {
+        if (config.isStatusEffectEnabled()) {
             int gamma = (int)Math.round(client.options.getGamma().getValue() * 100);
             if (gamma > 100) {
                 if (!player.hasStatusEffect(GammaUtils.BRIGHT)) {

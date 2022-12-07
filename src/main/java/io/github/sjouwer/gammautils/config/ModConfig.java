@@ -66,11 +66,11 @@ public class ModConfig implements ConfigData {
         return advancedOptions.gammaStep / 100.0;
     }
 
-    public boolean updateToggleEnabled() {
+    public boolean isUpdateToggleEnabled() {
         return updateToggle;
     }
 
-    public boolean smoothTransitionEnabled() {
+    public boolean isSmoothTransitionEnabled() {
         return smoothTransition;
     }
 
@@ -78,7 +78,7 @@ public class ModConfig implements ConfigData {
         return advancedOptions.transitionSpeed / 100.0;
     }
 
-    public boolean limitCheckEnabled() {
+    public boolean isLimitCheckEnabled() {
         return advancedOptions.limitCheck;
     }
 
@@ -90,15 +90,15 @@ public class ModConfig implements ConfigData {
         return advancedOptions.maxGamma / 100.0;
     }
 
-    public boolean gammaMessageEnabled() {
+    public boolean isGammaMessageEnabled() {
         return advancedOptions.showMessage;
     }
 
-    public boolean statusEffectEnabled() {
+    public boolean isStatusEffectEnabled() {
         return showStatusEffect;
     }
 
-    public boolean resetOnCloseEnabled() {
+    public boolean isResetOnCloseEnabled() {
         return advancedOptions.resetOnClose;
     }
 }
