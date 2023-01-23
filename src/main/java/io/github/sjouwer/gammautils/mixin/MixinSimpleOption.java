@@ -1,37 +1,29 @@
 package io.github.sjouwer.gammautils.mixin;
 
-import com.mojang.serialization.Codec;
+import io.github.sjouwer.gammautils.util.ISimpleOption;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.SimpleOption;
-import net.minecraft.client.resource.language.I18n;
-import net.minecraft.text.Text;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+import java.util.Objects;
+import java.util.function.Consumer;
 
 @Mixin(SimpleOption.class)
-public class MixinSimpleOption<T> {
-    @Shadow @Final
-    Text text;
+public class MixinSimpleOption implements ISimpleOption {
+    @Shadow Object value;
+    @Shadow @Final private Consumer<Object> changeCallback;
 
-    @Shadow
-    T value;
-
-    @Inject(method = "getCodec", at = @At("HEAD"), cancellable = true)
-    private void returnFakeCodec(CallbackInfoReturnable<Codec<Double>> info) {
-        if (text.getString().equals(I18n.translate("options.gamma"))) {
-            info.setReturnValue(Codec.DOUBLE);
-        }
-    }
-
-    @Inject(method = "setValue", at = @At("HEAD"), cancellable = true)
-    private void setRealValue(T value, CallbackInfo info) {
-        if (text.getString().equals(I18n.translate("options.gamma"))) {
+    @Override
+    public void set(Object value) {
+        if (!MinecraftClient.getInstance().isRunning()) {
             this.value = value;
-            info.cancel();
+        } else {
+            if (!Objects.equals(this.value, value)) {
+                this.value = value;
+                this.changeCallback.accept(this.value);
+            }
         }
     }
 }

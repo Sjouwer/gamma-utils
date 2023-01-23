@@ -2,6 +2,7 @@ package io.github.sjouwer.gammautils;
 
 import io.github.sjouwer.gammautils.config.ModConfig;
 import io.github.sjouwer.gammautils.statuseffect.StatusEffectManager;
+import io.github.sjouwer.gammautils.util.ISimpleOption;
 import io.github.sjouwer.gammautils.util.InfoProvider;
 import net.minecraft.client.MinecraftClient;
 
@@ -74,7 +75,7 @@ public class GammaOptions {
             startTimer(newValue, valueChangePerTick);
         }
         else {
-            client.options.getGamma().setValue(newValue);
+            ISimpleOption.setGamma(newValue);
             StatusEffectManager.updateGammaStatusEffect();
             InfoProvider.showGammaHudMessage();
         }
@@ -93,11 +94,11 @@ public class GammaOptions {
                 if ((valueChangePerTick > 0 && nextValue >= newValue) ||
                         (valueChangePerTick < 0 && nextValue <= newValue)) {
                     timer.cancel();
-                    client.options.getGamma().setValue(newValue);
+                    ISimpleOption.setGamma(newValue);
                     StatusEffectManager.updateGammaStatusEffect();
                 }
                 else {
-                    client.options.getGamma().setValue(nextValue);
+                    ISimpleOption.setGamma(nextValue);
                 }
                 InfoProvider.showGammaHudMessage();
             }

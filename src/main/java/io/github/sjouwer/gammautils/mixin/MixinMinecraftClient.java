@@ -2,6 +2,7 @@ package io.github.sjouwer.gammautils.mixin;
 
 import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.config.ModConfig;
+import io.github.sjouwer.gammautils.util.ISimpleOption;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.GameOptions;
@@ -21,7 +22,7 @@ public class MixinMinecraftClient {
     private void close(CallbackInfo info) {
         ModConfig config = GammaUtils.getConfig();
         if (config.isResetOnCloseEnabled()) {
-            options.getGamma().setValue(config.getDefaultGamma());
+            ISimpleOption.setGamma(config.getDefaultGamma());
             config.setNightVision(false);
         }
         options.write();
