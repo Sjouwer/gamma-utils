@@ -11,6 +11,7 @@
   "contributors": [
     "pt-br: Percario",
     "zh-cn: buiawpkgew1",
+    "zh-cn: GodGun968",
     "ko-kr: gyular"
   ],
 
@@ -54,6 +55,6 @@
     "minecraft": "~1.19.3",
     "fabricloader": ">=0.14.0",
     "fabric": ">=0.67.1",
-    "cloth-config": ">=8.0.0"
+    "cloth-config": ">=9.0.0"
   }
 }
