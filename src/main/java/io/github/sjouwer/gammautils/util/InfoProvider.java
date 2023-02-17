@@ -1,13 +1,13 @@
 package io.github.sjouwer.gammautils.util;
 
+import io.github.sjouwer.gammautils.GammaOptions;
 import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.config.ModConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.MutableText;
+import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
-
-import static net.minecraft.text.Style.EMPTY;
 
 public final class InfoProvider {
     private static final MinecraftClient client = MinecraftClient.getInstance();
@@ -21,7 +21,7 @@ public final class InfoProvider {
             return;
         }
 
-        int gamma = (int)Math.round(client.options.getGamma().getValue() * 100);
+        int gamma = GammaOptions.getRoundedGamma();
         MutableText message = Text.translatable("text.gamma_utils.message.gamma", gamma);
 
         Formatting format;
@@ -35,7 +35,7 @@ public final class InfoProvider {
             format = Formatting.DARK_GREEN;
         }
 
-        message.setStyle(EMPTY.withColor(format));
+        message.setStyle(Style.EMPTY.withColor(format));
         client.inGameHud.setOverlayMessage(message, false);
     }
 
@@ -47,11 +47,11 @@ public final class InfoProvider {
         MutableText message;
         if (enabled) {
             message = Text.translatable("text.gamma_utils.message.nightvision.enabled");
-            message.setStyle(EMPTY.withColor(Formatting.DARK_GREEN));
+            message.setStyle(Style.EMPTY.withColor(Formatting.DARK_GREEN));
         }
         else {
             message = Text.translatable("text.gamma_utils.message.nightvision.disabled");
-            message.setStyle(EMPTY.withColor(Formatting.DARK_RED));
+            message.setStyle(Style.EMPTY.withColor(Formatting.DARK_RED));
         }
 
         client.inGameHud.setOverlayMessage(message, false);

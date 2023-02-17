@@ -14,13 +14,11 @@ public class MixinClientPlayNetworkHandler {
 
     @Inject(method = "onPlayerAbilities", at = @At("TAIL"))
     private void onPlayerAbilities(PlayerAbilitiesS2CPacket packet, CallbackInfo info) {
-        StatusEffectManager.updateGammaStatusEffect();
-        StatusEffectManager.updateNightVision();
+        StatusEffectManager.updateAllEffects();
     }
 
     @Inject(method = "onPlayerRespawn", at = @At("TAIL"))
     private void onPlayerRespawn(PlayerRespawnS2CPacket packet, CallbackInfo info) {
-        StatusEffectManager.updateGammaStatusEffect();
-        StatusEffectManager.updateNightVision();
+        StatusEffectManager.updateAllEffects();
     }
 }

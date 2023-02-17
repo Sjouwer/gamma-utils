@@ -14,7 +14,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(SimpleOption.class)
 public class MixinSimpleOption<T> {
-    @Shadow @Final
+
+    @Shadow
+    @Final
     Text text;
 
     @Shadow

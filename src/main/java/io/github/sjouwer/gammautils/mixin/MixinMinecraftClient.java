@@ -2,9 +2,9 @@ package io.github.sjouwer.gammautils.mixin;
 
 import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.config.ModConfig;
-import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.GameOptions;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -15,16 +15,17 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class MixinMinecraftClient {
 
     @Shadow
-    private GameOptions options;
+    @Final
+    public GameOptions options;
 
     @Inject(method = "close", at = @At("HEAD"))
-    private void close(CallbackInfo info) {
+    private void saveOnClose(CallbackInfo info) {
         ModConfig config = GammaUtils.getConfig();
         if (config.isResetOnCloseEnabled()) {
             options.getGamma().setValue(config.getDefaultGamma());
             config.setNightVision(false);
         }
         options.write();
-        AutoConfig.getConfigHolder(ModConfig.class).save();
+        GammaUtils.saveConfig();
     }
 }

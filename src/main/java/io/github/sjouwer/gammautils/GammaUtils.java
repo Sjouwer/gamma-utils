@@ -25,6 +25,10 @@ public class GammaUtils implements ClientModInitializer {
         return configHolder.getConfig();
     }
 
+    public static void saveConfig() {
+        configHolder.save();
+    }
+
     @Override
     public void onInitializeClient() {
         configHolder = AutoConfig.register(ModConfig.class, JanksonConfigSerializer::new);

@@ -1,5 +1,6 @@
 package io.github.sjouwer.gammautils.statuseffect;
 
+import io.github.sjouwer.gammautils.GammaOptions;
 import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.config.ModConfig;
 import io.github.sjouwer.gammautils.util.InfoProvider;
@@ -16,6 +17,11 @@ public class StatusEffectManager {
     private StatusEffectManager() {
     }
 
+    public static void updateAllEffects() {
+        updateGammaStatusEffect();
+        updateNightVision();
+    }
+
     public static void toggleNightVision() {
         ClientPlayerEntity player = client.player;
         if (player == null) {
@@ -23,37 +29,31 @@ public class StatusEffectManager {
         }
 
         if (player.hasStatusEffect(StatusEffects.NIGHT_VISION)) {
-            disableNightVision();
+            disableNightVision(player);
             InfoProvider.showNightVisionHudMessage(false);
         }
         else {
-            enableNightVision();
+            enableNightVision(player);
             InfoProvider.showNightVisionHudMessage(true);
         }
     }
 
     public static void updateNightVision() {
-        if (config.isNightVisionEnabled()) {
-            enableNightVision();
-        }
-    }
-
-    private static void enableNightVision() {
-        ClientPlayerEntity player = client.player;
-        if (player == null) {
+        if (client.player == null) {
             return;
         }
 
+        if (config.isNightVisionEnabled()) {
+            enableNightVision(client.player);
+        }
+    }
+
+    private static void enableNightVision(ClientPlayerEntity player) {
         addPermEffect(player, StatusEffects.NIGHT_VISION);
         config.setNightVision(true);
     }
 
-    private static void disableNightVision() {
-        ClientPlayerEntity player = client.player;
-        if (player == null) {
-            return;
-        }
-
+    private static void disableNightVision(ClientPlayerEntity player) {
         player.removeStatusEffect(StatusEffects.NIGHT_VISION);
         config.setNightVision(false);
     }
@@ -65,7 +65,7 @@ public class StatusEffectManager {
         }
 
         if (config.isStatusEffectEnabled()) {
-            int gamma = (int)Math.round(client.options.getGamma().getValue() * 100);
+            int gamma = GammaOptions.getRoundedGamma();
             if (gamma > 100) {
                 if (!player.hasStatusEffect(GammaUtils.BRIGHT)) {
                     player.removeStatusEffect(GammaUtils.DIM);

@@ -1,7 +1,7 @@
 package io.github.sjouwer.gammautils.mixin;
 
+import io.github.sjouwer.gammautils.GammaOptions;
 import io.github.sjouwer.gammautils.GammaUtils;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffectUtil;
 import net.minecraft.text.Text;
@@ -14,9 +14,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class MixinStatusEffectUtil {
 
     @Inject(method = "durationToString", at = @At("HEAD"), cancellable = true)
-    private static void durationToString(StatusEffectInstance effect, float multiplier, CallbackInfoReturnable<Text> info) {
+    private static void gammaToString(StatusEffectInstance effect, float multiplier, CallbackInfoReturnable<Text> info) {
         if (effect.getEffectType().equals(GammaUtils.BRIGHT) || effect.getEffectType().equals(GammaUtils.DIM)) {
-            int gamma = (int)Math.round(MinecraftClient.getInstance().options.getGamma().getValue() * 100);
+            int gamma = GammaOptions.getRoundedGamma();
             info.setReturnValue(Text.literal(gamma + "%"));
         }
     }
