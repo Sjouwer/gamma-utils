@@ -1,9 +1,9 @@
-![icon-small](https://user-images.githubusercontent.com/84018133/121270201-87f29f00-c8c1-11eb-8bb1-1bd4d8076a93.png)
+<img src="https://github.com/Sjouwer/gamma-utils/blob/1.19/src/main/resources/assets/gammautils/icon.png" width="200">  
 
-This is a fully configurable gamma/brightness utility mod, making it much easier to see in the dark. 
+This is a fully configurable and client side gamma/brightness utility mod, making it much easier to see in the dark. 
 It's a really basic mod that allows you to change the gamma value in game way higher than the in game brightness setting allows. 
 Nights will look like day and caves will look like they're fully lit up. 
-Basically Gammabright but for fabric.
+Basically Fullbright/Gammabright but for Fabric.
 
 ## **Functions**
 
@@ -24,11 +24,11 @@ Decrease the gamma percentage by the configured step percentage or the given val
 Set the gamma to a specific percentage.
  
 **Min Gamma**  
-*Usage: /gamma min*  
+*Usage: Keybind or /gamma min*  
 Sets the gamma to the configured minimum limit. 
  
 **Max Gamma**  
-*Usage: /gamma max*  
+*Usage: Keybind or /gamma max*  
 Sets the gamma to the configured maximum limit. 
 
 **Toggle Night Vision**  
