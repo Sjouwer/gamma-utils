@@ -5,7 +5,6 @@ import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.config.ModConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.MutableText;
-import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
@@ -35,7 +34,7 @@ public final class InfoProvider {
             format = Formatting.DARK_GREEN;
         }
 
-        message.setStyle(Style.EMPTY.withColor(format));
+        message.formatted(format);
         client.inGameHud.setOverlayMessage(message, false);
     }
 
@@ -47,11 +46,11 @@ public final class InfoProvider {
         MutableText message;
         if (enabled) {
             message = Text.translatable("text.gamma_utils.message.nightvision.enabled");
-            message.setStyle(Style.EMPTY.withColor(Formatting.DARK_GREEN));
+            message.formatted(Formatting.DARK_GREEN);
         }
         else {
             message = Text.translatable("text.gamma_utils.message.nightvision.disabled");
-            message.setStyle(Style.EMPTY.withColor(Formatting.DARK_RED));
+            message.formatted(Formatting.DARK_RED);
         }
 
         client.inGameHud.setOverlayMessage(message, false);
