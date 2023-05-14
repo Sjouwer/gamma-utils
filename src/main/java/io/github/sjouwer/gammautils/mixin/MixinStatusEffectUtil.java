@@ -13,8 +13,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(StatusEffectUtil.class)
 public class MixinStatusEffectUtil {
 
-    @Inject(method = "durationToString", at = @At("HEAD"), cancellable = true)
-    private static void gammaToString(StatusEffectInstance effect, float multiplier, CallbackInfoReturnable<Text> info) {
+    @Inject(method = "getDurationText", at = @At("HEAD"), cancellable = true)
+    private static void getGammaText(StatusEffectInstance effect, float multiplier, CallbackInfoReturnable<Text> info) {
         if (effect.getEffectType().equals(GammaUtils.BRIGHT) || effect.getEffectType().equals(GammaUtils.DIM)) {
             int gamma = GammaOptions.getRoundedGamma();
             info.setReturnValue(Text.literal(gamma + "%"));

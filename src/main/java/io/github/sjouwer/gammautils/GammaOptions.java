@@ -12,7 +12,7 @@ import java.util.TimerTask;
 public class GammaOptions {
     private static final SimpleOption<Double> gamma = MinecraftClient.getInstance().options.getGamma();
     private static final ModConfig config = GammaUtils.getConfig();
-    private static Timer timer = null;
+    private static Timer transitionTimer = null;
 
     private GammaOptions() {
     }
@@ -26,35 +26,19 @@ public class GammaOptions {
     }
 
     public static void toggleGamma() {
-        double value = gamma.getValue();
-        if (value == config.getDefaultGamma()) {
-            value = config.getToggledGamma();
-        }
-        else {
-            value = config.getDefaultGamma();
-        }
-        setGamma(value, true);
+        double newValue = gamma.getValue() == config.getDefaultGamma() ? config.getToggledGamma() : config.getDefaultGamma();
+        setGamma(newValue, true);
     }
 
     public static void increaseGamma(double value) {
         double newValue = gamma.getValue();
-        if (value == 0) {
-            newValue += config.getGammaStep();
-        }
-        else {
-            newValue += value;
-        }
+        newValue += value == 0 ? config.getGammaStep() : value;
         setGamma(newValue, false);
     }
 
     public static void decreaseGamma(double value) {
         double newValue = gamma.getValue();
-        if (value == 0) {
-            newValue -= config.getGammaStep();
-        }
-        else {
-            newValue -= value;
-        }
+        newValue -= value == 0 ? config.getGammaStep() : value;
         setGamma(newValue, false);
     }
 
@@ -67,8 +51,8 @@ public class GammaOptions {
     }
 
     public static void setGamma(double newValue, boolean smoothTransition) {
-        if (timer != null) {
-            timer.cancel();
+        if (transitionTimer != null) {
+            transitionTimer.cancel();
         }
 
         if (config.getMaxGamma() > config.getMinGamma() && config.isLimitCheckEnabled()) {
@@ -80,7 +64,7 @@ public class GammaOptions {
             if (newValue < gamma.getValue()) {
                 valueChangePerTick *= -1;
             }
-            startTimer(newValue, valueChangePerTick);
+            startTransitionTimer(newValue, valueChangePerTick);
         }
         else {
             gamma.setValue(newValue);
@@ -93,15 +77,15 @@ public class GammaOptions {
         }
     }
 
-    private static void startTimer(double newValue, double valueChangePerTick) {
-        timer = new Timer();
-        timer.scheduleAtFixedRate(new TimerTask() {
+    private static void startTransitionTimer(double newValue, double valueChangePerTick) {
+        transitionTimer = new Timer();
+        transitionTimer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
                 double nextValue = gamma.getValue() + valueChangePerTick;
                 if ((valueChangePerTick > 0 && nextValue >= newValue) ||
                         (valueChangePerTick < 0 && nextValue <= newValue)) {
-                    timer.cancel();
+                    transitionTimer.cancel();
                     gamma.setValue(newValue);
                     StatusEffectManager.updateGammaStatusEffect();
                 }
