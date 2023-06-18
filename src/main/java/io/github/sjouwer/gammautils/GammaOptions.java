@@ -21,7 +21,7 @@ public class GammaOptions {
         return gamma.getValue();
     }
 
-    public static int getRoundedGamma() {
+    public static int getGammaPercentage() {
         return (int)Math.round(gamma.getValue() * 100);
     }
 
