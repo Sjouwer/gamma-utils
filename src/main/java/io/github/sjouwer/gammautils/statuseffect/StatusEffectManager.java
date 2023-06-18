@@ -65,7 +65,7 @@ public class StatusEffectManager {
         }
 
         if (config.isStatusEffectEnabled()) {
-            int gamma = GammaOptions.getRoundedGamma();
+            int gamma = GammaOptions.getGammaPercentage();
             if (gamma > 100) {
                 if (!player.hasStatusEffect(GammaUtils.BRIGHT)) {
                     player.removeStatusEffect(GammaUtils.DIM);

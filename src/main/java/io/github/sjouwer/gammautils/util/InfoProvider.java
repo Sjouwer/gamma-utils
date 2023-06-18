@@ -20,7 +20,7 @@ public final class InfoProvider {
             return;
         }
 
-        int gamma = GammaOptions.getRoundedGamma();
+        int gamma = GammaOptions.getGammaPercentage();
         MutableText message = Text.translatable("text.gamma_utils.message.gamma", gamma);
 
         Formatting format;

@@ -8,7 +8,10 @@
     "MixinStatusEffectUtil",
     "MixinClientPlayNetworkHandler",
     "MixinSimpleOption",
-    "MixinLightmapTextureManager"
+    "MixinLightmapTextureManager",
+    "MixinStatusEffectSpriteManager",
+    "SpriteAtlasHolderInvoker",
+    "MixinStatusEffect"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -16,7 +16,7 @@ public class MixinStatusEffectUtil {
     @Inject(method = "getDurationText", at = @At("HEAD"), cancellable = true)
     private static void getGammaText(StatusEffectInstance effect, float multiplier, CallbackInfoReturnable<Text> info) {
         if (effect.getEffectType().equals(GammaUtils.BRIGHT) || effect.getEffectType().equals(GammaUtils.DIM)) {
-            int gamma = GammaOptions.getRoundedGamma();
+            int gamma = GammaOptions.getGammaPercentage();
             info.setReturnValue(Text.literal(gamma + "%"));
         }
     }
