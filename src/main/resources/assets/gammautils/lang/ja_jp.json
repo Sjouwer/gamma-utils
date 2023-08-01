@@ -1,0 +1,58 @@
+{
+	"modmenu.descriptionTranslation.gammautils": "明るさを上げ，暗闇を見やすくします．",
+
+	"key.categories.gamma_utils": "Gamma Utils",
+	"key.gamma_utils.gamma_toggle": "明るさ切り替え",
+	"key.gamma_utils.increase_gamma": "明るさを上げる",
+	"key.gamma_utils.decrease_gamma": "明るさを下げる",
+	"key.gamma_utils.max_gamma": "明るさを最大にする",
+	"key.gamma_utils.min_gamma": "明るさを最小にする",
+	"key.gamma_utils.night_vision_toggle": "暗視切り替え",
+
+	"text.autoconfig.gamma_utils.title": "Gamma Utils 設定",
+
+	"text.autoconfig.gamma_utils.option.defaultGamma": "デフォルトの明るさ",
+	"text.autoconfig.gamma_utils.option.defaultGamma.@Tooltip": "modをオフにした時の明るさ",
+
+	"text.autoconfig.gamma_utils.option.toggledGamma": "切り替え時の明るさ",
+	"text.autoconfig.gamma_utils.option.toggledGamma.@Tooltip": "modをオンにした時の明るさ",
+
+	"text.autoconfig.gamma_utils.option.smoothTransition": "滑らかに変更",
+	"text.autoconfig.gamma_utils.option.smoothTransition.@Tooltip": "明るさの切り替えを滑らかに行う",
+
+	"text.autoconfig.gamma_utils.option.updateToggle": "切り替え時の明るさを更新",
+	"text.autoconfig.gamma_utils.option.updateToggle.@Tooltip": "最後に使用したデフォルトでない明るさを\n切り替え時の明るさとして保持する",
+
+	"text.autoconfig.gamma_utils.option.showStatusEffect": "ステータス効果を表示",
+	"text.autoconfig.gamma_utils.option.showStatusEffect.@Tooltip": "通常の範囲外の明るさの時に\nステータス効果を表示する\n- \"明るさ大\" 100% 超\n- \"明るさ小\" 0% 未満",
+
+	"text.autoconfig.gamma_utils.option.advancedOptions": "高度な設定",
+
+	"text.autoconfig.gamma_utils.option.advancedOptions.transitionSpeed": "変更速度",
+	"text.autoconfig.gamma_utils.option.advancedOptions.transitionSpeed.@Tooltip": "明るさの変更速度(%/s)\n(\"滑らかに変更\"がオンの場合)",
+
+	"text.autoconfig.gamma_utils.option.advancedOptions.limitCheck": "限界値チェック",
+	"text.autoconfig.gamma_utils.option.advancedOptions.limitCheck.@Tooltip": "明るさの上限と下限を強制するかどうか",
+
+	"text.autoconfig.gamma_utils.option.advancedOptions.minGamma": "明るさの下限",
+	"text.autoconfig.gamma_utils.option.advancedOptions.minGamma.@Tooltip": "\"限界値チェック\"が有効な場合に\n許容する明るさの下限値",
+
+	"text.autoconfig.gamma_utils.option.advancedOptions.maxGamma": "明るさの上限",
+	"text.autoconfig.gamma_utils.option.advancedOptions.maxGamma.@Tooltip": "\"限界値チェック\"が有効な場合に\n許容する明るさの上限値",
+
+	"text.autoconfig.gamma_utils.option.advancedOptions.gammaStep": "明るさの変更単位",
+	"text.autoconfig.gamma_utils.option.advancedOptions.gammaStep.@Tooltip": "この値ずつ明るさを上げたり下げたりする",
+
+	"text.autoconfig.gamma_utils.option.advancedOptions.showMessage": "明るさ表示",
+	"text.autoconfig.gamma_utils.option.advancedOptions.showMessage.@Tooltip": "明るさを変更したときにその値を表示する",
+
+	"text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose": "終了時にリセット",
+	"text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose.@Tooltip": "ゲームを終了するときに明るさをデフォルトに戻す",
+
+	"text.gamma_utils.message.gamma": "明るさ: %d%%",
+	"text.gamma_utils.message.nightvision.enabled": "暗視: オン",
+	"text.gamma_utils.message.nightvision.disabled": "暗視: オフ",
+
+	"effect.gammautils.bright": "明るさ大",
+	"effect.gammautils.dim": "明るさ小"
+}
