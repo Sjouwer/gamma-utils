@@ -1,0 +1,56 @@
+{
+    "key.categories.gamma_utils": "Gamma Utils",
+    "key.gamma_utils.gamma_toggle": "Уключыць ",
+    "key.gamma_utils.increase_gamma": "Павысіць яркасць",
+    "key.gamma_utils.decrease_gamma": "Панізіць яркасць",
+    "key.gamma_utils.max_gamma": "Максімальная яркасць",
+    "key.gamma_utils.min_gamma": "Мінімальная яркасць",
+    "key.gamma_utils.night_vision_toggle": "Пераключальнік начнога зроку",
+
+    "text.autoconfig.gamma_utils.title": "Налады Gamma Utils",
+
+    "text.autoconfig.gamma_utils.option.defaultGamma": "Вызначаны працэнт яркасці",
+    "text.autoconfig.gamma_utils.option.defaultGamma.@Tooltip": "Працэнт яркасці калі \nмод выключаны",
+
+    "text.autoconfig.gamma_utils.option.toggledGamma": "Уключыць павышаную яркасць",
+    "text.autoconfig.gamma_utils.option.toggledGamma.@Tooltip": "Працэнт яркасці калі \nмод уключаны",
+
+    "text.autoconfig.gamma_utils.option.smoothTransition": "Плаўны пераход",
+    "text.autoconfig.gamma_utils.option.smoothTransition.@Tooltip": "Робіць павышэнне яркасці \nбольш плаўным",
+
+    "text.autoconfig.gamma_utils.option.updateToggle": "Захоўваць уключаную лічбу",
+    "text.autoconfig.gamma_utils.option.updateToggle.@Tooltip": "Калі ўключана, дазваляе \nзапамінаць апошнюю лічбу \nпрацэнтаў яркасці, якую вы выкарыстоўвалі",
+
+    "text.autoconfig.gamma_utils.option.showStatusEffect": "Паказваць іконку эфекта",
+    "text.autoconfig.gamma_utils.option.showStatusEffect.@Tooltip": "Паказваць іконку эфекта, калі \nпрацэнт больш за звычайны \n- \"Павышаная яркасць\" больш 100% \n- \"Нізкая яркасць\" меньш 0%",
+
+    "text.autoconfig.gamma_utils.option.advancedOptions": "Пашыраныя налады",
+
+    "text.autoconfig.gamma_utils.option.advancedOptions.transitionSpeed": "Хуткасць пераходу",
+    "text.autoconfig.gamma_utils.option.advancedOptions.transitionSpeed.@Tooltip": "Хуткасць павышэння працэнтаў яркасці ў секунду \n(калі Плаўны Пераход уключаны)",
+
+    "text.autoconfig.gamma_utils.option.advancedOptions.limitCheck": "Праверка лімітаў",
+    "text.autoconfig.gamma_utils.option.advancedOptions.limitCheck.@Tooltip": "Усталяяваць вызначаныя \nмінімальныя і максімальныя працэнты яркасці",
+
+    "text.autoconfig.gamma_utils.option.advancedOptions.minGamma": "Ліміт мінімальнай яркасці",
+    "text.autoconfig.gamma_utils.option.advancedOptions.minGamma.@Tooltip": "Мінімальный працэнт гамы, які дазваляе мод, \nкалі Праверка Лімітаў уключана",
+
+    "text.autoconfig.gamma_utils.option.advancedOptions.maxGamma": "Ліміт максімальнай яркасці",
+    "text.autoconfig.gamma_utils.option.advancedOptions.maxGamma.@Tooltip": "Максімальны працэнт гамы, які дазваляе мод, \nкалі Праверка Лімітаў уключана",
+
+    "text.autoconfig.gamma_utils.option.advancedOptions.gammaStep": "Шаг яркасці ў працэнтах",
+    "text.autoconfig.gamma_utils.option.advancedOptions.gammaStep.@Tooltip": "Працэнт на які яркасць \nпавышаецца ці паніжаецца",
+
+    "text.autoconfig.gamma_utils.option.advancedOptions.showMessage": "Паказваць паведамленне яркасці",
+    "text.autoconfig.gamma_utils.option.advancedOptions.showMessage.@Tooltip": "Паказваць паведамленне з новай лічбай \nкалі яркасць змяняецца",
+
+    "text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose": "Скідваць пасля закрыцця",
+    "text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose.@Tooltip": "Скідваць яркасць да вызначанай, \nкалі Minecraft зачынены",
+
+    "text.gamma_utils.message.gamma": "Яркасць: %d%%",
+    "text.gamma_utils.message.nightvision.enabled": "Начны зрок: Уключаны",
+    "text.gamma_utils.message.nightvision.disabled": "Начны зрок: Адключаны",
+
+    "effect.gammautils.bright": "Павышаная яркасць",
+    "effect.gammautils.dim": "Нізкая яркасць"
+}
