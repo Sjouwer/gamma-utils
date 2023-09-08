@@ -12,7 +12,8 @@
     "MixinStatusEffectSpriteManager",
     "SpriteAtlasHolderInvoker",
     "MixinStatusEffect",
-    "MixinSimpleRegistry"
+    "MixinSimpleRegistry",
+    "MixinStatusEffectInstance"
   ],
   "injectors": {
     "defaultRequire": 1

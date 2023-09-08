@@ -44,6 +44,9 @@
     "text.autoconfig.gamma_utils.option.advancedOptions.showMessage": "Show Gamma Message",
     "text.autoconfig.gamma_utils.option.advancedOptions.showMessage.@Tooltip": "Show a message with the new gamma value \nwhen the gamma has changed",
 
+    "text.autoconfig.gamma_utils.option.advancedOptions.showNightVisionIcon": "Show Night Vision Icon",
+    "text.autoconfig.gamma_utils.option.advancedOptions.showNightVisionIcon.@Tooltip": "Show the Night Vision icon in the upper \nright corner like a real status effect",
+
     "text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose": "Reset On Close",
     "text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose.@Tooltip": "Reset the gamma value to default \nwhen Minecraft closes",
 

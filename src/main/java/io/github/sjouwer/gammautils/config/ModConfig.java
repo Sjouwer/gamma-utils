@@ -23,6 +23,8 @@ public class ModConfig implements ConfigData {
         @Tooltip
         private boolean showMessage = true;
         @Tooltip
+        private boolean showNightVisionIcon = false;
+        @Tooltip
         private boolean resetOnClose = false;
     }
 
@@ -96,6 +98,10 @@ public class ModConfig implements ConfigData {
 
     public boolean isStatusEffectEnabled() {
         return showStatusEffect;
+    }
+
+    public boolean isNightVisionIconShown() {
+        return advancedOptions.showNightVisionIcon;
     }
 
     public boolean isResetOnCloseEnabled() {
