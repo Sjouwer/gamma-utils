@@ -1,6 +1,6 @@
 package io.github.sjouwer.gammautils.mixin;
 
-import io.github.sjouwer.gammautils.GammaUtils;
+import io.github.sjouwer.gammautils.statuseffect.StatusEffectManager;
 import net.minecraft.client.texture.Sprite;
 import net.minecraft.client.texture.StatusEffectSpriteManager;
 import net.minecraft.entity.effect.StatusEffect;
@@ -15,11 +15,11 @@ public class MixinStatusEffectSpriteManager {
 
     @Inject(method = "getSprite", at = @At("HEAD"), cancellable = true)
     private void getGammaSprite(StatusEffect effect, CallbackInfoReturnable<Sprite> info) {
-        if (effect.equals(GammaUtils.BRIGHT)) {
+        if (effect.equals(StatusEffectManager.BRIGHT)) {
             info.setReturnValue(((SpriteAtlasHolderInvoker) this).invokeGetSprite(new Identifier("gammautils", "bright")));
         }
 
-        if (effect.equals(GammaUtils.DIM)) {
+        if (effect.equals(StatusEffectManager.DIM)) {
             info.setReturnValue(((SpriteAtlasHolderInvoker) this).invokeGetSprite(new Identifier("gammautils", "dim")));
         }
     }

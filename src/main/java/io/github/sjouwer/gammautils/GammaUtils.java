@@ -6,15 +6,11 @@ import me.shedaniel.autoconfig.ConfigHolder;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.util.ActionResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class GammaUtils implements ClientModInitializer {
-    public static final StatusEffect BRIGHT = new BrightStatusEffect();
-    public static final StatusEffect DIM = new DimStatusEffect();
-
     public static final Logger LOGGER = LoggerFactory.getLogger("Gamma Utils");
     private static ConfigHolder<ModConfig> configHolder;
 

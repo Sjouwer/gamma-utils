@@ -13,6 +13,8 @@ import net.minecraft.entity.effect.StatusEffects;
 public class StatusEffectManager {
     private static final MinecraftClient client = MinecraftClient.getInstance();
     private static final ModConfig config = GammaUtils.getConfig();
+    public static final StatusEffect BRIGHT = new BrightStatusEffect();
+    public static final StatusEffect DIM = new DimStatusEffect();
 
     private StatusEffectManager() {
     }
@@ -67,22 +69,22 @@ public class StatusEffectManager {
         if (config.isStatusEffectEnabled()) {
             int gamma = GammaOptions.getGammaPercentage();
             if (gamma > 100) {
-                if (!player.hasStatusEffect(GammaUtils.BRIGHT)) {
-                    player.removeStatusEffect(GammaUtils.DIM);
-                    addPermEffect(player, GammaUtils.BRIGHT);
+                if (!player.hasStatusEffect(BRIGHT)) {
+                    player.removeStatusEffect(DIM);
+                    addPermEffect(player, BRIGHT);
                 }
                 return;
             }
             else if (gamma < 0) {
-                if (!player.hasStatusEffect(GammaUtils.DIM)) {
-                    player.removeStatusEffect(GammaUtils.BRIGHT);
-                    addPermEffect(player, GammaUtils.DIM);
+                if (!player.hasStatusEffect(DIM)) {
+                    player.removeStatusEffect(BRIGHT);
+                    addPermEffect(player, DIM);
                 }
                 return;
             }
         }
-        player.removeStatusEffect(GammaUtils.DIM);
-        player.removeStatusEffect(GammaUtils.BRIGHT);
+        player.removeStatusEffect(DIM);
+        player.removeStatusEffect(BRIGHT);
     }
 
     private static void addPermEffect(ClientPlayerEntity player, StatusEffect effect) {
