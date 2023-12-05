@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(StatusEffect.class)
 public class MixinStatusEffect {
 
-    @Inject(method = "getTranslationKey", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "loadTranslationKey", at = @At("HEAD"), cancellable = true)
     public void getGammaTranslationKey(CallbackInfoReturnable<String> info) {
         if (((StatusEffect) (Object) this).equals(StatusEffectManager.BRIGHT)) {
             info.setReturnValue("effect.gammautils.bright");

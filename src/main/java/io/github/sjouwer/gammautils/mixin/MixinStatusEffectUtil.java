@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class MixinStatusEffectUtil {
 
     @Inject(method = "getDurationText", at = @At("HEAD"), cancellable = true)
-    private static void getGammaText(StatusEffectInstance effect, float multiplier, CallbackInfoReturnable<Text> info) {
+    private static void getGammaText(StatusEffectInstance effect, float multiplier, float tickRate, CallbackInfoReturnable<Text> info) {
         if (effect.getEffectType().equals(StatusEffectManager.BRIGHT) || effect.getEffectType().equals(StatusEffectManager.DIM)) {
             int gamma = GammaOptions.getGammaPercentage();
             info.setReturnValue(Text.literal(gamma + "%"));
