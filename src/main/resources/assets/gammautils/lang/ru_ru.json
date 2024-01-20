@@ -9,6 +9,9 @@
 
     "text.autoconfig.gamma_utils.title": "Конфигурация Gamma Utils",
 
+    "text.autoconfig.gamma_utils.option.advancedOptions.showNightVisionIcon": "Показать значок ночного видения",
+    "text.autoconfig.gamma_utils.option.advancedOptions.showNightVisionIcon.@Tooltip": "Показывать значок ночного видения в правом верхнем \nуглу, как настоящий эффект статуса.",
+
     "text.autoconfig.gamma_utils.option.defaultGamma": "Процент гаммы по умолчанию",
     "text.autoconfig.gamma_utils.option.defaultGamma.@Tooltip": "Процент гаммы, когда \nмод отключен",
 
