@@ -11,8 +11,6 @@
     "MixinLightmapTextureManager",
     "MixinStatusEffectSpriteManager",
     "SpriteAtlasHolderInvoker",
-    "MixinStatusEffect",
-    "MixinSimpleRegistry",
     "MixinStatusEffectInstance"
   ],
   "injectors": {
