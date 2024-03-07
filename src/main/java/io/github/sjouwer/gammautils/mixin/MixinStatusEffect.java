@@ -12,11 +12,11 @@ public class MixinStatusEffect {
 
     @Inject(method = "loadTranslationKey", at = @At("HEAD"), cancellable = true)
     public void getGammaTranslationKey(CallbackInfoReturnable<String> info) {
-        if (((StatusEffect) (Object) this).equals(StatusEffectManager.BRIGHT)) {
+        if (((StatusEffect) (Object) this).equals(StatusEffectManager.BRIGHT.value())) {
             info.setReturnValue("effect.gammautils.bright");
         }
 
-        if (((StatusEffect) (Object) this).equals(StatusEffectManager.DIM)) {
+        if (((StatusEffect) (Object) this).equals(StatusEffectManager.DIM.value())) {
             info.setReturnValue("effect.gammautils.dim");
         }
     }

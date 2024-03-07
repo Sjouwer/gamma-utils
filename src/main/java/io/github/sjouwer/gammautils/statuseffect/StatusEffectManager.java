@@ -9,12 +9,13 @@ import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.registry.entry.RegistryEntry;
 
 public class StatusEffectManager {
     private static final MinecraftClient client = MinecraftClient.getInstance();
     private static final ModConfig config = GammaUtils.getConfig();
-    public static final StatusEffect BRIGHT = new BrightStatusEffect();
-    public static final StatusEffect DIM = new DimStatusEffect();
+    public static final StatusEffectRegistryEntry BRIGHT = new StatusEffectRegistryEntry(new BrightStatusEffect());
+    public static final StatusEffectRegistryEntry DIM = new StatusEffectRegistryEntry(new DimStatusEffect());
 
     private StatusEffectManager() {
     }
@@ -87,7 +88,7 @@ public class StatusEffectManager {
         player.removeStatusEffect(BRIGHT);
     }
 
-    private static void addPermEffect(ClientPlayerEntity player, StatusEffect effect) {
+    private static void addPermEffect(ClientPlayerEntity player, RegistryEntry<StatusEffect> effect) {
         StatusEffectInstance statusEffect = new StatusEffectInstance(effect, -1);
         player.addStatusEffect(statusEffect);
     }
