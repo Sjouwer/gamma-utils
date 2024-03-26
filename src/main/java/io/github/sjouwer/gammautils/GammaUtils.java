@@ -4,7 +4,7 @@ import io.github.sjouwer.gammautils.config.ModConfig;
 import io.github.sjouwer.gammautils.statuseffect.*;
 import me.shedaniel.autoconfig.ConfigHolder;
 import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
+import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
 import net.minecraft.util.ActionResult;
 import org.slf4j.Logger;
@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 
 public class GammaUtils implements ClientModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("Gamma Utils");
+    public static final String NAMESPACE = "gammautils";
     private static ConfigHolder<ModConfig> configHolder;
 
     public static ModConfig getConfig() {
@@ -24,7 +25,7 @@ public class GammaUtils implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        configHolder = AutoConfig.register(ModConfig.class, JanksonConfigSerializer::new);
+        configHolder = AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
         configHolder.registerSaveListener((manager, data) -> {
             StatusEffectManager.updateGammaStatusEffect();
             return ActionResult.SUCCESS;

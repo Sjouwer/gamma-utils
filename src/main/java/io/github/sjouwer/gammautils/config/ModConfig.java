@@ -1,5 +1,6 @@
 package io.github.sjouwer.gammautils.config;
 
+import io.github.sjouwer.gammautils.GammaUtils;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.Excluded;
@@ -7,7 +8,7 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.Tooltip;
 import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.CollapsibleObject;
 
 @SuppressWarnings("FieldMayBeFinal")
-@Config(name = "gamma_utils")
+@Config(name = GammaUtils.NAMESPACE)
 public class ModConfig implements ConfigData {
     static class AdvancedOptionsObj {
         @Tooltip

@@ -1,33 +1,30 @@
 {
-    "key.categories.gamma_utils": "Gamma Utils",
-    "key.gamma_utils.gamma_toggle": "Ativar/Desativar brilho",
-    "key.gamma_utils.increase_gamma": "Aumentar brilho",
-    "key.gamma_utils.decrease_gamma": "Reduzir brilho",
+    "key.categories.gammautils": "Gamma Utils",
+    "key.gammautils.gammaToggle": "Ativar/Desativar brilho",
+    "key.gammautils.increaseGamma": "Aumentar brilho",
+    "key.gammautils.decreaseGamma": "Reduzir brilho",
 
-    "text.autoconfig.gamma_utils.title": "Definições do Gamma Utils",
+    "text.autoconfig.gammautils.title": "Definições do Gamma Utils",
 
-    "text.autoconfig.gamma_utils.option.defaultGamma": "Porcentagem padrão de brilho",
-    "text.autoconfig.gamma_utils.option.defaultGamma.@Tooltip": "Porcentagem padrão de brilho com o mod inativo.",
+    "text.autoconfig.gammautils.option.defaultGamma": "Porcentagem padrão de brilho",
+    "text.autoconfig.gammautils.option.defaultGamma.@Tooltip": "Porcentagem padrão de brilho com o mod inativo.",
 
-    "text.autoconfig.gamma_utils.option.toggledGamma": "Porcentagem ativa de brilho",
-    "text.autoconfig.gamma_utils.option.toggledGamma.@Tooltip": "Porcentagem de brilho com o mod ativo.",
+    "text.autoconfig.gammautils.option.toggledGamma": "Porcentagem ativa de brilho",
+    "text.autoconfig.gammautils.option.toggledGamma.@Tooltip": "Porcentagem de brilho com o mod ativo.",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions": "Avançado",
+    "text.autoconfig.gammautils.option.advancedOptions": "Avançado",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions.limitCheck": "Verificação de limite",
-    "text.autoconfig.gamma_utils.option.advancedOptions.limitCheck.@Tooltip": "Aplicação de limites nos brilhos mínimo e máximo.",
+    "text.autoconfig.gammautils.option.advancedOptions.limitCheck": "Verificação de limite",
+    "text.autoconfig.gammautils.option.advancedOptions.limitCheck.@Tooltip": "Aplicação de limites nos brilhos mínimo e máximo.",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions.minGamma": "Limite de brilho mínimo",
-    "text.autoconfig.gamma_utils.option.advancedOptions.minGamma.@Tooltip": "Porcentagem de brilho mínimo permitida pelo mod se a verificação de limite estiver ativada",
+    "text.autoconfig.gammautils.option.advancedOptions.minGamma": "Limite de brilho mínimo",
+    "text.autoconfig.gammautils.option.advancedOptions.minGamma.@Tooltip": "Porcentagem de brilho mínimo permitida pelo mod se a verificação de limite estiver ativada",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions.maxGamma": "Limite de brilho máximo",
-    "text.autoconfig.gamma_utils.option.advancedOptions.maxGamma.@Tooltip": "Porcentagem de brilho máximo permitida pelo mod se a verificação de limite estiver ativada",
+    "text.autoconfig.gammautils.option.advancedOptions.maxGamma": "Limite de brilho máximo",
+    "text.autoconfig.gammautils.option.advancedOptions.maxGamma.@Tooltip": "Porcentagem de brilho máximo permitida pelo mod se a verificação de limite estiver ativada",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions.gammaStep": "Fase de porcentagem de brilho",
-    "text.autoconfig.gamma_utils.option.advancedOptions.gammaStep.@Tooltip": "Alteração da porcentagem de brilho em cada aumento ou redução.",
+    "text.autoconfig.gammautils.option.advancedOptions.gammaStep": "Fase de porcentagem de brilho",
+    "text.autoconfig.gammautils.option.advancedOptions.gammaStep.@Tooltip": "Alteração da porcentagem de brilho em cada aumento ou redução.",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions.saveOptions": "Salvar definições",
-    "text.autoconfig.gamma_utils.option.advancedOptions.saveOptions.@Tooltip": "Desativar essa opção redefinirá os valores de brilho definidos no mod ao encerrar o jogo",
-
-    "text.gamma_utils.message.gamma": "Brilho: %d%%"
+    "text.gammautils.message.gammaPercentage": "Brilho: %d%%"
 }

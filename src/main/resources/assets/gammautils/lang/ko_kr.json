@@ -1,53 +1,53 @@
 {
-    "key.categories.gamma_utils": "Gamma Utils",
-    "key.gamma_utils.gamma_toggle": "감마 토글",
-    "key.gamma_utils.increase_gamma": "감마 증가",
-    "key.gamma_utils.decrease_gamma": "감마 감소",
-    "key.gamma_utils.night_vision_toggle": "야간 시야 토글",
+    "key.categories.gammautils": "Gamma Utils",
+    "key.gammautils.gammaToggle": "감마 토글",
+    "key.gammautils.increaseGamma": "감마 증가",
+    "key.gammautils.decreaseGamma": "감마 감소",
+    "key.gammautils.nightVisionToggle": "야간 시야 토글",
 
-    "text.autoconfig.gamma_utils.title": "Gamma Utils 환경설정",
+    "text.autoconfig.gammautils.title": "Gamma Utils 환경설정",
 
-    "text.autoconfig.gamma_utils.option.defaultGamma": "기본 감마 백분율",
-    "text.autoconfig.gamma_utils.option.defaultGamma.@Tooltip": "모드 토글이 꺼졌을 때 기본 감마 백분율",
+    "text.autoconfig.gammautils.option.defaultGamma": "기본 감마 백분율",
+    "text.autoconfig.gammautils.option.defaultGamma.@Tooltip": "모드 토글이 꺼졌을 때 기본 감마 백분율",
 
-    "text.autoconfig.gamma_utils.option.toggledGamma": "토글된 감마 백분율",
-    "text.autoconfig.gamma_utils.option.toggledGamma.@Tooltip": "모드 토글이 켜졌을 때 감마 백분율",
+    "text.autoconfig.gammautils.option.toggledGamma": "토글된 감마 백분율",
+    "text.autoconfig.gammautils.option.toggledGamma.@Tooltip": "모드 토글이 켜졌을 때 감마 백분율",
 
-    "text.autoconfig.gamma_utils.option.smoothTransition": "부드러운 전환",
-    "text.autoconfig.gamma_utils.option.smoothTransition.@Tooltip": "토글을 통해 감마 전환 시 좀 더 부드럽게 전환합니다",
+    "text.autoconfig.gammautils.option.smoothTransition": "부드러운 전환",
+    "text.autoconfig.gammautils.option.smoothTransition.@Tooltip": "토글을 통해 감마 전환 시 좀 더 부드럽게 전환합니다",
 
-    "text.autoconfig.gamma_utils.option.updateToggle": "토글 값 업데이트",
-    "text.autoconfig.gamma_utils.option.updateToggle.@Tooltip": "활성화 시 마지막으로 사용한 기본 값이 아닌 값으로 토글 값이 설정됩니다.",
+    "text.autoconfig.gammautils.option.updateToggle": "토글 값 업데이트",
+    "text.autoconfig.gammautils.option.updateToggle.@Tooltip": "활성화 시 마지막으로 사용한 기본 값이 아닌 값으로 토글 값이 설정됩니다.",
 
-    "text.autoconfig.gamma_utils.option.showStatusEffect": "상태 효과 표시",
-    "text.autoconfig.gamma_utils.option.showStatusEffect.@Tooltip": "감마 백분율이 일반 범위를 벗어났을 때 상태 효과를 표시합니다 \n(0% 미만인 \"저감마\" 및 100% 이상인 \"고감마\")",
+    "text.autoconfig.gammautils.option.showStatusEffect": "상태 효과 표시",
+    "text.autoconfig.gammautils.option.showStatusEffect.@Tooltip": "감마 백분율이 일반 범위를 벗어났을 때 상태 효과를 표시합니다 \n(0% 미만인 \"저감마\" 및 100% 이상인 \"고감마\")",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions": "고급 옵션",
+    "text.autoconfig.gammautils.option.advancedOptions": "고급 옵션",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions.transitionSpeed": "전환 속도",
-    "text.autoconfig.gamma_utils.option.advancedOptions.transitionSpeed.@Tooltip": "초당 감마 백분율 속도 (부드러운 전환 사용 시)",
+    "text.autoconfig.gammautils.option.advancedOptions.transitionSpeed": "전환 속도",
+    "text.autoconfig.gammautils.option.advancedOptions.transitionSpeed.@Tooltip": "초당 감마 백분율 속도 (부드러운 전환 사용 시)",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions.limitCheck": "제한 설정",
-    "text.autoconfig.gamma_utils.option.advancedOptions.limitCheck.@Tooltip": "조절할 수 있는 감마 값의 최댓값/최솟값을 적용합니다.",
+    "text.autoconfig.gammautils.option.advancedOptions.limitCheck": "제한 설정",
+    "text.autoconfig.gammautils.option.advancedOptions.limitCheck.@Tooltip": "조절할 수 있는 감마 값의 최댓값/최솟값을 적용합니다.",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions.minGamma": "감마 최솟값",
-    "text.autoconfig.gamma_utils.option.advancedOptions.minGamma.@Tooltip": "제한 설정 옵션 사용 시 적용될 감마 최솟값을 설정합니다.",
+    "text.autoconfig.gammautils.option.advancedOptions.minGamma": "감마 최솟값",
+    "text.autoconfig.gammautils.option.advancedOptions.minGamma.@Tooltip": "제한 설정 옵션 사용 시 적용될 감마 최솟값을 설정합니다.",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions.maxGamma": "감마 최댓값",
-    "text.autoconfig.gamma_utils.option.advancedOptions.maxGamma.@Tooltip": "제한 설정 옵션 사용 시 적용될 감마 최댓값을 설정합니다.",
+    "text.autoconfig.gammautils.option.advancedOptions.maxGamma": "감마 최댓값",
+    "text.autoconfig.gammautils.option.advancedOptions.maxGamma.@Tooltip": "제한 설정 옵션 사용 시 적용될 감마 최댓값을 설정합니다.",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions.gammaStep": "감마 백분율 증감분",
-    "text.autoconfig.gamma_utils.option.advancedOptions.gammaStep.@Tooltip": "감마 백분율 증가/감소 시 증감분을 설정합니다.",
+    "text.autoconfig.gammautils.option.advancedOptions.gammaStep": "감마 백분율 증감분",
+    "text.autoconfig.gammautils.option.advancedOptions.gammaStep.@Tooltip": "감마 백분율 증가/감소 시 증감분을 설정합니다.",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions.showMessage": "감마 메시지 표시",
-    "text.autoconfig.gamma_utils.option.advancedOptions.showMessage.@Tooltip": "새로운 감마 값을 메시지로 표시합니다.",
+    "text.autoconfig.gammautils.option.advancedOptions.showMessage": "감마 메시지 표시",
+    "text.autoconfig.gammautils.option.advancedOptions.showMessage.@Tooltip": "새로운 감마 값을 메시지로 표시합니다.",
 
-    "text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose": "게임 종료 시 초기화",
-    "text.autoconfig.gamma_utils.option.advancedOptions.resetOnClose.@Tooltip": "마인크래프트를 종료할 때 감마 값을 기본 값으로 초기화합니다.",
+    "text.autoconfig.gammautils.option.advancedOptions.resetOnClose": "게임 종료 시 초기화",
+    "text.autoconfig.gammautils.option.advancedOptions.resetOnClose.@Tooltip": "마인크래프트를 종료할 때 감마 값을 기본 값으로 초기화합니다.",
 
-    "text.gamma_utils.message.gamma": "감마: %d%%",
-    "text.gamma_utils.message.nightvision.enabled": "야간 시야: 활성화됨",
-    "text.gamma_utils.message.nightvision.disabled": "야간 시야: 비활성화됨",
+    "text.gammautils.message.gammaPercentage": "감마: %d%%",
+    "text.gammautils.message.nightVisionEnabled": "야간 시야: 활성화됨",
+    "text.gammautils.message.nightVisionDisabled": "야간 시야: 비활성화됨",
 
     "effect.gammautils.bright": "고감마",
     "effect.gammautils.dim": "저감마"

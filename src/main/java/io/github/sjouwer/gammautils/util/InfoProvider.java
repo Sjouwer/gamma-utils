@@ -21,7 +21,7 @@ public final class InfoProvider {
         }
 
         int gamma = GammaOptions.getGammaPercentage();
-        MutableText message = Text.translatable("text.gamma_utils.message.gamma", gamma);
+        MutableText message = Text.translatable("text.gammautils.message.gammaPercentage", gamma);
 
         Formatting format;
         if (gamma < 0) {
@@ -45,11 +45,11 @@ public final class InfoProvider {
 
         MutableText message;
         if (enabled) {
-            message = Text.translatable("text.gamma_utils.message.nightvision.enabled");
+            message = Text.translatable("text.gammautils.message.nightVisionEnabled");
             message.formatted(Formatting.DARK_GREEN);
         }
         else {
-            message = Text.translatable("text.gamma_utils.message.nightvision.disabled");
+            message = Text.translatable("text.gammautils.message.nightVisionDisabled");
             message.formatted(Formatting.DARK_RED);
         }
 

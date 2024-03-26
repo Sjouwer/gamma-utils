@@ -1,11 +1,11 @@
 package io.github.sjouwer.gammautils.statuseffect;
 
+import io.github.sjouwer.gammautils.GammaUtils;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.util.Identifier;
 
 public class GammaStatusEffect extends StatusEffect {
-    private static final String NAMESPACE = "gammautils";
     private final String key;
 
     public GammaStatusEffect(String key, StatusEffectCategory category, int color) {
@@ -20,10 +20,10 @@ public class GammaStatusEffect extends StatusEffect {
 
     @Override
     protected String loadTranslationKey() {
-        return "effect." + NAMESPACE + "." + key;
+        return "effect." + GammaUtils.NAMESPACE + "." + key;
     }
 
     public Identifier getIdentifier() {
-        return new Identifier(NAMESPACE, key);
+        return new Identifier(GammaUtils.NAMESPACE, key);
     }
 }
