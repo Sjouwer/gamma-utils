@@ -11,7 +11,8 @@
     "MixinLightmapTextureManager",
     "MixinStatusEffectSpriteManager",
     "SpriteAtlasHolderInvoker",
-    "MixinStatusEffectInstance"
+    "MixinStatusEffectInstance",
+    "MixinInventoryScreen"
   ],
   "injectors": {
     "defaultRequire": 1
