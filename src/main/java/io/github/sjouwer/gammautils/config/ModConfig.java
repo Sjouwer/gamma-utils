@@ -101,7 +101,7 @@ public class ModConfig implements ConfigData {
         return showStatusEffect;
     }
 
-    public boolean isNightVisionIconShown() {
+    public boolean isNightVisionIconEnabled() {
         return advancedOptions.showNightVisionIcon;
     }
 

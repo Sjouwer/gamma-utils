@@ -19,9 +19,12 @@ public class MixinStatusEffectInstance {
     @Final
     private RegistryEntry<StatusEffect> type;
 
+    /**
+     * Mixin to hide the night vision status icon in the upper right corner of the HUD
+     */
     @Inject(method = "shouldShowIcon", at = @At("HEAD"), cancellable = true)
     private void hideNightVisionIcon(CallbackInfoReturnable<Boolean> info) {
-        if (type.equals(StatusEffects.NIGHT_VISION) && !GammaUtils.getConfig().isNightVisionIconShown() && GammaUtils.getConfig().isNightVisionEnabled()) {
+        if (type.equals(StatusEffects.NIGHT_VISION) && !GammaUtils.getConfig().isNightVisionIconEnabled() && GammaUtils.getConfig().isNightVisionEnabled()) {
             info.setReturnValue(false);
         }
     }

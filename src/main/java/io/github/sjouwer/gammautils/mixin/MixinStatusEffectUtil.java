@@ -13,7 +13,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(StatusEffectUtil.class)
 public class MixinStatusEffectUtil {
 
-    // Mixin to show the gamma percentage instead of the StatusEffect duration
+    /**
+     * Mixin to show the gamma percentage instead of the StatusEffect duration
+     */
     @Inject(method = "getDurationText", at = @At("HEAD"), cancellable = true)
     private static void getGammaText(StatusEffectInstance effect, float multiplier, float tickRate, CallbackInfoReturnable<Text> info) {
         if (effect.getEffectType().value() instanceof GammaStatusEffect) {

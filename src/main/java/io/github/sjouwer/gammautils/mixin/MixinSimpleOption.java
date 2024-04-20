@@ -22,6 +22,9 @@ public class MixinSimpleOption<T> {
     @Shadow
     T value;
 
+    /**
+     * Mixin to allow saving "invalid" gamma values into the options file
+     */
     @Inject(method = "getCodec", at = @At("HEAD"), cancellable = true)
     private void returnFakeCodec(CallbackInfoReturnable<Codec<Double>> info) {
         if (text.getString().equals(I18n.translate("options.gamma"))) {
@@ -29,6 +32,9 @@ public class MixinSimpleOption<T> {
         }
     }
 
+    /**
+     * Mixin to allow setting "invalid" gamma values
+     */
     @Inject(method = "setValue", at = @At("HEAD"), cancellable = true)
     private void setRealValue(T value, CallbackInfo info) {
         if (text.getString().equals(I18n.translate("options.gamma"))) {

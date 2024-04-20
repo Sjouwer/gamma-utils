@@ -13,7 +13,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(StatusEffectSpriteManager.class)
 public class MixinStatusEffectSpriteManager {
 
-    // Mixin to provide the gamma StutusEffect sprites, is needed because they aren't actually registered
+    /**
+     * Mixin to provide the gamma StutusEffect sprites, is needed because they aren't actually registered
+     */
     @Inject(method = "getSprite", at = @At("HEAD"), cancellable = true)
     private void getGammaSprite(RegistryEntry<StatusEffect> effect, CallbackInfoReturnable<Sprite> info) {
         if (effect.value() instanceof GammaStatusEffect gammaEffect) {
