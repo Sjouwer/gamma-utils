@@ -10,8 +10,7 @@
   ],
   "contributors": [
     "pt-br: Percario",
-    "zh-cn: buiawpkgew1",
-    "zh-cn: GodGun968",
+    "zh-cn: buiawpkgew1, GodGun968",
     "ko-kr: gyular",
     "es-es: Boxadactle",
     "ja-jp: co-91",
@@ -45,9 +44,9 @@
   ],
 
   "depends": {
-    "minecraft": ">=1.20.5-alpha",
+    "minecraft": ">=1.20.5",
     "fabricloader": ">=0.15.0",
-    "fabric-api": ">=0.96.7",
+    "fabric-api": ">=0.97.5",
     "cloth-config": ">=14.0.0"
   }
 }
