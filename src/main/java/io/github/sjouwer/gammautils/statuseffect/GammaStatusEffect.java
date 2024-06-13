@@ -24,6 +24,6 @@ public class GammaStatusEffect extends StatusEffect {
     }
 
     public Identifier getIdentifier() {
-        return new Identifier(GammaUtils.NAMESPACE, key);
+        return Identifier.of(GammaUtils.NAMESPACE, key);
     }
 }
