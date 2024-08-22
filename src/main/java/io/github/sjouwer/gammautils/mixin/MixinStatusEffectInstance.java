@@ -1,6 +1,7 @@
 package io.github.sjouwer.gammautils.mixin;
 
 import io.github.sjouwer.gammautils.GammaUtils;
+import io.github.sjouwer.gammautils.config.ModConfig;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -24,7 +25,8 @@ public class MixinStatusEffectInstance {
      */
     @Inject(method = "shouldShowIcon", at = @At("HEAD"), cancellable = true)
     private void hideNightVisionIcon(CallbackInfoReturnable<Boolean> info) {
-        if (type.equals(StatusEffects.NIGHT_VISION) && !GammaUtils.getConfig().isNightVisionIconEnabled() && GammaUtils.getConfig().isNightVisionEnabled()) {
+        ModConfig config = GammaUtils.getConfig();
+        if (type.equals(StatusEffects.NIGHT_VISION) && !config.isNightVisionIconEnabled() && config.isNightVisionEnabled()) {
             info.setReturnValue(false);
         }
     }

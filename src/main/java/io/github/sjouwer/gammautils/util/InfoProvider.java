@@ -1,7 +1,8 @@
 package io.github.sjouwer.gammautils.util;
 
-import io.github.sjouwer.gammautils.GammaOptions;
+import io.github.sjouwer.gammautils.GammaManager;
 import io.github.sjouwer.gammautils.GammaUtils;
+import io.github.sjouwer.gammautils.NightVisionManager;
 import io.github.sjouwer.gammautils.config.ModConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.MutableText;
@@ -20,7 +21,7 @@ public final class InfoProvider {
             return;
         }
 
-        int gamma = GammaOptions.getGammaPercentage();
+        int gamma = GammaManager.getGammaPercentage();
         MutableText message = Text.translatable("text.gammautils.message.gammaPercentage", gamma);
 
         Formatting format;
@@ -38,21 +39,37 @@ public final class InfoProvider {
         client.inGameHud.setOverlayMessage(message, false);
     }
 
-    public static void showNightVisionHudMessage(boolean enabled) {
-        if (!config.isGammaMessageEnabled()) {
+    public static void showNightVisionStatusHudMessage() {
+        if (!config.isNightVisionMessageEnabled()) {
             return;
         }
 
-        MutableText message;
-        if (enabled) {
-            message = Text.translatable("text.gammautils.message.nightVisionEnabled");
-            message.formatted(Formatting.DARK_GREEN);
+        if (config.isNightVisionEnabled()) {
+            showNightVisionStrengthHudMessage();
         }
         else {
-            message = Text.translatable("text.gammautils.message.nightVisionDisabled");
+            MutableText message = Text.translatable("text.gammautils.message.nightVisionDisabled");
             message.formatted(Formatting.DARK_RED);
+            client.inGameHud.setOverlayMessage(message, false);
+        }
+    }
+
+    private static void showNightVisionStrengthHudMessage() {
+        int nightVision = NightVisionManager.getNightVisionPercentage();
+        MutableText message = Text.translatable("text.gammautils.message.nightVisionPercentage", nightVision);
+
+        Formatting format;
+        if (nightVision < 0) {
+            format = Formatting.DARK_RED;
+        }
+        else if (nightVision > 100) {
+            format = Formatting.GOLD;
+        }
+        else {
+            format = Formatting.DARK_GREEN;
         }
 
+        message.formatted(format);
         client.inGameHud.setOverlayMessage(message, false);
     }
 }

@@ -9,49 +9,46 @@
 
     "text.autoconfig.gammautils.title": "Конфигурация Gamma Utils",
 
-    "text.autoconfig.gammautils.option.advancedOptions.showNightVisionIcon": "Показать значок ночного видения",
-    "text.autoconfig.gammautils.option.advancedOptions.showNightVisionIcon.@Tooltip": "Показывать значок ночного видения в правом верхнем \nуглу, как настоящий эффект статуса.",
+    "text.autoconfig.gammautils.option.gammaSettings.defaultGamma": "Процент гаммы по умолчанию",
+    "text.autoconfig.gammautils.option.gammaSettings.defaultGamma.@Tooltip": "Процент гаммы, когда \nмод отключен",
 
-    "text.autoconfig.gammautils.option.defaultGamma": "Процент гаммы по умолчанию",
-    "text.autoconfig.gammautils.option.defaultGamma.@Tooltip": "Процент гаммы, когда \nмод отключен",
+    "text.autoconfig.gammautils.option.gammaSettings.toggledGamma": "Переключен процент гаммы",
+    "text.autoconfig.gammautils.option.gammaSettings.toggledGamma.@Tooltip": "Процент гаммы при \nвключении мода",
 
-    "text.autoconfig.gammautils.option.toggledGamma": "Переключен процент гаммы",
-    "text.autoconfig.gammautils.option.toggledGamma.@Tooltip": "Процент гаммы при \nвключении мода",
+    "text.autoconfig.gammautils.option.gammaSettings.updateToggle": "Обновить значение переключателя",
+    "text.autoconfig.gammautils.option.gammaSettings.updateToggle.@Tooltip": "Включение этого параметра приведет к тому, что значение \ntoggle запомнит последнее \nне значение по умолчанию, которое вы использовали.",
 
-    "text.autoconfig.gammautils.option.smoothTransition": "Плавный переход",
-    "text.autoconfig.gammautils.option.smoothTransition.@Tooltip": "Сделайте переход \nпереключения гаммы более плавным.",
+    "text.autoconfig.gammautils.option.gammaSettings.gammaStep": "Гамма-процентный шаг",
+    "text.autoconfig.gammautils.option.gammaSettings.gammaStep.@Tooltip": "Процентное изменение гаммы при \nкаждом увеличении или уменьшении",
 
-    "text.autoconfig.gammautils.option.updateToggle": "Обновить значение переключателя",
-    "text.autoconfig.gammautils.option.updateToggle.@Tooltip": "Включение этого параметра приведет к тому, что значение \ntoggle запомнит последнее \nне значение по умолчанию, которое вы использовали.",
+    "text.autoconfig.gammautils.option.gammaSettings.showStatusEffect": "Показать эффект статуса",
+    "text.autoconfig.gammautils.option.gammaSettings.showStatusEffect.@Tooltip": "Показывать эффект статуса, когда гамма \nпроцент выходит за пределы нормального диапазона \n- «Высокая гамма» выше 100 % \n- «Низкая гамма» ниже 0 %",
 
-    "text.autoconfig.gammautils.option.showStatusEffect": "Показать эффект статуса",
-    "text.autoconfig.gammautils.option.showStatusEffect.@Tooltip": "Показывать эффект статуса, когда гамма \nпроцент выходит за пределы нормального диапазона \n- «Высокая гамма» выше 100 % \n- «Низкая гамма» ниже 0 %",
+    "text.autoconfig.gammautils.option.gammaSettings.showMessage": "Показать гамма-сообщение",
+    "text.autoconfig.gammautils.option.gammaSettings.showMessage.@Tooltip": "Показывать сообщение с новым значением гаммы \nпри изменении гаммы",
 
-    "text.autoconfig.gammautils.option.advancedOptions": "Расширенные настройки",
+    "text.autoconfig.gammautils.option.gammaSettings.resetOnClose": "Сброс при закрытии",
+    "text.autoconfig.gammautils.option.gammaSettings.resetOnClose.@Tooltip": "Сбросьте значение гаммы по умолчанию \nпри закрытии Minecraft",
 
-    "text.autoconfig.gammautils.option.advancedOptions.transitionSpeed": "Скорость перехода",
-    "text.autoconfig.gammautils.option.advancedOptions.transitionSpeed.@Tooltip": "Скорость в процентах гаммы в секунду\n(при включенном плавном переходе)",
+    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.smoothTransition": "Плавный переход",
+    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.smoothTransition.@Tooltip": "Сделайте переход \nпереключения гаммы более плавным.",
 
-    "text.autoconfig.gammautils.option.advancedOptions.limitCheck": "Проверка лимита",
-    "text.autoconfig.gammautils.option.advancedOptions.limitCheck.@Tooltip": "Должен ли мод обеспечивать \nминимальный и максимальный пределы гаммы?",
+    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.transitionSpeed": "Скорость перехода",
+    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.transitionSpeed.@Tooltip": "Скорость в процентах гаммы в секунду\n(при включенном плавном переходе)",
 
-    "text.autoconfig.gammautils.option.advancedOptions.minGamma": "Минимальный предел гаммы",
-    "text.autoconfig.gammautils.option.advancedOptions.minGamma.@Tooltip": "Минимальный процент гаммы, \nдопустимый модом, если включена проверка пределов",
+    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.limitCheck": "Проверка лимита",
+    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.limitCheck.@Tooltip": "Должен ли мод обеспечивать \nминимальный и максимальный пределы гаммы?",
 
-    "text.autoconfig.gammautils.option.advancedOptions.maxGamma": "Максимальный предел гаммы",
-    "text.autoconfig.gammautils.option.advancedOptions.maxGamma.@Tooltip": "Максимальный процент гаммы, \nдопустимый модом, если включена проверка предела",
+    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.minGamma": "Минимальный предел гаммы",
+    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.minGamma.@Tooltip": "Минимальный процент гаммы, \nдопустимый модом, если включена проверка пределов",
 
-    "text.autoconfig.gammautils.option.advancedOptions.gammaStep": "Гамма-процентный шаг",
-    "text.autoconfig.gammautils.option.advancedOptions.gammaStep.@Tooltip": "Процентное изменение гаммы при \nкаждом увеличении или уменьшении",
+    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.maxGamma": "Максимальный предел гаммы",
+    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.maxGamma.@Tooltip": "Максимальный процент гаммы, \nдопустимый модом, если включена проверка предела",
 
-    "text.autoconfig.gammautils.option.advancedOptions.showMessage": "Показать гамма-сообщение",
-    "text.autoconfig.gammautils.option.advancedOptions.showMessage.@Tooltip": "Показывать сообщение с новым значением гаммы \nпри изменении гаммы",
-
-    "text.autoconfig.gammautils.option.advancedOptions.resetOnClose": "Сброс при закрытии",
-    "text.autoconfig.gammautils.option.advancedOptions.resetOnClose.@Tooltip": "Сбросьте значение гаммы по умолчанию \nпри закрытии Minecraft",
+    "text.autoconfig.gammautils.option.nightVisionSettings.showNightVisionIcon": "Показать значок ночного видения",
+    "text.autoconfig.gammautils.option.nightVisionSettings.showNightVisionIcon.@Tooltip": "Показывать значок ночного видения в правом верхнем \nуглу, как настоящий эффект статуса.",
 
     "text.gammautils.message.gammaPercentage": "Гамма: %d%%",
-    "text.gammautils.message.nightVisionEnabled": "Ночное видение: включено",
     "text.gammautils.message.nightVisionDisabled": "Ночное видение: отключено",
 
     "effect.gammautils.bright": "Высокая гамма",

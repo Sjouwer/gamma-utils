@@ -13,49 +13,46 @@
 
     "text.autoconfig.gammautils.title": "Gamma Utils 設定",
 
-    "text.autoconfig.gammautils.option.defaultGamma": "預設伽馬值百分比",
-    "text.autoconfig.gammautils.option.defaultGamma.@Tooltip": "模組關閉時\n的伽馬值百分比",
+    "text.autoconfig.gammautils.option.gammaSettings.defaultGamma": "預設伽馬值百分比",
+    "text.autoconfig.gammautils.option.gammaSettings.defaultGamma.@Tooltip": "模組關閉時\n的伽馬值百分比",
 
-    "text.autoconfig.gammautils.option.toggledGamma": "切換後伽馬值百分比",
-    "text.autoconfig.gammautils.option.toggledGamma.@Tooltip": "模組開啟時\n的伽馬值百分比",
+    "text.autoconfig.gammautils.option.gammaSettings.toggledGamma": "切換後伽馬值百分比",
+    "text.autoconfig.gammautils.option.gammaSettings.toggledGamma.@Tooltip": "模組開啟時\n的伽馬值百分比",
 
-    "text.autoconfig.gammautils.option.smoothTransition": "平滑過渡",
-    "text.autoconfig.gammautils.option.smoothTransition.@Tooltip": "使切換伽馬值時\n的過渡更平滑",
+    "text.autoconfig.gammautils.option.gammaSettings.updateToggle": "更新切換值",
+    "text.autoconfig.gammautils.option.gammaSettings.updateToggle.@Tooltip": "啟用此選項將使切換值\n記住您上次使用的\n非預設值",
 
-    "text.autoconfig.gammautils.option.updateToggle": "更新切換值",
-    "text.autoconfig.gammautils.option.updateToggle.@Tooltip": "啟用此選項將使切換值\n記住您上次使用的\n非預設值",
+    "text.autoconfig.gammautils.option.gammaSettings.gammaStep": "伽馬值百分比步長",
+    "text.autoconfig.gammautils.option.gammaSettings.gammaStep.@Tooltip": "每次增加或減少的\n伽馬值百分比變化",
 
-    "text.autoconfig.gammautils.option.showStatusEffect": "顯示狀態效果",
-    "text.autoconfig.gammautils.option.showStatusEffect.@Tooltip": "當伽馬值百分比\n超出正常範圍時顯示狀態效果\n- 超過 100% 時顯示「高伽馬值」\n- 低於 0% 時顯示「低伽馬值」",
+    "text.autoconfig.gammautils.option.gammaSettings.showStatusEffect": "顯示狀態效果",
+    "text.autoconfig.gammautils.option.gammaSettings.showStatusEffect.@Tooltip": "當伽馬值百分比\n超出正常範圍時顯示狀態效果\n- 超過 100% 時顯示「高伽馬值」\n- 低於 0% 時顯示「低伽馬值」",
 
-    "text.autoconfig.gammautils.option.advancedOptions": "進階選項",
+    "text.autoconfig.gammautils.option.gammaSettings.showMessage": "顯示伽馬值訊息",
+    "text.autoconfig.gammautils.option.gammaSettings.showMessage.@Tooltip": "當伽馬值發生變化時，\n顯示一條包含新伽馬值的訊息",
 
-    "text.autoconfig.gammautils.option.advancedOptions.transitionSpeed": "過渡速度",
-    "text.autoconfig.gammautils.option.advancedOptions.transitionSpeed.@Tooltip": "每秒伽馬值百分比的變化速度\n（當啟用平滑過渡時）",
+    "text.autoconfig.gammautils.option.gammaSettings.resetOnClose": "關閉時重設",
+    "text.autoconfig.gammautils.option.gammaSettings.resetOnClose.@Tooltip": "當 Minecraft 關閉時，\n將伽馬值重設為預設值",
 
-    "text.autoconfig.gammautils.option.advancedOptions.limitCheck": "限制檢查",
-    "text.autoconfig.gammautils.option.advancedOptions.limitCheck.@Tooltip": "模組是否應強制執行\n最小和最大伽馬值限制",
+    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.smoothTransition": "平滑過渡",
+    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.smoothTransition.@Tooltip": "使切換伽馬值時\n的過渡更平滑",
 
-    "text.autoconfig.gammautils.option.advancedOptions.minGamma": "最小伽馬值限制",
-    "text.autoconfig.gammautils.option.advancedOptions.minGamma.@Tooltip": "如果啟用限制檢查，\n模組將允許的最小伽馬值百分比",
+    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.transitionSpeed": "過渡速度",
+    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.transitionSpeed.@Tooltip": "每秒伽馬值百分比的變化速度\n（當啟用平滑過渡時）",
 
-    "text.autoconfig.gammautils.option.advancedOptions.maxGamma": "最大伽馬值限制",
-    "text.autoconfig.gammautils.option.advancedOptions.maxGamma.@Tooltip": "如果啟用限制檢查，\n模組將允許的最大伽馬值百分比",
+    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.limitCheck": "限制檢查",
+    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.limitCheck.@Tooltip": "模組是否應強制執行\n最小和最大伽馬值限制",
 
-    "text.autoconfig.gammautils.option.advancedOptions.gammaStep": "伽馬值百分比步長",
-    "text.autoconfig.gammautils.option.advancedOptions.gammaStep.@Tooltip": "每次增加或減少的\n伽馬值百分比變化",
+    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.minGamma": "最小伽馬值限制",
+    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.minGamma.@Tooltip": "如果啟用限制檢查，\n模組將允許的最小伽馬值百分比",
 
-    "text.autoconfig.gammautils.option.advancedOptions.showMessage": "顯示伽馬值訊息",
-    "text.autoconfig.gammautils.option.advancedOptions.showMessage.@Tooltip": "當伽馬值發生變化時，\n顯示一條包含新伽馬值的訊息",
+    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.maxGamma": "最大伽馬值限制",
+    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.maxGamma.@Tooltip": "如果啟用限制檢查，\n模組將允許的最大伽馬值百分比",
 
-    "text.autoconfig.gammautils.option.advancedOptions.showNightVisionIcon": "顯示夜視圖示",
-    "text.autoconfig.gammautils.option.advancedOptions.showNightVisionIcon.@Tooltip": "顯示夜視 HUD 和物品欄圖示，\n就像一般的狀態效果一樣",
-
-    "text.autoconfig.gammautils.option.advancedOptions.resetOnClose": "關閉時重設",
-    "text.autoconfig.gammautils.option.advancedOptions.resetOnClose.@Tooltip": "當 Minecraft 關閉時，\n將伽馬值重設為預設值",
+    "text.autoconfig.gammautils.option.nightVisionSettings.showNightVisionIcon": "顯示夜視圖示",
+    "text.autoconfig.gammautils.option.nightVisionSettings.showNightVisionIcon.@Tooltip": "顯示夜視 HUD 和物品欄圖示，\n就像一般的狀態效果一樣",
 
     "text.gammautils.message.gammaPercentage": "伽馬值： %d%%",
-    "text.gammautils.message.nightVisionEnabled": "夜視： 已啟用",
     "text.gammautils.message.nightVisionDisabled": "夜視： 已停用",
 
     "effect.gammautils.bright": "高伽馬值",
