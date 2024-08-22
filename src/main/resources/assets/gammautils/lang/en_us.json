@@ -89,7 +89,7 @@
     "text.autoconfig.gammautils.option.nightVision.showMessage.@Tooltip": "Show a message containing the \nnew Night Vision percentage \nwhen it has changed",
 
     "text.autoconfig.gammautils.option.nightVision.resetOnClose": "Reset On Close",
-    "text.autoconfig.gammautils.option.nightVision.resetOnClose.@Tooltip": "Reset the Night Vision value to \ndefault when Minecraft closes",
+    "text.autoconfig.gammautils.option.nightVision.resetOnClose.@Tooltip": "Disable Night Vision when Minecraft closes",
 
     "text.autoconfig.gammautils.option.nightVision.transition": "Smooth Transition",
 

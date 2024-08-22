@@ -18,15 +18,23 @@ public class MixinMinecraftClient {
     @Final
     public GameOptions options;
 
+    /**
+     * Mixin to make sure everything is properly and neatly saved when closing the game
+     */
     @Inject(method = "close", at = @At("HEAD"))
     private void saveOnClose(CallbackInfo info) {
         ModConfig config = GammaUtils.getConfig();
+        double gamma = options.getGamma().getValue();
+
         if (config.gamma.isResetOnCloseEnabled()) {
-            options.getGamma().setValue(config.gamma.getDefaultStrength());
+            gamma = config.gamma.getDefaultStrength();
         }
+
         if (config.nightVision.isResetOnCloseEnabled()) {
             config.nightVision.setStatus(false);
         }
+
+        options.getGamma().setValue((Math.round(gamma * 100.0) / 100.0));
         options.write();
         GammaUtils.saveConfig();
     }

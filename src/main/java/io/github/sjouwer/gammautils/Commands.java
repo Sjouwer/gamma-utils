@@ -35,7 +35,7 @@ public class Commands {
                         .then(literal("set")
                             .then(argument("value", integer())
                                 .executes(ctx -> {
-                                    GammaManager.setGamma(getInteger(ctx, "value") / 100.0, true);
+                                    GammaManager.setGamma(getInteger(ctx, "value") / 100.0, true, true);
                                     return 1;
                                 })))
                         .then(literal("increase")
@@ -71,7 +71,7 @@ public class Commands {
                     .then(literal("set")
                         .then(argument("value", integer())
                             .executes(ctx -> {
-                                NightVisionManager.setNightVision(getInteger(ctx, "value"), true, false);
+                                NightVisionManager.setNightVision(getInteger(ctx, "value"), true, false, true);
                                 return 1;
                             })))
                     .then(literal("increase")

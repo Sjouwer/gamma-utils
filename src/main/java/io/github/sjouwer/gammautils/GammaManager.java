@@ -30,27 +30,27 @@ public class GammaManager {
 
     public static void toggleGamma() {
         double newValue = gamma.getValue() == config.getDefaultStrength() ? config.getToggledStrength() : config.getDefaultStrength();
-        setGamma(newValue, true);
+        setGamma(newValue, true, true);
     }
 
     public static void increaseGamma(double value) {
         double newValue = gamma.getValue();
         newValue += value == 0 ? config.getStepStrength() : value;
-        setGamma(newValue, false);
+        setGamma(newValue, false, true);
     }
 
     public static void decreaseGamma(double value) {
         double newValue = gamma.getValue();
         newValue -= value == 0 ? config.getStepStrength() : value;
-        setGamma(newValue, false);
+        setGamma(newValue, false, true);
     }
 
     public static void minGamma() {
-        setGamma(config.getMinimumStrength(), true);
+        setGamma(config.getMinimumStrength(), true, true);
     }
 
     public static void maxGamma() {
-        setGamma(config.getMaximumStrength(), true);
+        setGamma(config.getMaximumStrength(), true, true);
     }
 
     public static void setDimensionPreference() {
@@ -60,17 +60,17 @@ public class GammaManager {
 
         RegistryKey<World> dimension = client.world.getRegistryKey();
         if (dimension.equals(World.OVERWORLD)) {
-            setGamma(config.getOverworldPreference(), false);
+            setGamma(config.getOverworldPreference(), false, false);
         }
         else if (dimension.equals(World.NETHER)) {
-            setGamma(config.getNetherPreference(), false);
+            setGamma(config.getNetherPreference(), false, false);
         }
         else if (dimension.equals(World.END)) {
-            setGamma(config.getEndPreference(), false);
+            setGamma(config.getEndPreference(), false, false);
         }
     }
 
-    public static void setGamma(double newValue, boolean smoothTransition) {
+    public static void setGamma(double newValue, boolean smoothTransition, boolean showMessage) {
         if (transitionTimer != null) {
             transitionTimer.cancel();
         }
@@ -84,12 +84,14 @@ public class GammaManager {
             if (newValue < gamma.getValue()) {
                 valueChangePerTick *= -1;
             }
-            startTransitionTimer(newValue, valueChangePerTick);
+            startTransitionTimer(newValue, valueChangePerTick, showMessage);
         }
         else {
             gamma.setValue(newValue);
             StatusEffectManager.updateGammaStatusEffect();
-            InfoProvider.showGammaHudMessage();
+            if (showMessage) {
+                InfoProvider.showGammaHudMessage();
+            }
         }
 
         if (config.isToggleUpdateEnabled() && newValue != config.getDefaultStrength() && newValue != config.getToggledStrength()) {
@@ -97,7 +99,7 @@ public class GammaManager {
         }
     }
 
-    private static void startTransitionTimer(double newValue, double valueChangePerTick) {
+    private static void startTransitionTimer(double newValue, double valueChangePerTick, boolean showMessage) {
         transitionTimer = new Timer();
         transitionTimer.scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -112,7 +114,10 @@ public class GammaManager {
                 else {
                     gamma.setValue(nextValue);
                 }
-                InfoProvider.showGammaHudMessage();
+
+                if (showMessage) {
+                    InfoProvider.showGammaHudMessage();
+                }
             }
         }, 0, 10);
     }
