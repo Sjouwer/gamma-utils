@@ -1,9 +1,8 @@
 package io.github.sjouwer.gammautils.statuseffect;
 
-import io.github.sjouwer.gammautils.GammaOptions;
+import io.github.sjouwer.gammautils.GammaManager;
 import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.config.ModConfig;
-import io.github.sjouwer.gammautils.util.InfoProvider;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.effect.StatusEffect;
@@ -28,38 +27,26 @@ public class StatusEffectManager {
         updateNightVision();
     }
 
-    public static void toggleNightVision() {
-        ClientPlayerEntity player = client.player;
-        if (player == null) {
-            return;
-        }
-
-        if (player.hasStatusEffect(StatusEffects.NIGHT_VISION)) {
-            disableNightVision(player);
-            InfoProvider.showNightVisionHudMessage(false);
-        }
-        else {
-            enableNightVision(player);
-            InfoProvider.showNightVisionHudMessage(true);
-        }
-    }
-
     public static void updateNightVision() {
-        if (client.player == null) {
-            return;
-        }
-
         if (config.isNightVisionEnabled()) {
             enableNightVision(client.player);
         }
     }
 
-    private static void enableNightVision(ClientPlayerEntity player) {
+    public static void enableNightVision(ClientPlayerEntity player) {
+        if (player == null) {
+            return;
+        }
+
         addPermEffect(player, StatusEffects.NIGHT_VISION);
         config.setNightVision(true);
     }
 
-    private static void disableNightVision(ClientPlayerEntity player) {
+    public static void disableNightVision(ClientPlayerEntity player) {
+        if (player == null) {
+            return;
+        }
+
         player.removeStatusEffect(StatusEffects.NIGHT_VISION);
         config.setNightVision(false);
     }
@@ -71,7 +58,7 @@ public class StatusEffectManager {
         }
 
         if (config.isStatusEffectEnabled()) {
-            int gamma = GammaOptions.getGammaPercentage();
+            int gamma = GammaManager.getGammaPercentage();
             if (gamma > 100) {
                 if (!player.hasStatusEffect(BRIGHT)) {
                     player.removeStatusEffect(DIM);

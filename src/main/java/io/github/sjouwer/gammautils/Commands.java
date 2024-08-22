@@ -1,6 +1,5 @@
 package io.github.sjouwer.gammautils;
 
-import io.github.sjouwer.gammautils.statuseffect.StatusEffectManager;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 
 import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.*;
@@ -11,62 +10,89 @@ public class Commands {
     }
 
     public static void registerCommands() {
+        registerGammaCommands();
+        registerNightVisionCommands();
+    }
+
+    public static void registerGammaCommands() {
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) ->
                 dispatcher.register(literal("gamma")
                         .then(literal("toggle")
-                                .executes(ctx -> {
-                                    GammaOptions.toggleGamma();
-                                    return 1;
-                                }))
-
+                            .executes(ctx -> {
+                                GammaManager.toggleGamma();
+                                return 1;
+                            }))
                         .then(literal("min")
-                                .executes(ctx -> {
-                                    GammaOptions.minGamma();
-                                    return 1;
-                                }))
-
+                            .executes(ctx -> {
+                                GammaManager.minGamma();
+                                return 1;
+                            }))
                         .then(literal("max")
-                                .executes(ctx -> {
-                                    GammaOptions.maxGamma();
-                                    return 1;
-                                }))
-
+                            .executes(ctx -> {
+                                GammaManager.maxGamma();
+                                return 1;
+                            }))
                         .then(literal("set")
-                                .then(argument("value", integer())
-                                        .executes(ctx -> {
-                                            GammaOptions.setGamma(getInteger(ctx, "value") / 100.0, true);
-                                            return 1;
-                                        })))
-
+                            .then(argument("value", integer())
+                                .executes(ctx -> {
+                                    GammaManager.setGamma(getInteger(ctx, "value") / 100.0, true);
+                                    return 1;
+                                })))
                         .then(literal("increase")
+                            .executes(ctx -> {
+                                GammaManager.increaseGamma(0);
+                                return 1;
+                            })
+                            .then(argument("value", integer())
                                 .executes(ctx -> {
-                                    GammaOptions.increaseGamma(0);
+                                    GammaManager.increaseGamma(getInteger(ctx, "value") / 100.0);
                                     return 1;
-                                })
-                                .then(argument("value", integer())
-                                        .executes(ctx -> {
-                                                    GammaOptions.increaseGamma(getInteger(ctx, "value") / 100.0);
-                                                    return 1;
-                                                }
-                                        )))
-
+                                })))
                         .then(literal("decrease")
+                            .executes(ctx -> {
+                                GammaManager.decreaseGamma(0);
+                                return 1;
+                            })
+                            .then(argument("value", integer())
                                 .executes(ctx -> {
-                                    GammaOptions.decreaseGamma(0);
+                                    GammaManager.decreaseGamma(getInteger(ctx, "value") / 100.0);
                                     return 1;
-                                })
-                                .then(argument("value", integer())
-                                        .executes(ctx -> {
-                                                    GammaOptions.decreaseGamma(getInteger(ctx, "value") / 100.0);
-                                                    return 1;
-                                                }
-                                        )))
+                                })))));
+    }
 
-                        .then(literal("nightvision")
-                                .executes(ctx -> {
-                                            StatusEffectManager.toggleNightVision();
-                                            return 1;
-                                        }
-                                ))));
+    public static void registerNightVisionCommands() {
+        ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) ->
+                dispatcher.register(literal("nightvision")
+                    .then(literal("toggle")
+                        .executes(ctx -> {
+                            NightVisionManager.toggleNightVision();
+                            return 1;
+                        }))
+                    .then(literal("set")
+                        .then(argument("value", integer())
+                            .executes(ctx -> {
+                                NightVisionManager.setNightVision(getInteger(ctx, "value"), true, false);
+                                return 1;
+                            })))
+                    .then(literal("increase")
+                        .executes(ctx -> {
+                            NightVisionManager.increaseNightVision(0);
+                            return 1;
+                        })
+                        .then(argument("value", integer())
+                            .executes(ctx -> {
+                                NightVisionManager.increaseNightVision(getInteger(ctx, "value"));
+                                    return 1;
+                                })))
+                    .then(literal("decrease")
+                        .executes(ctx -> {
+                            NightVisionManager.decreaseNightVision(0);
+                            return 1;
+                        })
+                        .then(argument("value", integer())
+                            .executes(ctx -> {
+                                NightVisionManager.decreaseNightVision(getInteger(ctx, "value"));
+                                    return 1;
+                                })))));
     }
 }

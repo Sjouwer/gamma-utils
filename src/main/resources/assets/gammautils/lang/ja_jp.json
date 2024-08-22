@@ -11,46 +11,43 @@
 
 	"text.autoconfig.gammautils.title": "Gamma Utils 設定",
 
-	"text.autoconfig.gammautils.option.defaultGamma": "デフォルトの明るさ",
-	"text.autoconfig.gammautils.option.defaultGamma.@Tooltip": "modをオフにした時の明るさ",
+	"text.autoconfig.gammautils.option.gammaSettings.defaultGamma": "デフォルトの明るさ",
+	"text.autoconfig.gammautils.option.gammaSettings.defaultGamma.@Tooltip": "modをオフにした時の明るさ",
 
-	"text.autoconfig.gammautils.option.toggledGamma": "切り替え時の明るさ",
-	"text.autoconfig.gammautils.option.toggledGamma.@Tooltip": "modをオンにした時の明るさ",
+	"text.autoconfig.gammautils.option.gammaSettings.toggledGamma": "切り替え時の明るさ",
+	"text.autoconfig.gammautils.option.gammaSettings.toggledGamma.@Tooltip": "modをオンにした時の明るさ",
 
-	"text.autoconfig.gammautils.option.smoothTransition": "滑らかに変更",
-	"text.autoconfig.gammautils.option.smoothTransition.@Tooltip": "明るさの切り替えを滑らかに行う",
+	"text.autoconfig.gammautils.option.gammaSettings.updateToggle": "切り替え時の明るさを更新",
+	"text.autoconfig.gammautils.option.gammaSettings.updateToggle.@Tooltip": "最後に使用したデフォルトでない明るさを\n切り替え時の明るさとして保持する",
 
-	"text.autoconfig.gammautils.option.updateToggle": "切り替え時の明るさを更新",
-	"text.autoconfig.gammautils.option.updateToggle.@Tooltip": "最後に使用したデフォルトでない明るさを\n切り替え時の明るさとして保持する",
+	"text.autoconfig.gammautils.option.gammaSettings.gammaStep": "明るさの変更単位",
+	"text.autoconfig.gammautils.option.gammaSettings.gammaStep.@Tooltip": "この値ずつ明るさを上げたり下げたりする",
 
-	"text.autoconfig.gammautils.option.showStatusEffect": "ステータス効果を表示",
-	"text.autoconfig.gammautils.option.showStatusEffect.@Tooltip": "通常の範囲外の明るさの時に\nステータス効果を表示する\n- \"明るさ大\" 100% 超\n- \"明るさ小\" 0% 未満",
+	"text.autoconfig.gammautils.option.gammaSettings.showStatusEffect": "ステータス効果を表示",
+	"text.autoconfig.gammautils.option.gammaSettings.showStatusEffect.@Tooltip": "通常の範囲外の明るさの時に\nステータス効果を表示する\n- \"明るさ大\" 100% 超\n- \"明るさ小\" 0% 未満",
 
-	"text.autoconfig.gammautils.option.advancedOptions": "高度な設定",
+	"text.autoconfig.gammautils.option.gammaSettings.showMessage": "明るさ表示",
+	"text.autoconfig.gammautils.option.gammaSettings.showMessage.@Tooltip": "明るさを変更したときにその値を表示する",
 
-	"text.autoconfig.gammautils.option.advancedOptions.transitionSpeed": "変更速度",
-	"text.autoconfig.gammautils.option.advancedOptions.transitionSpeed.@Tooltip": "明るさの変更速度(%/s)\n(\"滑らかに変更\"がオンの場合)",
+	"text.autoconfig.gammautils.option.gammaSettings.resetOnClose": "終了時にリセット",
+	"text.autoconfig.gammautils.option.gammaSettings.resetOnClose.@Tooltip": "ゲームを終了するときに明るさをデフォルトに戻す",
 
-	"text.autoconfig.gammautils.option.advancedOptions.limitCheck": "限界値チェック",
-	"text.autoconfig.gammautils.option.advancedOptions.limitCheck.@Tooltip": "明るさの上限と下限を強制するかどうか",
+	"text.autoconfig.gammautils.option.gammaSettings.transitionSettings.smoothTransition": "滑らかに変更",
+	"text.autoconfig.gammautils.option.gammaSettings.transitionSettings.smoothTransition.@Tooltip": "明るさの切り替えを滑らかに行う",
 
-	"text.autoconfig.gammautils.option.advancedOptions.minGamma": "明るさの下限",
-	"text.autoconfig.gammautils.option.advancedOptions.minGamma.@Tooltip": "\"限界値チェック\"が有効な場合に\n許容する明るさの下限値",
+	"text.autoconfig.gammautils.option.gammaSettings.transitionSettings.transitionSpeed": "変更速度",
+	"text.autoconfig.gammautils.option.gammaSettings.transitionSettings.transitionSpeed.@Tooltip": "明るさの変更速度(%/s)\n(\"滑らかに変更\"がオンの場合)",
 
-	"text.autoconfig.gammautils.option.advancedOptions.maxGamma": "明るさの上限",
-	"text.autoconfig.gammautils.option.advancedOptions.maxGamma.@Tooltip": "\"限界値チェック\"が有効な場合に\n許容する明るさの上限値",
+	"text.autoconfig.gammautils.option.gammaSettings.limiterSettings.limitCheck": "限界値チェック",
+	"text.autoconfig.gammautils.option.gammaSettings.limiterSettings.limitCheck.@Tooltip": "明るさの上限と下限を強制するかどうか",
 
-	"text.autoconfig.gammautils.option.advancedOptions.gammaStep": "明るさの変更単位",
-	"text.autoconfig.gammautils.option.advancedOptions.gammaStep.@Tooltip": "この値ずつ明るさを上げたり下げたりする",
+	"text.autoconfig.gammautils.option.gammaSettings.limiterSettings.minGamma": "明るさの下限",
+	"text.autoconfig.gammautils.option.gammaSettings.limiterSettings.minGamma.@Tooltip": "\"限界値チェック\"が有効な場合に\n許容する明るさの下限値",
 
-	"text.autoconfig.gammautils.option.advancedOptions.showMessage": "明るさ表示",
-	"text.autoconfig.gammautils.option.advancedOptions.showMessage.@Tooltip": "明るさを変更したときにその値を表示する",
-
-	"text.autoconfig.gammautils.option.advancedOptions.resetOnClose": "終了時にリセット",
-	"text.autoconfig.gammautils.option.advancedOptions.resetOnClose.@Tooltip": "ゲームを終了するときに明るさをデフォルトに戻す",
+	"text.autoconfig.gammautils.option.gammaSettings.limiterSettings.maxGamma": "明るさの上限",
+	"text.autoconfig.gammautils.option.gammaSettings.limiterSettings.maxGamma.@Tooltip": "\"限界値チェック\"が有効な場合に\n許容する明るさの上限値",
 
 	"text.gammautils.message.gammaPercentage": "明るさ: %d%%",
-	"text.gammautils.message.nightVisionEnabled": "暗視: オン",
 	"text.gammautils.message.nightVisionDisabled": "暗視: オフ",
 
 	"effect.gammautils.bright": "明るさ大",

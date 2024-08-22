@@ -9,12 +9,12 @@ import net.minecraft.client.option.SimpleOption;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class GammaOptions {
+public class GammaManager {
     private static final SimpleOption<Double> gamma = MinecraftClient.getInstance().options.getGamma();
     private static final ModConfig config = GammaUtils.getConfig();
     private static Timer transitionTimer = null;
 
-    private GammaOptions() {
+    private GammaManager() {
     }
 
     public static double getGamma() {
@@ -55,12 +55,12 @@ public class GammaOptions {
             transitionTimer.cancel();
         }
 
-        if (config.getMaxGamma() > config.getMinGamma() && config.isLimitCheckEnabled()) {
-            newValue = Math.max(config.getMinGamma(), Math.min(newValue, config.getMaxGamma()));
+        if (config.isGammaLimiterEnabled() && config.getMaxGamma() > config.getMinGamma()) {
+            newValue = Math.clamp(newValue, config.getMinGamma(), config.getMaxGamma());
         }
 
-        if (smoothTransition && config.isSmoothTransitionEnabled()) {
-            double valueChangePerTick = config.getTransitionSpeed() / 100;
+        if (smoothTransition && config.isSmoothGammaEnabled()) {
+            double valueChangePerTick = config.getGammaTransitionSpeed() / 100;
             if (newValue < gamma.getValue()) {
                 valueChangePerTick *= -1;
             }
@@ -72,7 +72,7 @@ public class GammaOptions {
             InfoProvider.showGammaHudMessage();
         }
 
-        if (config.isUpdateToggleEnabled() && newValue != config.getDefaultGamma() && newValue != config.getToggledGamma()) {
+        if (config.isGammaToggleUpdateEnabled() && newValue != config.getDefaultGamma() && newValue != config.getToggledGamma()) {
             config.setToggledGamma(newValue);
         }
     }

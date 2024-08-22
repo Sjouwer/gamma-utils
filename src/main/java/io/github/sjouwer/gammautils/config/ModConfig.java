@@ -3,109 +3,209 @@ package io.github.sjouwer.gammautils.config;
 import io.github.sjouwer.gammautils.GammaUtils;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
-import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.Excluded;
-import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.Tooltip;
-import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.CollapsibleObject;
+import me.shedaniel.autoconfig.annotation.ConfigEntry.Category;
+import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.*;
 
 @SuppressWarnings("FieldMayBeFinal")
 @Config(name = GammaUtils.NAMESPACE)
 public class ModConfig implements ConfigData {
-    static class AdvancedOptionsObj {
+    @Category("gammaSettings")
+    @TransitiveObject
+    private GammaSettings gammaSettings = new GammaSettings();
+
+    @Category("nightVisionSettings")
+    @TransitiveObject
+    private NightVisionSettings nightVisionSettings = new NightVisionSettings();
+
+    static class GammaSettings {
         @Tooltip
-        private int transitionSpeed = 4500;
+        private int defaultGamma = 100;
+        @Tooltip
+        private int toggledGamma = 1500;
+        @Tooltip
+        private boolean updateToggle = false;
+        @Tooltip
+        private int gammaStep = 10;
+        @Tooltip
+        private boolean showMessage = true;
+        @Tooltip
+        private boolean showStatusEffect = false;
+        @Tooltip
+        private boolean resetOnClose = false;
+        @CollapsibleObject
+        private GammaTransitionSettings transitionSettings = new GammaTransitionSettings();
+        @CollapsibleObject
+        private GammaLimiterSettings limiterSettings = new GammaLimiterSettings();
+    }
+
+    static class GammaTransitionSettings {
+        @Tooltip
+        private boolean smoothTransition = false;
+        @Tooltip
+        private int transitionSpeed = 3000;
+    }
+
+    static class GammaLimiterSettings {
         @Tooltip
         private boolean limitCheck = true;
         @Tooltip
         private int minGamma = -750;
         @Tooltip
         private int maxGamma = 1500;
+    }
+
+    static class NightVisionTransitionSettings {
         @Tooltip
-        private int gammaStep = 10;
+        private boolean smoothTransition = false;
         @Tooltip
-        private boolean showMessage = true;
+        private int transitionSpeed = 200;
+    }
+
+    static class NightVisionLimiterSettings {
+        @Tooltip
+        private boolean limitCheck = true;
+        @Tooltip
+        private int minNightVision = 0;
+        @Tooltip
+        private int maxNightVision = 100;
+    }
+
+    static class NightVisionSettings {
+        @Excluded
+        private boolean nightVisionEnabled = false;
+        @Excluded
+        private double nightVisionStrength = 100;
+        @Tooltip
+        private int toggledNightVision = 100;
+        @Tooltip
+        private boolean updateToggle = false;
+        @Tooltip
+        private int nightVisionStep = 2;
         @Tooltip
         private boolean showNightVisionIcon = false;
         @Tooltip
+        private boolean showMessage = true;
+        @Tooltip
         private boolean resetOnClose = false;
-    }
-
-    @Excluded
-    private boolean nightVisionEnabled = false;
-    @Tooltip
-    private int defaultGamma = 100;
-    @Tooltip
-    private int toggledGamma = 1500;
-    @Tooltip
-    private boolean updateToggle = false;
-    @Tooltip
-    private boolean smoothTransition = false;
-    @Tooltip
-    private boolean showStatusEffect = false;
-
-    @CollapsibleObject
-    private AdvancedOptionsObj advancedOptions = new AdvancedOptionsObj();
-
-    public boolean isNightVisionEnabled() {
-        return nightVisionEnabled;
+        @CollapsibleObject
+        private NightVisionTransitionSettings transitionSettings = new NightVisionTransitionSettings();
+        @CollapsibleObject
+        private NightVisionLimiterSettings limiterSettings = new NightVisionLimiterSettings();
     }
 
     public void setNightVision(boolean status) {
-        nightVisionEnabled = status;
+        nightVisionSettings.nightVisionEnabled = status;
     }
 
     public double getDefaultGamma() {
-        return defaultGamma / 100.0;
+        return gammaSettings.defaultGamma / 100.0;
     }
 
     public double getToggledGamma() {
-        return toggledGamma / 100.0;
+        return gammaSettings.toggledGamma / 100.0;
     }
 
-    public void setToggledGamma(double gamma) {
-        toggledGamma = (int)Math.round(gamma * 100) ;
+    public void setToggledGamma(double newValue) {
+        gammaSettings.toggledGamma = (int)Math.round(newValue * 100);
+    }
+
+    public boolean isGammaToggleUpdateEnabled() {
+        return gammaSettings.updateToggle;
     }
 
     public double getGammaStep() {
-        return advancedOptions.gammaStep / 100.0;
+        return gammaSettings.gammaStep / 100.0;
     }
 
-    public boolean isUpdateToggleEnabled() {
-        return updateToggle;
+    public boolean isSmoothGammaEnabled() {
+        return gammaSettings.transitionSettings.smoothTransition;
     }
 
-    public boolean isSmoothTransitionEnabled() {
-        return smoothTransition;
+    public double getGammaTransitionSpeed() {
+        return gammaSettings.transitionSettings.transitionSpeed / 100.0;
     }
 
-    public double getTransitionSpeed() {
-        return advancedOptions.transitionSpeed / 100.0;
-    }
-
-    public boolean isLimitCheckEnabled() {
-        return advancedOptions.limitCheck;
+    public boolean isGammaLimiterEnabled() {
+        return gammaSettings.limiterSettings.limitCheck;
     }
 
     public double getMinGamma() {
-        return advancedOptions.minGamma / 100.0;
+        return gammaSettings.limiterSettings.minGamma / 100.0;
     }
 
     public double getMaxGamma() {
-        return advancedOptions.maxGamma / 100.0;
+        return gammaSettings.limiterSettings.maxGamma / 100.0;
     }
 
     public boolean isGammaMessageEnabled() {
-        return advancedOptions.showMessage;
+        return gammaSettings.showMessage;
     }
 
     public boolean isStatusEffectEnabled() {
-        return showStatusEffect;
+        return gammaSettings.showStatusEffect;
+    }
+
+    public boolean isResetGammaOnCloseEnabled() {
+        return gammaSettings.resetOnClose;
+    }
+
+    public boolean isNightVisionEnabled() {
+        return nightVisionSettings.nightVisionEnabled;
+    }
+
+    public double getNightVisionStrength() {
+        return nightVisionSettings.nightVisionStrength;
+    }
+
+    public void setNightVisionStrength(double newValue) {
+        nightVisionSettings.nightVisionStrength = newValue;
+    }
+
+    public int getToggledNightVision() {
+        return nightVisionSettings.toggledNightVision;
+    }
+
+    public void setToggledNightVision(int newValue) {
+        nightVisionSettings.toggledNightVision = newValue;
+    }
+
+    public boolean isNightVisionToggleUpdateEnabled() {
+        return nightVisionSettings.updateToggle;
+    }
+
+    public int getNightVisionStep() {
+        return nightVisionSettings.nightVisionStep;
+    }
+
+    public boolean isSmoothNightVisionEnabled() {
+        return nightVisionSettings.transitionSettings.smoothTransition;
+    }
+
+    public double getNightVisionTransitionSpeed() {
+        return nightVisionSettings.transitionSettings.transitionSpeed;
+    }
+
+    public boolean isNightVisionLimiterEnabled() {
+        return nightVisionSettings.limiterSettings.limitCheck;
+    }
+
+    public int getMaxNightVisionStrength() {
+        return nightVisionSettings.limiterSettings.maxNightVision;
+    }
+
+    public int getMinNightVisionStrength() {
+        return nightVisionSettings.limiterSettings.minNightVision;
     }
 
     public boolean isNightVisionIconEnabled() {
-        return advancedOptions.showNightVisionIcon;
+        return nightVisionSettings.showNightVisionIcon;
     }
 
-    public boolean isResetOnCloseEnabled() {
-        return advancedOptions.resetOnClose;
+    public boolean isNightVisionMessageEnabled() {
+        return nightVisionSettings.showMessage;
+    }
+
+    public boolean isResetNightVisionOnCloseEnabled() {
+        return nightVisionSettings.resetOnClose;
     }
 }
