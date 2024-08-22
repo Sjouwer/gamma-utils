@@ -30,25 +30,25 @@ public class NightVisionManager {
         }
 
         if (config.isEnabled()) {
-            NightVisionManager.setNightVision(0, true, true);
+            NightVisionManager.setNightVision(0, true, true, true);
         }
         else {
-            NightVisionManager.setNightVision(0, false, false);
+            NightVisionManager.setNightVision(0, false, false, true);
             StatusEffectManager.enableNightVision(player);
-            NightVisionManager.setNightVision(config.getToggledStrength(), true, false);
+            NightVisionManager.setNightVision(config.getToggledStrength(), true, false, true);
         }
     }
 
     public static void increaseNightVision(int value) {
         double newValue = config.getStrength();
         newValue += value == 0 ? config.getStepStrength() : value;
-        setNightVision(newValue, false, false);
+        setNightVision(newValue, false, false, true);
     }
 
     public static void decreaseNightVision(int value) {
         double newValue = config.getStrength();
         newValue -= value == 0 ? config.getStepStrength() : value;
-        setNightVision(newValue, false, false);
+        setNightVision(newValue, false, false, true);
     }
 
     public static void setDimensionPreference() {
@@ -58,17 +58,17 @@ public class NightVisionManager {
 
         RegistryKey<World> dimension = client.world.getRegistryKey();
         if (dimension.equals(World.OVERWORLD)) {
-            setNightVision(config.getOverworldPreference(), false, false);
+            setNightVision(config.getOverworldPreference(), false, false, false);
         }
         else if (dimension.equals(World.NETHER)) {
-            setNightVision(config.getNetherPreference(), false, false);
+            setNightVision(config.getNetherPreference(), false, false, false);
         }
         else if (dimension.equals(World.END)) {
-            setNightVision(config.getEndPreference(), false, false);
+            setNightVision(config.getEndPreference(), false, false, false);
         }
     }
 
-    public static void setNightVision(double newValue, boolean smoothTransition, boolean disable) {
+    public static void setNightVision(double newValue, boolean smoothTransition, boolean disable, boolean showMessage) {
         if (transitionTimer != null) {
             transitionTimer.cancel();
         }
@@ -82,14 +82,16 @@ public class NightVisionManager {
             if (newValue < config.getStrength()) {
                 valueChangePerTick *= -1;
             }
-            startTransitionTimer(newValue, valueChangePerTick, disable);
+            startTransitionTimer(newValue, valueChangePerTick, disable, showMessage);
         }
         else {
             config.setStrength(newValue);
             if (disable) {
                 StatusEffectManager.disableNightVision(client.player);
             }
-            InfoProvider.showNightVisionStatusHudMessage();
+            if (showMessage) {
+                InfoProvider.showNightVisionStatusHudMessage();
+            }
         }
 
         if (config.isToggleUpdateEnabled() && newValue != 0 && newValue != config.getToggledStrength()) {
@@ -97,7 +99,7 @@ public class NightVisionManager {
         }
     }
 
-    private static void startTransitionTimer(double newValue, double valueChangePerTick, boolean disable) {
+    private static void startTransitionTimer(double newValue, double valueChangePerTick, boolean disable, boolean showMessage) {
         transitionTimer = new Timer();
         transitionTimer.scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -114,7 +116,10 @@ public class NightVisionManager {
                 else {
                     config.setStrength(nextValue);
                 }
-                InfoProvider.showNightVisionStatusHudMessage();
+
+                if (showMessage) {
+                    InfoProvider.showNightVisionStatusHudMessage();
+                }
             }
         }, 0, 10);
     }
