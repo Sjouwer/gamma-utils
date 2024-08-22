@@ -9,41 +9,41 @@
 
     "text.autoconfig.gammautils.title": "Cài đặt Gamma Utils",
 
-    "text.autoconfig.gammautils.option.gammaSettings.defaultGamma": "Tỷ lệ Gamma mặc định",
-    "text.autoconfig.gammautils.option.gammaSettings.defaultGamma.@Tooltip": "Tỷ lệ phần trăm gamma khi \nmod đang tắt",
+    "text.autoconfig.gammautils.option.gamma.defaultGamma": "Tỷ lệ Gamma mặc định",
+    "text.autoconfig.gammautils.option.gamma.defaultGamma.@Tooltip": "Tỷ lệ phần trăm gamma khi \nmod đang tắt",
 
-    "text.autoconfig.gammautils.option.gammaSettings.toggledGamma": "Tỷ lệ phần trăm Gamma đã chuyển đổi",
-    "text.autoconfig.gammautils.option.gammaSettings.toggledGamma.@Tooltip": "Tỷ lệ phần trăm gamma khi \nmod được bật",
+    "text.autoconfig.gammautils.option.gamma.toggledGamma": "Tỷ lệ phần trăm Gamma đã chuyển đổi",
+    "text.autoconfig.gammautils.option.gamma.toggledGamma.@Tooltip": "Tỷ lệ phần trăm gamma khi \nmod được bật",
 
-    "text.autoconfig.gammautils.option.gammaSettings.updateToggle": "Cập nhật giá trị chuyển đổi",
-    "text.autoconfig.gammautils.option.gammaSettings.updateToggle.@Tooltip": "Kích hoạt tính năng này sẽ làm cho \nchuyển đổi giá trị ghi nhớ \ngiá trị không mặc định cuối cùng mà bạn đã sử dụng",
+    "text.autoconfig.gammautils.option.gamma.updateToggle": "Cập nhật giá trị chuyển đổi",
+    "text.autoconfig.gammautils.option.gamma.updateToggle.@Tooltip": "Kích hoạt tính năng này sẽ làm cho \nchuyển đổi giá trị ghi nhớ \ngiá trị không mặc định cuối cùng mà bạn đã sử dụng",
 
-    "text.autoconfig.gammautils.option.gammaSettings.gammaStep": "Tỉ lệ gamma cho mỗi lần chuyển đổi",
-    "text.autoconfig.gammautils.option.gammaSettings.gammaStep.@Tooltip": "Tỉ lệ gamma thay đổi cho \nmỗi lần tăng hoặc giảm",
+    "text.autoconfig.gammautils.option.gamma.gammaStep": "Tỉ lệ gamma cho mỗi lần chuyển đổi",
+    "text.autoconfig.gammautils.option.gamma.gammaStep.@Tooltip": "Tỉ lệ gamma thay đổi cho \nmỗi lần tăng hoặc giảm",
 
-    "text.autoconfig.gammautils.option.gammaSettings.showStatusEffect": "Hiển thị hiệu ứng trạng thái",
-    "text.autoconfig.gammautils.option.gammaSettings.showStatusEffect.@Tooltip": "Hiển thị hiệu ứng trạng thái khi \ntỉ lệ gamma nằm ngoài phạm vi bình thường \n- \"Gamma cao\" trên 100% \n- \"Gamma thấp\" dưới 0%",
+    "text.autoconfig.gammautils.option.gamma.showStatusEffect": "Hiển thị hiệu ứng trạng thái",
+    "text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "Hiển thị hiệu ứng trạng thái khi \ntỉ lệ gamma nằm ngoài phạm vi bình thường \n- \"Gamma cao\" trên 100% \n- \"Gamma thấp\" dưới 0%",
 
-    "text.autoconfig.gammautils.option.gammaSettings.showMessage": "Hiển thị thông báo Gamma",
-    "text.autoconfig.gammautils.option.gammaSettings.showMessage.@Tooltip": "Hiển thị thông báo có giá trị gamma mới \nkhi gamma đã thay đổi",
+    "text.autoconfig.gammautils.option.gamma.showMessage": "Hiển thị thông báo Gamma",
+    "text.autoconfig.gammautils.option.gamma.showMessage.@Tooltip": "Hiển thị thông báo có giá trị gamma mới \nkhi gamma đã thay đổi",
 
-    "text.autoconfig.gammautils.option.gammaSettings.resetOnClose": "Đặt lại khi đóng",
-    "text.autoconfig.gammautils.option.gammaSettings.resetOnClose.@Tooltip": "Đặt lại giá trị gamma về mặc định \nkhi Minecraft đóng",
+    "text.autoconfig.gammautils.option.gamma.resetOnClose": "Đặt lại khi đóng",
+    "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "Đặt lại giá trị gamma về mặc định \nkhi Minecraft đóng",
 
-    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.smoothTransition": "Chuyển tiếp mượt mà",
-    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.smoothTransition.@Tooltip": "Khiến quá trình chuyển đổi của \n việc chuyển đổi gamma mượt mà hơn",
+    "text.autoconfig.gammautils.option.gamma.transition.smoothTransition": "Chuyển tiếp mượt mà",
+    "text.autoconfig.gammautils.option.gamma.transition.smoothTransition.@Tooltip": "Khiến quá trình chuyển đổi của \n việc chuyển đổi gamma mượt mà hơn",
 
-    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.transitionSpeed": "Tốc độ chuyển tiếp",
-    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.transitionSpeed.@Tooltip": "Tốc độ theo tỷ lệ phần trăm gamma mỗi giây \n(khi Chuyển tiếp mượt mà được bật)",
+    "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed": "Tốc độ chuyển tiếp",
+    "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed.@Tooltip": "Tốc độ theo tỷ lệ phần trăm gamma mỗi giây \n(khi Chuyển tiếp mượt mà được bật)",
 
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.limitCheck": "Kiểm tra giới hạn",
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.limitCheck.@Tooltip": "Mod có nên thực thi \ngiới hạn gamma tối thiểu và tối đa không",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "Kiểm tra giới hạn",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "Mod có nên thực thi \ngiới hạn gamma tối thiểu và tối đa không",
 
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.minGamma": "Giới hạn Gamma tối thiểu",
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.minGamma.@Tooltip": "Phần trăm gamma tối thiểu mà mod sẽ \ncho phép nếu Kiểm tra giới hạn được bật",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "Giới hạn Gamma tối thiểu",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "Phần trăm gamma tối thiểu mà mod sẽ \ncho phép nếu Kiểm tra giới hạn được bật",
 
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.maxGamma": "Giới hạn Gamma tối đa",
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.maxGamma.@Tooltip": "Phần trăm gamma tối đa mà mod sẽ \ncho phép nếu Kiểm tra giới hạn được bật",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "Giới hạn Gamma tối đa",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Phần trăm gamma tối đa mà mod sẽ \ncho phép nếu Kiểm tra giới hạn được bật",
 
     "text.gammautils.message.gammaPercentage": "Gamma: %d%%",
     "text.gammautils.message.nightVisionDisabled": "Nhìn trong bóng tối: Tắt",

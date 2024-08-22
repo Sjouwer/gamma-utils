@@ -17,84 +17,112 @@
 
     "text.autoconfig.gammautils.category.gammaSettings": "Gamma",
 
-    "text.autoconfig.gammautils.option.gammaSettings.defaultGamma": "Default Gamma Percentage",
-    "text.autoconfig.gammautils.option.gammaSettings.defaultGamma.@Tooltip": "Gamma percentage for when \nthe Gamma is toggled off",
+    "text.autoconfig.gammautils.option.gamma.defaultGamma": "Default Gamma Percentage",
+    "text.autoconfig.gammautils.option.gamma.defaultGamma.@Tooltip": "Gamma percentage for when \nGamma is toggled off",
 
-    "text.autoconfig.gammautils.option.gammaSettings.toggledGamma": "Toggled Gamma Percentage",
-    "text.autoconfig.gammautils.option.gammaSettings.toggledGamma.@Tooltip": "Gamma percentage for when \nthe Gamma is toggled on",
+    "text.autoconfig.gammautils.option.gamma.toggledGamma": "Toggled Gamma Percentage",
+    "text.autoconfig.gammautils.option.gamma.toggledGamma.@Tooltip": "Gamma percentage for when \nGamma is toggled on",
 
-    "text.autoconfig.gammautils.option.gammaSettings.updateToggle": "Update Toggle Value",
-    "text.autoconfig.gammautils.option.gammaSettings.updateToggle.@Tooltip": "Enabling this will make the \ntoggle value remember the last \nnon default value you've used",
+    "text.autoconfig.gammautils.option.gamma.updateToggle": "Update Toggle Value",
+    "text.autoconfig.gammautils.option.gamma.updateToggle.@Tooltip": "Enabling this will make the \ntoggle value remember the last \nnon default value you've used",
 
-    "text.autoconfig.gammautils.option.gammaSettings.gammaStep": "Gamma Percentage Step",
-    "text.autoconfig.gammautils.option.gammaSettings.gammaStep.@Tooltip": "Gamma percentage change for \nevery increase or decrease",
+    "text.autoconfig.gammautils.option.gamma.gammaStep": "Gamma Percentage Step",
+    "text.autoconfig.gammautils.option.gamma.gammaStep.@Tooltip": "Gamma percentage change for \nevery increase or decrease",
 
-    "text.autoconfig.gammautils.option.gammaSettings.showStatusEffect": "Show Status Effect",
-    "text.autoconfig.gammautils.option.gammaSettings.showStatusEffect.@Tooltip": "Show a status effect when the Gamma \npercentage is outside normal range \n- \"High Gamma\" above 100% \n- \"Low Gamma\" below 0%",
+    "text.autoconfig.gammautils.option.gamma.showStatusEffect": "Show Status Effect",
+    "text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "Show a status effect when the Gamma \npercentage is outside normal range \n- \"High Gamma\" above 100% \n- \"Low Gamma\" below 0%",
 
-    "text.autoconfig.gammautils.option.gammaSettings.showMessage": "Show Gamma Message",
-    "text.autoconfig.gammautils.option.gammaSettings.showMessage.@Tooltip": "Show a message containing the \nnew Gamma percentage when \nit has changed",
+    "text.autoconfig.gammautils.option.gamma.showMessage": "Show Gamma Message",
+    "text.autoconfig.gammautils.option.gamma.showMessage.@Tooltip": "Show a message containing the \nnew Gamma percentage when \nit has changed",
 
-    "text.autoconfig.gammautils.option.gammaSettings.resetOnClose": "Reset On Close",
-    "text.autoconfig.gammautils.option.gammaSettings.resetOnClose.@Tooltip": "Reset the Gamma value to default \nwhen Minecraft closes",
+    "text.autoconfig.gammautils.option.gamma.resetOnClose": "Reset On Close",
+    "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "Reset the Gamma value to default \nwhen Minecraft closes",
 
-    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings": "Smooth Transition",
+    "text.autoconfig.gammautils.option.gamma.transition": "Smooth Transition",
 
-    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.smoothTransition": "Enable Smooth Transition",
-    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.smoothTransition.@Tooltip": "Make the transition of \ntoggling Gamma smoother",
+    "text.autoconfig.gammautils.option.gamma.transition.smoothTransition": "Enable Smooth Transition",
+    "text.autoconfig.gammautils.option.gamma.transition.smoothTransition.@Tooltip": "Make the transition of \ntoggling Gamma smoother",
 
-    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.transitionSpeed": "Transition Speed",
-    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.transitionSpeed.@Tooltip": "Speed in percentage per second \nwhen Smooth Transition is enabled",
+    "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed": "Transition Speed",
+    "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed.@Tooltip": "Speed in percentage per second \nwhen Smooth Transition is enabled",
 
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings": "Limiter",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference": "Dimension Preference",
 
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.limitCheck": "Enable Limiter",
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.limitCheck.@Tooltip": "Should the mod enforce the \nminimum and maximum Gamma limits",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference": "Enable Dimension Preference",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference.@Tooltip": "Gamma will automatically be \nset to the preferred strength \nwhen switching dimensions",
 
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.minGamma": "Minimum Gamma Limit",
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.minGamma.@Tooltip": "Minimum Gamma percentage the mod will \nallow if the Limit Check is enabled",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.overworldPreference": "Overworld Preference",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.overworldPreference.@Tooltip": "Preferred Gamma strength \nfor the Overworld",
 
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.maxGamma": "Maximum Gamma Limit",
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.maxGamma.@Tooltip": "Maximum Gamma percentage the mod will \nallow if the Limit Check is enabled",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.netherPreference": "Nether Preference",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.netherPreference.@Tooltip": "Preferred Gamma strength \nfor the Nether",
+
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.endPreference": "End Preference",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.endPreference.@Tooltip": "Preferred Gamma strength \nfor the End",
+
+    "text.autoconfig.gammautils.option.gamma.limiter": "Limiter",
+
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "Enable Limiter",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "Should the mod enforce the \nminimum and maximum Gamma limits",
+
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "Minimum Gamma Limit",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "Minimum Gamma percentage the mod will \nallow if the Limit Check is enabled",
+
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "Maximum Gamma Limit",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Maximum Gamma percentage the mod will \nallow if the Limit Check is enabled",
 
     "text.autoconfig.gammautils.category.nightVisionSettings": "Night Vision",
 
-    "text.autoconfig.gammautils.option.nightVisionSettings.toggledNightVision": "Toggled Night Vision Percentage",
-    "text.autoconfig.gammautils.option.nightVisionSettings.toggledNightVision.@Tooltip": "Night Vision percentage for when \nthe Night Vision is toggled on",
+    "text.autoconfig.gammautils.option.nightVision.toggledNightVision": "Toggled Night Vision Percentage",
+    "text.autoconfig.gammautils.option.nightVision.toggledNightVision.@Tooltip": "Night Vision percentage for when \nNight Vision is toggled on",
 
-    "text.autoconfig.gammautils.option.nightVisionSettings.updateToggle": "Update Toggle Value",
-    "text.autoconfig.gammautils.option.nightVisionSettings.updateToggle.@Tooltip": "Enabling this will make the \ntoggle value remember the last \nnon zero value you've used",
+    "text.autoconfig.gammautils.option.nightVision.updateToggle": "Update Toggle Value",
+    "text.autoconfig.gammautils.option.nightVision.updateToggle.@Tooltip": "Enabling this will make the \ntoggle value remember the last \nnon zero value you've used",
 
-    "text.autoconfig.gammautils.option.nightVisionSettings.nightVisionStep": "Night Vision Percentage Step",
-    "text.autoconfig.gammautils.option.nightVisionSettings.nightVisionStep.@Tooltip": "Night Vision percentage change \nfor every increase or decrease",
+    "text.autoconfig.gammautils.option.nightVision.nightVisionStep": "Night Vision Percentage Step",
+    "text.autoconfig.gammautils.option.nightVision.nightVisionStep.@Tooltip": "Night Vision percentage change \nfor every increase or decrease",
 
-    "text.autoconfig.gammautils.option.nightVisionSettings.showNightVisionIcon": "Show Night Vision Icon",
-    "text.autoconfig.gammautils.option.nightVisionSettings.showNightVisionIcon.@Tooltip": "Show the Night Vision HUD and inventory \nicon just like a normal status effect",
+    "text.autoconfig.gammautils.option.nightVision.showNightVisionIcon": "Show Night Vision Icon",
+    "text.autoconfig.gammautils.option.nightVision.showNightVisionIcon.@Tooltip": "Show the Night Vision HUD and inventory \nicon just like a normal status effect",
 
-    "text.autoconfig.gammautils.option.nightVisionSettings.showMessage": "Show Night Vision Message",
-    "text.autoconfig.gammautils.option.nightVisionSettings.showMessage.@Tooltip": "Show a message containing the \nnew Night Vision percentage \nwhen it has changed",
+    "text.autoconfig.gammautils.option.nightVision.showMessage": "Show Night Vision Message",
+    "text.autoconfig.gammautils.option.nightVision.showMessage.@Tooltip": "Show a message containing the \nnew Night Vision percentage \nwhen it has changed",
 
-    "text.autoconfig.gammautils.option.nightVisionSettings.resetOnClose": "Reset On Close",
-    "text.autoconfig.gammautils.option.nightVisionSettings.resetOnClose.@Tooltip": "Reset the Night Vision value to \ndefault when Minecraft closes",
+    "text.autoconfig.gammautils.option.nightVision.resetOnClose": "Reset On Close",
+    "text.autoconfig.gammautils.option.nightVision.resetOnClose.@Tooltip": "Reset the Night Vision value to \ndefault when Minecraft closes",
 
-    "text.autoconfig.gammautils.option.nightVisionSettings.transitionSettings": "Smooth Transition",
+    "text.autoconfig.gammautils.option.nightVision.transition": "Smooth Transition",
 
-    "text.autoconfig.gammautils.option.nightVisionSettings.transitionSettings.smoothTransition": "Enable Smooth Transition",
-    "text.autoconfig.gammautils.option.nightVisionSettings.transitionSettings.smoothTransition.@Tooltip": "Make the transition of toggling \nNight Vision smoother",
+    "text.autoconfig.gammautils.option.nightVision.transition.smoothTransition": "Enable Smooth Transition",
+    "text.autoconfig.gammautils.option.nightVision.transition.smoothTransition.@Tooltip": "Make the transition of toggling \nNight Vision smoother",
 
-    "text.autoconfig.gammautils.option.nightVisionSettings.transitionSettings.transitionSpeed": "Transition Speed",
-    "text.autoconfig.gammautils.option.nightVisionSettings.transitionSettings.transitionSpeed.@Tooltip": "Speed in percentage per second \nwhen Smooth Transition is enabled",
+    "text.autoconfig.gammautils.option.nightVision.transition.transitionSpeed": "Transition Speed",
+    "text.autoconfig.gammautils.option.nightVision.transition.transitionSpeed.@Tooltip": "Speed in percentage per second \nwhen Smooth Transition is enabled",
 
-    "text.autoconfig.gammautils.option.nightVisionSettings.limiterSettings": "Limiter",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference": "Dimension Preference",
 
-    "text.autoconfig.gammautils.option.nightVisionSettings.limiterSettings.limitCheck": "Enable Limiter",
-    "text.autoconfig.gammautils.option.nightVisionSettings.limiterSettings.limitCheck.@Tooltip": "Should the mod enforce the \nminimum and maximum Night Vision limits",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference": "Enable Dimension Preference",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference.@Tooltip": "Night Vision will automatically be \nset to the preferred strength \nwhen switching dimensions",
 
-    "text.autoconfig.gammautils.option.nightVisionSettings.limiterSettings.minNightVision": "Minimum Night Vision Limit",
-    "text.autoconfig.gammautils.option.nightVisionSettings.limiterSettings.minNightVision.@Tooltip": "Minimum Night Vision percentage the mod will \nallow if the Limit Check is enabled",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.overworldPreference": "Overworld Preference",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.overworldPreference.@Tooltip": "Preferred Night Vision strength \nfor the Overworld",
 
-    "text.autoconfig.gammautils.option.nightVisionSettings.limiterSettings.maxNightVision": "Maximum Night Vision Limit",
-    "text.autoconfig.gammautils.option.nightVisionSettings.limiterSettings.maxNightVision.@Tooltip": "Maximum Night Vision percentage the mod will \nallow if the Limit Check is enabled",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.netherPreference": "Nether Preference",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.netherPreference.@Tooltip": "Preferred Night Vision strength \nfor the Nether",
+
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.endPreference": "End Preference",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.endPreference.@Tooltip": "Preferred Night Vision strength \nfor the End",
+
+    "text.autoconfig.gammautils.option.nightVision.limiter": "Limiter",
+
+    "text.autoconfig.gammautils.option.nightVision.limiter.limitCheck": "Enable Limiter",
+    "text.autoconfig.gammautils.option.nightVision.limiter.limitCheck.@Tooltip": "Should the mod enforce the \nminimum and maximum Night Vision limits",
+
+    "text.autoconfig.gammautils.option.nightVision.limiter.minNightVision": "Minimum Night Vision Limit",
+    "text.autoconfig.gammautils.option.nightVision.limiter.minNightVision.@Tooltip": "Minimum Night Vision percentage the mod will \nallow if the Limit Check is enabled",
+
+    "text.autoconfig.gammautils.option.nightVision.limiter.maxNightVision": "Maximum Night Vision Limit",
+    "text.autoconfig.gammautils.option.nightVision.limiter.maxNightVision.@Tooltip": "Maximum Night Vision percentage the mod will \nallow if the Limit Check is enabled",
 
     "text.gammautils.message.gammaPercentage": "Gamma: %d%%",
     "text.gammautils.message.nightVisionPercentage": "Night Vision: %d%%",

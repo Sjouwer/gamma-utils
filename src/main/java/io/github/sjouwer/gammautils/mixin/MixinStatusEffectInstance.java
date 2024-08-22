@@ -26,7 +26,7 @@ public class MixinStatusEffectInstance {
     @Inject(method = "shouldShowIcon", at = @At("HEAD"), cancellable = true)
     private void hideNightVisionIcon(CallbackInfoReturnable<Boolean> info) {
         ModConfig config = GammaUtils.getConfig();
-        if (type.equals(StatusEffects.NIGHT_VISION) && !config.isNightVisionIconEnabled() && config.isNightVisionEnabled()) {
+        if (type.equals(StatusEffects.NIGHT_VISION) && !config.nightVision.isIconEnabled() && config.nightVision.isEnabled()) {
             info.setReturnValue(false);
         }
     }

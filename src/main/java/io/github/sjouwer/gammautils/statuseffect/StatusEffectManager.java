@@ -28,7 +28,7 @@ public class StatusEffectManager {
     }
 
     public static void updateNightVision() {
-        if (config.isNightVisionEnabled()) {
+        if (config.nightVision.isEnabled()) {
             enableNightVision(client.player);
         }
     }
@@ -39,7 +39,7 @@ public class StatusEffectManager {
         }
 
         addPermEffect(player, StatusEffects.NIGHT_VISION);
-        config.setNightVision(true);
+        config.nightVision.setStatus(true);
     }
 
     public static void disableNightVision(ClientPlayerEntity player) {
@@ -48,7 +48,7 @@ public class StatusEffectManager {
         }
 
         player.removeStatusEffect(StatusEffects.NIGHT_VISION);
-        config.setNightVision(false);
+        config.nightVision.setStatus(false);
     }
 
     public static void updateGammaStatusEffect() {
@@ -57,7 +57,7 @@ public class StatusEffectManager {
             return;
         }
 
-        if (config.isStatusEffectEnabled()) {
+        if (config.gamma.isStatusEffectEnabled()) {
             int gamma = GammaManager.getGammaPercentage();
             if (gamma > 100) {
                 if (!player.hasStatusEffect(BRIGHT)) {
