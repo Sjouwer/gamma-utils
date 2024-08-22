@@ -1,5 +1,7 @@
 package io.github.sjouwer.gammautils.mixin;
 
+import io.github.sjouwer.gammautils.GammaManager;
+import io.github.sjouwer.gammautils.NightVisionManager;
 import io.github.sjouwer.gammautils.statuseffect.StatusEffectManager;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.network.packet.s2c.play.PlayerAbilitiesS2CPacket;
@@ -18,6 +20,8 @@ public class MixinClientPlayNetworkHandler {
     @Inject(method = "onPlayerAbilities", at = @At("TAIL"))
     private void onPlayerAbilities(PlayerAbilitiesS2CPacket packet, CallbackInfo info) {
         StatusEffectManager.updateAllEffects();
+        GammaManager.setDimensionPreference();
+        NightVisionManager.setDimensionPreference();
     }
 
     /**

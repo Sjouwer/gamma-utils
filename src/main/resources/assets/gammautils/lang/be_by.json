@@ -9,41 +9,41 @@
 
     "text.autoconfig.gammautils.title": "Налады Gamma Utils",
 
-    "text.autoconfig.gammautils.option.gammaSettings.defaultGamma": "Вызначаны працэнт яркасці",
-    "text.autoconfig.gammautils.option.gammaSettings.defaultGamma.@Tooltip": "Працэнт яркасці калі \nмод выключаны",
+    "text.autoconfig.gammautils.option.gamma.defaultGamma": "Вызначаны працэнт яркасці",
+    "text.autoconfig.gammautils.option.gamma.defaultGamma.@Tooltip": "Працэнт яркасці калі \nмод выключаны",
 
-    "text.autoconfig.gammautils.option.gammaSettings.toggledGamma": "Уключыць павышаную яркасць",
-    "text.autoconfig.gammautils.option.gammaSettings.toggledGamma.@Tooltip": "Працэнт яркасці калі \nмод уключаны",
+    "text.autoconfig.gammautils.option.gamma.toggledGamma": "Уключыць павышаную яркасць",
+    "text.autoconfig.gammautils.option.gamma.toggledGamma.@Tooltip": "Працэнт яркасці калі \nмод уключаны",
 
-    "text.autoconfig.gammautils.option.gammaSettings.updateToggle": "Захоўваць уключаную лічбу",
-    "text.autoconfig.gammautils.option.gammaSettings.updateToggle.@Tooltip": "Калі ўключана, дазваляе \nзапамінаць апошнюю лічбу \nпрацэнтаў яркасці, якую вы выкарыстоўвалі",
+    "text.autoconfig.gammautils.option.gamma.updateToggle": "Захоўваць уключаную лічбу",
+    "text.autoconfig.gammautils.option.gamma.updateToggle.@Tooltip": "Калі ўключана, дазваляе \nзапамінаць апошнюю лічбу \nпрацэнтаў яркасці, якую вы выкарыстоўвалі",
 
-    "text.autoconfig.gammautils.option.gammaSettings.gammaStep": "Шаг яркасці ў працэнтах",
-    "text.autoconfig.gammautils.option.gammaSettings.gammaStep.@Tooltip": "Працэнт на які яркасць \nпавышаецца ці паніжаецца",
+    "text.autoconfig.gammautils.option.gamma.gammaStep": "Шаг яркасці ў працэнтах",
+    "text.autoconfig.gammautils.option.gamma.gammaStep.@Tooltip": "Працэнт на які яркасць \nпавышаецца ці паніжаецца",
 
-    "text.autoconfig.gammautils.option.gammaSettings.showStatusEffect": "Паказваць іконку эфекта",
-    "text.autoconfig.gammautils.option.gammaSettings.showStatusEffect.@Tooltip": "Паказваць іконку эфекта, калі \nпрацэнт больш за звычайны \n- \"Павышаная яркасць\" больш 100% \n- \"Нізкая яркасць\" меньш 0%",
+    "text.autoconfig.gammautils.option.gamma.showStatusEffect": "Паказваць іконку эфекта",
+    "text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "Паказваць іконку эфекта, калі \nпрацэнт больш за звычайны \n- \"Павышаная яркасць\" больш 100% \n- \"Нізкая яркасць\" меньш 0%",
 
-    "text.autoconfig.gammautils.option.gammaSettings.showMessage": "Паказваць паведамленне яркасці",
-    "text.autoconfig.gammautils.option.gammaSettings.showMessage.@Tooltip": "Паказваць паведамленне з новай лічбай \nкалі яркасць змяняецца",
+    "text.autoconfig.gammautils.option.gamma.showMessage": "Паказваць паведамленне яркасці",
+    "text.autoconfig.gammautils.option.gamma.showMessage.@Tooltip": "Паказваць паведамленне з новай лічбай \nкалі яркасць змяняецца",
 
-    "text.autoconfig.gammautils.option.gammaSettings.resetOnClose": "Скідваць пасля закрыцця",
-    "text.autoconfig.gammautils.option.gammaSettings.resetOnClose.@Tooltip": "Скідваць яркасць да вызначанай, \nкалі Minecraft зачынены",
+    "text.autoconfig.gammautils.option.gamma.resetOnClose": "Скідваць пасля закрыцця",
+    "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "Скідваць яркасць да вызначанай, \nкалі Minecraft зачынены",
 
-    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.smoothTransition": "Плаўны пераход",
-    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.smoothTransition.@Tooltip": "Робіць павышэнне яркасці \nбольш плаўным",
+    "text.autoconfig.gammautils.option.gamma.transition.smoothTransition": "Плаўны пераход",
+    "text.autoconfig.gammautils.option.gamma.transition.smoothTransition.@Tooltip": "Робіць павышэнне яркасці \nбольш плаўным",
 
-    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.transitionSpeed": "Хуткасць пераходу",
-    "text.autoconfig.gammautils.option.gammaSettings.transitionSettings.transitionSpeed.@Tooltip": "Хуткасць павышэння працэнтаў яркасці ў секунду \n(калі Плаўны Пераход уключаны)",
+    "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed": "Хуткасць пераходу",
+    "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed.@Tooltip": "Хуткасць павышэння працэнтаў яркасці ў секунду \n(калі Плаўны Пераход уключаны)",
 
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.limitCheck": "Праверка лімітаў",
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.limitCheck.@Tooltip": "Усталяяваць вызначаныя \nмінімальныя і максімальныя працэнты яркасці",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "Праверка лімітаў",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "Усталяяваць вызначаныя \nмінімальныя і максімальныя працэнты яркасці",
 
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.minGamma": "Ліміт мінімальнай яркасці",
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.minGamma.@Tooltip": "Мінімальный працэнт гамы, які дазваляе мод, \nкалі Праверка Лімітаў уключана",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "Ліміт мінімальнай яркасці",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "Мінімальный працэнт гамы, які дазваляе мод, \nкалі Праверка Лімітаў уключана",
 
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.maxGamma": "Ліміт максімальнай яркасці",
-    "text.autoconfig.gammautils.option.gammaSettings.limiterSettings.maxGamma.@Tooltip": "Максімальны працэнт гамы, які дазваляе мод, \nкалі Праверка Лімітаў уключана",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "Ліміт максімальнай яркасці",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Максімальны працэнт гамы, які дазваляе мод, \nкалі Праверка Лімітаў уключана",
 
     "text.gammautils.message.gammaPercentage": "Яркасць: %d%%",
     "text.gammautils.message.nightVisionDisabled": "Начны зрок: Адключаны",

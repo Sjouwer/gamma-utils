@@ -5,13 +5,16 @@ import io.github.sjouwer.gammautils.statuseffect.StatusEffectManager;
 import io.github.sjouwer.gammautils.util.InfoProvider;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.SimpleOption;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.world.World;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class GammaManager {
-    private static final SimpleOption<Double> gamma = MinecraftClient.getInstance().options.getGamma();
-    private static final ModConfig config = GammaUtils.getConfig();
+    private static final MinecraftClient client = MinecraftClient.getInstance();
+    private static final SimpleOption<Double> gamma = client.options.getGamma();
+    private static final ModConfig.GammaSettings config = GammaUtils.getConfig().gamma;
     private static Timer transitionTimer = null;
 
     private GammaManager() {
@@ -26,28 +29,45 @@ public class GammaManager {
     }
 
     public static void toggleGamma() {
-        double newValue = gamma.getValue() == config.getDefaultGamma() ? config.getToggledGamma() : config.getDefaultGamma();
+        double newValue = gamma.getValue() == config.getDefaultStrength() ? config.getToggledStrength() : config.getDefaultStrength();
         setGamma(newValue, true);
     }
 
     public static void increaseGamma(double value) {
         double newValue = gamma.getValue();
-        newValue += value == 0 ? config.getGammaStep() : value;
+        newValue += value == 0 ? config.getStepStrength() : value;
         setGamma(newValue, false);
     }
 
     public static void decreaseGamma(double value) {
         double newValue = gamma.getValue();
-        newValue -= value == 0 ? config.getGammaStep() : value;
+        newValue -= value == 0 ? config.getStepStrength() : value;
         setGamma(newValue, false);
     }
 
     public static void minGamma() {
-        setGamma(config.getMinGamma(), true);
+        setGamma(config.getMinimumStrength(), true);
     }
 
     public static void maxGamma() {
-        setGamma(config.getMaxGamma(), true);
+        setGamma(config.getMaximumStrength(), true);
+    }
+
+    public static void setDimensionPreference() {
+        if (client.world == null || !config.isDimensionPreferenceEnabled()) {
+            return;
+        }
+
+        RegistryKey<World> dimension = client.world.getRegistryKey();
+        if (dimension.equals(World.OVERWORLD)) {
+            setGamma(config.getOverworldPreference(), false);
+        }
+        else if (dimension.equals(World.NETHER)) {
+            setGamma(config.getNetherPreference(), false);
+        }
+        else if (dimension.equals(World.END)) {
+            setGamma(config.getEndPreference(), false);
+        }
     }
 
     public static void setGamma(double newValue, boolean smoothTransition) {
@@ -55,12 +75,12 @@ public class GammaManager {
             transitionTimer.cancel();
         }
 
-        if (config.isGammaLimiterEnabled() && config.getMaxGamma() > config.getMinGamma()) {
-            newValue = Math.clamp(newValue, config.getMinGamma(), config.getMaxGamma());
+        if (config.isLimiterEnabled() && config.getMaximumStrength() > config.getMinimumStrength()) {
+            newValue = Math.clamp(newValue, config.getMinimumStrength(), config.getMaximumStrength());
         }
 
-        if (smoothTransition && config.isSmoothGammaEnabled()) {
-            double valueChangePerTick = config.getGammaTransitionSpeed() / 100;
+        if (smoothTransition && config.isSmoothTransitionEnabled()) {
+            double valueChangePerTick = config.getTransitionSpeed() / 100;
             if (newValue < gamma.getValue()) {
                 valueChangePerTick *= -1;
             }
@@ -72,8 +92,8 @@ public class GammaManager {
             InfoProvider.showGammaHudMessage();
         }
 
-        if (config.isGammaToggleUpdateEnabled() && newValue != config.getDefaultGamma() && newValue != config.getToggledGamma()) {
-            config.setToggledGamma(newValue);
+        if (config.isToggleUpdateEnabled() && newValue != config.getDefaultStrength() && newValue != config.getToggledStrength()) {
+            config.setToggledStrength(newValue);
         }
     }
 

@@ -17,7 +17,7 @@ public final class InfoProvider {
     }
 
     public static void showGammaHudMessage() {
-        if (!config.isGammaMessageEnabled()) {
+        if (!config.gamma.isMessageEnabled()) {
             return;
         }
 
@@ -40,11 +40,11 @@ public final class InfoProvider {
     }
 
     public static void showNightVisionStatusHudMessage() {
-        if (!config.isNightVisionMessageEnabled()) {
+        if (!config.nightVision.isMessageEnabled()) {
             return;
         }
 
-        if (config.isNightVisionEnabled()) {
+        if (config.nightVision.isEnabled()) {
             showNightVisionStrengthHudMessage();
         }
         else {
