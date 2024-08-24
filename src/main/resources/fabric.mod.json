@@ -17,7 +17,8 @@
     "ru-ru: Fenixinc",
     "vi-vn: ImVietnam",
     "be-by: Gazmanovich",
-    "tr-tr: kryparnold"
+    "tr-tr: kryparnold",
+    "zh-tw: yichifauzi"
   ],
 
   "contact": {
@@ -44,7 +45,7 @@
   ],
 
   "depends": {
-    "minecraft": ">=1.20.5",
+    "minecraft": ">=1.20.5 <=1.20.6",
     "fabricloader": ">=0.15.0",
     "fabric-api": ">=0.97.5",
     "cloth-config": ">=14.0.0"
