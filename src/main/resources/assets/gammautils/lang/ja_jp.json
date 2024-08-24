@@ -26,8 +26,8 @@
 	"text.autoconfig.gammautils.option.gamma.showStatusEffect": "ステータス効果を表示",
 	"text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "通常の範囲外の明るさの時に\nステータス効果を表示する\n- \"明るさ大\" 100% 超\n- \"明るさ小\" 0% 未満",
 
-	"text.autoconfig.gammautils.option.gamma.showMessage": "明るさ表示",
-	"text.autoconfig.gammautils.option.gamma.showMessage.@Tooltip": "明るさを変更したときにその値を表示する",
+	"text.autoconfig.gammautils.option.gamma.hudMessage.showMessage": "明るさ表示",
+	"text.autoconfig.gammautils.option.gamma.hudMessage.showMessage.@Tooltip": "明るさを変更したときにその値を表示する",
 
 	"text.autoconfig.gammautils.option.gamma.resetOnClose": "終了時にリセット",
 	"text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "ゲームを終了するときに明るさをデフォルトに戻す",

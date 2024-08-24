@@ -22,8 +22,8 @@
     "text.autoconfig.gammautils.option.gamma.showStatusEffect": "상태 효과 표시",
     "text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "감마 백분율이 일반 범위를 벗어났을 때 상태 효과를 표시합니다 \n(0% 미만인 \"저감마\" 및 100% 이상인 \"고감마\")",
 
-    "text.autoconfig.gammautils.option.gamma.showMessage": "감마 메시지 표시",
-    "text.autoconfig.gammautils.option.gamma.showMessage.@Tooltip": "새로운 감마 값을 메시지로 표시합니다.",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage": "감마 메시지 표시",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage.@Tooltip": "새로운 감마 값을 메시지로 표시합니다.",
 
     "text.autoconfig.gammautils.option.gamma.resetOnClose": "게임 종료 시 초기화",
     "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "마인크래프트를 종료할 때 감마 값을 기본 값으로 초기화합니다.",

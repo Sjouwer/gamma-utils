@@ -28,8 +28,8 @@
     "text.autoconfig.gammautils.option.gamma.showStatusEffect": "顯示狀態效果",
     "text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "當伽馬值百分比\n超出正常範圍時顯示狀態效果\n- 超過 100% 時顯示「高伽馬值」\n- 低於 0% 時顯示「低伽馬值」",
 
-    "text.autoconfig.gammautils.option.gamma.showMessage": "顯示伽馬值訊息",
-    "text.autoconfig.gammautils.option.gamma.showMessage.@Tooltip": "當伽馬值發生變化時，\n顯示一條包含新伽馬值的訊息",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage": "顯示伽馬值訊息",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage.@Tooltip": "當伽馬值發生變化時，\n顯示一條包含新伽馬值的訊息",
 
     "text.autoconfig.gammautils.option.gamma.resetOnClose": "關閉時重設",
     "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "當 Minecraft 關閉時，\n將伽馬值重設為預設值",
