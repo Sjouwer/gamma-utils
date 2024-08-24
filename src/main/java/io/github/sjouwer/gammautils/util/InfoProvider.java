@@ -7,7 +7,6 @@ import io.github.sjouwer.gammautils.config.ModConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
 
 public final class InfoProvider {
     private static final MinecraftClient client = MinecraftClient.getInstance();
@@ -17,30 +16,30 @@ public final class InfoProvider {
     }
 
     public static void showGammaHudMessage() {
-        if (!config.gamma.isMessageEnabled()) {
+        if (!config.gamma.isHudMessageEnabled()) {
             return;
         }
 
         int gamma = GammaManager.getGammaPercentage();
         MutableText message = Text.translatable("text.gammautils.message.gammaPercentage", gamma);
 
-        Formatting format;
+        int color;
         if (gamma < 0) {
-            format = Formatting.DARK_RED;
+            color = config.gamma.getNegativeHudColor();
         }
         else if (gamma > 100) {
-            format = Formatting.GOLD;
+            color = config.gamma.getPositiveHudColor();
         }
         else {
-            format = Formatting.DARK_GREEN;
+            color = config.gamma.getDefaultHudColor();
         }
 
-        message.formatted(format);
+        message.withColor(color);
         client.inGameHud.setOverlayMessage(message, false);
     }
 
     public static void showNightVisionStatusHudMessage() {
-        if (!config.nightVision.isMessageEnabled()) {
+        if (!config.nightVision.isHudMessageEnabled()) {
             return;
         }
 
@@ -49,7 +48,7 @@ public final class InfoProvider {
         }
         else {
             MutableText message = Text.translatable("text.gammautils.message.nightVisionDisabled");
-            message.formatted(Formatting.DARK_RED);
+            message.withColor(config.nightVision.getDisabledHudColor());
             client.inGameHud.setOverlayMessage(message, false);
         }
     }
@@ -58,18 +57,18 @@ public final class InfoProvider {
         int nightVision = NightVisionManager.getNightVisionPercentage();
         MutableText message = Text.translatable("text.gammautils.message.nightVisionPercentage", nightVision);
 
-        Formatting format;
+        int color;
         if (nightVision < 0) {
-            format = Formatting.DARK_RED;
+            color = config.nightVision.getNegativeHudColor();
         }
         else if (nightVision > 100) {
-            format = Formatting.GOLD;
+            color = config.nightVision.getPositiveHudColor();
         }
         else {
-            format = Formatting.DARK_GREEN;
+            color = config.nightVision.getDefaultHudColor();
         }
 
-        message.formatted(format);
+        message.withColor(color);
         client.inGameHud.setOverlayMessage(message, false);
     }
 }

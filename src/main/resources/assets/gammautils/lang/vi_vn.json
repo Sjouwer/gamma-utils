@@ -24,8 +24,8 @@
     "text.autoconfig.gammautils.option.gamma.showStatusEffect": "Hiển thị hiệu ứng trạng thái",
     "text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "Hiển thị hiệu ứng trạng thái khi \ntỉ lệ gamma nằm ngoài phạm vi bình thường \n- \"Gamma cao\" trên 100% \n- \"Gamma thấp\" dưới 0%",
 
-    "text.autoconfig.gammautils.option.gamma.showMessage": "Hiển thị thông báo Gamma",
-    "text.autoconfig.gammautils.option.gamma.showMessage.@Tooltip": "Hiển thị thông báo có giá trị gamma mới \nkhi gamma đã thay đổi",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage": "Hiển thị thông báo Gamma",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage.@Tooltip": "Hiển thị thông báo có giá trị gamma mới \nkhi gamma đã thay đổi",
 
     "text.autoconfig.gammautils.option.gamma.resetOnClose": "Đặt lại khi đóng",
     "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "Đặt lại giá trị gamma về mặc định \nkhi Minecraft đóng",

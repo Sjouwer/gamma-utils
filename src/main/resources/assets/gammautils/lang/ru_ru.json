@@ -24,8 +24,8 @@
     "text.autoconfig.gammautils.option.gamma.showStatusEffect": "Показать эффект статуса",
     "text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "Показывать эффект статуса, когда гамма \nпроцент выходит за пределы нормального диапазона \n- «Высокая гамма» выше 100 % \n- «Низкая гамма» ниже 0 %",
 
-    "text.autoconfig.gammautils.option.gamma.showMessage": "Показать гамма-сообщение",
-    "text.autoconfig.gammautils.option.gamma.showMessage.@Tooltip": "Показывать сообщение с новым значением гаммы \nпри изменении гаммы",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage": "Показать гамма-сообщение",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage.@Tooltip": "Показывать сообщение с новым значением гаммы \nпри изменении гаммы",
 
     "text.autoconfig.gammautils.option.gamma.resetOnClose": "Сброс при закрытии",
     "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "Сбросьте значение гаммы по умолчанию \nпри закрытии Minecraft",

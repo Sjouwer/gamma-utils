@@ -23,8 +23,6 @@ public class ModConfig implements ConfigData {
         @Tooltip
         private int gammaStep = 10;
         @Tooltip
-        private boolean showMessage = true;
-        @Tooltip
         private boolean showStatusEffect = false;
         @Tooltip
         private boolean resetOnClose = false;
@@ -36,6 +34,8 @@ public class ModConfig implements ConfigData {
         private DimensionPreference dimensionPreference = new DimensionPreference();
         @CollapsibleObject
         private Limiter limiter = new Limiter();
+        @CollapsibleObject
+        private HudMessage hudMessage = new HudMessage();
 
         static class Transition {
             @Tooltip
@@ -76,6 +76,17 @@ public class ModConfig implements ConfigData {
             private int minGamma = -750;
             @Tooltip
             private int maxGamma = 1500;
+        }
+
+        static class HudMessage {
+            @Tooltip
+            private boolean showMessage = true;
+            @ColorPicker
+            private int defaultColor = 43520;
+            @ColorPicker
+            private int positiveColor = 0xFFAA00;
+            @ColorPicker
+            private int negativeColor = 0xAA0000;
         }
 
         public double getDefaultStrength() {
@@ -126,10 +137,6 @@ public class ModConfig implements ConfigData {
             return limiter.maxGamma / 100.0;
         }
 
-        public boolean isMessageEnabled() {
-            return showMessage;
-        }
-
         public boolean isDimensionPreferenceEnabled() {
             return dimensionPreference.enableDimensionPreference;
         }
@@ -161,6 +168,22 @@ public class ModConfig implements ConfigData {
         public int getDynamicAveragingLightRange() {
             return dynamic.averagingLightRange;
         }
+
+        public boolean isHudMessageEnabled() {
+            return hudMessage.showMessage;
+        }
+
+        public int getDefaultHudColor() {
+            return hudMessage.defaultColor;
+        }
+
+        public int getPositiveHudColor() {
+            return hudMessage.positiveColor;
+        }
+
+        public int getNegativeHudColor() {
+            return hudMessage.negativeColor;
+        }
     }
 
     @Category("nightVisionSettings")
@@ -181,8 +204,6 @@ public class ModConfig implements ConfigData {
         @Tooltip
         private boolean showNightVisionIcon = false;
         @Tooltip
-        private boolean showMessage = true;
-        @Tooltip
         private boolean resetOnClose = false;
         @CollapsibleObject
         private Transition transition = new Transition();
@@ -192,6 +213,8 @@ public class ModConfig implements ConfigData {
         private DimensionPreference dimensionPreference = new DimensionPreference();
         @CollapsibleObject
         private Limiter limiter = new Limiter();
+        @CollapsibleObject
+        private HudMessage hudMessage = new HudMessage();
 
         static class Transition {
             @Tooltip
@@ -232,6 +255,19 @@ public class ModConfig implements ConfigData {
             private int minNightVision = 0;
             @Tooltip
             private int maxNightVision = 100;
+        }
+
+        static class HudMessage {
+            @Tooltip
+            private boolean showMessage = true;
+            @ColorPicker
+            private int defaultColor = 43520;
+            @ColorPicker
+            private int positiveColor = 0xFFAA00;
+            @ColorPicker
+            private int negativeColor = 0xAA0000;
+            @ColorPicker
+            private int disabledColor = 0xAA0000;
         }
 
         public void setStatus(boolean status) {
@@ -290,10 +326,6 @@ public class ModConfig implements ConfigData {
             return showNightVisionIcon;
         }
 
-        public boolean isMessageEnabled() {
-            return showMessage;
-        }
-
         public boolean isResetOnCloseEnabled() {
             return resetOnClose;
         }
@@ -329,5 +361,26 @@ public class ModConfig implements ConfigData {
         public int getDynamicAveragingLightRange() {
             return dynamic.averagingLightRange;
         }
+
+        public boolean isHudMessageEnabled() {
+            return hudMessage.showMessage;
+        }
+
+        public int getDefaultHudColor() {
+            return hudMessage.defaultColor;
+        }
+
+        public int getPositiveHudColor() {
+            return hudMessage.positiveColor;
+        }
+
+        public int getNegativeHudColor() {
+            return hudMessage.negativeColor;
+        }
+
+        public int getDisabledHudColor() {
+            return hudMessage.disabledColor;
+        }
+
     }
 }

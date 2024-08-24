@@ -24,8 +24,8 @@
     "text.autoconfig.gammautils.option.gamma.showStatusEffect": "Mostrar el efecto de estado",
     "text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "Mostrar un efecto de estado cuando el porcentaje de \ngamma está fuera del rango normal \n- \"Valor alto de gamma\" más de 100% \n- \"Valor bajo de gamma\" menos de 0%",
 
-    "text.autoconfig.gammautils.option.gamma.showMessage": "Mostrar el mensaje de gamma",
-    "text.autoconfig.gammautils.option.gamma.showMessage.@Tooltip": "Mostrar una mensaje con el nuevo valor de gamma \ncuando el porcentaje de gamma ha cambiado.",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage": "Mostrar el mensaje de gamma",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage.@Tooltip": "Mostrar una mensaje con el nuevo valor de gamma \ncuando el porcentaje de gamma ha cambiado.",
 
     "text.autoconfig.gammautils.option.gamma.resetOnClose": "Reiniciar cuando cerrar el juego",
     "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "Reiniciar el valor de gamma \ncuando cerrar Minecraft.",

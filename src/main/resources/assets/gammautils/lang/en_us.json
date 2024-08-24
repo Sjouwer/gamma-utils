@@ -32,9 +32,6 @@
     "text.autoconfig.gammautils.option.gamma.showStatusEffect": "Show Status Effect",
     "text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "Show a status effect when the Gamma \npercentage is outside normal range \n- \"High Gamma\" above 100% \n- \"Low Gamma\" below 0%",
 
-    "text.autoconfig.gammautils.option.gamma.showMessage": "Show Gamma Message",
-    "text.autoconfig.gammautils.option.gamma.showMessage.@Tooltip": "Show a message containing the \nnew Gamma percentage when \nit has changed",
-
     "text.autoconfig.gammautils.option.gamma.resetOnClose": "Reset On Close",
     "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "Reset the Gamma value to default \nwhen Minecraft closes",
 
@@ -88,6 +85,16 @@
     "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "Maximum Gamma Limit",
     "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Maximum Gamma percentage the mod will \nallow if the Limit Check is enabled",
 
+    "text.autoconfig.gammautils.option.gamma.hudMessage": "HUD Message",
+
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage": "Show HUD Message",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage.@Tooltip": "Show a message containing the \nnew Gamma percentage when \nit has changed",
+
+    "text.autoconfig.gammautils.option.gamma.hudMessage.defaultColor": "Color: 0 - 100",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.positiveColor": "Color: > 100",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.negativeColor": "Color: < 0",
+
+
     "text.autoconfig.gammautils.category.nightVisionSettings": "Night Vision",
 
     "text.autoconfig.gammautils.option.nightVision.toggledNightVision": "Toggled Night Vision Percentage",
@@ -101,9 +108,6 @@
 
     "text.autoconfig.gammautils.option.nightVision.showNightVisionIcon": "Show Night Vision Icon",
     "text.autoconfig.gammautils.option.nightVision.showNightVisionIcon.@Tooltip": "Show the Night Vision HUD and inventory \nicon just like a normal status effect",
-
-    "text.autoconfig.gammautils.option.nightVision.showMessage": "Show Night Vision Message",
-    "text.autoconfig.gammautils.option.nightVision.showMessage.@Tooltip": "Show a message containing the \nnew Night Vision percentage \nwhen it has changed",
 
     "text.autoconfig.gammautils.option.nightVision.resetOnClose": "Reset On Close",
     "text.autoconfig.gammautils.option.nightVision.resetOnClose.@Tooltip": "Disable Night Vision when Minecraft closes",
@@ -157,6 +161,17 @@
 
     "text.autoconfig.gammautils.option.nightVision.limiter.maxNightVision": "Maximum Night Vision Limit",
     "text.autoconfig.gammautils.option.nightVision.limiter.maxNightVision.@Tooltip": "Maximum Night Vision percentage the mod will \nallow if the Limit Check is enabled",
+
+    "text.autoconfig.gammautils.option.nightVision.hudMessage": "HUD Message",
+
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.showMessage": "Show HUD Message",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.showMessage.@Tooltip": "Show a message containing the \nnew Night Vision percentage \nwhen it has changed",
+
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.defaultColor": "Color: 0 - 100",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.positiveColor": "Color: > 100",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.negativeColor": "Color: < 0",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.disabledColor": "Color: Disabled",
+
 
     "text.gammautils.message.gammaPercentage": "Gamma: %d%%",
     "text.gammautils.message.nightVisionPercentage": "Night Vision: %d%%",

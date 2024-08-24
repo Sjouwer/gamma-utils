@@ -24,8 +24,8 @@
     "text.autoconfig.gammautils.option.gamma.showStatusEffect": "Паказваць іконку эфекта",
     "text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "Паказваць іконку эфекта, калі \nпрацэнт больш за звычайны \n- \"Павышаная яркасць\" больш 100% \n- \"Нізкая яркасць\" меньш 0%",
 
-    "text.autoconfig.gammautils.option.gamma.showMessage": "Паказваць паведамленне яркасці",
-    "text.autoconfig.gammautils.option.gamma.showMessage.@Tooltip": "Паказваць паведамленне з новай лічбай \nкалі яркасць змяняецца",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage": "Паказваць паведамленне яркасці",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage.@Tooltip": "Паказваць паведамленне з новай лічбай \nкалі яркасць змяняецца",
 
     "text.autoconfig.gammautils.option.gamma.resetOnClose": "Скідваць пасля закрыцця",
     "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "Скідваць яркасць да вызначанай, \nкалі Minecraft зачынены",

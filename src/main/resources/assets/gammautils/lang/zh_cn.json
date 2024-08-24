@@ -24,8 +24,8 @@
     "text.autoconfig.gammautils.option.gamma.showStatusEffect": "显示状态效果",
     "text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "当伽玛百分比超出正常范围时显示状态效果 \n(\"低伽马\" 低于 0% 和 \"高伽马\" 100% 以上)",
 
-    "text.autoconfig.gammautils.option.gamma.showMessage": "显示伽马信息",
-    "text.autoconfig.gammautils.option.gamma.showMessage.@Tooltip": "显示带有新伽马值的信息",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage": "显示伽马信息",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage.@Tooltip": "显示带有新伽马值的信息",
 
     "text.autoconfig.gammautils.option.gamma.resetOnClose": "关闭时重置",
     "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "Minecraft关闭时将伽玛值重置为默认值",

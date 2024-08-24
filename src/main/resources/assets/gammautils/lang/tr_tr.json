@@ -24,8 +24,8 @@
     "text.autoconfig.gammautils.option.gamma.showStatusEffect": "Durum Efekti Göster",
     "text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "Aydınlatma değeri normal değerler \ndışındayken bir durum efekti göster \n- \"Yüksek Aydınlatma\" 100% üzerindeyken \n- \"Düşük Aydınlatma\" 0% altındayken",
 
-    "text.autoconfig.gammautils.option.gamma.showMessage": "Aydınlatma Değeri Mesajı Göster",
-    "text.autoconfig.gammautils.option.gamma.showMessage.@Tooltip": "Aydınlatma Değeri değiştiğinde yeni \nAydınlatma Değerini ile bir mesaj göster",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage": "Aydınlatma Değeri Mesajı Göster",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage.@Tooltip": "Aydınlatma Değeri değiştiğinde yeni \nAydınlatma Değerini ile bir mesaj göster",
 
     "text.autoconfig.gammautils.option.gamma.resetOnClose": "Kapatırken Sıfırla",
     "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "Minecraft'ı kapattıktan sonra aydınlatma değerini varsayılan değere sıfırla",
