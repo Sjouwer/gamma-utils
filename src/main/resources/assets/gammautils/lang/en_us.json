@@ -46,6 +46,23 @@
     "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed": "Transition Speed",
     "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed.@Tooltip": "Speed in percentage per second \nwhen Smooth Transition is enabled",
 
+    "text.autoconfig.gammautils.option.gamma.dynamic": "Dynamic Gamma",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma": "Enable Dynamic Gamma",
+    "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma.@Tooltip": "Makes Gamma dynamically \nadjust itself depending on the \nlight level around the player",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.minGamma": "Minimum Gamma Strength",
+    "text.autoconfig.gammautils.option.gamma.dynamic.minGamma.@Tooltip": "Gamma strength at light level 0",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.maxGamma": "Maximum Gamma Strength",
+    "text.autoconfig.gammautils.option.gamma.dynamic.maxGamma.@Tooltip": "Gamma strength at light level 15",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.transitionSpeed": "Transition Speed",
+    "text.autoconfig.gammautils.option.gamma.dynamic.transitionSpeed.@Tooltip": "Dynamic transition speed in \npercentage per second when \nthe light level changes",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.averagingLightRange": "Averaging Light Level Range",
+    "text.autoconfig.gammautils.option.gamma.dynamic.averagingLightRange.@Tooltip": "Range in blocks around the player \nto average the light level of",
+
     "text.autoconfig.gammautils.option.gamma.dimensionPreference": "Dimension Preference",
 
     "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference": "Enable Dimension Preference",
@@ -98,6 +115,23 @@
 
     "text.autoconfig.gammautils.option.nightVision.transition.transitionSpeed": "Transition Speed",
     "text.autoconfig.gammautils.option.nightVision.transition.transitionSpeed.@Tooltip": "Speed in percentage per second \nwhen Smooth Transition is enabled",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic": "Dynamic Night Vision",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision": "Enable Dynamic Night Vision",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision.@Tooltip": "Makes Night Vision dynamically \nadjust itself depending on the \nlight level around the player",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision": "Minimum Night Vision Strength",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision.@Tooltip": "Night Vision strength at light level 0",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.maxNightVision": "Maximum Night Vision Strength",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.maxNightVision.@Tooltip": "Night Vision strength at light level 15",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.transitionSpeed": "Transition Speed",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.transitionSpeed.@Tooltip": "Dynamic transition speed in \npercentage per second when \nthe light level changes",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.averagingLightRange": "Averaging Light Level Range",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.averagingLightRange.@Tooltip": "Range in blocks around the player \nto average the light level of",
 
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference": "Dimension Preference",
 

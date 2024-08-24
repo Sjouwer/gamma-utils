@@ -3,6 +3,7 @@ package io.github.sjouwer.gammautils;
 import io.github.sjouwer.gammautils.config.ModConfig;
 import io.github.sjouwer.gammautils.statuseffect.StatusEffectManager;
 import io.github.sjouwer.gammautils.util.InfoProvider;
+import io.github.sjouwer.gammautils.util.LightLevelUtil;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.SimpleOption;
 import net.minecraft.registry.RegistryKey;
@@ -16,6 +17,7 @@ public class GammaManager {
     private static final SimpleOption<Double> gamma = client.options.getGamma();
     private static final ModConfig.GammaSettings config = GammaUtils.getConfig().gamma;
     private static Timer transitionTimer = null;
+    private static double dynamicGammaTarget = Double.NaN;
 
     private GammaManager() {
     }
@@ -30,6 +32,7 @@ public class GammaManager {
 
     public static void toggleGamma() {
         double newValue = gamma.getValue() == config.getDefaultStrength() ? config.getToggledStrength() : config.getDefaultStrength();
+        dynamicGammaTarget = Double.NaN;
         setGamma(newValue, true, true);
     }
 
@@ -70,7 +73,25 @@ public class GammaManager {
         }
     }
 
+    public static void setDynamicGamma() {
+        if (!config.isDynamicGammaEnabled()) {
+            return;
+        }
+
+        double lightLevel = LightLevelUtil.getAverageLightLevel(config.getDynamicAveragingLightRange());
+        double step = (config.getMaxDynamicStrength() - config.getMinDynamicStrength()) / 15.0;
+        double target = (config.getMinDynamicStrength() + step * (15 - lightLevel));
+        if (dynamicGammaTarget != target) {
+            dynamicGammaTarget = target;
+            setGamma(target, true, false, true);
+        }
+    }
+
     public static void setGamma(double newValue, boolean smoothTransition, boolean showMessage) {
+        setGamma(newValue, smoothTransition, showMessage, false);
+    }
+
+    public static void setGamma(double newValue, boolean smoothTransition, boolean showMessage, boolean dynamic) {
         if (transitionTimer != null) {
             transitionTimer.cancel();
         }
@@ -79,8 +100,8 @@ public class GammaManager {
             newValue = Math.clamp(newValue, config.getMinimumStrength(), config.getMaximumStrength());
         }
 
-        if (smoothTransition && config.isSmoothTransitionEnabled()) {
-            double valueChangePerTick = config.getTransitionSpeed() / 100;
+        if (smoothTransition && (config.isSmoothTransitionEnabled() || dynamic)) {
+            double valueChangePerTick = config.getTransitionSpeed(dynamic) / 100;
             if (newValue < gamma.getValue()) {
                 valueChangePerTick *= -1;
             }
