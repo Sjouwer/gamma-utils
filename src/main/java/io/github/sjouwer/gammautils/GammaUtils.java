@@ -6,6 +6,7 @@ import me.shedaniel.autoconfig.ConfigHolder;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.util.ActionResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,5 +34,10 @@ public class GammaUtils implements ClientModInitializer {
 
         KeyBindings.registerBindings();
         Commands.registerCommands();
+
+        ClientTickEvents.START_CLIENT_TICK.register(client -> {
+            GammaManager.setDynamicGamma();
+            NightVisionManager.setDynamicNightVision();
+        });
     }
 }

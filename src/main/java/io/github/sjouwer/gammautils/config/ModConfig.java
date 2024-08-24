@@ -3,7 +3,7 @@ package io.github.sjouwer.gammautils.config;
 import io.github.sjouwer.gammautils.GammaUtils;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
-import me.shedaniel.autoconfig.annotation.ConfigEntry.Category;
+import me.shedaniel.autoconfig.annotation.ConfigEntry.*;
 import me.shedaniel.autoconfig.annotation.ConfigEntry.Gui.*;
 
 @SuppressWarnings("FieldMayBeFinal")
@@ -31,6 +31,8 @@ public class ModConfig implements ConfigData {
         @CollapsibleObject
         private Transition transition = new Transition();
         @CollapsibleObject
+        private DynamicGamma dynamic = new DynamicGamma();
+        @CollapsibleObject
         private DimensionPreference dimensionPreference = new DimensionPreference();
         @CollapsibleObject
         private Limiter limiter = new Limiter();
@@ -40,6 +42,20 @@ public class ModConfig implements ConfigData {
             private boolean smoothTransition = false;
             @Tooltip
             private int transitionSpeed = 3000;
+        }
+
+        static class DynamicGamma {
+            @Tooltip
+            private boolean enableDynamicGamma = false;
+            @Tooltip
+            private int minGamma = 100;
+            @Tooltip
+            private int maxGamma = 1000;
+            @Tooltip
+            private int transitionSpeed = 200;
+            @Tooltip
+            @BoundedDiscrete(max=16)
+            private int averagingLightRange = 8;
         }
 
         static class DimensionPreference {
@@ -86,8 +102,8 @@ public class ModConfig implements ConfigData {
             return transition.smoothTransition;
         }
 
-        public double getTransitionSpeed() {
-            return transition.transitionSpeed / 100.0;
+        public double getTransitionSpeed(boolean dynamic) {
+            return (dynamic ? this.dynamic.transitionSpeed : transition.transitionSpeed) / 100.0;
         }
 
         public boolean isStatusEffectEnabled() {
@@ -129,6 +145,22 @@ public class ModConfig implements ConfigData {
         public double getEndPreference() {
             return dimensionPreference.endPreference / 100.0;
         }
+
+        public boolean isDynamicGammaEnabled() {
+            return dynamic.enableDynamicGamma;
+        }
+
+        public double getMinDynamicStrength() {
+            return dynamic.minGamma / 100.0;
+        }
+
+        public double getMaxDynamicStrength() {
+            return dynamic.maxGamma / 100.0;
+        }
+
+        public int getDynamicAveragingLightRange() {
+            return dynamic.averagingLightRange;
+        }
     }
 
     @Category("nightVisionSettings")
@@ -155,6 +187,8 @@ public class ModConfig implements ConfigData {
         @CollapsibleObject
         private Transition transition = new Transition();
         @CollapsibleObject
+        private DynamicNightVision dynamic = new DynamicNightVision();
+        @CollapsibleObject
         private DimensionPreference dimensionPreference = new DimensionPreference();
         @CollapsibleObject
         private Limiter limiter = new Limiter();
@@ -164,6 +198,20 @@ public class ModConfig implements ConfigData {
             private boolean smoothTransition = false;
             @Tooltip
             private int transitionSpeed = 200;
+        }
+
+        static class DynamicNightVision {
+            @Tooltip
+            private boolean enableDynamicNightVision = false;
+            @Tooltip
+            private int minNightVision = 0;
+            @Tooltip
+            private int maxNightVision = 100;
+            @Tooltip
+            private int transitionSpeed = 15;
+            @Tooltip
+            @BoundedDiscrete(max=16)
+            private int averagingLightRange = 8;
         }
 
         static class DimensionPreference {
@@ -222,8 +270,8 @@ public class ModConfig implements ConfigData {
             return transition.smoothTransition;
         }
 
-        public double getTransitionSpeed() {
-            return transition.transitionSpeed;
+        public double getTransitionSpeed(boolean dynamic) {
+            return dynamic ? this.dynamic.transitionSpeed : transition.transitionSpeed;
         }
 
         public boolean isLimiterEnabled() {
@@ -254,16 +302,32 @@ public class ModConfig implements ConfigData {
             return dimensionPreference.enableDimensionPreference;
         }
 
-        public double getOverworldPreference() {
+        public int getOverworldPreference() {
             return dimensionPreference.overworldPreference;
         }
 
-        public double getNetherPreference() {
+        public int getNetherPreference() {
             return dimensionPreference.netherPreference;
         }
 
-        public double getEndPreference() {
+        public int getEndPreference() {
             return dimensionPreference.endPreference;
+        }
+
+        public boolean isDynamicNightVisionEnabled() {
+            return dynamic.enableDynamicNightVision;
+        }
+
+        public int getMinDynamicStrength() {
+            return dynamic.minNightVision;
+        }
+
+        public int getMaxDynamicStrength() {
+            return dynamic.maxNightVision;
+        }
+
+        public int getDynamicAveragingLightRange() {
+            return dynamic.averagingLightRange;
         }
     }
 }

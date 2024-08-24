@@ -3,6 +3,7 @@ package io.github.sjouwer.gammautils;
 import io.github.sjouwer.gammautils.config.ModConfig;
 import io.github.sjouwer.gammautils.statuseffect.StatusEffectManager;
 import io.github.sjouwer.gammautils.util.InfoProvider;
+import io.github.sjouwer.gammautils.util.LightLevelUtil;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.registry.RegistryKey;
@@ -15,6 +16,7 @@ public class NightVisionManager {
     private static final ModConfig.NightVisionSettings config = GammaUtils.getConfig().nightVision;
     private static final MinecraftClient client = MinecraftClient.getInstance();
     private static Timer transitionTimer = null;
+    private static double dynamicNightVisionTarget = Double.NaN;
 
     private NightVisionManager() {
     }
@@ -35,6 +37,7 @@ public class NightVisionManager {
         else {
             NightVisionManager.setNightVision(0, false, false, true);
             StatusEffectManager.enableNightVision(player);
+            dynamicNightVisionTarget = Double.NaN;
             NightVisionManager.setNightVision(config.getToggledStrength(), true, false, true);
         }
     }
@@ -68,7 +71,25 @@ public class NightVisionManager {
         }
     }
 
+    public static void setDynamicNightVision() {
+        if (!config.isDynamicNightVisionEnabled()) {
+            return;
+        }
+
+        double lightLevel = LightLevelUtil.getAverageLightLevel(config.getDynamicAveragingLightRange());
+        double step = (config.getMaxDynamicStrength() - config.getMinDynamicStrength()) / 15.0;
+        double target = (config.getMinDynamicStrength() + step * (15 - lightLevel));
+        if (dynamicNightVisionTarget != target) {
+            dynamicNightVisionTarget = target;
+            setNightVision(target, true, false, false, true);
+        }
+    }
+
     public static void setNightVision(double newValue, boolean smoothTransition, boolean disable, boolean showMessage) {
+        setNightVision(newValue, smoothTransition, disable, showMessage, false);
+    }
+
+    public static void setNightVision(double newValue, boolean smoothTransition, boolean disable, boolean showMessage, boolean dynamic) {
         if (transitionTimer != null) {
             transitionTimer.cancel();
         }
@@ -77,8 +98,8 @@ public class NightVisionManager {
             newValue = Math.clamp(newValue, config.getMinimumStrength(), config.getMaximumStrength());
         }
 
-        if (smoothTransition && config.isSmoothTransitionEnabled()) {
-            double valueChangePerTick = config.getTransitionSpeed() / 100;
+        if (smoothTransition && (config.isSmoothTransitionEnabled() || dynamic)) {
+            double valueChangePerTick = config.getTransitionSpeed(dynamic) / 100;
             if (newValue < config.getStrength()) {
                 valueChangePerTick *= -1;
             }

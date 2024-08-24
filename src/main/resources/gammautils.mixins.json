@@ -12,7 +12,7 @@
     "MixinSimpleOption",
     "MixinStatusEffectInstance",
     "MixinStatusEffectSpriteManager",
-    "MixinStatusEffectUtil",
+    "MixinAbstractInventoryScreen",
     "SpriteAtlasHolderInvoker"
   ],
   "injectors": {
