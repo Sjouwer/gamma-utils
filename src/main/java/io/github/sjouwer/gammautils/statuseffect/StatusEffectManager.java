@@ -28,27 +28,17 @@ public class StatusEffectManager {
     }
 
     public static void updateNightVision() {
-        if (config.nightVision.isEnabled()) {
-            enableNightVision(client.player);
-        }
-    }
-
-    public static void enableNightVision(ClientPlayerEntity player) {
+        ClientPlayerEntity player = client.player;
         if (player == null) {
             return;
         }
 
-        addPermEffect(player, StatusEffects.NIGHT_VISION);
-        config.nightVision.setStatus(true);
-    }
-
-    public static void disableNightVision(ClientPlayerEntity player) {
-        if (player == null) {
-            return;
+        if (config.nightVision.isEnabled() && config.nightVision.isIconEnabled()) {
+            addPermEffect(player, StatusEffects.NIGHT_VISION);
         }
-
-        player.removeStatusEffect(StatusEffects.NIGHT_VISION);
-        config.nightVision.setStatus(false);
+        else {
+            player.removeStatusEffect(StatusEffects.NIGHT_VISION);
+        }
     }
 
     public static void updateGammaStatusEffect() {

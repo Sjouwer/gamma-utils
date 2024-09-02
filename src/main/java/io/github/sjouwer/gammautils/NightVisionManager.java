@@ -5,7 +5,6 @@ import io.github.sjouwer.gammautils.statuseffect.StatusEffectManager;
 import io.github.sjouwer.gammautils.util.InfoProvider;
 import io.github.sjouwer.gammautils.util.LightLevelUtil;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.world.World;
 
@@ -26,20 +25,32 @@ public class NightVisionManager {
     }
 
     public static void toggleNightVision() {
-        ClientPlayerEntity player = client.player;
-        if (player == null) {
-            return;
-        }
-
         if (config.isEnabled()) {
-            NightVisionManager.setNightVision(0, true, true, true);
+            if (config.isDynamicNightVisionEnabled()) {
+                InfoProvider.showDynamicNightVisionHudMessage(false);
+                NightVisionManager.setNightVision(0, true, true, false, true);
+            }
+            else {
+                NightVisionManager.setNightVision(0, true, true, true);
+            }
         }
         else {
-            NightVisionManager.setNightVision(0, false, false, true);
-            StatusEffectManager.enableNightVision(player);
-            dynamicNightVisionTarget = Double.NaN;
-            NightVisionManager.setNightVision(config.getToggledStrength(), true, false, true);
+            NightVisionManager.setNightVision(0, false, false, false);
+            enableNightVision(true);
+            if (config.isDynamicNightVisionEnabled()) {
+                InfoProvider.showDynamicNightVisionHudMessage(true);
+                dynamicNightVisionTarget = Double.NaN;
+                setDynamicNightVision();
+            }
+            else {
+                NightVisionManager.setNightVision(config.getToggledStrength(), true, false, true);
+            }
         }
+    }
+
+    private static void enableNightVision(boolean status) {
+        config.setStatus(status);
+        StatusEffectManager.updateNightVision();
     }
 
     public static void increaseNightVision(int value) {
@@ -108,14 +119,14 @@ public class NightVisionManager {
         else {
             config.setStrength(newValue);
             if (disable) {
-                StatusEffectManager.disableNightVision(client.player);
+                enableNightVision(false);
             }
             if (showMessage) {
                 InfoProvider.showNightVisionStatusHudMessage();
             }
         }
 
-        if (config.isToggleUpdateEnabled() && newValue != 0 && newValue != config.getToggledStrength()) {
+        if (config.isToggleUpdateEnabled() && newValue != 0) {
             config.setToggledStrength((int)Math.round(newValue));
         }
     }
@@ -131,7 +142,7 @@ public class NightVisionManager {
                     transitionTimer.cancel();
                     config.setStrength(newValue);
                     if (disable) {
-                        StatusEffectManager.disableNightVision(client.player);
+                        enableNightVision(false);
                     }
                 }
                 else {

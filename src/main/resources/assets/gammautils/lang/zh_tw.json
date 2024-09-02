@@ -126,10 +126,10 @@
     "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision.@Tooltip": "使夜視根據玩家\n周圍的亮度動態調整",
 
     "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision": "最小夜視強度",
-    "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision.@Tooltip": "亮度等級 0 時的夜視強度",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision.@Tooltip": "亮度等級 15 時的夜視強度",
 
     "text.autoconfig.gammautils.option.nightVision.dynamic.maxNightVision": "最大夜視強度",
-    "text.autoconfig.gammautils.option.nightVision.dynamic.maxNightVision.@Tooltip": "亮度等級 15 時的夜視強度",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.maxNightVision.@Tooltip": "亮度等級 0 時的夜視強度",
 
     "text.autoconfig.gammautils.option.nightVision.dynamic.transitionSpeed": "過渡速度",
     "text.autoconfig.gammautils.option.nightVision.dynamic.transitionSpeed.@Tooltip": "亮度等級變化時，\n每秒百分比的動態過渡速度",

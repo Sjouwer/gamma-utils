@@ -22,10 +22,10 @@ public class Commands {
                         return 1;
                     })
                     .then(argument("value", integer())
-                            .executes(ctx -> {
-                                GammaManager.setGamma(getInteger(ctx, "value") / 100.0, true, true);
-                                return 1;
-                            }))
+                        .executes(ctx -> {
+                            GammaManager.setGamma(getInteger(ctx, "value") / 100.0, true, true);
+                            return 1;
+                        }))
                     .then(literal("toggle")
                         .executes(ctx -> {
                             GammaManager.toggleGamma();
@@ -77,11 +77,11 @@ public class Commands {
                         return 1;
                     })
                     .then(argument("value", integer())
-                            .executes(ctx -> {
-                                NightVisionManager.toggleNightVision();
-                                NightVisionManager.setNightVision(getInteger(ctx, "value"), true, false, true);
-                                return 1;
-                            }))
+                        .executes(ctx -> {
+                            NightVisionManager.toggleNightVision();
+                            NightVisionManager.setNightVision(getInteger(ctx, "value"), true, false, true);
+                            return 1;
+                        }))
                     .then(literal("toggle")
                         .executes(ctx -> {
                             NightVisionManager.toggleNightVision();

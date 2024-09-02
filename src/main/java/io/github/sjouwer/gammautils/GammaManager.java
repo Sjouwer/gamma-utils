@@ -115,7 +115,7 @@ public class GammaManager {
             }
         }
 
-        if (config.isToggleUpdateEnabled() && newValue != config.getDefaultStrength() && newValue != config.getToggledStrength()) {
+        if (config.isToggleUpdateEnabled() && newValue != config.getDefaultStrength()) {
             config.setToggledStrength(newValue);
         }
     }

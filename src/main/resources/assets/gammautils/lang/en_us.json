@@ -126,10 +126,10 @@
     "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision.@Tooltip": "Makes Night Vision dynamically \nadjust itself depending on the \nlight level around the player",
 
     "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision": "Minimum Night Vision Strength",
-    "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision.@Tooltip": "Night Vision strength at light level 0",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision.@Tooltip": "Night Vision strength at light level 15",
 
     "text.autoconfig.gammautils.option.nightVision.dynamic.maxNightVision": "Maximum Night Vision Strength",
-    "text.autoconfig.gammautils.option.nightVision.dynamic.maxNightVision.@Tooltip": "Night Vision strength at light level 15",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.maxNightVision.@Tooltip": "Night Vision strength at light level 0",
 
     "text.autoconfig.gammautils.option.nightVision.dynamic.transitionSpeed": "Transition Speed",
     "text.autoconfig.gammautils.option.nightVision.dynamic.transitionSpeed.@Tooltip": "Dynamic transition speed in \npercentage per second when \nthe light level changes",
@@ -170,12 +170,15 @@
     "text.autoconfig.gammautils.option.nightVision.hudMessage.defaultColor": "Color: 0 - 100",
     "text.autoconfig.gammautils.option.nightVision.hudMessage.positiveColor": "Color: > 100",
     "text.autoconfig.gammautils.option.nightVision.hudMessage.negativeColor": "Color: < 0",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.enabledColor": "Color: Enabled",
     "text.autoconfig.gammautils.option.nightVision.hudMessage.disabledColor": "Color: Disabled",
 
 
     "text.gammautils.message.gammaPercentage": "Gamma: %d%%",
     "text.gammautils.message.nightVisionPercentage": "Night Vision: %d%%",
     "text.gammautils.message.nightVisionDisabled": "Night Vision: Disabled",
+    "text.gammautils.message.dynamicNightVisionEnabled": "Enabling Dynamic Night Vision",
+    "text.gammautils.message.dynamicNightVisionDisabled": "Disabling Dynamic Night Vision",
 
     "effect.gammautils.bright": "High Gamma",
     "effect.gammautils.dim": "Low Gamma"

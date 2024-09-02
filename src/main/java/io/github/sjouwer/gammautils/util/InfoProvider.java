@@ -38,6 +38,20 @@ public final class InfoProvider {
         client.inGameHud.setOverlayMessage(message, false);
     }
 
+    public static void showDynamicNightVisionHudMessage(boolean enabled) {
+        MutableText message;
+        if (enabled) {
+            message = Text.translatable("text.gammautils.message.dynamicNightVisionEnabled");
+            message.withColor(config.nightVision.getEnabledHudColor());
+        }
+        else {
+            message = Text.translatable("text.gammautils.message.dynamicNightVisionDisabled");
+            message.withColor(config.nightVision.getDisabledHudColor());
+        }
+
+        client.inGameHud.setOverlayMessage(message, false);
+    }
+
     public static void showNightVisionStatusHudMessage() {
         if (!config.nightVision.isHudMessageEnabled()) {
             return;

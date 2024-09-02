@@ -6,11 +6,9 @@
   "client": [
     "MixinClientPlayNetworkHandler",
     "MixinGameRenderer",
-    "MixinInventoryScreen",
     "MixinLightmapTextureManager",
     "MixinMinecraftClient",
     "MixinSimpleOption",
-    "MixinStatusEffectInstance",
     "MixinStatusEffectSpriteManager",
     "MixinAbstractInventoryScreen",
     "SpriteAtlasHolderInvoker"
