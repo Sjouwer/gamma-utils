@@ -267,6 +267,8 @@ public class ModConfig implements ConfigData {
             @ColorPicker
             private int negativeColor = 0xAA0000;
             @ColorPicker
+            private int enabledColor = 43520;
+            @ColorPicker
             private int disabledColor = 0xAA0000;
         }
 
@@ -376,6 +378,10 @@ public class ModConfig implements ConfigData {
 
         public int getNegativeHudColor() {
             return hudMessage.negativeColor;
+        }
+
+        public int getEnabledHudColor() {
+            return hudMessage.enabledColor;
         }
 
         public int getDisabledHudColor() {

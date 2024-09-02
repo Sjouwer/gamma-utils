@@ -28,7 +28,7 @@ public class GammaUtils implements ClientModInitializer {
     public void onInitializeClient() {
         configHolder = AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
         configHolder.registerSaveListener((manager, data) -> {
-            StatusEffectManager.updateGammaStatusEffect();
+            StatusEffectManager.updateAllEffects();
             return ActionResult.SUCCESS;
         });
 
