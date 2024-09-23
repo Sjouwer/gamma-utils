@@ -33,7 +33,7 @@ public class StatusEffectManager {
             return;
         }
 
-        if (config.nightVision.isEnabled() && config.nightVision.isIconEnabled()) {
+        if (config.nightVision.isEnabled() && config.nightVision.isStatusEffectEnabled()) {
             addPermEffect(player, StatusEffects.NIGHT_VISION);
         }
         else {

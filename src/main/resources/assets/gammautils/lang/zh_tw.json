@@ -106,8 +106,8 @@
     "text.autoconfig.gammautils.option.nightVision.nightVisionStep": "夜視百分比步長",
     "text.autoconfig.gammautils.option.nightVision.nightVisionStep.@Tooltip": "每次增加或減少的\n夜視百分比變化",
 
-    "text.autoconfig.gammautils.option.nightVision.showNightVisionIcon": "顯示夜視圖示",
-    "text.autoconfig.gammautils.option.nightVision.showNightVisionIcon.@Tooltip": "顯示夜視 HUD 和物品欄圖示，\n就像一般的狀態效果一樣",
+    "text.autoconfig.gammautils.option.nightVision.showStatusEffect": "顯示夜視圖示",
+    "text.autoconfig.gammautils.option.nightVision.showStatusEffect.@Tooltip": "顯示夜視 HUD 和物品欄圖示，\n就像一般的狀態效果一樣",
 
     "text.autoconfig.gammautils.option.nightVision.resetOnClose": "關閉時重設",
     "text.autoconfig.gammautils.option.nightVision.resetOnClose.@Tooltip": "Minecraft 關閉時停用夜視",

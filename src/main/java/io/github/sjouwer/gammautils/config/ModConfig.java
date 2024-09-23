@@ -113,12 +113,20 @@ public class ModConfig implements ConfigData {
             return transition.smoothTransition;
         }
 
+        public void setSmoothTransitionStatus(boolean status) {
+            transition.smoothTransition = status;
+        }
+
         public double getTransitionSpeed(boolean dynamic) {
             return (dynamic ? this.dynamic.transitionSpeed : transition.transitionSpeed) / 100.0;
         }
 
         public boolean isStatusEffectEnabled() {
             return showStatusEffect;
+        }
+
+        public void setStatusEffectStatus(boolean status) {
+            showStatusEffect = status;
         }
 
         public boolean isResetOnCloseEnabled() {
@@ -155,6 +163,10 @@ public class ModConfig implements ConfigData {
 
         public boolean isDynamicGammaEnabled() {
             return dynamic.enableDynamicGamma;
+        }
+
+        public void setDynamicGammaStatus(boolean status) {
+            dynamic.enableDynamicGamma = status;
         }
 
         public double getMinDynamicStrength() {
@@ -202,7 +214,7 @@ public class ModConfig implements ConfigData {
         @Tooltip
         private int nightVisionStep = 2;
         @Tooltip
-        private boolean showNightVisionIcon = false;
+        private boolean showStatusEffect = false;
         @Tooltip
         private boolean resetOnClose = false;
         @CollapsibleObject
@@ -308,6 +320,10 @@ public class ModConfig implements ConfigData {
             return transition.smoothTransition;
         }
 
+        public void setSmoothTransitionStatus(boolean status) {
+            transition.smoothTransition = status;
+        }
+
         public double getTransitionSpeed(boolean dynamic) {
             return dynamic ? this.dynamic.transitionSpeed : transition.transitionSpeed;
         }
@@ -324,8 +340,12 @@ public class ModConfig implements ConfigData {
             return limiter.minNightVision;
         }
 
-        public boolean isIconEnabled() {
-            return showNightVisionIcon;
+        public boolean isStatusEffectEnabled() {
+            return showStatusEffect;
+        }
+
+        public void setStatusEffectStatus(boolean status) {
+            showStatusEffect = status;
         }
 
         public boolean isResetOnCloseEnabled() {
@@ -350,6 +370,10 @@ public class ModConfig implements ConfigData {
 
         public boolean isDynamicNightVisionEnabled() {
             return dynamic.enableDynamicNightVision;
+        }
+
+        public void setDynamicNightVisionStatus(boolean status) {
+            dynamic.enableDynamicNightVision = status;
         }
 
         public int getMinDynamicStrength() {
