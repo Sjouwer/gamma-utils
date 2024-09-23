@@ -45,8 +45,8 @@
     "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "Maksimum Aydınlatma Limiti",
     "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Limit Kontrolü açıkken modun \nizin vereceği maksimum aydınlatma değeri",
 
-    "text.autoconfig.gammautils.option.nightVision.showNightVisionIcon": "Gece Görüşü İkonunu Göster",
-    "text.autoconfig.gammautils.option.nightVision.showNightVisionIcon.@Tooltip": "Gece Görüşü İkonunu normal \nefektler gibi sağ üstte göster",
+    "text.autoconfig.gammautils.option.nightVision.showStatusEffect": "Gece Görüşü İkonunu Göster",
+    "text.autoconfig.gammautils.option.nightVision.showStatusEffect.@Tooltip": "Gece Görüşü İkonunu normal \nefektler gibi sağ üstte göster",
 
     "text.gammautils.message.gammaPercentage": "Aydınlatma Değeri: %d%%",
     "text.gammautils.message.nightVisionDisabled": "Gece Görüşü: Kapalı",

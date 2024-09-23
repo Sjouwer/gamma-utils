@@ -7,6 +7,7 @@ import io.github.sjouwer.gammautils.util.LightLevelUtil;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.SimpleOption;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.text.Text;
 import net.minecraft.world.World;
 
 import java.util.Timer;
@@ -88,10 +89,18 @@ public class GammaManager {
     }
 
     public static void setGamma(double newValue, boolean smoothTransition, boolean showMessage) {
+        if (config.isDynamicGammaEnabled()) {
+            if (showMessage) {
+                Text message = Text.translatable("text.gammautils.message.incompatibleWithDynamicGamma");
+                InfoProvider.sendMessage(message);
+            }
+            return;
+        }
+
         setGamma(newValue, smoothTransition, showMessage, false);
     }
 
-    public static void setGamma(double newValue, boolean smoothTransition, boolean showMessage, boolean dynamic) {
+    private static void setGamma(double newValue, boolean smoothTransition, boolean showMessage, boolean dynamic) {
         if (transitionTimer != null) {
             transitionTimer.cancel();
         }
@@ -118,6 +127,28 @@ public class GammaManager {
         if (config.isToggleUpdateEnabled() && newValue != config.getDefaultStrength()) {
             config.setToggledStrength(newValue);
         }
+    }
+
+    protected static void toggleDynamicGamma() {
+        boolean newStatus = !config.isDynamicGammaEnabled();
+        config.setDynamicGammaStatus(newStatus);
+        Text message = Text.translatable("text.gammautils.message.dynamicGamma" + (newStatus ? "On" : "Off"));
+        InfoProvider.sendMessage(message);
+    }
+
+    protected static void toggleStatusEffect() {
+        boolean newStatus = !config.isStatusEffectEnabled();
+        config.setStatusEffectStatus(newStatus);
+        StatusEffectManager.updateGammaStatusEffect();
+        Text message = Text.translatable("text.gammautils.message.statusEffectGamma" + (newStatus ? "On" : "Off"));
+        InfoProvider.sendMessage(message);
+    }
+
+    protected static void toggleSmoothTransition() {
+        boolean newStatus = !config.isSmoothTransitionEnabled();
+        config.setSmoothTransitionStatus(newStatus);
+        Text message = Text.translatable("text.gammautils.message.transitionGamma" + (newStatus ? "On" : "Off"));
+        InfoProvider.sendMessage(message);
     }
 
     private static void startTransitionTimer(double newValue, double valueChangePerTick, boolean showMessage) {

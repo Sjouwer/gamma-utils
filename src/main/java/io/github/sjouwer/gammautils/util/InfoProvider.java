@@ -15,6 +15,15 @@ public final class InfoProvider {
     private InfoProvider() {
     }
 
+    public static void sendMessage(Text message) {
+        if (client.player == null) {
+            GammaUtils.LOGGER.info(message.getString());
+            return;
+        }
+
+        client.player.sendMessage(message, false);
+    }
+
     public static void showGammaHudMessage() {
         if (!config.gamma.isHudMessageEnabled()) {
             return;

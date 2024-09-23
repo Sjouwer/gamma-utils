@@ -106,8 +106,8 @@
     "text.autoconfig.gammautils.option.nightVision.nightVisionStep": "Night Vision Percentage Step",
     "text.autoconfig.gammautils.option.nightVision.nightVisionStep.@Tooltip": "Night Vision percentage change \nfor every increase or decrease",
 
-    "text.autoconfig.gammautils.option.nightVision.showNightVisionIcon": "Show Night Vision Icon",
-    "text.autoconfig.gammautils.option.nightVision.showNightVisionIcon.@Tooltip": "Show the Night Vision HUD and inventory \nicon just like a normal status effect",
+    "text.autoconfig.gammautils.option.nightVision.showStatusEffect": "Show Status Effect",
+    "text.autoconfig.gammautils.option.nightVision.showStatusEffect.@Tooltip": "Show the Night Vision HUD and inventory \nicon just like a normal status effect",
 
     "text.autoconfig.gammautils.option.nightVision.resetOnClose": "Reset On Close",
     "text.autoconfig.gammautils.option.nightVision.resetOnClose.@Tooltip": "Disable Night Vision when Minecraft closes",
@@ -179,6 +179,21 @@
     "text.gammautils.message.nightVisionDisabled": "Night Vision: Disabled",
     "text.gammautils.message.dynamicNightVisionEnabled": "Enabling Dynamic Night Vision",
     "text.gammautils.message.dynamicNightVisionDisabled": "Disabling Dynamic Night Vision",
+    "text.gammautils.message.dynamicGammaOn": "Dynamic Gamma has been turned on",
+    "text.gammautils.message.dynamicGammaOff": "Dynamic Gamma has been turned off",
+    "text.gammautils.message.dynamicNightVisionOn": "Dynamic Night Vision has been turned on",
+    "text.gammautils.message.dynamicNightVisionOff": "Dynamic Night Vision has been turned off",
+    "text.gammautils.message.statusEffectGammaOn": "Gamma Status Effects have been turned on",
+    "text.gammautils.message.statusEffectGammaOff": "Gamma Status Effects have been turned off",
+    "text.gammautils.message.statusEffectNightVisionOn": "Night Vision Status Effect has been turned on",
+    "text.gammautils.message.statusEffectNightVisionOff": "Night Vision Status Effect has been turned off",
+    "text.gammautils.message.transitionGammaOn": "Gamma Smooth Transition has been turned on",
+    "text.gammautils.message.transitionGammaOff": "Gamma Smooth Transition has been turned off",
+    "text.gammautils.message.transitionNightVisionOn": "Night Vision Smooth Transition has been turned on",
+    "text.gammautils.message.transitionNightVisionOff": "Night Vision Smooth Transition has been turned off",
+    "text.gammautils.message.incompatibleWithDynamicGamma": "This feature does not work with Dynamic Gamma enabled",
+    "text.gammautils.message.incompatibleWithDynamicNightVision": "This feature does not work with Dynamic Night Vision enabled",
+
 
     "effect.gammautils.bright": "High Gamma",
     "effect.gammautils.dim": "Low Gamma"
