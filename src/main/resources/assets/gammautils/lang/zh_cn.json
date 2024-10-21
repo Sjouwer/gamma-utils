@@ -1,52 +1,199 @@
 {
-    "key.categories.gammautils": "伽玛工具",
-    "key.gammautils.gammaToggle": "伽玛切换",
-    "key.gammautils.increaseGamma": "增加伽玛",
-    "key.gammautils.decreaseGamma": "减少伽马",
+    "modmenu.nameTranslation.gammautils": "Gamma Utils (伽马工具)",
+    "modmenu.summaryTranslation.pickblockpro": "伽马/亮度/夜视 模组，让你在黑暗中轻松看清",
+    "modmenu.descriptionTranslation.gammautils": "伽马/亮度/夜视 模组，让你在黑暗中轻松看清",
+
+    "key.categories.gammautils": "Gamma Utils (伽马工具)",
+    "key.gammautils.gammaToggle": "伽马值开关",
+    "key.gammautils.increaseGamma": "增加伽马值",
+    "key.gammautils.decreaseGamma": "减少伽马值",
     "key.gammautils.maxGamma": "最大伽马值",
     "key.gammautils.minGamma": "最小伽马值",
-    "key.gammautils.nightVisionToggle": "夜视切换",
+    "key.gammautils.nightVisionToggle": "夜视开关",
+    "key.gammautils.increaseNightVision": "增加夜视百分比",
+    "key.gammautils.decreaseNightVision": "减少夜视百分比",
 
     "text.autoconfig.gammautils.title": "伽玛工具配置",
 
+    "text.autoconfig.gammautils.category.gammaSettings": "伽马值",
+
     "text.autoconfig.gammautils.option.gamma.defaultGamma": "默认伽玛百分比",
-    "text.autoconfig.gammautils.option.gamma.defaultGamma.@Tooltip": "关闭mod时的伽玛百分比",
+    "text.autoconfig.gammautils.option.gamma.defaultGamma.@Tooltip": "关闭伽马值开关时的伽马值百分比",
 
     "text.autoconfig.gammautils.option.gamma.toggledGamma": "切换伽玛百分比",
-    "text.autoconfig.gammautils.option.gamma.toggledGamma.@Tooltip": "开启模组时的伽马百分比",
+    "text.autoconfig.gammautils.option.gamma.toggledGamma.@Tooltip": "开启伽马值开关时的伽马值百分比",
 
     "text.autoconfig.gammautils.option.gamma.updateToggle": "更新切换值",
-    "text.autoconfig.gammautils.option.gamma.updateToggle.@Tooltip": "启用此功能将使切换值记住你最后使用的非默认值",
+    "text.autoconfig.gammautils.option.gamma.updateToggle.@Tooltip": "启用时,将使切换值记住您上次使用的非默认值",
 
     "text.autoconfig.gammautils.option.gamma.gammaStep": "伽玛百分比步长",
-    "text.autoconfig.gammautils.option.gamma.gammaStep.@Tooltip": "每次增加或减少的伽马百分比变化",
+    "text.autoconfig.gammautils.option.gamma.gammaStep.@Tooltip": "每次增加或减少的伽马值百分比",
 
     "text.autoconfig.gammautils.option.gamma.showStatusEffect": "显示状态效果",
     "text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "当伽玛百分比超出正常范围时显示状态效果 \n(\"低伽马\" 低于 0% 和 \"高伽马\" 100% 以上)",
 
-    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage": "显示伽马信息",
-    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage.@Tooltip": "显示带有新伽马值的信息",
-
     "text.autoconfig.gammautils.option.gamma.resetOnClose": "关闭时重置",
-    "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "Minecraft关闭时将伽玛值重置为默认值",
+    "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "Minecraft关闭时,将伽玛值重置为默认值",
 
-    "text.autoconfig.gammautils.option.gamma.transition.smoothTransition": "平稳过渡",
-    "text.autoconfig.gammautils.option.gamma.transition.smoothTransition.@Tooltip": "使切换伽马时的过渡更平滑",
+    "text.autoconfig.gammautils.option.gamma.transition": "平滑过渡",
+
+    "text.autoconfig.gammautils.option.gamma.transition.smoothTransition": "启用平滑过渡",
+    "text.autoconfig.gammautils.option.gamma.transition.smoothTransition.@Tooltip": "使切换伽马值时的过渡更平滑",
 
     "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed": "过渡速度",
-    "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed.@Tooltip": "每秒伽马百分比的速度（启用平滑过渡时）",
+    "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed.@Tooltip": "每秒伽马值百分比的变化速度\n（启用平滑过渡时）",
 
-    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "限制检查",
-    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "mod是否应该强制执行最小和最大伽马限制",
+    "text.autoconfig.gammautils.option.gamma.dynamic": "动态伽马值",
 
-    "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "最小伽马限制",
-    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "如果启用了限制检查，mod将允许的最小伽马百分比",
+    "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma": "启用动态伽马值",
+    "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma.@Tooltip": "使伽马值根据玩家自身周围的亮度动态调整",
 
-    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "最大伽马限制",
-    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "如果启用了限制检查，mod将允许的最大伽马百分比",
+    "text.autoconfig.gammautils.option.gamma.dynamic.minGamma": "最小伽马值强度",
+    "text.autoconfig.gammautils.option.gamma.dynamic.minGamma.@Tooltip": "亮度等级为0时的伽马值强度",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.maxGamma": "最大伽马值强度",
+    "text.autoconfig.gammautils.option.gamma.dynamic.maxGamma.@Tooltip": "亮度等级为15时的伽马值强度",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.transitionSpeed": "过渡速度",
+    "text.autoconfig.gammautils.option.gamma.dynamic.transitionSpeed.@Tooltip": "当亮度等级变化时,\n每秒的动态转化百分比变化速度",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.averagingLightRange": "平均亮度等级范围",
+    "text.autoconfig.gammautils.option.gamma.dynamic.averagingLightRange.@Tooltip": "玩家周围以方块为单位的范围,\n用于平均亮度等级",
+
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference": "维度偏好",
+
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference": "启用维度偏好",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference.@Tooltip": "切换维度时，伽玛值会自动设置到偏好强度",
+
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.overworldPreference": "主世界偏好",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.overworldPreference.@Tooltip": "位于主世界时的\n伽马值偏好强度",
+
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.netherPreference": "下界偏好",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.netherPreference.@Tooltip": "位于下界时的\n伽马值偏好强度",
+
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.endPreference": "末地偏好",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.endPreference.@Tooltip": "位于末地时的\n伽马值偏好强度",
+
+    "text.autoconfig.gammautils.option.gamma.limiter": "伽马值限制器",
+
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "启用限制检查",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "模组是否应执行最小和最大伽马值限制",
+
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "最小伽马值限制",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "如果启用限制检查，模组将允许的最小伽马值百分比",
+
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "最大伽马值限制",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "如果启用限制检查，模组将允许的最大伽马值百分比",
+
+    "text.autoconfig.gammautils.option.gamma.hudMessage": "HUD 消息",
+
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage": "显示 HUD 消息",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage.@Tooltip": "当伽马值发生变化时, \n显示一条包含新伽马值的消息",
+
+    "text.autoconfig.gammautils.option.gamma.hudMessage.defaultColor": "颜色: 0 - 100",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.positiveColor": "颜色: > 100",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.negativeColor": "颜色: < 0",
+
+
+    "text.autoconfig.gammautils.category.nightVisionSettings": "夜视",
+
+    "text.autoconfig.gammautils.option.nightVision.toggledNightVision": "切换夜视百分比",
+    "text.autoconfig.gammautils.option.nightVision.toggledNightVision.@Tooltip": "夜视开启时的夜视百分比",
+
+    "text.autoconfig.gammautils.option.nightVision.updateToggle": "更新切换值",
+    "text.autoconfig.gammautils.option.nightVision.updateToggle.@Tooltip": "启用时,将使切换值记住您上次使用的非0值",
+
+    "text.autoconfig.gammautils.option.nightVision.nightVisionStep": "夜视百分比步长",
+    "text.autoconfig.gammautils.option.nightVision.nightVisionStep.@Tooltip": "每次增加或减少的夜视百分比",
+
+    "text.autoconfig.gammautils.option.nightVision.showStatusEffect": "显示夜视状态效果",
+    "text.autoconfig.gammautils.option.nightVision.showStatusEffect.@Tooltip": "显示夜视图标和物品栏图标\n就像正常的药水状态效果一样",
+
+    "text.autoconfig.gammautils.option.nightVision.resetOnClose": "关闭时重置",
+    "text.autoconfig.gammautils.option.nightVision.resetOnClose.@Tooltip": "Minecraft关闭时,关闭夜视",
+
+    "text.autoconfig.gammautils.option.nightVision.transition": "平滑过渡",
+
+    "text.autoconfig.gammautils.option.nightVision.transition.smoothTransition": "启用平滑过渡",
+    "text.autoconfig.gammautils.option.nightVision.transition.smoothTransition.@Tooltip": "使切换夜视时的过渡更平滑",
+
+    "text.autoconfig.gammautils.option.nightVision.transition.transitionSpeed": "过渡速度",
+    "text.autoconfig.gammautils.option.nightVision.transition.transitionSpeed.@Tooltip": "当启用平滑过渡时\n每秒的百分比变化速度",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic": "动态夜视",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision": "启用动态夜视",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision.@Tooltip": "使夜视根据玩家自身周围的亮度动态调整",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision": "最小夜视强度",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision.@Tooltip": "亮度等级为15时的夜视强度",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.maxNightVision": "最大夜视强度",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.maxNightVision.@Tooltip": "亮度等级为0的夜视强度",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.transitionSpeed": "过渡速度",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.transitionSpeed.@Tooltip": "亮度等级变化时,\n每秒的百分比动态过渡速度",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.averagingLightRange": "平均亮度等级范围",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.averagingLightRange.@Tooltip": "玩家周围以方块为单位的范围，\n用于平均亮度等级",
+
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference": "维度偏好",
+
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference": "启用维度偏好",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference.@Tooltip": "切换维度时，夜视会自动设置到偏好强度",
+
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.overworldPreference": "主世界偏好",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.overworldPreference.@Tooltip": "位于主世界时的\n夜视偏好强度",
+
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.netherPreference": "下界偏好",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.netherPreference.@Tooltip": "位于下界时的\n夜视偏好强度",
+
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.endPreference": "末地偏好",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.endPreference.@Tooltip": "位于末地时的\n夜视偏好强度",
+
+    "text.autoconfig.gammautils.option.nightVision.limiter": "夜视限制器",
+
+    "text.autoconfig.gammautils.option.nightVision.limiter.limitCheck": "启用限制检查",
+    "text.autoconfig.gammautils.option.nightVision.limiter.limitCheck.@Tooltip": "模组是否应执行最小和最大夜视限制",
+
+    "text.autoconfig.gammautils.option.nightVision.limiter.minNightVision": "最小夜视限制",
+    "text.autoconfig.gammautils.option.nightVision.limiter.minNightVision.@Tooltip": "如果启用限制检查,\n模组将允许的最小夜视百分比",
+
+    "text.autoconfig.gammautils.option.nightVision.limiter.maxNightVision": "最大夜视限制",
+    "text.autoconfig.gammautils.option.nightVision.limiter.maxNightVision.@Tooltip": "如果启用限制检查,\n模组将允许的最大夜视百分比",
+
+    "text.autoconfig.gammautils.option.nightVision.hudMessage": "HUD 消息",
+
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.showMessage": "显示HUD消息",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.showMessage.@Tooltip": "当夜视发生变化时, \n显示一条包含新的夜视百分比的消息",
+
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.defaultColor": "颜色: 0 - 100",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.positiveColor": "颜色: > 100",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.negativeColor": "颜色: < 0",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.enabledColor": "颜色: 已启用",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.disabledColor": "颜色: 已禁用",
+
 
     "text.gammautils.message.gammaPercentage": "伽玛: %d%%",
+    "text.gammautils.message.nightVisionPercentage": "夜视: %d%%",
     "text.gammautils.message.nightVisionDisabled": "夜视：已禁用",
+    "text.gammautils.message.dynamicNightVisionEnabled": "启用动态夜视",
+    "text.gammautils.message.dynamicNightVisionDisabled": "禁用动态夜视",
+    "text.gammautils.message.dynamicGammaOn": "动态伽马值已开启",
+    "text.gammautils.message.dynamicGammaOff": "动态伽马值已关闭",
+    "text.gammautils.message.dynamicNightVisionOn": "动态夜视已开启",
+    "text.gammautils.message.dynamicNightVisionOff": "动态夜视已关闭",
+    "text.gammautils.message.statusEffectGammaOn": "伽马状态效果已开启",
+    "text.gammautils.message.statusEffectGammaOff": "伽马状态效果已关闭",
+    "text.gammautils.message.statusEffectNightVisionOn": "夜视状态效果已开启",
+    "text.gammautils.message.statusEffectNightVisionOff": "夜视状态效果已关闭",
+    "text.gammautils.message.transitionGammaOn": "伽玛值平滑过渡已开启",
+    "text.gammautils.message.transitionGammaOff": "伽玛值平滑过渡已关闭",
+    "text.gammautils.message.transitionNightVisionOn": "夜视平滑过渡已开启",
+    "text.gammautils.message.transitionNightVisionOff": "夜视平滑过渡已关闭",
+    "text.gammautils.message.incompatibleWithDynamicGamma": "启用动态伽玛值时，该功能不生效",
+    "text.gammautils.message.incompatibleWithDynamicNightVision": "启用动态夜视时，该功能不生效",
+
 
     "effect.gammautils.bright": "高伽马",
     "effect.gammautils.dim": "低伽马"
