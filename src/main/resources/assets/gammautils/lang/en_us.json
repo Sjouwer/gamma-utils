@@ -60,6 +60,9 @@
     "text.autoconfig.gammautils.option.gamma.dynamic.averagingLightRange": "Averaging Light Level Range",
     "text.autoconfig.gammautils.option.gamma.dynamic.averagingLightRange.@Tooltip": "Range in blocks around the player \nto average the light level of",
 
+    "text.autoconfig.gammautils.option.gamma.dynamic.skyBrightnessOverride": "Sky Brightness Override",
+    "text.autoconfig.gammautils.option.gamma.dynamic.skyBrightnessOverride.@Tooltip": "This mod uses whatever is higher; \nthis setting or the actual sky brightness. \nThis makes it possible to have a lower \ndynamic Gamma when under skylight. \nBy default the sky brightness is 20% at \nmidnight and 100% at noon",
+
     "text.autoconfig.gammautils.option.gamma.dimensionPreference": "Dimension Preference",
 
     "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference": "Enable Dimension Preference",
@@ -136,6 +139,9 @@
 
     "text.autoconfig.gammautils.option.nightVision.dynamic.averagingLightRange": "Averaging Light Level Range",
     "text.autoconfig.gammautils.option.nightVision.dynamic.averagingLightRange.@Tooltip": "Range in blocks around the player \nto average the light level of",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.skyBrightnessOverride": "Sky Brightness Override",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.skyBrightnessOverride.@Tooltip": "This mod uses whatever is higher; \nthis setting or the actual sky brightness. \nThis makes it possible to have a lower \ndynamic NightVision when under skylight. \nBy default the sky brightness is 20% at \nmidnight and 100% at noon",
 
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference": "Dimension Preference",
 

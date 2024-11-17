@@ -15,42 +15,45 @@ public class LightLevelUtil {
     private static final MinecraftClient client = MinecraftClient.getInstance();
 
     public static Double getAverageLightLevel(int range) {
+        return getAverageLightLevel(range, 0);
+    }
+
+    public static Double getAverageLightLevel(int range, float skyBrightnessOverride) {
         if (client.world == null || client.player == null) {
             return 15.0;
         }
 
         BlockPos playerPos = client.player.getBlockPos().up();
         List<Double> lightLevels = new ArrayList<>();
-        lightLevels.add(getLightLevel(playerPos));
+        lightLevels.add(getLightLevel(playerPos, skyBrightnessOverride));
         if (range > 0) {
-            addLightLevelsInDirection(lightLevels, playerPos, Direction.NORTH, range);
-            addLightLevelsInDirection(lightLevels, playerPos, Direction.EAST, range);
-            addLightLevelsInDirection(lightLevels, playerPos, Direction.SOUTH, range);
-            addLightLevelsInDirection(lightLevels, playerPos, Direction.WEST, range);
+            for (Direction direction : Direction.values()) {
+                addLightLevelsInDirection(lightLevels, playerPos, direction, range, skyBrightnessOverride);
+            }
         }
 
         return lightLevels.stream().mapToDouble(lvl -> lvl).average().orElse(15.0);
     }
 
-    private static void addLightLevelsInDirection(List<Double> lightLevels, BlockPos blockPos, Direction direction, int range) {
+    private static void addLightLevelsInDirection(List<Double> lightLevels, BlockPos blockPos, Direction direction, int range, float skyBrightnessOverride) {
         for (int i = 0; i < range; i++) {
             BlockPos offsetPos = blockPos.offset(direction, i);
             if(!client.world.getBlockState(offsetPos).isAir()) {
                 break;
             }
 
-            lightLevels.add(getLightLevel(offsetPos));
+            lightLevels.add(getLightLevel(offsetPos, skyBrightnessOverride));
         }
     }
 
-    public static double getLightLevel(BlockPos blockPos) {
+    public static double getLightLevel(BlockPos blockPos, float skyBrightnessOverride) {
         if (client.world == null) {
             return 15.0;
         }
 
         int blockLight = client.world.getLightingProvider().get(LightType.BLOCK).getLightLevel(blockPos);
         int skyLight = client.world.getLightingProvider().get(LightType.SKY).getLightLevel(blockPos);
-        float skyBrightness = client.world.getSkyBrightness(1f);
+        float skyBrightness = Math.max(client.world.getSkyBrightness(1f), skyBrightnessOverride);
         return Math.max(blockLight, skyLight * skyBrightness);
     }
 }

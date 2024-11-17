@@ -56,6 +56,9 @@ public class ModConfig implements ConfigData {
             @Tooltip
             @BoundedDiscrete(max=16)
             private int averagingLightRange = 8;
+            @Tooltip
+            @BoundedDiscrete(min=0, max=100)
+            private int skyBrightnessOverride = 0;
         }
 
         static class DimensionPreference {
@@ -181,6 +184,10 @@ public class ModConfig implements ConfigData {
             return dynamic.averagingLightRange;
         }
 
+        public float getSkyBrightnessOverride() {
+            return dynamic.skyBrightnessOverride / 100f;
+        }
+
         public boolean isHudMessageEnabled() {
             return hudMessage.showMessage;
         }
@@ -247,6 +254,9 @@ public class ModConfig implements ConfigData {
             @Tooltip
             @BoundedDiscrete(max=16)
             private int averagingLightRange = 8;
+            @Tooltip
+            @BoundedDiscrete(min=0, max=100)
+            private int skyBrightnessOverride = 0;
         }
 
         static class DimensionPreference {
@@ -386,6 +396,10 @@ public class ModConfig implements ConfigData {
 
         public int getDynamicAveragingLightRange() {
             return dynamic.averagingLightRange;
+        }
+
+        public float getSkyBrightnessOverride() {
+            return dynamic.skyBrightnessOverride / 100f;
         }
 
         public boolean isHudMessageEnabled() {

@@ -79,7 +79,7 @@ public class GammaManager {
             return;
         }
 
-        double lightLevel = LightLevelUtil.getAverageLightLevel(config.getDynamicAveragingLightRange());
+        double lightLevel = LightLevelUtil.getAverageLightLevel(config.getDynamicAveragingLightRange(), config.getSkyBrightnessOverride());
         double step = (config.getMaxDynamicStrength() - config.getMinDynamicStrength()) / 15.0;
         double target = (config.getMinDynamicStrength() + step * (15 - lightLevel));
         if (dynamicGammaTarget != target) {
