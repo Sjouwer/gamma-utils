@@ -173,6 +173,10 @@
     "text.autoconfig.gammautils.option.nightVision.hudMessage.enabledColor": "Color: Enabled",
     "text.autoconfig.gammautils.option.nightVision.hudMessage.disabledColor": "Color: Disabled",
 
+    "text.autoconfig.gammautils.category.otherSettings": "Other",
+
+    "text.autoconfig.gammautils.option.other.namespacedCommands": "Namespaced commands",
+    "text.autoconfig.gammautils.option.other.namespacedCommands.@Tooltip": "Adds a namespace to all GammaUtils commands. \nEnable this to prevent conflicts with \nother mods or server commands",
 
     "text.gammautils.message.gammaPercentage": "Gamma: %d%%",
     "text.gammautils.message.nightVisionPercentage": "Night Vision: %d%%",

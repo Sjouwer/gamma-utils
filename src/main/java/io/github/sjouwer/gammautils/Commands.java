@@ -22,7 +22,7 @@ public class Commands {
 
     public static void registerGammaCommands() {
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) ->
-            dispatcher.register(literal("gamma")
+            dispatcher.register(literal(config.other.namespacedCommandsEnabled() ? (GammaUtils.NAMESPACE + ":gamma") : "gamma")
                 .executes(ctx -> {
                     GammaManager.toggleGamma();
                     return 1;
@@ -145,7 +145,7 @@ public class Commands {
 
     public static void registerNightVisionCommands() {
         ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) ->
-            dispatcher.register(literal("nightvision")
+            dispatcher.register(literal(config.other.namespacedCommandsEnabled() ? (GammaUtils.NAMESPACE + ":nightvision") : "nightvision")
                 .executes(ctx -> {
                     NightVisionManager.toggleNightVision();
                     return 1;

@@ -411,6 +411,19 @@ public class ModConfig implements ConfigData {
         public int getDisabledHudColor() {
             return hudMessage.disabledColor;
         }
+    }
 
+    @Category("otherSettings")
+    @TransitiveObject
+    public OtherSettings other = new OtherSettings();
+
+    public static class OtherSettings {
+        @RequiresRestart
+        @Tooltip
+        private boolean namespacedCommands = false;
+
+        public boolean namespacedCommandsEnabled() {
+            return namespacedCommands;
+        }
     }
 }
