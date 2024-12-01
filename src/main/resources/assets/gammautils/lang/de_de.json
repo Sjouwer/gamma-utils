@@ -60,7 +60,10 @@
     "text.autoconfig.gammautils.option.gamma.dynamic.averagingLightRange": "Bereich für Lichtpegel-Mittelung",
     "text.autoconfig.gammautils.option.gamma.dynamic.averagingLightRange.@Tooltip": "Bereich in Blöcken um den Spieler, \num den Lichtpegel zu mitteln",
 
-    "text.autoconfig.gammautils.option.gamma.dimensionPreference": "Dimensionseinstellungen",
+	"text.autoconfig.gammautils.option.gamma.dynamic.skyBrightnessOverride": "Angepasste Himmelshelligkeit",
+	"text.autoconfig.gammautils.option.gamma.dynamic.skyBrightnessOverride.@Tooltip": "Diese Mod verwendet den höheren Wert; \ndiese Einstellung oder die tatsächliche Himmelshelligkeit. \nDamit kann ein niedrigeres dynamisches Gamma \nunter Himmelslicht verwendet werden. \nStandardmäßig beträgt die Himmelshelligkeit \num Mitternacht 20 % und \nzu Mittag 100 %.",
+    
+	"text.autoconfig.gammautils.option.gamma.dimensionPreference": "Dimensionseinstellungen",
 
     "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference": "Dimensionseinstellungen aktivieren",
     "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference.@Tooltip": "Gamma wird automatisch auf die \nbevorzugte Stärke gesetzt, \nwenn die Dimension gewechselt wird",
@@ -137,7 +140,10 @@
     "text.autoconfig.gammautils.option.nightVision.dynamic.averagingLightRange": "Bereich für Lichtpegel-Mittelung",
     "text.autoconfig.gammautils.option.nightVision.dynamic.averagingLightRange.@Tooltip": "Bereich in Blöcken um den Spieler, \num den Lichtpegel zu mitteln",
 
-    "text.autoconfig.gammautils.option.nightVision.dimensionPreference": "Dimensionseinstellungen",
+	"text.autoconfig.gammautils.option.nightVision.dynamic.skyBrightnessOverride": "Angepasste Himmelshelligkeit",
+	"text.autoconfig.gammautils.option.nightVision.dynamic.skyBrightnessOverride.@Tooltip": "Diese Mod verwendet den höheren Wert; \ndiese Einstellung oder die tatsächliche Himmelshelligkeit. \nDamit kann eine niedrigere dynamische Nachtsicht \nunter Himmelslicht verwendet werden. \nStandardmäßig beträgt die Himmelshelligkeit \num Mitternacht 20 % und \nzu Mittag 100 %.",
+	
+	"text.autoconfig.gammautils.option.nightVision.dimensionPreference": "Dimensionseinstellungen",
 
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference": "Dimensionseinstellungen aktivieren",
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference.@Tooltip": "Die Nachtsicht wird automatisch auf die \nbevorzugte Stärke gesetzt, \nwenn die Dimension gewechselt wird",
@@ -173,7 +179,11 @@
     "text.autoconfig.gammautils.option.nightVision.hudMessage.enabledColor": "Farbe: Aktiviert",
     "text.autoconfig.gammautils.option.nightVision.hudMessage.disabledColor": "Farbe: Deaktiviert",
 
+	"text.autoconfig.gammautils.category.otherSettings": "Sonstiges",
 
+	"text.autoconfig.gammautils.option.other.namespacedCommands": "Namensraum-Kommandos",
+	"text.autoconfig.gammautils.option.other.namespacedCommands.@Tooltip": "Fügt allen Gamma-Werkzeuge-Kommandos \neinen Namensraum hinzu. \nAktivieren Sie diese Option, um Konflikte \nmit anderen Mods oder Server-Kommandos zu vermeiden.",
+	
     "text.gammautils.message.gammaPercentage": "Gamma: %d%%",
     "text.gammautils.message.nightVisionPercentage": "Nachtsicht: %d%%",
     "text.gammautils.message.nightVisionDisabled": "Nachtsicht: Deaktiviert",
