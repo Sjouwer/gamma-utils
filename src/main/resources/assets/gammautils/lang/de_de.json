@@ -1,0 +1,210 @@
+{
+    "modmenu.nameTranslation.gammautils": "Gamma-Werkzeuge",
+    "modmenu.summaryTranslation.pickblockpro": "Gamma-/Helligkeits-/Nachtsicht-Mod, erleichtert das Sehen im Dunkeln.",
+    "modmenu.descriptionTranslation.gammautils": "Gamma-/Helligkeits-/Nachtsicht-Mod, erleichtert das Sehen im Dunkeln.",
+
+    "key.categories.gammautils": "Gamma-Werkzeuge",
+    "key.gammautils.gammaToggle": "Gamma umschalten",
+    "key.gammautils.increaseGamma": "Gamma erhöhen",
+    "key.gammautils.decreaseGamma": "Gamma verringern",
+    "key.gammautils.maxGamma": "Maximales Gamma festlegen",
+    "key.gammautils.minGamma": "Minimales Gamma festlegen",
+    "key.gammautils.nightVisionToggle": "Nachtsicht umschalten",
+    "key.gammautils.increaseNightVision": "Nachtsicht erhöhen",
+    "key.gammautils.decreaseNightVision": "Nachtsicht verringern",
+
+    "text.autoconfig.gammautils.title": "Gamma-Werkzeuge Konfiguration",
+
+    "text.autoconfig.gammautils.category.gammaSettings": "Gamma",
+
+    "text.autoconfig.gammautils.option.gamma.defaultGamma": "Standard-Gamma-Prozentsatz",
+    "text.autoconfig.gammautils.option.gamma.defaultGamma.@Tooltip": "Gamma-Prozentsatz, wenn \nGamma deaktiviert ist",
+
+    "text.autoconfig.gammautils.option.gamma.toggledGamma": "Aktivierter Gamma-Prozentsatz",
+    "text.autoconfig.gammautils.option.gamma.toggledGamma.@Tooltip": "Gamma-Prozentsatz, wenn \nGamma aktiviert ist",
+
+    "text.autoconfig.gammautils.option.gamma.updateToggle": "Wert bei Umschaltung aktualisieren",
+    "text.autoconfig.gammautils.option.gamma.updateToggle.@Tooltip": "Aktivieren, damit der \nUmschaltwert den zuletzt \ngenutzten Nicht-Standardwert speichert",
+
+    "text.autoconfig.gammautils.option.gamma.gammaStep": "Gamma-Schritt-Prozentsatz",
+    "text.autoconfig.gammautils.option.gamma.gammaStep.@Tooltip": "Prozentsatzänderung des Gammas \nbei jeder Erhöhung oder Verringerung",
+
+    "text.autoconfig.gammautils.option.gamma.showStatusEffect": "Status-Effekt anzeigen",
+    "text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "Zeigt einen Status-Effekt an, wenn der \nGamma-Wert außerhalb des normalen Bereichs liegt \n- \"Hohes Gamma\" über 100% \n- \"Niedriges Gamma\" unter 0%",
+
+    "text.autoconfig.gammautils.option.gamma.resetOnClose": "Beim Schließen zurücksetzen",
+    "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "Setzt den Gamma-Wert auf Standard zurück, \nwenn Minecraft geschlossen wird",
+
+    "text.autoconfig.gammautils.option.gamma.transition": "Sanfter Übergang",
+
+    "text.autoconfig.gammautils.option.gamma.transition.smoothTransition": "Sanften Übergang aktivieren",
+    "text.autoconfig.gammautils.option.gamma.transition.smoothTransition.@Tooltip": "Macht das Umschalten des \nGammas weicher",
+
+    "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed": "Übergangsgeschwindigkeit",
+    "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed.@Tooltip": "Geschwindigkeit in Prozent pro Sekunde \nbei aktiviertem sanften Übergang",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic": "Dynamisches Gamma",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma": "Dynamisches Gamma aktivieren",
+    "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma.@Tooltip": "Passt Gamma dynamisch an \ndie Lichtverhältnisse um den Spieler an",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.minGamma": "Minimale Gamma-Stärke",
+    "text.autoconfig.gammautils.option.gamma.dynamic.minGamma.@Tooltip": "Gamma-Stärke bei Lichtlevel 0",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.maxGamma": "Maximale Gamma-Stärke",
+    "text.autoconfig.gammautils.option.gamma.dynamic.maxGamma.@Tooltip": "Gamma-Stärke bei Lichtlevel 15",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.transitionSpeed": "Übergangsgeschwindigkeit",
+    "text.autoconfig.gammautils.option.gamma.dynamic.transitionSpeed.@Tooltip": "Dynamische Übergangsgeschwindigkeit in \nProzent pro Sekunde bei Änderungen des Lichtlevels",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.averagingLightRange": "Bereich für Lichtpegel-Mittelung",
+    "text.autoconfig.gammautils.option.gamma.dynamic.averagingLightRange.@Tooltip": "Bereich in Blöcken um den Spieler, \num den Lichtpegel zu mitteln",
+
+	"text.autoconfig.gammautils.option.gamma.dynamic.skyBrightnessOverride": "Angepasste Himmelshelligkeit",
+	"text.autoconfig.gammautils.option.gamma.dynamic.skyBrightnessOverride.@Tooltip": "Diese Mod verwendet den höheren Wert; \ndiese Einstellung oder die tatsächliche Himmelshelligkeit. \nDamit kann ein niedrigeres dynamisches Gamma \nunter Himmelslicht verwendet werden. \nStandardmäßig beträgt die Himmelshelligkeit \num Mitternacht 20 % und \nzu Mittag 100 %.",
+    
+	"text.autoconfig.gammautils.option.gamma.dimensionPreference": "Dimensionseinstellungen",
+
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference": "Dimensionseinstellungen aktivieren",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference.@Tooltip": "Gamma wird automatisch auf die \nbevorzugte Stärke gesetzt, \nwenn die Dimension gewechselt wird",
+
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.overworldPreference": "Overworld-Einstellung",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.overworldPreference.@Tooltip": "Bevorzugte Gamma-Stärke \nfür die Overworld",
+
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.netherPreference": "Nether-Einstellung",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.netherPreference.@Tooltip": "Bevorzugte Gamma-Stärke \nfür den Nether",
+
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.endPreference": "End-Einstellung",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.endPreference.@Tooltip": "Bevorzugte Gamma-Stärke \nfür das Ende",
+
+    "text.autoconfig.gammautils.option.gamma.limiter": "Begrenzung",
+
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "Begrenzung aktivieren",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "Soll die Mod die \nminimale und maximale Gamma-Begrenzung durchsetzen",
+
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "Minimale Gamma-Begrenzung",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "Minimale Gamma-Prozentzahl, die die Mod \nerlaubt, wenn die Begrenzung aktiviert ist",
+
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "Maximale Gamma-Begrenzung",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Maximale Gamma-Prozentzahl, die die Mod \nerlaubt, wenn die Begrenzung aktiviert ist",
+
+    "text.autoconfig.gammautils.option.gamma.hudMessage": "HUD-Nachricht",
+
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage": "HUD-Nachricht anzeigen",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage.@Tooltip": "Zeigt eine Nachricht mit dem neuen \nGamma-Prozentsatz an, wenn \nes sich geändert hat",
+
+    "text.autoconfig.gammautils.option.gamma.hudMessage.defaultColor": "Farbe: 0 - 100",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.positiveColor": "Farbe: > 100",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.negativeColor": "Farbe: < 0",
+
+
+    "text.autoconfig.gammautils.category.nightVisionSettings": "Nachtsicht",
+
+    "text.autoconfig.gammautils.option.nightVision.toggledNightVision": "Aktivierter Nachtsicht-Prozentsatz",
+    "text.autoconfig.gammautils.option.nightVision.toggledNightVision.@Tooltip": "Nachtsicht-Prozentsatz, wenn \nNachtsicht aktiviert ist",
+
+    "text.autoconfig.gammautils.option.nightVision.updateToggle": "Wert bei Umschaltung aktualisieren",
+    "text.autoconfig.gammautils.option.nightVision.updateToggle.@Tooltip": "Aktivieren, damit der \nUmschaltwert den zuletzt \ngenutzten Nicht-Null-Wert speichert",
+
+    "text.autoconfig.gammautils.option.nightVision.nightVisionStep": "Nachtsicht-Schritt-Prozentsatz",
+    "text.autoconfig.gammautils.option.nightVision.nightVisionStep.@Tooltip": "Nachtsicht-Prozentänderung \nbei jeder Erhöhung oder Verringerung",
+
+    "text.autoconfig.gammautils.option.nightVision.showStatusEffect": "Status-Effekt anzeigen",
+    "text.autoconfig.gammautils.option.nightVision.showStatusEffect.@Tooltip": "Zeigt den Nachtsicht-HUD und das \nInventar-Icon wie einen normalen Status-Effekt",
+
+    "text.autoconfig.gammautils.option.nightVision.resetOnClose": "Beim Schließen zurücksetzen",
+    "text.autoconfig.gammautils.option.nightVision.resetOnClose.@Tooltip": "Deaktiviert die Nachtsicht, wenn Minecraft geschlossen wird",
+
+    "text.autoconfig.gammautils.option.nightVision.transition": "Sanfter Übergang",
+
+    "text.autoconfig.gammautils.option.nightVision.transition.smoothTransition": "Sanften Übergang aktivieren",
+    "text.autoconfig.gammautils.option.nightVision.transition.smoothTransition.@Tooltip": "Macht das Umschalten der \nNachtsicht weicher",
+
+    "text.autoconfig.gammautils.option.nightVision.transition.transitionSpeed": "Übergangsgeschwindigkeit",
+    "text.autoconfig.gammautils.option.nightVision.transition.transitionSpeed.@Tooltip": "Geschwindigkeit in Prozent pro Sekunde \nbei aktiviertem sanften Übergang",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic": "Dynamische Nachtsicht",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision": "Dynamische Nachtsicht aktivieren",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision.@Tooltip": "Passt die Nachtsicht dynamisch an \ndie Lichtverhältnisse um den Spieler an",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision": "Minimale Nachtsicht-Stärke",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision.@Tooltip": "Nachtsicht-Stärke bei Lichtlevel 15",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.maxNightVision": "Maximale Nachtsicht-Stärke",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.maxNightVision.@Tooltip": "Nachtsicht-Stärke bei Lichtlevel 0",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.transitionSpeed": "Übergangsgeschwindigkeit",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.transitionSpeed.@Tooltip": "Dynamische Übergangsgeschwindigkeit in \nProzent pro Sekunde bei Änderungen des Lichtlevels",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.averagingLightRange": "Bereich für Lichtpegel-Mittelung",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.averagingLightRange.@Tooltip": "Bereich in Blöcken um den Spieler, \num den Lichtpegel zu mitteln",
+
+	"text.autoconfig.gammautils.option.nightVision.dynamic.skyBrightnessOverride": "Angepasste Himmelshelligkeit",
+	"text.autoconfig.gammautils.option.nightVision.dynamic.skyBrightnessOverride.@Tooltip": "Diese Mod verwendet den höheren Wert; \ndiese Einstellung oder die tatsächliche Himmelshelligkeit. \nDamit kann eine niedrigere dynamische Nachtsicht \nunter Himmelslicht verwendet werden. \nStandardmäßig beträgt die Himmelshelligkeit \num Mitternacht 20 % und \nzu Mittag 100 %.",
+	
+	"text.autoconfig.gammautils.option.nightVision.dimensionPreference": "Dimensionseinstellungen",
+
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference": "Dimensionseinstellungen aktivieren",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference.@Tooltip": "Die Nachtsicht wird automatisch auf die \nbevorzugte Stärke gesetzt, \nwenn die Dimension gewechselt wird",
+
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.overworldPreference": "Overworld-Einstellung",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.overworldPreference.@Tooltip": "Bevorzugte Nachtsicht-Stärke \nfür die Overworld",
+
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.netherPreference": "Nether-Einstellung",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.netherPreference.@Tooltip": "Bevorzugte Nachtsicht-Stärke \nfür den Nether",
+
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.endPreference": "End-Einstellung",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.endPreference.@Tooltip": "Bevorzugte Nachtsicht-Stärke \nfür das Ende",
+
+    "text.autoconfig.gammautils.option.nightVision.limiter": "Begrenzung",
+
+    "text.autoconfig.gammautils.option.nightVision.limiter.limitCheck": "Begrenzung aktivieren",
+    "text.autoconfig.gammautils.option.nightVision.limiter.limitCheck.@Tooltip": "Soll die Mod die \nminimale und maximale Nachtsicht-Begrenzung durchsetzen",
+
+    "text.autoconfig.gammautils.option.nightVision.limiter.minNightVision": "Minimale Nachtsicht-Begrenzung",
+    "text.autoconfig.gammautils.option.nightVision.limiter.minNightVision.@Tooltip": "Minimale Nachtsicht-Prozentzahl, die die Mod \nerlaubt, wenn die Begrenzung aktiviert ist",
+
+    "text.autoconfig.gammautils.option.nightVision.limiter.maxNightVision": "Maximale Nachtsicht-Begrenzung",
+    "text.autoconfig.gammautils.option.nightVision.limiter.maxNightVision.@Tooltip": "Maximale Nachtsicht-Prozentzahl, die die Mod \nerlaubt, wenn die Begrenzung aktiviert ist",
+
+    "text.autoconfig.gammautils.option.nightVision.hudMessage": "HUD-Nachricht",
+
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.showMessage": "HUD-Nachricht anzeigen",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.showMessage.@Tooltip": "Zeigt eine Nachricht mit dem neuen \nNachtsicht-Prozentsatz an, wenn \ner sich geändert hat",
+
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.defaultColor": "Farbe: 0 - 100",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.positiveColor": "Farbe: > 100",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.negativeColor": "Farbe: < 0",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.enabledColor": "Farbe: Aktiviert",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.disabledColor": "Farbe: Deaktiviert",
+
+	"text.autoconfig.gammautils.category.otherSettings": "Sonstiges",
+
+	"text.autoconfig.gammautils.option.other.namespacedCommands": "Namensraum-Kommandos",
+	"text.autoconfig.gammautils.option.other.namespacedCommands.@Tooltip": "Fügt allen Gamma-Werkzeuge-Kommandos \neinen Namensraum hinzu. \nAktivieren Sie diese Option, um Konflikte \nmit anderen Mods oder Server-Kommandos zu vermeiden.",
+	
+    "text.gammautils.message.gammaPercentage": "Gamma: %d%%",
+    "text.gammautils.message.nightVisionPercentage": "Nachtsicht: %d%%",
+    "text.gammautils.message.nightVisionDisabled": "Nachtsicht: Deaktiviert",
+    "text.gammautils.message.dynamicNightVisionEnabled": "Dynamische Nachtsicht aktiviert",
+    "text.gammautils.message.dynamicNightVisionDisabled": "Dynamische Nachtsicht deaktiviert",
+    "text.gammautils.message.dynamicGammaOn": "Dynamisches Gamma wurde aktiviert",
+    "text.gammautils.message.dynamicGammaOff": "Dynamisches Gamma wurde deaktiviert",
+    "text.gammautils.message.dynamicNightVisionOn": "Dynamische Nachtsicht wurde aktiviert",
+    "text.gammautils.message.dynamicNightVisionOff": "Dynamische Nachtsicht wurde deaktiviert",
+    "text.gammautils.message.statusEffectGammaOn": "Gamma-Status-Effekte wurden aktiviert",
+    "text.gammautils.message.statusEffectGammaOff": "Gamma-Status-Effekte wurden deaktiviert",
+    "text.gammautils.message.statusEffectNightVisionOn": "Nachtsicht-Status-Effekt wurde aktiviert",
+    "text.gammautils.message.statusEffectNightVisionOff": "Nachtsicht-Status-Effekt wurde deaktiviert",
+    "text.gammautils.message.transitionGammaOn": "Sanfter Übergang für Gamma wurde aktiviert",
+    "text.gammautils.message.transitionGammaOff": "Sanfter Übergang für Gamma wurde deaktiviert",
+    "text.gammautils.message.transitionNightVisionOn": "Sanfter Übergang für Nachtsicht wurde aktiviert",
+    "text.gammautils.message.transitionNightVisionOff": "Sanfter Übergang für Nachtsicht wurde deaktiviert",
+    "text.gammautils.message.incompatibleWithDynamicGamma": "Diese Funktion ist mit aktiviertem dynamischem Gamma nicht kompatibel",
+    "text.gammautils.message.incompatibleWithDynamicNightVision": "Diese Funktion ist mit aktivierter dynamischer Nachtsicht nicht kompatibel",
+
+
+    "effect.gammautils.bright": "Hohes Gamma",
+    "effect.gammautils.dim": "Niedriges Gamma"
+}
