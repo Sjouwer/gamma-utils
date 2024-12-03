@@ -1,9 +1,9 @@
 {
-    "modmenu.nameTranslation.gammautils": "Gamma-Werkzeuge",
+    "modmenu.nameTranslation.gammautils": "Gamma Utils (Gamma-Werkzeuge)",
     "modmenu.summaryTranslation.pickblockpro": "Gamma-/Helligkeits-/Nachtsicht-Mod, erleichtert das Sehen im Dunkeln.",
     "modmenu.descriptionTranslation.gammautils": "Gamma-/Helligkeits-/Nachtsicht-Mod, erleichtert das Sehen im Dunkeln.",
 
-    "key.categories.gammautils": "Gamma-Werkzeuge",
+    "key.categories.gammautils": "Gamma Utils (Gamma-Werkzeuge)",
     "key.gammautils.gammaToggle": "Gamma umschalten",
     "key.gammautils.increaseGamma": "Gamma erhöhen",
     "key.gammautils.decreaseGamma": "Gamma verringern",
