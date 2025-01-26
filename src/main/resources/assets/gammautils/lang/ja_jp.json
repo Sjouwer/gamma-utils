@@ -1,55 +1,210 @@
 {
-	"modmenu.descriptionTranslation.gammautils": "明るさを上げ，暗闇を見やすくします．",
+    "modmenu.nameTranslation.gammautils": "Gamma Utils",
+    "modmenu.summaryTranslation.gammautils": "暗い場所を見やすくする ガンマ/明るさ/暗視MOD",
+    "modmenu.descriptionTranslation.gammautils": "暗い場所を見やすくする ガンマ/明るさ/暗視MOD",
 
-	"key.categories.gammautils": "Gamma Utils",
-	"key.gammautils.gammaToggle": "明るさ切り替え",
-	"key.gammautils.increaseGamma": "明るさを上げる",
-	"key.gammautils.decreaseGamma": "明るさを下げる",
-	"key.gammautils.maxGamma": "明るさを最大にする",
-	"key.gammautils.minGamma": "明るさを最小にする",
-	"key.gammautils.nightVisionToggle": "暗視切り替え",
+    "key.categories.gammautils": "Gamma Utils",
+    "key.gammautils.gammaToggle": "ガンマ切り替え",
+    "key.gammautils.increaseGamma": "ガンマ値を上げる",
+    "key.gammautils.decreaseGamma": "ガンマ値を下げる",
+    "key.gammautils.maxGamma": "ガンマ値を最大にする",
+    "key.gammautils.minGamma": "ガンマ値を最小にする",
+    "key.gammautils.nightVisionToggle": "暗視切り替え",
+    "key.gammautils.increaseNightVision": "暗視レベルを上げる",
+    "key.gammautils.decreaseNightVision": "暗視レベルを下げる",
 
-	"text.autoconfig.gammautils.title": "Gamma Utils 設定",
+    "text.autoconfig.gammautils.title": "Gamma Utils 設定",
 
-	"text.autoconfig.gammautils.option.gamma.defaultGamma": "デフォルトの明るさ",
-	"text.autoconfig.gammautils.option.gamma.defaultGamma.@Tooltip": "modをオフにした時の明るさ",
+    "text.autoconfig.gammautils.category.gammaSettings": "ガンマ値",
 
-	"text.autoconfig.gammautils.option.gamma.toggledGamma": "切り替え時の明るさ",
-	"text.autoconfig.gammautils.option.gamma.toggledGamma.@Tooltip": "modをオンにした時の明るさ",
+    "text.autoconfig.gammautils.option.gamma.defaultGamma": "デフォルトのガンマ値",
+    "text.autoconfig.gammautils.option.gamma.defaultGamma.@Tooltip": "機能をオフにしたときのガンマ値",
 
-	"text.autoconfig.gammautils.option.gamma.updateToggle": "切り替え時の明るさを更新",
-	"text.autoconfig.gammautils.option.gamma.updateToggle.@Tooltip": "最後に使用したデフォルトでない明るさを\n切り替え時の明るさとして保持する",
+    "text.autoconfig.gammautils.option.gamma.toggledGamma": "切り替え時のガンマ値",
+    "text.autoconfig.gammautils.option.gamma.toggledGamma.@Tooltip": "機能をオンにしたときのガンマ値",
 
-	"text.autoconfig.gammautils.option.gamma.gammaStep": "明るさの変更単位",
-	"text.autoconfig.gammautils.option.gamma.gammaStep.@Tooltip": "この値ずつ明るさを上げたり下げたりする",
+    "text.autoconfig.gammautils.option.gamma.updateToggle": "切り替え時のガンマ値を更新",
+    "text.autoconfig.gammautils.option.gamma.updateToggle.@Tooltip": "最後に使用したデフォルトでないガンマ値を\n切り替え時のガンマ値として保持する",
 
-	"text.autoconfig.gammautils.option.gamma.showStatusEffect": "ステータス効果を表示",
-	"text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "通常の範囲外の明るさの時に\nステータス効果を表示する\n- \"明るさ大\" 100% 超\n- \"明るさ小\" 0% 未満",
+    "text.autoconfig.gammautils.option.gamma.gammaStep": "ガンマ値の変更単位",
+    "text.autoconfig.gammautils.option.gamma.gammaStep.@Tooltip": "この幅でガンマ値を上げたり下げたりする",
 
-	"text.autoconfig.gammautils.option.gamma.hudMessage.showMessage": "明るさ表示",
-	"text.autoconfig.gammautils.option.gamma.hudMessage.showMessage.@Tooltip": "明るさを変更したときにその値を表示する",
+    "text.autoconfig.gammautils.option.gamma.showStatusEffect": "ステータス効果を表示",
+    "text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "通常の範囲外のガンマ値のときに\nステータス効果を表示する\n- 「高ガンマ値」 100% 超\n- 「低ガンマ値」 0% 未満",
 
-	"text.autoconfig.gammautils.option.gamma.resetOnClose": "終了時にリセット",
-	"text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "ゲームを終了するときに明るさをデフォルトに戻す",
+    "text.autoconfig.gammautils.option.gamma.resetOnClose": "終了時にリセット",
+    "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "ゲームを終了するときにガンマ値をデフォルトに戻す",
 
-	"text.autoconfig.gammautils.option.gamma.transition.smoothTransition": "滑らかに変更",
-	"text.autoconfig.gammautils.option.gamma.transition.smoothTransition.@Tooltip": "明るさの切り替えを滑らかに行う",
+    "text.autoconfig.gammautils.option.gamma.transition": "滑らかな切り替え",
 
-	"text.autoconfig.gammautils.option.gamma.transition.transitionSpeed": "変更速度",
-	"text.autoconfig.gammautils.option.gamma.transition.transitionSpeed.@Tooltip": "明るさの変更速度(%/s)\n(\"滑らかに変更\"がオンの場合)",
+    "text.autoconfig.gammautils.option.gamma.transition.smoothTransition": "滑らかに切り替え",
+    "text.autoconfig.gammautils.option.gamma.transition.smoothTransition.@Tooltip": "ガンマの切り替えを滑らかに行う",
 
-	"text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "限界値チェック",
-	"text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "明るさの上限と下限を強制するかどうか",
+    "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed": "変更速度",
+    "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed.@Tooltip": "ガンマ値の変更速度(%/s)\n(「滑らかに切り替え」がオンの場合)",
 
-	"text.autoconfig.gammautils.option.gamma.limiter.minGamma": "明るさの下限",
-	"text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "\"限界値チェック\"が有効な場合に\n許容する明るさの下限値",
+    "text.autoconfig.gammautils.option.gamma.dynamic": "自動ガンマ調整",
 
-	"text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "明るさの上限",
-	"text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "\"限界値チェック\"が有効な場合に\n許容する明るさの上限値",
+    "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma": "ガンマ値を自動的に調整",
+    "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma.@Tooltip": "プレイヤーの周囲の明るさに応じて\nガンマ値を自動的に調整する",
 
-	"text.gammautils.message.gammaPercentage": "明るさ: %d%%",
-	"text.gammautils.message.nightVisionDisabled": "暗視: オフ",
+    "text.autoconfig.gammautils.option.gamma.dynamic.minGamma": "最小ガンマ値",
+    "text.autoconfig.gammautils.option.gamma.dynamic.minGamma.@Tooltip": "周囲の明るさレベルが15のときのガンマ値",
 
-	"effect.gammautils.bright": "明るさ大",
-	"effect.gammautils.dim": "明るさ小"
+    "text.autoconfig.gammautils.option.gamma.dynamic.maxGamma": "最大ガンマ値",
+    "text.autoconfig.gammautils.option.gamma.dynamic.maxGamma.@Tooltip": "周囲の明るさレベルが0のときのガンマ値",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.transitionSpeed": "変更速度",
+    "text.autoconfig.gammautils.option.gamma.dynamic.transitionSpeed.@Tooltip": "明るさレベルが変化したときの\nガンマ値変更速度(%/s)",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.averagingLightRange": "明るさレベル平均化範囲",
+    "text.autoconfig.gammautils.option.gamma.dynamic.averagingLightRange.@Tooltip": "プレイヤー周囲の明るさレベルを\n平均化する際の範囲 (ブロック単位)",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.skyBrightnessOverride": "空からの明るさ上書き",
+    "text.autoconfig.gammautils.option.gamma.dynamic.skyBrightnessOverride.@Tooltip": "ここに設定した値と実際の空からの明るさ\nのうち高いほうが使用される．\nこれによって空からの光が届く場所での\nガンマ値を低く抑えられる．\nデフォルトの空からの明るさは\n真夜中で20%，正午で100%である．",
+
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference": "ディメンション別設定",
+
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference": "ディメンション別の設定を使用",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference.@Tooltip": "ディメンションを移動した際に\n事前設定したガンマ値を適用する",
+
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.overworldPreference": "オーバーワールド",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.overworldPreference.@Tooltip": "オーバーワールドの事前設定ガンマ値",
+
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.netherPreference": "ネザー",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.netherPreference.@Tooltip": "ネザーの事前設定ガンマ値",
+
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.endPreference": "エンド",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.endPreference.@Tooltip": "エンドの事前設定ガンマ値",
+
+    "text.autoconfig.gammautils.option.gamma.limiter": "ガンマ値制限",
+
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "ガンマ値を制限",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "ガンマ値の上限と下限を強制するかどうか",
+
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "ガンマ値の下限",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "「ガンマ値を制限」が有効な場合に\n許容するガンマ値の下限",
+
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "ガンマ値の上限",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "「ガンマ値を制限」が有効な場合に\n許容するガンマ値の上限",
+
+    "text.autoconfig.gammautils.option.gamma.hudMessage": "HUD表示",
+
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage": "ガンマ値表示",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.showMessage.@Tooltip": "ガンマ値を変更したときにその値を表示する",
+
+    "text.autoconfig.gammautils.option.gamma.hudMessage.defaultColor": "0 - 100 の文字色",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.positiveColor": "> 100 の文字色",
+    "text.autoconfig.gammautils.option.gamma.hudMessage.negativeColor": "< 0 の文字色",
+
+
+    "text.autoconfig.gammautils.category.nightVisionSettings": "暗視",
+
+    "text.autoconfig.gammautils.option.nightVision.toggledNightVision": "切り替え時の暗視レベル",
+    "text.autoconfig.gammautils.option.nightVision.toggledNightVision.@Tooltip": "機能をオンにしたときの暗視レベル",
+
+    "text.autoconfig.gammautils.option.nightVision.updateToggle": "切り替え時の暗視レベルを更新",
+    "text.autoconfig.gammautils.option.nightVision.updateToggle.@Tooltip": "最後に使用した0以外の暗視レベルを\n切り替え時の暗視レベルとして保持する",
+
+    "text.autoconfig.gammautils.option.nightVision.nightVisionStep": "暗視レベルの変更単位",
+    "text.autoconfig.gammautils.option.nightVision.nightVisionStep.@Tooltip": "この幅で暗視レベルを増減させる",
+
+    "text.autoconfig.gammautils.option.nightVision.showStatusEffect": "ステータス効果を表示",
+    "text.autoconfig.gammautils.option.nightVision.showStatusEffect.@Tooltip": "暗視のHUDとインベントリアイコンを\n通常のステータス効果と同じように表示する",
+
+    "text.autoconfig.gammautils.option.nightVision.resetOnClose": "終了時にリセット",
+    "text.autoconfig.gammautils.option.nightVision.resetOnClose.@Tooltip": "ゲーム終了時に暗視をオフにする",
+
+    "text.autoconfig.gammautils.option.nightVision.transition": "滑らかな切り替え",
+
+    "text.autoconfig.gammautils.option.nightVision.transition.smoothTransition": "滑らかに切り替え",
+    "text.autoconfig.gammautils.option.nightVision.transition.smoothTransition.@Tooltip": "暗視の切替を滑らかに行う",
+
+    "text.autoconfig.gammautils.option.nightVision.transition.transitionSpeed": "変更速度",
+    "text.autoconfig.gammautils.option.nightVision.transition.transitionSpeed.@Tooltip": "暗視レベルの変更速度(%/s)\n(「滑らかに切り替え」がオンの場合)",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic": "自動暗視調整",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision": "暗視レベルを自動的に調整",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision.@Tooltip": "プレイヤーの周囲の明るさに応じて\n暗視レベルを自動的に調整する",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision": "最小暗視レベル",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision.@Tooltip": "周囲の明るさレベルが15のときの暗視レベル",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.maxNightVision": "最大暗視レベル",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.maxNightVision.@Tooltip": "周囲の明るさレベルが0のときの暗視レベル",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.transitionSpeed": "変更速度",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.transitionSpeed.@Tooltip": "明るさレベルが変化したときの\n暗視レベル変更速度(%/s)",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.averagingLightRange": "明るさレベル平均化範囲",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.averagingLightRange.@Tooltip": "プレイヤー周囲の明るさレベルを\n平均化する際の範囲 (ブロック単位)",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.skyBrightnessOverride": "空からの明るさ上書き",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.skyBrightnessOverride.@Tooltip": "ここに設定した値と実際の空からの明るさ\nのうち高いほうが使用される．\nこれによって空からの光が届く場所での\nガンマ値を低く抑えられる．\nデフォルトの空からの明るさは\n真夜中で20%，正午で100%である．",
+
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference": "ディメンション別設定",
+
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference": "ディメンション別の設定を使用",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference.@Tooltip": "ディメンションを移動した際に\n事前設定した暗視レベルを適用する",
+
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.overworldPreference": "オーバーワールド",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.overworldPreference.@Tooltip": "オーバーワールドの事前設定暗視レベル",
+
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.netherPreference": "ネザー",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.netherPreference.@Tooltip": "ネザーの事前設定暗視レベル",
+
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.endPreference": "エンド",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.endPreference.@Tooltip": "エンドの事前設定暗視レベル",
+
+    "text.autoconfig.gammautils.option.nightVision.limiter": "暗視レベル制限",
+
+    "text.autoconfig.gammautils.option.nightVision.limiter.limitCheck": "暗視レベルを制限",
+    "text.autoconfig.gammautils.option.nightVision.limiter.limitCheck.@Tooltip": "暗視レベルの上限と下限を強制するかどうか",
+
+    "text.autoconfig.gammautils.option.nightVision.limiter.minNightVision": "暗視レベルの上限と下限を強制するかどうか",
+    "text.autoconfig.gammautils.option.nightVision.limiter.minNightVision.@Tooltip": "「暗視レベルを制限」が有効な場合に\n許容する暗視レベルの下限",
+
+    "text.autoconfig.gammautils.option.nightVision.limiter.maxNightVision": "暗視レベルの上限",
+    "text.autoconfig.gammautils.option.nightVision.limiter.maxNightVision.@Tooltip": "「暗視レベルを制限」が有効な場合に\n許容する暗視レベルの上限",
+
+    "text.autoconfig.gammautils.option.nightVision.hudMessage": "HUD表示",
+
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.showMessage": "暗視レベル表示",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.showMessage.@Tooltip": "暗視レベルを変更したときにその値を表示する",
+
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.defaultColor": "0 - 100 の文字色",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.positiveColor": "> 100 の文字色",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.negativeColor": "< 0 の文字色",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.enabledColor": "オン の文字色",
+    "text.autoconfig.gammautils.option.nightVision.hudMessage.disabledColor": "オフ の文字色",
+
+    "text.autoconfig.gammautils.category.otherSettings": "その他",
+
+    "text.autoconfig.gammautils.option.other.namespacedCommands": "コマンドの名前空間設定",
+    "text.autoconfig.gammautils.option.other.namespacedCommands.@Tooltip": "GammaUtilsのすべてのコマンドに名前空間を付与する．\n他のMODやサーバコマンドとの競合を回避できる．",
+
+    "text.gammautils.message.gammaPercentage": "ガンマ値: %d%%",
+    "text.gammautils.message.nightVisionPercentage": "暗視レベル: %d%%",
+    "text.gammautils.message.nightVisionDisabled": "暗視: オフ",
+    "text.gammautils.message.dynamicNightVisionEnabled": "自動暗視調整を オン にしました",
+    "text.gammautils.message.dynamicNightVisionDisabled": "自動暗視調整を オフ にしました",
+    "text.gammautils.message.dynamicGammaOn": "自動ガンマ調整を オン にしました",
+    "text.gammautils.message.dynamicGammaOff": "自動ガンマ調整を オフ にしました",
+    "text.gammautils.message.dynamicNightVisionOn": "自動暗視調整を オン にしました",
+    "text.gammautils.message.dynamicNightVisionOff": "自動暗視調整を オフ にしました",
+    "text.gammautils.message.statusEffectGammaOn": "ガンマのステータス効果表示を オン にしました",
+    "text.gammautils.message.statusEffectGammaOff": "ガンマのステータス効果表示を オフ にしました",
+    "text.gammautils.message.statusEffectNightVisionOn": "暗視のステータス効果表示を オン にしました",
+    "text.gammautils.message.statusEffectNightVisionOff": "暗視のステータス効果表示を オフ にしました",
+    "text.gammautils.message.transitionGammaOn": "ガンマの滑らかな切り替えを オン にしました",
+    "text.gammautils.message.transitionGammaOff": "ガンマの滑らかな切り替えを オフ にしました",
+    "text.gammautils.message.transitionNightVisionOn": "暗視の滑らかな切り替えを オン にしました",
+    "text.gammautils.message.transitionNightVisionOff": "暗視の滑らかな切り替えを オフ にしました",
+    "text.gammautils.message.incompatibleWithDynamicGamma": "自動ガンマ調整がオンの状態では使用できません",
+    "text.gammautils.message.incompatibleWithDynamicNightVision": "自動暗視調整がオンの状態では使用できません",
+
+
+    "effect.gammautils.bright": "高ガンマ値",
+    "effect.gammautils.dim": "低ガンマ値"
 }
