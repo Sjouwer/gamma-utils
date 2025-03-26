@@ -33,7 +33,7 @@
     "text.autoconfig.gammautils.option.gamma.showStatusEffect.@Tooltip": "当伽玛百分比超出正常范围时显示状态效果 \n(\"低伽马\" 低于 0% 和 \"高伽马\" 100% 以上)",
 
     "text.autoconfig.gammautils.option.gamma.resetOnClose": "关闭时重置",
-    "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "Minecraft关闭时,将伽玛值重置为默认值",
+    "text.autoconfig.gammautils.option.gamma.resetOnClose.@Tooltip": "Minecraft 关闭时,将伽玛值重置为默认值",
 
     "text.autoconfig.gammautils.option.gamma.transition": "平滑过渡",
 
@@ -59,6 +59,9 @@
 
     "text.autoconfig.gammautils.option.gamma.dynamic.averagingLightRange": "平均亮度等级范围",
     "text.autoconfig.gammautils.option.gamma.dynamic.averagingLightRange.@Tooltip": "玩家周围以方块为单位的范围,\n用于平均亮度等级",
+
+    "text.autoconfig.gammautils.option.gamma.dynamic.skyBrightnessOverride": "天空亮度覆盖",
+    "text.autoconfig.gammautils.option.gamma.dynamic.skyBrightnessOverride.@Tooltip": "此 mod 使用两者中较高的一个；此设置或实际的天空亮度。\n这使得在有天光时可以使用较低的动态伽马值。\n默认情况下，午夜时天空亮度为 20%，正午时为 100%",
 
     "text.autoconfig.gammautils.option.gamma.dimensionPreference": "维度偏好",
 
@@ -110,7 +113,7 @@
     "text.autoconfig.gammautils.option.nightVision.showStatusEffect.@Tooltip": "显示夜视图标和物品栏图标\n就像正常的药水状态效果一样",
 
     "text.autoconfig.gammautils.option.nightVision.resetOnClose": "关闭时重置",
-    "text.autoconfig.gammautils.option.nightVision.resetOnClose.@Tooltip": "Minecraft关闭时,关闭夜视",
+    "text.autoconfig.gammautils.option.nightVision.resetOnClose.@Tooltip": "Minecraft 关闭时,关闭夜视",
 
     "text.autoconfig.gammautils.option.nightVision.transition": "平滑过渡",
 
@@ -136,6 +139,9 @@
 
     "text.autoconfig.gammautils.option.nightVision.dynamic.averagingLightRange": "平均亮度等级范围",
     "text.autoconfig.gammautils.option.nightVision.dynamic.averagingLightRange.@Tooltip": "玩家周围以方块为单位的范围，\n用于平均亮度等级",
+
+    "text.autoconfig.gammautils.option.nightVision.dynamic.skyBrightnessOverride": "天空亮度覆盖",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.skyBrightnessOverride.@Tooltip": "此 mod 使用两者中较高的一个；此设置或实际的天空亮度。\n这使得在有天光时可以使用较低的动态伽马值。\n默认情况下，午夜时天空亮度为 20%，正午时为 100%",
 
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference": "维度偏好",
 
@@ -173,6 +179,10 @@
     "text.autoconfig.gammautils.option.nightVision.hudMessage.enabledColor": "颜色: 已启用",
     "text.autoconfig.gammautils.option.nightVision.hudMessage.disabledColor": "颜色: 已禁用",
 
+    "text.autoconfig.gammautils.category.otherSettings": "其他",
+
+    "text.autoconfig.gammautils.option.other.namespacedCommands": "命名空间命令",
+    "text.autoconfig.gammautils.option.other.namespacedCommands.@Tooltip": "为所有GammaUtils命令添加命名空间。\n启用此选项可防止与其他 mod 或服务器命令发生冲突。",
 
     "text.gammautils.message.gammaPercentage": "伽玛: %d%%",
     "text.gammautils.message.nightVisionPercentage": "夜视: %d%%",
