@@ -1,6 +1,6 @@
 {
     "modmenu.nameTranslation.gammautils": "Gamma Utils (伽马工具)",
-    "modmenu.summaryTranslation.pickblockpro": "伽马/亮度/夜视 模组，让你在黑暗中轻松看清",
+    "modmenu.summaryTranslation.gammautils": "伽马/亮度/夜视 模组，让你在黑暗中轻松看清",
     "modmenu.descriptionTranslation.gammautils": "伽马/亮度/夜视 模组，让你在黑暗中轻松看清",
 
     "key.categories.gammautils": "Gamma Utils (伽马工具)",
@@ -49,10 +49,10 @@
     "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma.@Tooltip": "使伽马值根据玩家自身周围的亮度动态调整",
 
     "text.autoconfig.gammautils.option.gamma.dynamic.minGamma": "最小伽马值强度",
-    "text.autoconfig.gammautils.option.gamma.dynamic.minGamma.@Tooltip": "亮度等级为0时的伽马值强度",
+    "text.autoconfig.gammautils.option.gamma.dynamic.minGamma.@Tooltip": "亮度等级为15时的伽马值强度",
 
     "text.autoconfig.gammautils.option.gamma.dynamic.maxGamma": "最大伽马值强度",
-    "text.autoconfig.gammautils.option.gamma.dynamic.maxGamma.@Tooltip": "亮度等级为15时的伽马值强度",
+    "text.autoconfig.gammautils.option.gamma.dynamic.maxGamma.@Tooltip": "亮度等级为0时的伽马值强度",
 
     "text.autoconfig.gammautils.option.gamma.dynamic.transitionSpeed": "过渡速度",
     "text.autoconfig.gammautils.option.gamma.dynamic.transitionSpeed.@Tooltip": "当亮度等级变化时,\n每秒的动态转化百分比变化速度",
