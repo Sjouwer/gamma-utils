@@ -8,7 +8,6 @@ import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.registry.entry.RegistryEntry;
 
 public class StatusEffectManager {
@@ -18,6 +17,8 @@ public class StatusEffectManager {
             new GammaStatusEffect("bright", StatusEffectCategory.BENEFICIAL, 0));
     public static final RegistryEntry.Direct<StatusEffect> DIM = new RegistryEntry.Direct<>(
             new GammaStatusEffect("dim", StatusEffectCategory.HARMFUL, 0));
+    public static final RegistryEntry.Direct<StatusEffect> NIGHT_VISION = new RegistryEntry.Direct<>(
+            new GammaStatusEffect("night_vision", StatusEffectCategory.BENEFICIAL, 0));
 
     private StatusEffectManager() {
     }
@@ -34,10 +35,10 @@ public class StatusEffectManager {
         }
 
         if (config.nightVision.isEnabled() && config.nightVision.isStatusEffectEnabled()) {
-            addPermEffect(player, StatusEffects.NIGHT_VISION);
+            addPermEffect(player, NIGHT_VISION);
         }
         else {
-            player.removeStatusEffect(StatusEffects.NIGHT_VISION);
+            player.removeStatusEffect(NIGHT_VISION);
         }
     }
 

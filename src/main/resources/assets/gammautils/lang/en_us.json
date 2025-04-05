@@ -206,5 +206,6 @@
 
 
     "effect.gammautils.bright": "High Gamma",
-    "effect.gammautils.dim": "Low Gamma"
+    "effect.gammautils.dim": "Low Gamma",
+    "effect.gammautils.night_vision": "Night Vision"
 }

@@ -206,5 +206,6 @@
 
 
     "effect.gammautils.bright": "高伽马",
-    "effect.gammautils.dim": "低伽马"
+    "effect.gammautils.dim": "低伽马",
+    "effect.gammautils.night_vision": "夜视"
 }
