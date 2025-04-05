@@ -178,5 +178,6 @@
     "text.gammautils.message.nightVisionDisabled": "夜視： 已停用",
 
     "effect.gammautils.bright": "高伽瑪值",
-    "effect.gammautils.dim": "低伽瑪值"
+    "effect.gammautils.dim": "低伽瑪值",
+    "effect.gammautils.night_vision": "夜視"
 }

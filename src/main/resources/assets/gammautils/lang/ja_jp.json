@@ -206,5 +206,6 @@
 
 
     "effect.gammautils.bright": "高ガンマ値",
-    "effect.gammautils.dim": "低ガンマ値"
+    "effect.gammautils.dim": "低ガンマ値",
+    "effect.gammautils.night_vision": "暗視"
 }
