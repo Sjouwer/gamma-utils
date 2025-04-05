@@ -49,10 +49,10 @@
     "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma.@Tooltip": "Passt Gamma dynamisch an \ndie Lichtverhältnisse um den Spieler an",
 
     "text.autoconfig.gammautils.option.gamma.dynamic.minGamma": "Minimale Gamma-Stärke",
-    "text.autoconfig.gammautils.option.gamma.dynamic.minGamma.@Tooltip": "Gamma-Stärke bei Lichtlevel 0",
+    "text.autoconfig.gammautils.option.gamma.dynamic.minGamma.@Tooltip": "Gamma-Stärke bei Lichtlevel 15",
 
     "text.autoconfig.gammautils.option.gamma.dynamic.maxGamma": "Maximale Gamma-Stärke",
-    "text.autoconfig.gammautils.option.gamma.dynamic.maxGamma.@Tooltip": "Gamma-Stärke bei Lichtlevel 15",
+    "text.autoconfig.gammautils.option.gamma.dynamic.maxGamma.@Tooltip": "Gamma-Stärke bei Lichtlevel 0",
 
     "text.autoconfig.gammautils.option.gamma.dynamic.transitionSpeed": "Übergangsgeschwindigkeit",
     "text.autoconfig.gammautils.option.gamma.dynamic.transitionSpeed.@Tooltip": "Dynamische Übergangsgeschwindigkeit in \nProzent pro Sekunde bei Änderungen des Lichtlevels",
