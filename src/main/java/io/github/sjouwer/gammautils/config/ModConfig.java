@@ -14,6 +14,8 @@ public class ModConfig implements ConfigData {
     public GammaSettings gamma = new GammaSettings();
 
     public static class GammaSettings {
+        @Excluded
+        private double value = 1;
         @Tooltip
         private int defaultGamma = 100;
         @Tooltip
@@ -92,15 +94,23 @@ public class ModConfig implements ConfigData {
             private int negativeColor = 0xAA0000;
         }
 
-        public double getDefaultStrength() {
+        public double getValue() {
+            return value;
+        }
+
+        public void setValue(double newValue) {
+            value = newValue;
+        }
+
+        public double getDefaultValue() {
             return defaultGamma / 100.0;
         }
 
-        public double getToggledStrength() {
+        public double getToggledValue() {
             return toggledGamma / 100.0;
         }
 
-        public void setToggledStrength(double newValue) {
+        public void setToggledValue(double newValue) {
             toggledGamma = (int)Math.round(newValue * 100);
         }
 
@@ -108,7 +118,7 @@ public class ModConfig implements ConfigData {
             return updateToggle;
         }
 
-        public double getStepStrength() {
+        public double getStepValue() {
             return gammaStep / 100.0;
         }
 
@@ -211,9 +221,9 @@ public class ModConfig implements ConfigData {
 
     public static class NightVisionSettings {
         @Excluded
-        private boolean nightVisionEnabled = false;
+        private boolean enabled = false;
         @Excluded
-        private double nightVisionStrength = 100;
+        private double value = 100;
         @Tooltip
         private int toggledNightVision = 100;
         @Tooltip
@@ -295,26 +305,26 @@ public class ModConfig implements ConfigData {
         }
 
         public void setStatus(boolean status) {
-            nightVisionEnabled = status;
+            enabled = status;
         }
 
         public boolean isEnabled() {
-            return nightVisionEnabled;
+            return enabled;
         }
 
-        public double getStrength() {
-            return nightVisionStrength;
+        public double getValue() {
+            return value;
         }
 
-        public void setStrength(double newValue) {
-            nightVisionStrength = newValue;
+        public void setValue(double newValue) {
+            value = newValue;
         }
 
-        public int getToggledStrength() {
+        public int getToggledValue() {
             return toggledNightVision;
         }
 
-        public void setToggledStrength(int newValue) {
+        public void setToggledValue(int newValue) {
             toggledNightVision = newValue;
         }
 
@@ -322,7 +332,7 @@ public class ModConfig implements ConfigData {
             return updateToggle;
         }
 
-        public int getStepStrength() {
+        public int getStepValue() {
             return nightVisionStep;
         }
 
