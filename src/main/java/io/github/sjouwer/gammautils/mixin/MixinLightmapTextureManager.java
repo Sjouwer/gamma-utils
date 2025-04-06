@@ -40,6 +40,6 @@ abstract class MixinLightmapTextureManager {
      */
     @ModifyExpressionValue(method = "update", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/network/ClientPlayerEntity;hasStatusEffect(Lnet/minecraft/registry/entry/RegistryEntry;)Z", ordinal = 0))
     private boolean hasNightVision(boolean original) {
-        return config.nightVision.isEnabled() || original;
+        return config.nightVision.isEnabled() || config.nightVision.isDynamicEnabled() || original;
     }
 }

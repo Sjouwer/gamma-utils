@@ -30,9 +30,23 @@ public class GammaManager {
     }
 
     public static void toggleGamma() {
+        if (gamma.isDynamicEnabled()) {
+            toggleDynamicPause();
+            return;
+        }
+
         double newValue = gamma.getValue() == gamma.getDefaultValue() ? gamma.getToggledValue() : gamma.getDefaultValue();
         dynamicGammaTarget = Double.NaN;
         setGamma(newValue, true, true);
+    }
+
+    public static void toggleDynamicPause() {
+        gamma.toggleDynamicPause();
+        InfoProvider.showDynamicGammaHudMessage();
+        if (gamma.isDynamicPaused()) {
+            dynamicGammaTarget = Double.NaN;
+            setGamma(gamma.getDefaultValue(), true, false, true);
+        }
     }
 
     public static void increaseGamma(double value) {
@@ -73,7 +87,7 @@ public class GammaManager {
     }
 
     public static void setDynamicGamma() {
-        if (!gamma.isDynamicGammaEnabled()) {
+        if (!gamma.isDynamicEnabled() || gamma.isDynamicPaused()) {
             return;
         }
 
@@ -87,7 +101,7 @@ public class GammaManager {
     }
 
     public static void setGamma(double newValue, boolean smoothTransition, boolean showMessage) {
-        if (gamma.isDynamicGammaEnabled()) {
+        if (gamma.isDynamicEnabled()) {
             if (showMessage) {
                 Text message = Text.translatable("text.gammautils.message.incompatibleWithDynamicGamma");
                 InfoProvider.sendMessage(message);
@@ -128,8 +142,8 @@ public class GammaManager {
     }
 
     protected static void toggleDynamicGamma() {
-        boolean newStatus = !gamma.isDynamicGammaEnabled();
-        gamma.setDynamicGammaStatus(newStatus);
+        boolean newStatus = !gamma.isDynamicEnabled();
+        gamma.setDynamicStatus(newStatus);
         Text message = Text.translatable("text.gammautils.message.dynamicGamma" + (newStatus ? "On" : "Off"));
         InfoProvider.sendMessage(message);
     }
@@ -159,12 +173,12 @@ public class GammaManager {
                         (valueChangePerTick < 0 && nextValue <= newValue)) {
                     transitionTimer.cancel();
                     gamma.setValue(newValue);
-                    StatusEffectManager.updateGammaStatusEffect();
                 }
                 else {
                     gamma.setValue(nextValue);
                 }
 
+                StatusEffectManager.updateGammaStatusEffect();
                 if (showMessage) {
                     InfoProvider.showGammaHudMessage();
                 }

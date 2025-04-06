@@ -45,8 +45,8 @@
 
     "text.autoconfig.gammautils.option.gamma.dynamic": "Dynamic Gamma",
 
-    "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma": "Enable Dynamic Gamma",
-    "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma.@Tooltip": "Makes Gamma dynamically \nadjust itself depending on the \nlight level around the player",
+    "text.autoconfig.gammautils.option.gamma.dynamic.enabled": "Enable Dynamic Gamma",
+    "text.autoconfig.gammautils.option.gamma.dynamic.enabled.@Tooltip": "Makes Gamma dynamically \nadjust itself depending on the \nlight level around the player",
 
     "text.autoconfig.gammautils.option.gamma.dynamic.minGamma": "Minimum Gamma Strength",
     "text.autoconfig.gammautils.option.gamma.dynamic.minGamma.@Tooltip": "Gamma strength at light level 15",
@@ -65,8 +65,8 @@
 
     "text.autoconfig.gammautils.option.gamma.dimensionPreference": "Dimension Preference",
 
-    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference": "Enable Dimension Preference",
-    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference.@Tooltip": "Gamma will automatically be \nset to the preferred strength \nwhen switching dimensions",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enabled": "Enable Dimension Preference",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enabled.@Tooltip": "Gamma will automatically be \nset to the preferred strength \nwhen switching dimensions",
 
     "text.autoconfig.gammautils.option.gamma.dimensionPreference.overworldPreference": "Overworld Preference",
     "text.autoconfig.gammautils.option.gamma.dimensionPreference.overworldPreference.@Tooltip": "Preferred Gamma strength \nfor the Overworld",
@@ -125,8 +125,8 @@
 
     "text.autoconfig.gammautils.option.nightVision.dynamic": "Dynamic Night Vision",
 
-    "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision": "Enable Dynamic Night Vision",
-    "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision.@Tooltip": "Makes Night Vision dynamically \nadjust itself depending on the \nlight level around the player",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.enabled": "Enable Dynamic Night Vision",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.enabled.@Tooltip": "Makes Night Vision dynamically \nadjust itself depending on the \nlight level around the player",
 
     "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision": "Minimum Night Vision Strength",
     "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision.@Tooltip": "Night Vision strength at light level 15",
@@ -145,8 +145,8 @@
 
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference": "Dimension Preference",
 
-    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference": "Enable Dimension Preference",
-    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference.@Tooltip": "Night Vision will automatically be \nset to the preferred strength \nwhen switching dimensions",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enabled": "Enable Dimension Preference",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enabled.@Tooltip": "Night Vision will automatically be \nset to the preferred strength \nwhen switching dimensions",
 
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference.overworldPreference": "Overworld Preference",
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference.overworldPreference.@Tooltip": "Preferred Night Vision strength \nfor the Overworld",
@@ -187,20 +187,22 @@
     "text.gammautils.message.gammaPercentage": "Gamma: %d%%",
     "text.gammautils.message.nightVisionPercentage": "Night Vision: %d%%",
     "text.gammautils.message.nightVisionDisabled": "Night Vision: Disabled",
-    "text.gammautils.message.dynamicNightVisionEnabled": "Enabling Dynamic Night Vision",
-    "text.gammautils.message.dynamicNightVisionDisabled": "Disabling Dynamic Night Vision",
-    "text.gammautils.message.dynamicGammaOn": "Dynamic Gamma has been turned on",
-    "text.gammautils.message.dynamicGammaOff": "Dynamic Gamma has been turned off",
-    "text.gammautils.message.dynamicNightVisionOn": "Dynamic Night Vision has been turned on",
-    "text.gammautils.message.dynamicNightVisionOff": "Dynamic Night Vision has been turned off",
-    "text.gammautils.message.statusEffectGammaOn": "Gamma Status Effects have been turned on",
-    "text.gammautils.message.statusEffectGammaOff": "Gamma Status Effects have been turned off",
-    "text.gammautils.message.statusEffectNightVisionOn": "Night Vision Status Effect has been turned on",
-    "text.gammautils.message.statusEffectNightVisionOff": "Night Vision Status Effect has been turned off",
-    "text.gammautils.message.transitionGammaOn": "Gamma Smooth Transition has been turned on",
-    "text.gammautils.message.transitionGammaOff": "Gamma Smooth Transition has been turned off",
-    "text.gammautils.message.transitionNightVisionOn": "Night Vision Smooth Transition has been turned on",
-    "text.gammautils.message.transitionNightVisionOff": "Night Vision Smooth Transition has been turned off",
+    "text.gammautils.message.dynamicGammaEnabled": "Resuming Dynamic Gamma",
+    "text.gammautils.message.dynamicGammaDisabled": "Stopping Dynamic Gamma",
+    "text.gammautils.message.dynamicNightVisionEnabled": "Resuming Dynamic Night Vision",
+    "text.gammautils.message.dynamicNightVisionDisabled": "Stopping Dynamic Night Vision",
+    "text.gammautils.message.dynamicGammaOn": "Dynamic Gamma has been enabled",
+    "text.gammautils.message.dynamicGammaOff": "Dynamic Gamma has been disabled",
+    "text.gammautils.message.dynamicNightVisionOn": "Dynamic Night Vision has been enabled",
+    "text.gammautils.message.dynamicNightVisionOff": "Dynamic Night Vision has been disabled",
+    "text.gammautils.message.statusEffectGammaOn": "Gamma Status Effects have been enabled",
+    "text.gammautils.message.statusEffectGammaOff": "Gamma Status Effects have been disabled",
+    "text.gammautils.message.statusEffectNightVisionOn": "Night Vision Status Effect has been enabled",
+    "text.gammautils.message.statusEffectNightVisionOff": "Night Vision Status Effect has been disabled",
+    "text.gammautils.message.transitionGammaOn": "Gamma Smooth Transition has been enabled",
+    "text.gammautils.message.transitionGammaOff": "Gamma Smooth Transition has been disabled",
+    "text.gammautils.message.transitionNightVisionOn": "Night Vision Smooth Transition has been enabled",
+    "text.gammautils.message.transitionNightVisionOff": "Night Vision Smooth Transition has been disabled",
     "text.gammautils.message.incompatibleWithDynamicGamma": "This feature does not work with Dynamic Gamma enabled",
     "text.gammautils.message.incompatibleWithDynamicNightVision": "This feature does not work with Dynamic Night Vision enabled",
 

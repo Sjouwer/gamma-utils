@@ -48,7 +48,9 @@ public class ModConfig implements ConfigData {
 
         static class DynamicGamma {
             @Tooltip
-            private boolean enableDynamicGamma = false;
+            private boolean enabled = false;
+            @Excluded
+            private boolean paused = false;
             @Tooltip
             private int minGamma = 100;
             @Tooltip
@@ -65,7 +67,7 @@ public class ModConfig implements ConfigData {
 
         static class DimensionPreference {
             @Tooltip
-            private boolean enableDimensionPreference = false;
+            private boolean enabled = false;
             @Tooltip
             private int overworldPreference = 1500;
             @Tooltip
@@ -159,7 +161,7 @@ public class ModConfig implements ConfigData {
         }
 
         public boolean isDimensionPreferenceEnabled() {
-            return dimensionPreference.enableDimensionPreference;
+            return dimensionPreference.enabled;
         }
 
         public double getOverworldPreference() {
@@ -174,12 +176,20 @@ public class ModConfig implements ConfigData {
             return dimensionPreference.endPreference / 100.0;
         }
 
-        public boolean isDynamicGammaEnabled() {
-            return dynamic.enableDynamicGamma;
+        public boolean isDynamicEnabled() {
+            return dynamic.enabled;
         }
 
-        public void setDynamicGammaStatus(boolean status) {
-            dynamic.enableDynamicGamma = status;
+        public void setDynamicStatus(boolean status) {
+            dynamic.enabled = status;
+        }
+
+        public boolean isDynamicPaused() {
+            return dynamic.paused;
+        }
+
+        public void toggleDynamicPause() {
+            dynamic.paused = !dynamic.paused;
         }
 
         public double getMinDynamicStrength() {
@@ -254,7 +264,9 @@ public class ModConfig implements ConfigData {
 
         static class DynamicNightVision {
             @Tooltip
-            private boolean enableDynamicNightVision = false;
+            private boolean enabled = false;
+            @Excluded
+            private boolean paused = false;
             @Tooltip
             private int minNightVision = 0;
             @Tooltip
@@ -271,7 +283,7 @@ public class ModConfig implements ConfigData {
 
         static class DimensionPreference {
             @Tooltip
-            private boolean enableDimensionPreference = false;
+            private boolean enabled = false;
             @Tooltip
             private int overworldPreference = 100;
             @Tooltip
@@ -373,7 +385,7 @@ public class ModConfig implements ConfigData {
         }
 
         public boolean isDimensionPreferenceEnabled() {
-            return dimensionPreference.enableDimensionPreference;
+            return dimensionPreference.enabled;
         }
 
         public int getOverworldPreference() {
@@ -388,12 +400,20 @@ public class ModConfig implements ConfigData {
             return dimensionPreference.endPreference;
         }
 
-        public boolean isDynamicNightVisionEnabled() {
-            return dynamic.enableDynamicNightVision;
+        public boolean isDynamicEnabled() {
+            return dynamic.enabled;
         }
 
-        public void setDynamicNightVisionStatus(boolean status) {
-            dynamic.enableDynamicNightVision = status;
+        public void setDynamicStatus(boolean status) {
+            dynamic.enabled = status;
+        }
+
+        public boolean isDynamicPaused() {
+            return dynamic.paused;
+        }
+
+        public void toggleDynamicPause() {
+            dynamic.paused = !dynamic.paused;
         }
 
         public int getMinDynamicStrength() {

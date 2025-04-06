@@ -18,7 +18,7 @@ public abstract class MixinGameRenderer {
     @Inject(method = "getNightVisionStrength", at = @At("HEAD"), cancellable = true)
     private static void adjustNightVisionStrength(LivingEntity entity, float tickDelta, CallbackInfoReturnable<Float> info) {
         ModConfig config = GammaUtils.getConfig();
-        if (config.nightVision.isEnabled()) {
+        if (config.nightVision.isEnabled() || config.nightVision.isDynamicEnabled()) {
             info.setReturnValue((float) (config.nightVision.getValue() / 100f));
         }
     }

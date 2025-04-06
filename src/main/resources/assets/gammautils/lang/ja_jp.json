@@ -45,8 +45,8 @@
 
     "text.autoconfig.gammautils.option.gamma.dynamic": "自動ガンマ調整",
 
-    "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma": "ガンマ値を自動的に調整",
-    "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma.@Tooltip": "プレイヤーの周囲の明るさに応じて\nガンマ値を自動的に調整する",
+    "text.autoconfig.gammautils.option.gamma.dynamic.enabled": "ガンマ値を自動的に調整",
+    "text.autoconfig.gammautils.option.gamma.dynamic.enabled.@Tooltip": "プレイヤーの周囲の明るさに応じて\nガンマ値を自動的に調整する",
 
     "text.autoconfig.gammautils.option.gamma.dynamic.minGamma": "最小ガンマ値",
     "text.autoconfig.gammautils.option.gamma.dynamic.minGamma.@Tooltip": "周囲の明るさレベルが15のときのガンマ値",
@@ -65,8 +65,8 @@
 
     "text.autoconfig.gammautils.option.gamma.dimensionPreference": "ディメンション別設定",
 
-    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference": "ディメンション別の設定を使用",
-    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference.@Tooltip": "ディメンションを移動した際に\n事前設定したガンマ値を適用する",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enabled": "ディメンション別の設定を使用",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enabled.@Tooltip": "ディメンションを移動した際に\n事前設定したガンマ値を適用する",
 
     "text.autoconfig.gammautils.option.gamma.dimensionPreference.overworldPreference": "オーバーワールド",
     "text.autoconfig.gammautils.option.gamma.dimensionPreference.overworldPreference.@Tooltip": "オーバーワールドの事前設定ガンマ値",
@@ -125,8 +125,8 @@
 
     "text.autoconfig.gammautils.option.nightVision.dynamic": "自動暗視調整",
 
-    "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision": "暗視レベルを自動的に調整",
-    "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision.@Tooltip": "プレイヤーの周囲の明るさに応じて\n暗視レベルを自動的に調整する",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.enabled": "暗視レベルを自動的に調整",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.enabled.@Tooltip": "プレイヤーの周囲の明るさに応じて\n暗視レベルを自動的に調整する",
 
     "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision": "最小暗視レベル",
     "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision.@Tooltip": "周囲の明るさレベルが15のときの暗視レベル",
@@ -145,8 +145,8 @@
 
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference": "ディメンション別設定",
 
-    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference": "ディメンション別の設定を使用",
-    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference.@Tooltip": "ディメンションを移動した際に\n事前設定した暗視レベルを適用する",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enabled": "ディメンション別の設定を使用",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enabled.@Tooltip": "ディメンションを移動した際に\n事前設定した暗視レベルを適用する",
 
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference.overworldPreference": "オーバーワールド",
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference.overworldPreference.@Tooltip": "オーバーワールドの事前設定暗視レベル",
