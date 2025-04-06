@@ -26,6 +26,11 @@ public class NightVisionManager {
     }
 
     public static void toggleNightVision() {
+        if (nightVision.isDynamicEnabled()) {
+            toggleDynamicPause();
+            return;
+        }
+
         if (nightVision.isEnabled()) {
             disableNightVision();
         }
@@ -34,9 +39,18 @@ public class NightVisionManager {
         }
     }
 
+    public static void toggleDynamicPause() {
+        nightVision.toggleDynamicPause();
+        InfoProvider.showDynamicNightVisionHudMessage();
+        if (nightVision.isDynamicPaused()) {
+            dynamicNightVisionTarget = Double.NaN;
+            setNightVision(0, true, false, true);
+        }
+    }
+
     public static void enableAndOrSetNightVision(int newValue) {
         if (nightVision.isEnabled()) {
-            NightVisionManager.setNightVision(newValue, true, false, true);
+            NightVisionManager.setNightVision(newValue, true, true);
         }
         else {
             enableNightVision(newValue);
@@ -48,38 +62,25 @@ public class NightVisionManager {
     }
 
     private static void enableNightVision(int newValue) {
-        NightVisionManager.setNightVision(0, false, false, false);
+        NightVisionManager.setNightVision(0, false, false);
         setNightVisionStatus(true);
-        if (nightVision.isDynamicNightVisionEnabled()) {
-            InfoProvider.showDynamicNightVisionHudMessage(true);
-            dynamicNightVisionTarget = Double.NaN;
-            setDynamicNightVision();
-        }
-        else {
-            NightVisionManager.setNightVision(newValue, true, false, true);
-        }
+        NightVisionManager.setNightVision(newValue, true, true);
     }
 
     public static void disableNightVision() {
-        if (nightVision.isDynamicNightVisionEnabled()) {
-            InfoProvider.showDynamicNightVisionHudMessage(false);
-            NightVisionManager.setNightVision(0, true, true, false, true);
-        }
-        else {
-            NightVisionManager.setNightVision(0, true, true, true);
-        }
+        NightVisionManager.setNightVision(0, true, true);
     }
 
     public static void increaseNightVision(int value) {
         double newValue = nightVision.getValue();
         newValue += value == 0 ? nightVision.getStepValue() : value;
-        setNightVision(newValue, false, false, true);
+        setNightVision(newValue, false, true);
     }
 
     public static void decreaseNightVision(int value) {
         double newValue = nightVision.getValue();
         newValue -= value == 0 ? nightVision.getStepValue() : value;
-        setNightVision(newValue, false, false, true);
+        setNightVision(newValue, false, true);
     }
 
     public static void setDimensionPreference() {
@@ -89,18 +90,18 @@ public class NightVisionManager {
 
         RegistryKey<World> dimension = client.world.getRegistryKey();
         if (dimension.equals(World.OVERWORLD)) {
-            setNightVision(nightVision.getOverworldPreference(), false, false, false);
+            setNightVision(nightVision.getOverworldPreference(), false, false);
         }
         else if (dimension.equals(World.NETHER)) {
-            setNightVision(nightVision.getNetherPreference(), false, false, false);
+            setNightVision(nightVision.getNetherPreference(), false, false);
         }
         else if (dimension.equals(World.END)) {
-            setNightVision(nightVision.getEndPreference(), false, false, false);
+            setNightVision(nightVision.getEndPreference(), false, false);
         }
     }
 
     public static void setDynamicNightVision() {
-        if (!nightVision.isDynamicNightVisionEnabled()) {
+        if (!nightVision.isDynamicEnabled() || nightVision.isDynamicPaused()) {
             return;
         }
 
@@ -109,12 +110,12 @@ public class NightVisionManager {
         double target = (nightVision.getMinDynamicStrength() + step * (15 - lightLevel));
         if (dynamicNightVisionTarget != target) {
             dynamicNightVisionTarget = target;
-            setNightVision(target, true, false, false, true);
+            setNightVision(target, true, false, true);
         }
     }
 
-    public static void setNightVision(double newValue, boolean smoothTransition, boolean disable, boolean showMessage) {
-        if (nightVision.isDynamicNightVisionEnabled()) {
+    public static void setNightVision(double newValue, boolean smoothTransition, boolean showMessage) {
+        if (nightVision.isDynamicEnabled()) {
             if (showMessage) {
                 Text message = Text.translatable("text.gammautils.message.incompatibleWithDynamicNightVision");
                 InfoProvider.sendMessage(message);
@@ -122,10 +123,10 @@ public class NightVisionManager {
             return;
         }
 
-        setNightVision(newValue, smoothTransition, disable, showMessage, false);
+        setNightVision(newValue, smoothTransition, showMessage, false);
     }
 
-    private static void setNightVision(double newValue, boolean smoothTransition, boolean disable, boolean showMessage, boolean dynamic) {
+    private static void setNightVision(double newValue, boolean smoothTransition, boolean showMessage, boolean dynamic) {
         if (transitionTimer != null) {
             transitionTimer.cancel();
         }
@@ -139,11 +140,11 @@ public class NightVisionManager {
             if (newValue < nightVision.getValue()) {
                 valueChangePerTick *= -1;
             }
-            startTransitionTimer(newValue, valueChangePerTick, disable, showMessage);
+            startTransitionTimer(newValue, valueChangePerTick, showMessage);
         }
         else {
             nightVision.setValue(newValue);
-            if (disable) {
+            if (newValue == 0) {
                 setNightVisionStatus(false);
             }
             if (showMessage) {
@@ -157,8 +158,8 @@ public class NightVisionManager {
     }
 
     protected static void toggleDynamicNightVision() {
-        boolean newStatus = !nightVision.isDynamicNightVisionEnabled();
-        nightVision.setDynamicNightVisionStatus(newStatus);
+        boolean newStatus = !nightVision.isDynamicEnabled();
+        nightVision.setDynamicStatus(newStatus);
         Text message = Text.translatable("text.gammautils.message.dynamicNightVision" + (newStatus ? "On" : "Off"));
         InfoProvider.sendMessage(message);
     }
@@ -183,7 +184,7 @@ public class NightVisionManager {
         StatusEffectManager.updateNightVision();
     }
 
-    private static void startTransitionTimer(double newValue, double valueChangePerTick, boolean disable, boolean showMessage) {
+    private static void startTransitionTimer(double newValue, double valueChangePerTick, boolean showMessage) {
         transitionTimer = new Timer();
         transitionTimer.scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -193,12 +194,11 @@ public class NightVisionManager {
                         (valueChangePerTick < 0 && nextValue <= newValue)) {
                     transitionTimer.cancel();
                     nightVision.setValue(newValue);
-                    if (disable) {
-                        setNightVisionStatus(false);
-                    }
+                    setNightVisionStatus(newValue != 0);
                 }
                 else {
                     nightVision.setValue(nextValue);
+                    setNightVisionStatus(nextValue != 0);
                 }
 
                 if (showMessage) {

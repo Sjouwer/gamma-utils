@@ -1,6 +1,6 @@
 {
     "modmenu.nameTranslation.gammautils": "Gamma Utils (Gamma-Werkzeuge)",
-    "modmenu.summaryTranslation.pickblockpro": "Gamma-/Helligkeits-/Nachtsicht-Mod, erleichtert das Sehen im Dunkeln.",
+    "modmenu.summaryTranslation.gammautils": "Gamma-/Helligkeits-/Nachtsicht-Mod, erleichtert das Sehen im Dunkeln.",
     "modmenu.descriptionTranslation.gammautils": "Gamma-/Helligkeits-/Nachtsicht-Mod, erleichtert das Sehen im Dunkeln.",
 
     "key.categories.gammautils": "Gamma Utils (Gamma-Werkzeuge)",
@@ -45,8 +45,8 @@
 
     "text.autoconfig.gammautils.option.gamma.dynamic": "Dynamisches Gamma",
 
-    "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma": "Dynamisches Gamma aktivieren",
-    "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma.@Tooltip": "Passt Gamma dynamisch an \ndie Lichtverhältnisse um den Spieler an",
+    "text.autoconfig.gammautils.option.gamma.dynamic.enabled": "Dynamisches Gamma aktivieren",
+    "text.autoconfig.gammautils.option.gamma.dynamic.enabled.@Tooltip": "Passt Gamma dynamisch an \ndie Lichtverhältnisse um den Spieler an",
 
     "text.autoconfig.gammautils.option.gamma.dynamic.minGamma": "Minimale Gamma-Stärke",
     "text.autoconfig.gammautils.option.gamma.dynamic.minGamma.@Tooltip": "Gamma-Stärke bei Lichtlevel 15",
@@ -65,8 +65,8 @@
     
 	"text.autoconfig.gammautils.option.gamma.dimensionPreference": "Dimensionseinstellungen",
 
-    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference": "Dimensionseinstellungen aktivieren",
-    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference.@Tooltip": "Gamma wird automatisch auf die \nbevorzugte Stärke gesetzt, \nwenn die Dimension gewechselt wird",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enabled": "Dimensionseinstellungen aktivieren",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enabled.@Tooltip": "Gamma wird automatisch auf die \nbevorzugte Stärke gesetzt, \nwenn die Dimension gewechselt wird",
 
     "text.autoconfig.gammautils.option.gamma.dimensionPreference.overworldPreference": "Overworld-Einstellung",
     "text.autoconfig.gammautils.option.gamma.dimensionPreference.overworldPreference.@Tooltip": "Bevorzugte Gamma-Stärke \nfür die Overworld",
@@ -125,8 +125,8 @@
 
     "text.autoconfig.gammautils.option.nightVision.dynamic": "Dynamische Nachtsicht",
 
-    "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision": "Dynamische Nachtsicht aktivieren",
-    "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision.@Tooltip": "Passt die Nachtsicht dynamisch an \ndie Lichtverhältnisse um den Spieler an",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.enabled": "Dynamische Nachtsicht aktivieren",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.enabled.@Tooltip": "Passt die Nachtsicht dynamisch an \ndie Lichtverhältnisse um den Spieler an",
 
     "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision": "Minimale Nachtsicht-Stärke",
     "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision.@Tooltip": "Nachtsicht-Stärke bei Lichtlevel 15",
@@ -145,8 +145,8 @@
 	
 	"text.autoconfig.gammautils.option.nightVision.dimensionPreference": "Dimensionseinstellungen",
 
-    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference": "Dimensionseinstellungen aktivieren",
-    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference.@Tooltip": "Die Nachtsicht wird automatisch auf die \nbevorzugte Stärke gesetzt, \nwenn die Dimension gewechselt wird",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enabled": "Dimensionseinstellungen aktivieren",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enabled.@Tooltip": "Die Nachtsicht wird automatisch auf die \nbevorzugte Stärke gesetzt, \nwenn die Dimension gewechselt wird",
 
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference.overworldPreference": "Overworld-Einstellung",
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference.overworldPreference.@Tooltip": "Bevorzugte Nachtsicht-Stärke \nfür die Overworld",

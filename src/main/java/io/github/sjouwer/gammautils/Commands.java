@@ -85,13 +85,13 @@ public class Commands {
                         }))
                     .then(literal("enable")
                         .executes(ctx -> {
-                            config.gamma.setDynamicGammaStatus(true);
+                            config.gamma.setDynamicStatus(true);
                             InfoProvider.sendMessage(Text.translatable("text.gammautils.message.dynamicGammaOn"));
                             return 1;
                         }))
                     .then(literal("disable")
                         .executes(ctx -> {
-                            config.gamma.setDynamicGammaStatus(false);
+                            config.gamma.setDynamicStatus(false);
                             InfoProvider.sendMessage(Text.translatable("text.gammautils.message.dynamicGammaOff"));
                             return 1;
                         })))
@@ -208,13 +208,13 @@ public class Commands {
                         }))
                     .then(literal("enable")
                         .executes(ctx -> {
-                            config.nightVision.setDynamicNightVisionStatus(true);
+                            config.nightVision.setDynamicStatus(true);
                             InfoProvider.sendMessage(Text.translatable("text.gammautils.message.dynamicNightVisionOn"));
                             return 1;
                         }))
                     .then(literal("disable")
                         .executes(ctx -> {
-                            config.nightVision.setDynamicNightVisionStatus(false);
+                            config.nightVision.setDynamicStatus(false);
                             InfoProvider.sendMessage(Text.translatable("text.gammautils.message.dynamicNightVisionOff"));
                             return 1;
                         })))

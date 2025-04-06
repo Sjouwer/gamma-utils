@@ -47,15 +47,37 @@ public final class InfoProvider {
         client.inGameHud.setOverlayMessage(message, false);
     }
 
-    public static void showDynamicNightVisionHudMessage(boolean enabled) {
+    public static void showDynamicGammaHudMessage() {
+        if (!config.gamma.isHudMessageEnabled()) {
+            return;
+        }
+
         MutableText message;
-        if (enabled) {
-            message = Text.translatable("text.gammautils.message.dynamicNightVisionEnabled");
-            message.withColor(config.nightVision.getEnabledHudColor());
+        if (config.gamma.isDynamicPaused()) {
+            message = Text.translatable("text.gammautils.message.dynamicGammaDisabled");
+            message.withColor(config.nightVision.getDisabledHudColor());
         }
         else {
+            message = Text.translatable("text.gammautils.message.dynamicGammaEnabled");
+            message.withColor(config.nightVision.getEnabledHudColor());
+        }
+
+        client.inGameHud.setOverlayMessage(message, false);
+    }
+
+    public static void showDynamicNightVisionHudMessage() {
+        if (!config.nightVision.isHudMessageEnabled()) {
+            return;
+        }
+
+        MutableText message;
+        if (config.nightVision.isDynamicPaused()) {
             message = Text.translatable("text.gammautils.message.dynamicNightVisionDisabled");
             message.withColor(config.nightVision.getDisabledHudColor());
+        }
+        else {
+            message = Text.translatable("text.gammautils.message.dynamicNightVisionEnabled");
+            message.withColor(config.nightVision.getEnabledHudColor());
         }
 
         client.inGameHud.setOverlayMessage(message, false);

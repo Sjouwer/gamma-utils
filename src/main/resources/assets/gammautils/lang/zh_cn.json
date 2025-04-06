@@ -45,8 +45,8 @@
 
     "text.autoconfig.gammautils.option.gamma.dynamic": "动态伽马值",
 
-    "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma": "启用动态伽马值",
-    "text.autoconfig.gammautils.option.gamma.dynamic.enableDynamicGamma.@Tooltip": "使伽马值根据玩家自身周围的亮度动态调整",
+    "text.autoconfig.gammautils.option.gamma.dynamic.enabled": "启用动态伽马值",
+    "text.autoconfig.gammautils.option.gamma.dynamic.enabled.@Tooltip": "使伽马值根据玩家自身周围的亮度动态调整",
 
     "text.autoconfig.gammautils.option.gamma.dynamic.minGamma": "最小伽马值强度",
     "text.autoconfig.gammautils.option.gamma.dynamic.minGamma.@Tooltip": "亮度等级为15时的伽马值强度",
@@ -65,8 +65,8 @@
 
     "text.autoconfig.gammautils.option.gamma.dimensionPreference": "维度偏好",
 
-    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference": "启用维度偏好",
-    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enableDimensionPreference.@Tooltip": "切换维度时，伽玛值会自动设置到偏好强度",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enabled": "启用维度偏好",
+    "text.autoconfig.gammautils.option.gamma.dimensionPreference.enabled.@Tooltip": "切换维度时，伽玛值会自动设置到偏好强度",
 
     "text.autoconfig.gammautils.option.gamma.dimensionPreference.overworldPreference": "主世界偏好",
     "text.autoconfig.gammautils.option.gamma.dimensionPreference.overworldPreference.@Tooltip": "位于主世界时的\n伽马值偏好强度",
@@ -125,8 +125,8 @@
 
     "text.autoconfig.gammautils.option.nightVision.dynamic": "动态夜视",
 
-    "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision": "启用动态夜视",
-    "text.autoconfig.gammautils.option.nightVision.dynamic.enableDynamicNightVision.@Tooltip": "使夜视根据玩家自身周围的亮度动态调整",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.enabled": "启用动态夜视",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.enabled.@Tooltip": "使夜视根据玩家自身周围的亮度动态调整",
 
     "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision": "最小夜视强度",
     "text.autoconfig.gammautils.option.nightVision.dynamic.minNightVision.@Tooltip": "亮度等级为15时的夜视强度",
@@ -145,8 +145,8 @@
 
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference": "维度偏好",
 
-    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference": "启用维度偏好",
-    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enableDimensionPreference.@Tooltip": "切换维度时，夜视会自动设置到偏好强度",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enabled": "启用维度偏好",
+    "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enabled.@Tooltip": "切换维度时，夜视会自动设置到偏好强度",
 
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference.overworldPreference": "主世界偏好",
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference.overworldPreference.@Tooltip": "位于主世界时的\n夜视偏好强度",
