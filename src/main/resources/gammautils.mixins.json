@@ -8,8 +8,8 @@
     "MixinGameRenderer",
     "MixinLightmapTextureManager",
     "MixinMinecraftClient",
+    "MixinStatusEffectUtil",
     "MixinStatusEffectSpriteManager",
-    "MixinAbstractInventoryScreen",
     "SpriteAtlasHolderInvoker"
   ],
   "injectors": {
