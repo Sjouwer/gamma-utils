@@ -15,14 +15,6 @@ abstract class MixinLightmapTextureManager {
     private static final ModConfig config = GammaUtils.getConfig();
 
     /**
-     * Mixin to use mod gamma value
-     */
-    @ModifyExpressionValue(method = "update", at = @At(value = "INVOKE", target = "Ljava/lang/Double;floatValue()F", ordinal = 1))
-    private float getModGammaValue(float original) {
-        return (float) config.gamma.getValue();
-    }
-
-    /**
      * Mixin needed to allow negative gamma
      */
     @ModifyExpressionValue(method = "update", at = @At(value = "INVOKE", target = "Ljava/lang/Math;max(FF)F", ordinal = 0))
