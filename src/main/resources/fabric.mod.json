@@ -45,6 +45,8 @@
     "gammautils.mixins.json"
   ],
 
+  "accessWidener" : "gammautils.accesswidener",
+
   "depends": {
     "minecraft": ">=1.21",
     "fabricloader": ">=0.15.11",

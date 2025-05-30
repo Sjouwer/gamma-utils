@@ -5,9 +5,11 @@
   "compatibilityLevel": "JAVA_21",
   "client": [
     "MixinClientPlayNetworkHandler",
+    "MixinGameOptions",
     "MixinGameRenderer",
     "MixinLightmapTextureManager",
     "MixinMinecraftClient",
+    "MixinSimpleOption",
     "MixinStatusEffectUtil",
     "MixinStatusEffectSpriteManager",
     "SpriteAtlasHolderInvoker"
