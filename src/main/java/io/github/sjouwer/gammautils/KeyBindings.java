@@ -8,7 +8,16 @@ import org.lwjgl.glfw.GLFW;
 
 public class KeyBindings {
     private static final String CATEGORY = "key.categories." + GammaUtils.NAMESPACE;
-    private static final String BASE_KEY = "key." + GammaUtils.NAMESPACE;
+    private static final String BASE_KEY = "key." + GammaUtils.NAMESPACE + ".";
+
+    public static final KeyBinding GAMMA_TOGGLE = new KeyBinding(BASE_KEY + "gammaToggle", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_G, CATEGORY);
+    public static final KeyBinding GAMMA_INCREASE = new KeyBinding(BASE_KEY + "increaseGamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UP, CATEGORY);
+    public static final KeyBinding GAMMA_DECREASE = new KeyBinding(BASE_KEY + "decreaseGamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_DOWN, CATEGORY);
+    public static final KeyBinding GAMMA_MAX = new KeyBinding(BASE_KEY + "maxGamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, CATEGORY);
+    public static final KeyBinding GAMMA_MIN = new KeyBinding(BASE_KEY + "minGamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, CATEGORY);
+    public static final KeyBinding NIGHT_VISION_TOGGLE = new KeyBinding(BASE_KEY + "nightVisionToggle", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_H, CATEGORY);
+    public static final KeyBinding NIGHT_VISION_INCREASE = new KeyBinding(BASE_KEY + "increaseNightVision", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_RIGHT, CATEGORY);
+    public static final KeyBinding NIGHT_VISION_DECREASE = new KeyBinding(BASE_KEY + "decreaseNightVision", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_LEFT, CATEGORY);
 
     private KeyBindings() {
     }
@@ -25,88 +34,80 @@ public class KeyBindings {
     }
 
     private static void registerGammaToggleKey() {
-        KeyBinding gammaToggleKey = new KeyBinding(BASE_KEY + ".gammaToggle", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_G, CATEGORY);
-        KeyBindingHelper.registerKeyBinding(gammaToggleKey);
+        KeyBindingHelper.registerKeyBinding(GAMMA_TOGGLE);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (gammaToggleKey.wasPressed()) {
+            while (GAMMA_TOGGLE.wasPressed()) {
                 GammaManager.toggleGamma();
             }
         });
     }
 
     private static void registerIncreaseGammaKey() {
-        KeyBinding increaseGammaKey = new KeyBinding(BASE_KEY + ".increaseGamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UP, CATEGORY);
-        KeyBindingHelper.registerKeyBinding(increaseGammaKey);
+        KeyBindingHelper.registerKeyBinding(GAMMA_INCREASE);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (increaseGammaKey.wasPressed()) {
+            while (GAMMA_INCREASE.wasPressed()) {
                 GammaManager.increaseGamma(0);
             }
         });
     }
 
     private static void registerDecreaseGammaKey() {
-        KeyBinding decreaseGammaKey = new KeyBinding(BASE_KEY + ".decreaseGamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_DOWN, CATEGORY);
-        KeyBindingHelper.registerKeyBinding(decreaseGammaKey);
+        KeyBindingHelper.registerKeyBinding(GAMMA_DECREASE);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (decreaseGammaKey.wasPressed()) {
+            while (GAMMA_DECREASE.wasPressed()) {
                 GammaManager.decreaseGamma(0);
             }
         });
     }
 
     private static void registerMaxGammaKey() {
-        KeyBinding maxGammaKey = new KeyBinding(BASE_KEY + ".maxGamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, CATEGORY);
-        KeyBindingHelper.registerKeyBinding(maxGammaKey);
+        KeyBindingHelper.registerKeyBinding(GAMMA_MAX);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (maxGammaKey.wasPressed()) {
+            while (GAMMA_MAX.wasPressed()) {
                 GammaManager.maxGamma();
             }
         });
     }
 
     private static void registerMinGammaKey() {
-        KeyBinding minGammaKey = new KeyBinding(BASE_KEY + ".minGamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, CATEGORY);
-        KeyBindingHelper.registerKeyBinding(minGammaKey);
+        KeyBindingHelper.registerKeyBinding(GAMMA_MIN);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (minGammaKey.wasPressed()) {
+            while (GAMMA_MIN.wasPressed()) {
                 GammaManager.minGamma();
             }
         });
     }
 
     private static void registerNightVisionToggleKey() {
-        KeyBinding nightVisionToggleKey = new KeyBinding(BASE_KEY + ".nightVisionToggle", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_H, CATEGORY);
-        KeyBindingHelper.registerKeyBinding(nightVisionToggleKey);
+        KeyBindingHelper.registerKeyBinding(NIGHT_VISION_TOGGLE);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (nightVisionToggleKey.wasPressed()) {
+            while (NIGHT_VISION_TOGGLE.wasPressed()) {
                 NightVisionManager.toggleNightVision();
             }
         });
     }
 
     private static void registerIncreaseNightVisionKey() {
-        KeyBinding increaseNightVisionKey = new KeyBinding(BASE_KEY + ".increaseNightVision", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_RIGHT, CATEGORY);
-        KeyBindingHelper.registerKeyBinding(increaseNightVisionKey);
+        KeyBindingHelper.registerKeyBinding(NIGHT_VISION_INCREASE);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (increaseNightVisionKey.wasPressed()) {
+            while (NIGHT_VISION_INCREASE.wasPressed()) {
                 NightVisionManager.increaseNightVision(0);
             }
         });
     }
 
     private static void registerDecreaseNightVisionKey() {
-        KeyBinding decreaseNightVisionKey = new KeyBinding(BASE_KEY + ".decreaseNightVision", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_LEFT, CATEGORY);
-        KeyBindingHelper.registerKeyBinding(decreaseNightVisionKey);
+        KeyBindingHelper.registerKeyBinding(NIGHT_VISION_DECREASE);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (decreaseNightVisionKey.wasPressed()) {
+            while (NIGHT_VISION_DECREASE.wasPressed()) {
                 NightVisionManager.decreaseNightVision(0);
             }
         });
