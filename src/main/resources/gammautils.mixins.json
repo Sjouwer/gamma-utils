@@ -10,8 +10,8 @@
     "MixinLightmapTextureManager",
     "MixinMinecraftClient",
     "MixinSimpleOption",
+    "MixinInGameHud",
     "MixinStatusEffectUtil",
-    "MixinStatusEffectSpriteManager",
     "SpriteAtlasHolderInvoker"
   ],
   "injectors": {

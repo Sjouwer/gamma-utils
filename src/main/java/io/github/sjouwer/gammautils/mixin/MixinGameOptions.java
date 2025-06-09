@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 public class MixinGameOptions<T> {
 
     /**
-     * Mixin to bypass reading and writing the options file for the gamma option
+     * Mixin to skip reading and writing the options file for the gamma option
      */
     @WrapOperation(method = "acceptProfiledOptions", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/option/GameOptions$OptionVisitor;accept(Ljava/lang/String;Lnet/minecraft/client/option/SimpleOption;)V"))
     private void doNotVisitGamma(GameOptions.OptionVisitor instance, String key, SimpleOption<T> option, Operation<Void> original) {
