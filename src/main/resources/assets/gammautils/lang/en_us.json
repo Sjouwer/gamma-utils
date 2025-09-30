@@ -3,7 +3,8 @@
     "modmenu.summaryTranslation.gammautils": "Gamma / Brightness / Night Vision mod, making it easy to see in the dark.",
     "modmenu.descriptionTranslation.gammautils": "Gamma / Brightness / Night Vision mod, making it easy to see in the dark.",
 
-    "key.categories.gammautils": "Gamma Utils",
+    "key.category.gammautils.gamma": "Gamma Utils - Gamma",
+    "key.category.gammautils.nightvision": "Gamma Utils - Night Vision",
     "key.gammautils.gammaToggle": "Toggle Gamma",
     "key.gammautils.increaseGamma": "Increase Gamma",
     "key.gammautils.decreaseGamma": "Decrease Gamma",

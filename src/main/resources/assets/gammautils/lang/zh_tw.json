@@ -3,7 +3,8 @@
     "modmenu.summaryTranslation.gammautils": "伽瑪值 / 亮度 / 夜視 模組，讓你輕鬆在黑暗中看清一切。",
     "modmenu.descriptionTranslation.gammautils": "伽瑪值 / 亮度 / 夜視 模組，讓你輕鬆在黑暗中看清一切。",
 
-    "key.categories.gammautils": "Gamma Utils (伽瑪值工具)",
+    "key.category.gammautils.gamma": "Gamma Utils - Gamma",
+    "key.category.gammautils.nightvision": "Gamma Utils - Night Vision",
     "key.gammautils.gammaToggle": "切換伽瑪值",
     "key.gammautils.increaseGamma": "增加伽瑪值",
     "key.gammautils.decreaseGamma": "減少伽瑪值",

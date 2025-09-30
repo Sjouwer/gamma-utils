@@ -1,5 +1,6 @@
 {
-    "key.categories.gammautils": "Gamma Utils",
+    "key.category.gammautils.gamma": "Gamma Utils - Gamma",
+    "key.category.gammautils.nightvision": "Gamma Utils - Night Vision",
     "key.gammautils.gammaToggle": "감마 토글",
     "key.gammautils.increaseGamma": "감마 증가",
     "key.gammautils.decreaseGamma": "감마 감소",

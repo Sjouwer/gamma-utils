@@ -3,7 +3,8 @@
     "modmenu.summaryTranslation.gammautils": "Gamma-/Helligkeits-/Nachtsicht-Mod, erleichtert das Sehen im Dunkeln.",
     "modmenu.descriptionTranslation.gammautils": "Gamma-/Helligkeits-/Nachtsicht-Mod, erleichtert das Sehen im Dunkeln.",
 
-    "key.categories.gammautils": "Gamma Utils (Gamma-Werkzeuge)",
+    "key.category.gammautils.gamma": "Gamma Utils - Gamma",
+    "key.category.gammautils.nightvision": "Gamma Utils - Night Vision",
     "key.gammautils.gammaToggle": "Gamma umschalten",
     "key.gammautils.increaseGamma": "Gamma erhöhen",
     "key.gammautils.decreaseGamma": "Gamma verringern",

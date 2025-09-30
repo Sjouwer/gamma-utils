@@ -1,5 +1,6 @@
 {
-    "key.categories.gammautils": "Gamma Utils",
+    "key.category.gammautils.gamma": "Gamma Utils - Gamma",
+    "key.category.gammautils.nightvision": "Gamma Utils - Night Vision",
     "key.gammautils.gammaToggle": "Aydınlatmayı Aç/Kapat",
     "key.gammautils.increaseGamma": "Aydınlatmayı Arttır",
     "key.gammautils.decreaseGamma": "Aydınlatmayı Azalt",

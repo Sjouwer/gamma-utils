@@ -4,20 +4,22 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.util.Identifier;
 import org.lwjgl.glfw.GLFW;
 
 public class KeyBindings {
-    private static final String CATEGORY = "key.categories." + GammaUtils.NAMESPACE;
+    private static final KeyBinding.Category GAMMA_CATEGORY = KeyBinding.Category.create(Identifier.of(GammaUtils.NAMESPACE, "gamma"));
+    private static final KeyBinding.Category NIGHT_VISION_CATEGORY = KeyBinding.Category.create(Identifier.of(GammaUtils.NAMESPACE, "nightvision"));
     private static final String BASE_KEY = "key." + GammaUtils.NAMESPACE + ".";
 
-    public static final KeyBinding GAMMA_TOGGLE = new KeyBinding(BASE_KEY + "gammaToggle", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_G, CATEGORY);
-    public static final KeyBinding GAMMA_INCREASE = new KeyBinding(BASE_KEY + "increaseGamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UP, CATEGORY);
-    public static final KeyBinding GAMMA_DECREASE = new KeyBinding(BASE_KEY + "decreaseGamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_DOWN, CATEGORY);
-    public static final KeyBinding GAMMA_MAX = new KeyBinding(BASE_KEY + "maxGamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, CATEGORY);
-    public static final KeyBinding GAMMA_MIN = new KeyBinding(BASE_KEY + "minGamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, CATEGORY);
-    public static final KeyBinding NIGHT_VISION_TOGGLE = new KeyBinding(BASE_KEY + "nightVisionToggle", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_H, CATEGORY);
-    public static final KeyBinding NIGHT_VISION_INCREASE = new KeyBinding(BASE_KEY + "increaseNightVision", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_RIGHT, CATEGORY);
-    public static final KeyBinding NIGHT_VISION_DECREASE = new KeyBinding(BASE_KEY + "decreaseNightVision", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_LEFT, CATEGORY);
+    public static final KeyBinding GAMMA_TOGGLE = new KeyBinding(BASE_KEY + "gammaToggle", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_G, GAMMA_CATEGORY);
+    public static final KeyBinding GAMMA_INCREASE = new KeyBinding(BASE_KEY + "increaseGamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UP, GAMMA_CATEGORY);
+    public static final KeyBinding GAMMA_DECREASE = new KeyBinding(BASE_KEY + "decreaseGamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_DOWN, GAMMA_CATEGORY);
+    public static final KeyBinding GAMMA_MAX = new KeyBinding(BASE_KEY + "maxGamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, GAMMA_CATEGORY);
+    public static final KeyBinding GAMMA_MIN = new KeyBinding(BASE_KEY + "minGamma", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, GAMMA_CATEGORY);
+    public static final KeyBinding NIGHT_VISION_TOGGLE = new KeyBinding(BASE_KEY + "nightVisionToggle", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_H, NIGHT_VISION_CATEGORY);
+    public static final KeyBinding NIGHT_VISION_INCREASE = new KeyBinding(BASE_KEY + "increaseNightVision", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_RIGHT, NIGHT_VISION_CATEGORY);
+    public static final KeyBinding NIGHT_VISION_DECREASE = new KeyBinding(BASE_KEY + "decreaseNightVision", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_LEFT, NIGHT_VISION_CATEGORY);
 
     private KeyBindings() {
     }
