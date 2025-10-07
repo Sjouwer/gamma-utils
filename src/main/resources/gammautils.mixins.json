@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_21",
   "client": [
     "MixinClientPlayNetworkHandler",
+    "MixinBackgroundRenderer",
     "MixinGameOptions",
     "MixinGameRenderer",
     "MixinLightmapTextureManager",

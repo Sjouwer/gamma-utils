@@ -241,6 +241,8 @@ public class ModConfig implements ConfigData {
         @Tooltip
         private int nightVisionStep = 2;
         @Tooltip
+        private boolean brightenFogColor = true;
+        @Tooltip
         private boolean showStatusEffect = false;
         @Tooltip
         private boolean resetOnClose = false;
@@ -346,6 +348,10 @@ public class ModConfig implements ConfigData {
 
         public int getStepValue() {
             return nightVisionStep;
+        }
+
+        public boolean isFogColorBrighteningEnabled() {
+            return brightenFogColor;
         }
 
         public boolean isSmoothTransitionEnabled() {
