@@ -241,6 +241,8 @@ public class ModConfig implements ConfigData {
         @Tooltip
         private int nightVisionStep = 2;
         @Tooltip
+        private boolean brightenFogColor = true;
+        @Tooltip
         private boolean showStatusEffect = false;
         @Tooltip
         private boolean resetOnClose = false;
@@ -299,6 +301,8 @@ public class ModConfig implements ConfigData {
             private int minNightVision = 0;
             @Tooltip
             private int maxNightVision = 100;
+            @Tooltip
+            private boolean gammaCompatibilityLimiter = false;
         }
 
         static class HudMessage {
@@ -348,6 +352,10 @@ public class ModConfig implements ConfigData {
             return nightVisionStep;
         }
 
+        public boolean isFogColorBrighteningEnabled() {
+            return brightenFogColor;
+        }
+
         public boolean isSmoothTransitionEnabled() {
             return transition.smoothTransition;
         }
@@ -370,6 +378,10 @@ public class ModConfig implements ConfigData {
 
         public int getMinimumStrength() {
             return limiter.minNightVision;
+        }
+
+        public boolean isGammaCompatibilityLimiterEnabled() {
+            return limiter.gammaCompatibilityLimiter;
         }
 
         public boolean isStatusEffectEnabled() {

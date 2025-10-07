@@ -5,12 +5,13 @@
   "compatibilityLevel": "JAVA_21",
   "client": [
     "MixinClientPlayNetworkHandler",
+    "MixinFogRenderer",
     "MixinGameOptions",
     "MixinGameRenderer",
+    "MixinInGameHud",
     "MixinLightmapTextureManager",
     "MixinMinecraftClient",
     "MixinSimpleOption",
-    "MixinInGameHud",
     "MixinStatusEffectUtil",
     "SpriteAtlasHolderInvoker"
   ],
