@@ -171,6 +171,9 @@
 
     "text.autoconfig.gammautils.option.nightVision.limiter.maxNightVision": "最大夜视限制",
     "text.autoconfig.gammautils.option.nightVision.limiter.maxNightVision.@Tooltip": "启用限制检查时，模组将允许的最大夜视百分比",
+    
+    "text.autoconfig.gammautils.option.nightVision.limiter.gammaCompatibilityLimiter": "伽马值兼容性限制器",
+    "text.autoconfig.gammautils.option.nightVision.limiter.gammaCompatibilityLimiter.@Tooltip": "无论上述设置如何，此设置都会将此模组的夜视效果和原版夜视效果限制为最高90%。当同时开启高伽马值和夜视效果时，需要启用此设置。",
 
     "text.autoconfig.gammautils.option.nightVision.hudMessage": "HUD消息",
 
