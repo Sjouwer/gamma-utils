@@ -16,17 +16,17 @@ public abstract class MixinGameRenderer {
      */
     @WrapMethod(method = "getNightVisionStrength")
     private static float adjustNightVisionStrength(LivingEntity entity, float tickProgress, Operation<Float> original) {
-        ModConfig.NightVisionSettings nightVision = GammaUtils.getConfig().nightVision;
+        ModConfig config = GammaUtils.getConfig();
         float strength;
 
-        if (nightVision.isEnabled() || nightVision.isDynamicEnabled()) {
-            strength = (float) (nightVision.getValue() / 100f);
+        if (config.nightVision.isEnabled() || config.nightVision.isDynamicEnabled()) {
+            strength = (float) (config.nightVision.getValue() / 100f);
         }
         else {
             strength = original.call(entity, tickProgress);
         }
 
-        if (nightVision.isGammaCompatibilityLimiterEnabled()) {
+        if (config.nightVision.isGammaCompatibilityEnabled() && config.gamma.getValue() > 1) {
             strength = Math.min(strength, 0.9f);
         }
 

@@ -172,8 +172,8 @@
     "text.autoconfig.gammautils.option.nightVision.limiter.maxNightVision": "Maximum Night Vision Limit",
     "text.autoconfig.gammautils.option.nightVision.limiter.maxNightVision.@Tooltip": "Maximum Night Vision percentage the mod will \nallow if the Limit Check is enabled",
 
-    "text.autoconfig.gammautils.option.nightVision.limiter.gammaCompatibilityLimiter": "Gamma Compatibility Limiter",
-    "text.autoconfig.gammautils.option.nightVision.limiter.gammaCompatibilityLimiter.@Tooltip": "Limits both this mod's Night Vision \nand vanilla Night Vision to max 90% \nregardless of the above settings. \nNeeded when wanting to run both high Gamma \nand Night Vision at the same time.",
+    "text.autoconfig.gammautils.option.nightVision.limiter.gammaCompatibility": "Gamma Compatibility Limiter",
+    "text.autoconfig.gammautils.option.nightVision.limiter.gammaCompatibility.@Tooltip": "Limits both this mod's Night Vision \nand vanilla Night Vision to max 90% \nregardless of the above settings. \nNeeded when wanting to run both high Gamma \nand Night Vision at the same time.",
 
     "text.autoconfig.gammautils.option.nightVision.hudMessage": "HUD Message",
 

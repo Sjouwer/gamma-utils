@@ -174,8 +174,8 @@
 
     "text.autoconfig.gammautils.option.nightVision.hudMessage": "HUD訊息",
 
-    "text.autoconfig.gammautils.option.nightVision.limiter.gammaCompatibilityLimiter": "伽瑪值相容性限制器",
-    "text.autoconfig.gammautils.option.nightVision.limiter.gammaCompatibilityLimiter.@Tooltip": "無論上述設定為何，此設定都會將此模組的夜視效果和原始夜視效果限制為最高90%。當同時開啟高伽瑪值和夜視效果時，需要啟用此設定。",
+    "text.autoconfig.gammautils.option.nightVision.limiter.gammaCompatibility": "伽瑪值相容性限制器",
+    "text.autoconfig.gammautils.option.nightVision.limiter.gammaCompatibility.@Tooltip": "無論上述設定為何，此設定都會將此模組的夜視效果和原始夜視效果限制為最高90%。當同時開啟高伽瑪值和夜視效果時，需要啟用此設定。",
 
     "text.autoconfig.gammautils.option.nightVision.hudMessage.showMessage": "顯示HUD訊息",
     "text.autoconfig.gammautils.option.nightVision.hudMessage.showMessage.@Tooltip": "當夜視發生變化時，顯示一條包含新夜視百分比的訊息",
