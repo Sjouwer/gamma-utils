@@ -209,7 +209,6 @@
     "text.gammautils.message.incompatibleWithDynamicGamma": "This feature does not work with Dynamic Gamma enabled",
     "text.gammautils.message.incompatibleWithDynamicNightVision": "This feature does not work with Dynamic Night Vision enabled",
 
-
     "effect.gammautils.bright": "High Gamma",
     "effect.gammautils.dim": "Low Gamma",
     "effect.gammautils.night_vision": "Night Vision"
