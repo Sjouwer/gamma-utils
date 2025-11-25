@@ -47,6 +47,12 @@
 
   "accessWidener" : "gammautils.accesswidener",
 
+  "custom": {
+    "badoptimizations:cache_hooks": {
+      "lightmap": "io.github.sjouwer.gammautils.compat.BadOptimizationsHook"
+    }
+  },
+
   "depends": {
     "minecraft": ">=1.21",
     "fabricloader": ">=0.15.11",
