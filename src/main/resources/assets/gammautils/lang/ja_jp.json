@@ -62,7 +62,7 @@
     "text.autoconfig.gammautils.option.gamma.dynamic.averagingLightRange.@Tooltip": "プレイヤー周囲の明るさレベルを\n平均化する際の範囲 (ブロック単位)",
 
     "text.autoconfig.gammautils.option.gamma.dynamic.skyBrightnessOverride": "空からの明るさ上書き",
-    "text.autoconfig.gammautils.option.gamma.dynamic.skyBrightnessOverride.@Tooltip": "ここに設定した値と実際の空からの明るさ\nのうち高いほうが使用される．\nこれによって空からの光が届く場所での\nガンマ値を低く抑えられる．\nデフォルトの空からの明るさは\n真夜中で20%，正午で100%である．",
+    "text.autoconfig.gammautils.option.gamma.dynamic.skyBrightnessOverride.@Tooltip": "ここに設定した値と実際の空からの明るさ\nのうち高いほうが使用される．\nこれによって空からの光が届く場所での\nガンマ値を低く抑えられる．\nデフォルトの空からの明るさは\n真夜中で24%，正午で100%である．",
 
     "text.autoconfig.gammautils.option.gamma.dimensionPreference": "ディメンション別設定",
 
@@ -142,7 +142,7 @@
     "text.autoconfig.gammautils.option.nightVision.dynamic.averagingLightRange.@Tooltip": "プレイヤー周囲の明るさレベルを\n平均化する際の範囲 (ブロック単位)",
 
     "text.autoconfig.gammautils.option.nightVision.dynamic.skyBrightnessOverride": "空からの明るさ上書き",
-    "text.autoconfig.gammautils.option.nightVision.dynamic.skyBrightnessOverride.@Tooltip": "ここに設定した値と実際の空からの明るさ\nのうち高いほうが使用される．\nこれによって空からの光が届く場所での\nガンマ値を低く抑えられる．\nデフォルトの空からの明るさは\n真夜中で20%，正午で100%である．",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.skyBrightnessOverride.@Tooltip": "ここに設定した値と実際の空からの明るさ\nのうち高いほうが使用される．\nこれによって空からの光が届く場所での\nガンマ値を低く抑えられる．\nデフォルトの空からの明るさは\n真夜中で24%，正午で100%である．",
 
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference": "ディメンション別設定",
 

@@ -62,7 +62,7 @@
     "text.autoconfig.gammautils.option.gamma.dynamic.averagingLightRange.@Tooltip": "玩家周圍以方塊為單位的範圍，\n用於平均亮度等級",
 
     "text.autoconfig.gammautils.option.gamma.dynamic.skyBrightnessOverride": "天空亮度覆蓋",
-    "text.autoconfig.gammautils.option.gamma.dynamic.skyBrightnessOverride.@Tooltip": "模組將使用此設定與實際的天空亮度兩者中較高的值。\n這使得在有天空光照時可以使用較低的動態伽馬值。\n預設情況下，午夜時天空亮度為20%，正午時為100%",
+    "text.autoconfig.gammautils.option.gamma.dynamic.skyBrightnessOverride.@Tooltip": "模組將使用此設定與實際的天空亮度兩者中較高的值。\n這使得在有天空光照時可以使用較低的動態伽馬值。\n預設情況下，午夜時天空亮度為24%，正午時為100%",
 
     "text.autoconfig.gammautils.option.gamma.dimensionPreference": "維度偏好",
 
@@ -147,7 +147,7 @@
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference": "維度偏好",
 
     "text.autoconfig.gammautils.option.nightVision.dynamic.skyBrightnessOverride": "天空亮度覆蓋",
-    "text.autoconfig.gammautils.option.nightVision.dynamic.skyBrightnessOverride.@Tooltip": "模組將使用此設定與實際的天空亮度兩者中較高的值。\n這使得在有天空光照時可以使用較低的動態夜視強度。\n預設情況下，午夜時天空為20%，正午時為100%",
+    "text.autoconfig.gammautils.option.nightVision.dynamic.skyBrightnessOverride.@Tooltip": "模組將使用此設定與實際的天空亮度兩者中較高的值。\n這使得在有天空光照時可以使用較低的動態夜視強度。\n預設情況下，午夜時天空為24%，正午時為100%",
 
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enabled": "啟用維度偏好",
     "text.autoconfig.gammautils.option.nightVision.dimensionPreference.enabled.@Tooltip": "切換維度時，夜視將自動設定為偏好的強度",

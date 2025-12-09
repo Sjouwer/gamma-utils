@@ -4,6 +4,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.LightType;
+import net.minecraft.world.attribute.EnvironmentAttributes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +54,13 @@ public class LightLevelUtil {
 
         int blockLight = client.world.getLightingProvider().get(LightType.BLOCK).getLightLevel(blockPos);
         int skyLight = client.world.getLightingProvider().get(LightType.SKY).getLightLevel(blockPos);
-        float skyBrightness = Math.max(client.world.getSkyBrightness(1f), skyBrightnessOverride);
-        return Math.max(blockLight, skyLight * skyBrightness);
+
+        float tickProgress = client.getRenderTickCounter().getTickProgress(true);
+        float skyBrightness = client.gameRenderer.getCamera().getEnvironmentAttributeInterpolator()
+                .get(EnvironmentAttributes.SKY_LIGHT_FACTOR_VISUAL, tickProgress);
+
+        float correctedSkyLight = skyLight * Math.max(skyBrightness, skyBrightnessOverride);
+
+        return Math.max(blockLight, correctedSkyLight);
     }
 }
