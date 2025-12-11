@@ -38,6 +38,9 @@
     ],
     "modmenu": [
       "io.github.sjouwer.gammautils.config.ModMenuApiImpl"
+    ],
+    "sodium:config_api_user": [
+      "io.github.sjouwer.gammautils.compat.SodiumConfigBuilder"
     ]
   },
 
