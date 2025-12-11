@@ -37,13 +37,13 @@
     "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed.@Tooltip": "El velocidad en porcentaje de gamma por segundo \n(cuando \"Transición liso\" está activado)",
 
     "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "Limitar el porcentaje de gamma",
-    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "¿El mod debe aplicar el limite \nde gamma mínimo y máximo?",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "¿El mod debe aplicar el limite \nde gamma mínimo y máximo? \nWARNING: Disabling this might cause issues with Sodium!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "Limite de gamma mínimo",
-    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "El porcentaje de gamma mínimo que el mod \npermitirá (cuando \"Limitar el porcentaje de gamma\" está activado)",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "El porcentaje de gamma mínimo que el mod \npermitirá (cuando \"Limitar el porcentaje de gamma\" está activado). \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "Limite de gamma máximo",
-    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "El porcentaje de gamma máximo que el mod \npermitará (cuando \"Limitar el porcentaje de gamma\" está activado)",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "El porcentaje de gamma máximo que el mod \npermitará (cuando \"Limitar el porcentaje de gamma\" está activado). \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.gammautils.message.gammaPercentage": "Gamma: %d%%",
     "text.gammautils.message.nightVisionDisabled": "Visión nocturna: Desactivado",

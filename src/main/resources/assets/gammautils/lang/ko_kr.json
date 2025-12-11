@@ -35,13 +35,13 @@
     "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed.@Tooltip": "초당 감마 백분율 속도 (부드러운 전환 사용 시)",
 
     "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "제한 설정",
-    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "조절할 수 있는 감마 값의 최댓값/최솟값을 적용합니다.",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "조절할 수 있는 감마 값의 최댓값/최솟값을 적용합니다. \nWARNING: Disabling this might cause issues with Sodium!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "감마 최솟값",
-    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "제한 설정 옵션 사용 시 적용될 감마 최솟값을 설정합니다.",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "제한 설정 옵션 사용 시 적용될 감마 최솟값을 설정합니다. \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "감마 최댓값",
-    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "제한 설정 옵션 사용 시 적용될 감마 최댓값을 설정합니다.",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "제한 설정 옵션 사용 시 적용될 감마 최댓값을 설정합니다. \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.gammautils.message.gammaPercentage": "감마: %d%%",
     "text.gammautils.message.nightVisionDisabled": "야간 시야: 비활성화됨",

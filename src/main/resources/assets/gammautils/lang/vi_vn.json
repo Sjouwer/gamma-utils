@@ -37,13 +37,13 @@
     "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed.@Tooltip": "Tốc độ theo tỷ lệ phần trăm gamma mỗi giây \n(khi Chuyển tiếp mượt mà được bật)",
 
     "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "Kiểm tra giới hạn",
-    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "Mod có nên thực thi \ngiới hạn gamma tối thiểu và tối đa không",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "Mod có nên thực thi \ngiới hạn gamma tối thiểu và tối đa không. \nWARNING: Disabling this might cause issues with Sodium!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "Giới hạn Gamma tối thiểu",
-    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "Phần trăm gamma tối thiểu mà mod sẽ \ncho phép nếu Kiểm tra giới hạn được bật",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "Phần trăm gamma tối thiểu mà mod sẽ \ncho phép nếu Kiểm tra giới hạn được bật. \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "Giới hạn Gamma tối đa",
-    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Phần trăm gamma tối đa mà mod sẽ \ncho phép nếu Kiểm tra giới hạn được bật",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Phần trăm gamma tối đa mà mod sẽ \ncho phép nếu Kiểm tra giới hạn được bật. \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.gammautils.message.gammaPercentage": "Gamma: %d%%",
     "text.gammautils.message.nightVisionDisabled": "Nhìn trong bóng tối: Tắt",

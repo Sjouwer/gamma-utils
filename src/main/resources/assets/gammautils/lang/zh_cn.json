@@ -80,13 +80,13 @@
     "text.autoconfig.gammautils.option.gamma.limiter": "伽马值限制器",
 
     "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "启用限制检查",
-    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "模组是否应执行最小和最大伽马值限制",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "模组是否应执行最小和最大伽马值限制 \nWARNING: Disabling this might cause issues with Sodium!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "最小伽马值限制",
-    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "如果启用限制检查，模组将允许的最小伽马值百分比",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "如果启用限制检查，模组将允许的最小伽马值百分比 \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "最大伽马值限制",
-    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "如果启用限制检查，模组将允许的最大伽马值百分比",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "如果启用限制检查，模组将允许的最大伽马值百分比 \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.gamma.hudMessage": "HUD消息",
 

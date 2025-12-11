@@ -37,13 +37,13 @@
     "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed.@Tooltip": "Скорость в процентах гаммы в секунду\n(при включенном плавном переходе)",
 
     "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "Проверка лимита",
-    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "Должен ли мод обеспечивать \nминимальный и максимальный пределы гаммы?",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "Должен ли мод обеспечивать \nминимальный и максимальный пределы гаммы? \nWARNING: Disabling this might cause issues with Sodium!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "Минимальный предел гаммы",
-    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "Минимальный процент гаммы, \nдопустимый модом, если включена проверка пределов",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "Минимальный процент гаммы, \nдопустимый модом, если включена проверка пределов. \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "Максимальный предел гаммы",
-    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Максимальный процент гаммы, \nдопустимый модом, если включена проверка предела",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Максимальный процент гаммы, \nдопустимый модом, если включена проверка предела. \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.nightVision.showStatusEffect": "Показать значок ночного видения",
     "text.autoconfig.gammautils.option.nightVision.showStatusEffect.@Tooltip": "Показывать значок ночного видения в правом верхнем \nуглу, как настоящий эффект статуса.",

@@ -44,7 +44,7 @@ dependencies {
     modImplementation "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}"
 
     //Sodium
-    compileOnly "net.caffeinemc:sodium-fabric-api:${project.sodium_fabric_api_version}"
+    modCompileOnly "net.caffeinemc:sodium-fabric-api:${project.sodium_fabric_api_version}"
 }
 
 processResources {

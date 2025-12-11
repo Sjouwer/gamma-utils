@@ -51,13 +51,13 @@ public class GammaManager {
 
     public static void increaseGamma(double value) {
         double newValue = gamma.getValue();
-        newValue += value == 0 ? gamma.getStepValue() : value;
+        newValue += value == 0 ? gamma.getStepStrength() : value;
         setGamma(newValue, false, true);
     }
 
     public static void decreaseGamma(double value) {
         double newValue = gamma.getValue();
-        newValue -= value == 0 ? gamma.getStepValue() : value;
+        newValue -= value == 0 ? gamma.getStepStrength() : value;
         setGamma(newValue, false, true);
     }
 

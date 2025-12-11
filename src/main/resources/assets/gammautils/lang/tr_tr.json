@@ -37,13 +37,13 @@
     "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed.@Tooltip": "Saniye başına aydınlatma değeri \n(Yumuşak Geçiş açıkken)",
 
     "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "Limit Kontrolü",
-    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "Mod minimum ve maksimum \naydınlatma limitlerini zorlasın mı",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "Mod minimum ve maksimum \naydınlatma limitlerini zorlasın mı. \nWARNING: Disabling this might cause issues with Sodium!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "Minimum Aydınlatma Limiti",
-    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "Limit Kontrolü açıkken modun \nizin vereceği minimum aydınlatma değeri",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "Limit Kontrolü açıkken modun \nizin vereceği minimum aydınlatma değeri. \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "Maksimum Aydınlatma Limiti",
-    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Limit Kontrolü açıkken modun \nizin vereceği maksimum aydınlatma değeri",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Limit Kontrolü açıkken modun \nizin vereceği maksimum aydınlatma değeri. \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.nightVision.showStatusEffect": "Gece Görüşü İkonunu Göster",
     "text.autoconfig.gammautils.option.nightVision.showStatusEffect.@Tooltip": "Gece Görüşü İkonunu normal \nefektler gibi sağ üstte göster",

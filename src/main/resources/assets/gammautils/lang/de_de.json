@@ -80,13 +80,13 @@
     "text.autoconfig.gammautils.option.gamma.limiter": "Begrenzung",
 
     "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "Begrenzung aktivieren",
-    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "Soll die Mod die \nminimale und maximale Gamma-Begrenzung durchsetzen",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "Soll die Mod die \nminimale und maximale Gamma-Begrenzung durchsetzen. \nWARNING: Disabling this might cause issues with Sodium!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "Minimale Gamma-Begrenzung",
-    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "Minimale Gamma-Prozentzahl, die die Mod \nerlaubt, wenn die Begrenzung aktiviert ist",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "Minimale Gamma-Prozentzahl, die die Mod \nerlaubt, wenn die Begrenzung aktiviert ist. \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "Maximale Gamma-Begrenzung",
-    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Maximale Gamma-Prozentzahl, die die Mod \nerlaubt, wenn die Begrenzung aktiviert ist",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Maximale Gamma-Prozentzahl, die die Mod \nerlaubt, wenn die Begrenzung aktiviert ist. \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.gamma.hudMessage": "HUD-Nachricht",
 

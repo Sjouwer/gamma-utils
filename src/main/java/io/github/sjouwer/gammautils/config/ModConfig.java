@@ -80,8 +80,10 @@ public class ModConfig implements ConfigData {
             @Tooltip
             private boolean limitCheck = true;
             @Tooltip
+            @RequiresRestart
             private int minGamma = -750;
             @Tooltip
+            @RequiresRestart
             private int maxGamma = 1500;
         }
 
@@ -120,7 +122,11 @@ public class ModConfig implements ConfigData {
             return updateToggle;
         }
 
-        public double getStepValue() {
+        public int getStep() {
+            return gammaStep;
+        }
+
+        public double getStepStrength() {
             return gammaStep / 100.0;
         }
 
@@ -152,8 +158,16 @@ public class ModConfig implements ConfigData {
             return limiter.limitCheck;
         }
 
+        public int getMin() {
+            return limiter.minGamma;
+        }
+
         public double getMinimumStrength() {
             return limiter.minGamma / 100.0;
+        }
+
+        public int getMax() {
+            return limiter.maxGamma;
         }
 
         public double getMaximumStrength() {

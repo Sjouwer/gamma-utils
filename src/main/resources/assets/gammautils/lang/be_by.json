@@ -37,13 +37,13 @@
     "text.autoconfig.gammautils.option.gamma.transition.transitionSpeed.@Tooltip": "Хуткасць павышэння працэнтаў яркасці ў секунду \n(калі Плаўны Пераход уключаны)",
 
     "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "Праверка лімітаў",
-    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "Усталяяваць вызначаныя \nмінімальныя і максімальныя працэнты яркасці",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "Усталяяваць вызначаныя \nмінімальныя і максімальныя працэнты яркасці. \nWARNING: Disabling this might cause issues with Sodium!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "Ліміт мінімальнай яркасці",
-    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "Мінімальный працэнт гамы, які дазваляе мод, \nкалі Праверка Лімітаў уключана",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "Мінімальный працэнт гамы, які дазваляе мод, \nкалі Праверка Лімітаў уключана. \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "Ліміт максімальнай яркасці",
-    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Максімальны працэнт гамы, які дазваляе мод, \nкалі Праверка Лімітаў уключана",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Максімальны працэнт гамы, які дазваляе мод, \nкалі Праверка Лімітаў уключана. \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.gammautils.message.gammaPercentage": "Яркасць: %d%%",
     "text.gammautils.message.nightVisionDisabled": "Начны зрок: Адключаны",

@@ -80,13 +80,13 @@
     "text.autoconfig.gammautils.option.gamma.limiter": "ガンマ値制限",
 
     "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "ガンマ値を制限",
-    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "ガンマ値の上限と下限を強制するかどうか",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "ガンマ値の上限と下限を強制するかどうか \nWARNING: Disabling this might cause issues with Sodium!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "ガンマ値の下限",
-    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "「ガンマ値を制限」が有効な場合に\n許容するガンマ値の下限",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "「ガンマ値を制限」が有効な場合に\n許容するガンマ値の下限 \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "ガンマ値の上限",
-    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "「ガンマ値を制限」が有効な場合に\n許容するガンマ値の上限",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "「ガンマ値を制限」が有効な場合に\n許容するガンマ値の上限 \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.gamma.hudMessage": "HUD表示",
 

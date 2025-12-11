@@ -80,13 +80,13 @@
     "text.autoconfig.gammautils.option.gamma.limiter": "Limiter",
 
     "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "Enable Limiter",
-    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "Should the mod enforce the \nminimum and maximum Gamma limits",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "Should the mod enforce the \nminimum and maximum Gamma limits. \nWARNING: Disabling this might \ncause issues with Sodium!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "Minimum Gamma Limit",
-    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "Minimum Gamma percentage the mod will \nallow if the Limit Check is enabled",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "Minimum Gamma percentage the mod will \nallow if the Limit Check is enabled. \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "Maximum Gamma Limit",
-    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Maximum Gamma percentage the mod will \nallow if the Limit Check is enabled",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "Maximum Gamma percentage the mod will \nallow if the Limit Check is enabled. \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.gamma.hudMessage": "HUD Message",
 
