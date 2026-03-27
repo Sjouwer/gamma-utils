@@ -4,17 +4,17 @@ import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import io.github.sjouwer.gammautils.GammaManager;
 import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.config.ModConfig;
-import net.minecraft.client.renderer.LightTexture;
+import net.minecraft.client.renderer.LightmapRenderStateExtractor;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
-@Mixin(LightTexture.class)
-abstract class MixinLightTexture {
+@Mixin(LightmapRenderStateExtractor.class)
+abstract class MixinLightmapRenderStateExtractor {
 
     /**
      * Mixin needed to allow negative gamma
      */
-    @ModifyExpressionValue(method = "updateLightTexture", at = @At(value = "INVOKE", target = "Ljava/lang/Math;max(FF)F", ordinal = 0))
+    @ModifyExpressionValue(method = "extract", at = @At(value = "INVOKE", target = "Ljava/lang/Math;max(FF)F", ordinal = 0))
     private float allowNegativeGamma(float original) {
         float gamma = (float) GammaManager.getGamma();
         if (gamma < 0) {
@@ -27,7 +27,7 @@ abstract class MixinLightTexture {
     /**
      * Mixin to allow Night Vision without Status Effect
      */
-    @ModifyExpressionValue(method = "updateLightTexture", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;hasEffect(Lnet/minecraft/core/Holder;)Z", ordinal = 0))
+    @ModifyExpressionValue(method = "extract", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;hasEffect(Lnet/minecraft/core/Holder;)Z", ordinal = 0))
     private boolean hasNightVision(boolean original) {
         ModConfig.NightVisionSettings nightVision = GammaUtils.getConfig().nightVision;
         return nightVision.isEnabled() || nightVision.isDynamicEnabled() || original;

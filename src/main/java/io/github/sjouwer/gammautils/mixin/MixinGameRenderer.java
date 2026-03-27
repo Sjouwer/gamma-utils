@@ -26,10 +26,6 @@ public abstract class MixinGameRenderer {
             strength = original.call(entity, tickProgress);
         }
 
-        if (config.nightVision.isGammaCompatibilityEnabled() && config.gamma.getValue() > 1) {
-            strength = Math.min(strength, 0.9f);
-        }
-
         return strength;
     }
 }

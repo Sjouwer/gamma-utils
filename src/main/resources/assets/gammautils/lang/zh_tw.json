@@ -81,13 +81,13 @@
     "text.autoconfig.gammautils.option.gamma.limiter": "限制器",
 
     "text.autoconfig.gammautils.option.gamma.limiter.limitCheck": "限制檢查",
-    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "模組是否應強制執行\n最小和最大伽瑪值限制 \nWARNING: Disabling this might cause issues with Sodium!",
+    "text.autoconfig.gammautils.option.gamma.limiter.limitCheck.@Tooltip": "模組是否應強制執行\n最小和最大伽瑪值限制 \n\nWARNING: Disabling this might cause issues with Sodium!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.minGamma": "最小伽瑪值限制",
-    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "如果啟用限制檢查，\n模組將允許的最小伽瑪值百分比 \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
+    "text.autoconfig.gammautils.option.gamma.limiter.minGamma.@Tooltip": "如果啟用限制檢查，\n模組將允許的最小伽瑪值百分比 \n\nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.gamma.limiter.maxGamma": "最大伽瑪值限制",
-    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "如果啟用限制檢查，\n模組將允許的最大伽瑪值百分比 \nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
+    "text.autoconfig.gammautils.option.gamma.limiter.maxGamma.@Tooltip": "如果啟用限制檢查，\n模組將允許的最大伽瑪值百分比 \n\nWARNING: If you use Sodium make sure to \nrestart when changing this setting!",
 
     "text.autoconfig.gammautils.option.gamma.hudMessage": "HUD訊息",
 

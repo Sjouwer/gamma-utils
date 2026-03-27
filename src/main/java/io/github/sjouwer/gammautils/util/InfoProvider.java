@@ -21,7 +21,7 @@ public final class InfoProvider {
             return;
         }
 
-        client.player.displayClientMessage(message, false);
+        client.player.sendSystemMessage(message);
     }
 
     public static void showGammaHudMessage() {

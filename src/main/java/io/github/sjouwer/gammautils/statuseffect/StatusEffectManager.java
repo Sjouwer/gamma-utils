@@ -5,6 +5,7 @@ import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.config.ModConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.core.component.DataComponentMap;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -14,11 +15,11 @@ public class StatusEffectManager {
     private static final Minecraft client = Minecraft.getInstance();
     private static final ModConfig config = GammaUtils.getConfig();
     public static final Holder.Direct<MobEffect> BRIGHT = new Holder.Direct<>(
-            new GammaStatusEffect("bright", MobEffectCategory.BENEFICIAL, 0));
+            new GammaStatusEffect("bright", MobEffectCategory.BENEFICIAL, 0), DataComponentMap.EMPTY);
     public static final Holder.Direct<MobEffect> DIM = new Holder.Direct<>(
-            new GammaStatusEffect("dim", MobEffectCategory.HARMFUL, 0));
+            new GammaStatusEffect("dim", MobEffectCategory.HARMFUL, 0), DataComponentMap.EMPTY);
     public static final Holder.Direct<MobEffect> NIGHT_VISION = new Holder.Direct<>(
-            new GammaStatusEffect("night_vision", MobEffectCategory.BENEFICIAL, 0));
+            new GammaStatusEffect("night_vision", MobEffectCategory.BENEFICIAL, 0), DataComponentMap.EMPTY);
 
     private StatusEffectManager() {
     }

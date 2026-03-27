@@ -315,8 +315,6 @@ public class ModConfig implements ConfigData {
             private int minNightVision = 0;
             @Tooltip
             private int maxNightVision = 100;
-            @Tooltip
-            private boolean gammaCompatibility = true;
         }
 
         static class HudMessage {
@@ -392,10 +390,6 @@ public class ModConfig implements ConfigData {
 
         public int getMinimumStrength() {
             return limiter.minNightVision;
-        }
-
-        public boolean isGammaCompatibilityEnabled() {
-            return limiter.gammaCompatibility;
         }
 
         public boolean isStatusEffectEnabled() {

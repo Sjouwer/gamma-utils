@@ -9,7 +9,7 @@
     "MixinOptions",
     "MixinGameRenderer",
     "MixinGui",
-    "MixinLightTexture",
+    "MixinLightmapRenderStateExtractor",
     "MixinMinecraft",
     "MixinOptionInstance",
     "MixinMobEffectUtil",
