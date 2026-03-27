@@ -6,7 +6,7 @@ import io.github.sjouwer.gammautils.util.InfoProvider;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.minecraft.network.chat.Component;
 
-import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.*;
+import static net.fabricmc.fabric.api.client.command.v2.ClientCommands.*;
 import static com.mojang.brigadier.arguments.IntegerArgumentType.*;
 
 public class Commands {

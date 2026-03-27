@@ -1,7 +1,7 @@
 package io.github.sjouwer.gammautils;
 
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
+import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.minecraft.client.KeyMapping;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.resources.Identifier;
@@ -36,7 +36,7 @@ public class KeyBindings {
     }
 
     private static void registerGammaToggleKey() {
-        KeyBindingHelper.registerKeyBinding(GAMMA_TOGGLE);
+        KeyMappingHelper.registerKeyMapping(GAMMA_TOGGLE);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (GAMMA_TOGGLE.consumeClick()) {
@@ -46,7 +46,7 @@ public class KeyBindings {
     }
 
     private static void registerIncreaseGammaKey() {
-        KeyBindingHelper.registerKeyBinding(GAMMA_INCREASE);
+        KeyMappingHelper.registerKeyMapping(GAMMA_INCREASE);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (GAMMA_INCREASE.consumeClick()) {
@@ -56,7 +56,7 @@ public class KeyBindings {
     }
 
     private static void registerDecreaseGammaKey() {
-        KeyBindingHelper.registerKeyBinding(GAMMA_DECREASE);
+        KeyMappingHelper.registerKeyMapping(GAMMA_DECREASE);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (GAMMA_DECREASE.consumeClick()) {
@@ -66,7 +66,7 @@ public class KeyBindings {
     }
 
     private static void registerMaxGammaKey() {
-        KeyBindingHelper.registerKeyBinding(GAMMA_MAX);
+        KeyMappingHelper.registerKeyMapping(GAMMA_MAX);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (GAMMA_MAX.consumeClick()) {
@@ -76,7 +76,7 @@ public class KeyBindings {
     }
 
     private static void registerMinGammaKey() {
-        KeyBindingHelper.registerKeyBinding(GAMMA_MIN);
+        KeyMappingHelper.registerKeyMapping(GAMMA_MIN);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (GAMMA_MIN.consumeClick()) {
@@ -86,7 +86,7 @@ public class KeyBindings {
     }
 
     private static void registerNightVisionToggleKey() {
-        KeyBindingHelper.registerKeyBinding(NIGHT_VISION_TOGGLE);
+        KeyMappingHelper.registerKeyMapping(NIGHT_VISION_TOGGLE);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (NIGHT_VISION_TOGGLE.consumeClick()) {
@@ -96,7 +96,7 @@ public class KeyBindings {
     }
 
     private static void registerIncreaseNightVisionKey() {
-        KeyBindingHelper.registerKeyBinding(NIGHT_VISION_INCREASE);
+        KeyMappingHelper.registerKeyMapping(NIGHT_VISION_INCREASE);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (NIGHT_VISION_INCREASE.consumeClick()) {
@@ -106,7 +106,7 @@ public class KeyBindings {
     }
 
     private static void registerDecreaseNightVisionKey() {
-        KeyBindingHelper.registerKeyBinding(NIGHT_VISION_DECREASE);
+        KeyMappingHelper.registerKeyMapping(NIGHT_VISION_DECREASE);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (NIGHT_VISION_DECREASE.consumeClick()) {
