@@ -4,16 +4,16 @@ import io.github.sjouwer.gammautils.config.ModConfig;
 import io.github.sjouwer.gammautils.statuseffect.StatusEffectManager;
 import io.github.sjouwer.gammautils.util.InfoProvider;
 import io.github.sjouwer.gammautils.util.LightLevelUtil;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.text.Text;
-import net.minecraft.world.World;
+import net.minecraft.client.Minecraft;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.level.Level;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class GammaManager {
-    private static final MinecraftClient client = MinecraftClient.getInstance();
+    private static final Minecraft client = Minecraft.getInstance();
     private static final ModConfig.GammaSettings gamma = GammaUtils.getConfig().gamma;
     private static Timer transitionTimer = null;
     private static double dynamicGammaTarget = Double.NaN;
@@ -70,18 +70,18 @@ public class GammaManager {
     }
 
     public static void setDimensionPreference() {
-        if (client.world == null || !gamma.isDimensionPreferenceEnabled()) {
+        if (client.level == null || !gamma.isDimensionPreferenceEnabled()) {
             return;
         }
 
-        RegistryKey<World> dimension = client.world.getRegistryKey();
-        if (dimension.equals(World.OVERWORLD)) {
+        ResourceKey<Level> dimension = client.level.dimension();
+        if (dimension.equals(Level.OVERWORLD)) {
             setGamma(gamma.getOverworldPreference(), false, false);
         }
-        else if (dimension.equals(World.NETHER)) {
+        else if (dimension.equals(Level.NETHER)) {
             setGamma(gamma.getNetherPreference(), false, false);
         }
-        else if (dimension.equals(World.END)) {
+        else if (dimension.equals(Level.END)) {
             setGamma(gamma.getEndPreference(), false, false);
         }
     }
@@ -103,7 +103,7 @@ public class GammaManager {
     public static void setGamma(double newValue, boolean smoothTransition, boolean showMessage) {
         if (gamma.isDynamicEnabled()) {
             if (showMessage) {
-                Text message = Text.translatable("text.gammautils.message.incompatibleWithDynamicGamma");
+                Component message = Component.translatable("text.gammautils.message.incompatibleWithDynamicGamma");
                 InfoProvider.sendMessage(message);
             }
             return;
@@ -144,7 +144,7 @@ public class GammaManager {
     protected static void toggleDynamicGamma() {
         boolean newStatus = !gamma.isDynamicEnabled();
         gamma.setDynamicStatus(newStatus);
-        Text message = Text.translatable("text.gammautils.message.dynamicGamma" + (newStatus ? "On" : "Off"));
+        Component message = Component.translatable("text.gammautils.message.dynamicGamma" + (newStatus ? "On" : "Off"));
         InfoProvider.sendMessage(message);
     }
 
@@ -152,14 +152,14 @@ public class GammaManager {
         boolean newStatus = !gamma.isStatusEffectEnabled();
         gamma.setStatusEffectStatus(newStatus);
         StatusEffectManager.updateGammaStatusEffect();
-        Text message = Text.translatable("text.gammautils.message.statusEffectGamma" + (newStatus ? "On" : "Off"));
+        Component message = Component.translatable("text.gammautils.message.statusEffectGamma" + (newStatus ? "On" : "Off"));
         InfoProvider.sendMessage(message);
     }
 
     protected static void toggleSmoothTransition() {
         boolean newStatus = !gamma.isSmoothTransitionEnabled();
         gamma.setSmoothTransitionStatus(newStatus);
-        Text message = Text.translatable("text.gammautils.message.transitionGamma" + (newStatus ? "On" : "Off"));
+        Component message = Component.translatable("text.gammautils.message.transitionGamma" + (newStatus ? "On" : "Off"));
         InfoProvider.sendMessage(message);
     }
 

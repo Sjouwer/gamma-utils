@@ -4,17 +4,17 @@ import io.github.sjouwer.gammautils.config.ModConfig;
 import io.github.sjouwer.gammautils.statuseffect.StatusEffectManager;
 import io.github.sjouwer.gammautils.util.InfoProvider;
 import io.github.sjouwer.gammautils.util.LightLevelUtil;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.text.Text;
-import net.minecraft.world.World;
+import net.minecraft.client.Minecraft;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.level.Level;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class NightVisionManager {
     private static final ModConfig.NightVisionSettings nightVision = GammaUtils.getConfig().nightVision;
-    private static final MinecraftClient client = MinecraftClient.getInstance();
+    private static final Minecraft client = Minecraft.getInstance();
     private static Timer transitionTimer = null;
     private static double dynamicNightVisionTarget = Double.NaN;
 
@@ -84,18 +84,18 @@ public class NightVisionManager {
     }
 
     public static void setDimensionPreference() {
-        if (client.world == null || !nightVision.isDimensionPreferenceEnabled()) {
+        if (client.level == null || !nightVision.isDimensionPreferenceEnabled()) {
             return;
         }
 
-        RegistryKey<World> dimension = client.world.getRegistryKey();
-        if (dimension.equals(World.OVERWORLD)) {
+        ResourceKey<Level> dimension = client.level.dimension();
+        if (dimension.equals(Level.OVERWORLD)) {
             setNightVision(nightVision.getOverworldPreference(), false, false);
         }
-        else if (dimension.equals(World.NETHER)) {
+        else if (dimension.equals(Level.NETHER)) {
             setNightVision(nightVision.getNetherPreference(), false, false);
         }
-        else if (dimension.equals(World.END)) {
+        else if (dimension.equals(Level.END)) {
             setNightVision(nightVision.getEndPreference(), false, false);
         }
     }
@@ -117,7 +117,7 @@ public class NightVisionManager {
     public static void setNightVision(double newValue, boolean smoothTransition, boolean showMessage) {
         if (nightVision.isDynamicEnabled()) {
             if (showMessage) {
-                Text message = Text.translatable("text.gammautils.message.incompatibleWithDynamicNightVision");
+                Component message = Component.translatable("text.gammautils.message.incompatibleWithDynamicNightVision");
                 InfoProvider.sendMessage(message);
             }
             return;
@@ -160,7 +160,7 @@ public class NightVisionManager {
     protected static void toggleDynamicNightVision() {
         boolean newStatus = !nightVision.isDynamicEnabled();
         nightVision.setDynamicStatus(newStatus);
-        Text message = Text.translatable("text.gammautils.message.dynamicNightVision" + (newStatus ? "On" : "Off"));
+        Component message = Component.translatable("text.gammautils.message.dynamicNightVision" + (newStatus ? "On" : "Off"));
         InfoProvider.sendMessage(message);
     }
 
@@ -168,14 +168,14 @@ public class NightVisionManager {
         boolean newStatus = !nightVision.isStatusEffectEnabled();
         nightVision.setStatusEffectStatus(newStatus);
         StatusEffectManager.updateNightVision();
-        Text message = Text.translatable("text.gammautils.message.statusEffectNightVision" + (newStatus ? "On" : "Off"));
+        Component message = Component.translatable("text.gammautils.message.statusEffectNightVision" + (newStatus ? "On" : "Off"));
         InfoProvider.sendMessage(message);
     }
 
     protected static void toggleSmoothTransition() {
         boolean newStatus = !nightVision.isSmoothTransitionEnabled();
         nightVision.setSmoothTransitionStatus(newStatus);
-        Text message = Text.translatable("text.gammautils.message.transitionNightVision" + (newStatus ? "On" : "Off"));
+        Component message = Component.translatable("text.gammautils.message.transitionNightVision" + (newStatus ? "On" : "Off"));
         InfoProvider.sendMessage(message);
     }
 

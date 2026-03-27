@@ -3,22 +3,22 @@ package io.github.sjouwer.gammautils.statuseffect;
 import io.github.sjouwer.gammautils.GammaManager;
 import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.config.ModConfig;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.network.ClientPlayerEntity;
-import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectCategory;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.core.Holder;
 
 public class StatusEffectManager {
-    private static final MinecraftClient client = MinecraftClient.getInstance();
+    private static final Minecraft client = Minecraft.getInstance();
     private static final ModConfig config = GammaUtils.getConfig();
-    public static final RegistryEntry.Direct<StatusEffect> BRIGHT = new RegistryEntry.Direct<>(
-            new GammaStatusEffect("bright", StatusEffectCategory.BENEFICIAL, 0));
-    public static final RegistryEntry.Direct<StatusEffect> DIM = new RegistryEntry.Direct<>(
-            new GammaStatusEffect("dim", StatusEffectCategory.HARMFUL, 0));
-    public static final RegistryEntry.Direct<StatusEffect> NIGHT_VISION = new RegistryEntry.Direct<>(
-            new GammaStatusEffect("night_vision", StatusEffectCategory.BENEFICIAL, 0));
+    public static final Holder.Direct<MobEffect> BRIGHT = new Holder.Direct<>(
+            new GammaStatusEffect("bright", MobEffectCategory.BENEFICIAL, 0));
+    public static final Holder.Direct<MobEffect> DIM = new Holder.Direct<>(
+            new GammaStatusEffect("dim", MobEffectCategory.HARMFUL, 0));
+    public static final Holder.Direct<MobEffect> NIGHT_VISION = new Holder.Direct<>(
+            new GammaStatusEffect("night_vision", MobEffectCategory.BENEFICIAL, 0));
 
     private StatusEffectManager() {
     }
@@ -29,7 +29,7 @@ public class StatusEffectManager {
     }
 
     public static void updateNightVision() {
-        ClientPlayerEntity player = client.player;
+        LocalPlayer player = client.player;
         if (player == null) {
             return;
         }
@@ -38,12 +38,12 @@ public class StatusEffectManager {
             addPermEffect(player, NIGHT_VISION);
         }
         else {
-            player.removeStatusEffect(NIGHT_VISION);
+            player.removeEffect(NIGHT_VISION);
         }
     }
 
     public static void updateGammaStatusEffect() {
-        ClientPlayerEntity player = client.player;
+        LocalPlayer player = client.player;
         if (player == null) {
             return;
         }
@@ -51,26 +51,26 @@ public class StatusEffectManager {
         if (config.gamma.isStatusEffectEnabled()) {
             int gamma = GammaManager.getGammaPercentage();
             if (gamma > 100) {
-                if (!player.hasStatusEffect(BRIGHT)) {
-                    player.removeStatusEffect(DIM);
+                if (!player.hasEffect(BRIGHT)) {
+                    player.removeEffect(DIM);
                     addPermEffect(player, BRIGHT);
                 }
                 return;
             }
             else if (gamma < 0) {
-                if (!player.hasStatusEffect(DIM)) {
-                    player.removeStatusEffect(BRIGHT);
+                if (!player.hasEffect(DIM)) {
+                    player.removeEffect(BRIGHT);
                     addPermEffect(player, DIM);
                 }
                 return;
             }
         }
-        player.removeStatusEffect(DIM);
-        player.removeStatusEffect(BRIGHT);
+        player.removeEffect(DIM);
+        player.removeEffect(BRIGHT);
     }
 
-    private static void addPermEffect(ClientPlayerEntity player, RegistryEntry<StatusEffect> effect) {
-        StatusEffectInstance statusEffect = new StatusEffectInstance(effect, -1);
-        player.addStatusEffect(statusEffect);
+    private static void addPermEffect(LocalPlayer player, Holder<MobEffect> effect) {
+        MobEffectInstance statusEffect = new MobEffectInstance(effect, -1);
+        player.addEffect(statusEffect);
     }
 }

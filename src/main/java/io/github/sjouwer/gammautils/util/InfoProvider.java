@@ -4,24 +4,24 @@ import io.github.sjouwer.gammautils.GammaManager;
 import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.NightVisionManager;
 import io.github.sjouwer.gammautils.config.ModConfig;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.text.MutableText;
-import net.minecraft.text.Text;
+import net.minecraft.client.Minecraft;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.Component;
 
 public final class InfoProvider {
-    private static final MinecraftClient client = MinecraftClient.getInstance();
+    private static final Minecraft client = Minecraft.getInstance();
     private static final ModConfig config = GammaUtils.getConfig();
 
     private InfoProvider() {
     }
 
-    public static void sendMessage(Text message) {
+    public static void sendMessage(Component message) {
         if (client.player == null) {
             GammaUtils.LOGGER.info(message.getString());
             return;
         }
 
-        client.player.sendMessage(message, false);
+        client.player.displayClientMessage(message, false);
     }
 
     public static void showGammaHudMessage() {
@@ -30,7 +30,7 @@ public final class InfoProvider {
         }
 
         int gamma = GammaManager.getGammaPercentage();
-        MutableText message = Text.translatable("text.gammautils.message.gammaPercentage", gamma);
+        MutableComponent message = Component.translatable("text.gammautils.message.gammaPercentage", gamma);
 
         int color;
         if (gamma < 0) {
@@ -44,7 +44,7 @@ public final class InfoProvider {
         }
 
         message.withColor(color);
-        client.inGameHud.setOverlayMessage(message, false);
+        client.gui.setOverlayMessage(message, false);
     }
 
     public static void showDynamicGammaHudMessage() {
@@ -52,17 +52,17 @@ public final class InfoProvider {
             return;
         }
 
-        MutableText message;
+        MutableComponent message;
         if (config.gamma.isDynamicPaused()) {
-            message = Text.translatable("text.gammautils.message.dynamicGammaDisabled");
+            message = Component.translatable("text.gammautils.message.dynamicGammaDisabled");
             message.withColor(config.nightVision.getDisabledHudColor());
         }
         else {
-            message = Text.translatable("text.gammautils.message.dynamicGammaEnabled");
+            message = Component.translatable("text.gammautils.message.dynamicGammaEnabled");
             message.withColor(config.nightVision.getEnabledHudColor());
         }
 
-        client.inGameHud.setOverlayMessage(message, false);
+        client.gui.setOverlayMessage(message, false);
     }
 
     public static void showDynamicNightVisionHudMessage() {
@@ -70,17 +70,17 @@ public final class InfoProvider {
             return;
         }
 
-        MutableText message;
+        MutableComponent message;
         if (config.nightVision.isDynamicPaused()) {
-            message = Text.translatable("text.gammautils.message.dynamicNightVisionDisabled");
+            message = Component.translatable("text.gammautils.message.dynamicNightVisionDisabled");
             message.withColor(config.nightVision.getDisabledHudColor());
         }
         else {
-            message = Text.translatable("text.gammautils.message.dynamicNightVisionEnabled");
+            message = Component.translatable("text.gammautils.message.dynamicNightVisionEnabled");
             message.withColor(config.nightVision.getEnabledHudColor());
         }
 
-        client.inGameHud.setOverlayMessage(message, false);
+        client.gui.setOverlayMessage(message, false);
     }
 
     public static void showNightVisionStatusHudMessage() {
@@ -92,15 +92,15 @@ public final class InfoProvider {
             showNightVisionStrengthHudMessage();
         }
         else {
-            MutableText message = Text.translatable("text.gammautils.message.nightVisionDisabled");
+            MutableComponent message = Component.translatable("text.gammautils.message.nightVisionDisabled");
             message.withColor(config.nightVision.getDisabledHudColor());
-            client.inGameHud.setOverlayMessage(message, false);
+            client.gui.setOverlayMessage(message, false);
         }
     }
 
     private static void showNightVisionStrengthHudMessage() {
         int nightVision = NightVisionManager.getNightVisionPercentage();
-        MutableText message = Text.translatable("text.gammautils.message.nightVisionPercentage", nightVision);
+        MutableComponent message = Component.translatable("text.gammautils.message.nightVisionPercentage", nightVision);
 
         int color;
         if (nightVision < 0) {
@@ -114,6 +114,6 @@ public final class InfoProvider {
         }
 
         message.withColor(color);
-        client.inGameHud.setOverlayMessage(message, false);
+        client.gui.setOverlayMessage(message, false);
     }
 }

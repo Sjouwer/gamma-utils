@@ -4,7 +4,7 @@ import io.github.sjouwer.gammautils.GammaUtils;
 import io.github.sjouwer.gammautils.config.ModConfig;
 import net.caffeinemc.mods.sodium.api.config.ConfigEntryPoint;
 import net.caffeinemc.mods.sodium.api.config.structure.ConfigBuilder;
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.Identifier;
 
 public class SodiumConfigBuilder implements ConfigEntryPoint {
     @Override
@@ -25,9 +25,9 @@ public class SodiumConfigBuilder implements ConfigEntryPoint {
 
         builder.registerModOptions(GammaUtils.NAMESPACE, "Gamma Utils", "1")
                 .registerOptionOverlay(
-                        Identifier.of("sodium:general.gamma"),
+                        Identifier.parse("sodium:general.gamma"),
                         builder.createIntegerOption(
-                                Identifier.of("sodium:general.gamma")).setRange(min, max, step)
+                                Identifier.parse("sodium:general.gamma")).setRange(min, max, step)
                 );
     }
 }

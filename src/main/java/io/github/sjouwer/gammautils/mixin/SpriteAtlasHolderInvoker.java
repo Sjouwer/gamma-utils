@@ -1,14 +1,14 @@
 package io.github.sjouwer.gammautils.mixin;
 
-import net.minecraft.client.texture.Sprite;
-import net.minecraft.client.texture.SpriteAtlasTexture;
-import net.minecraft.util.Identifier;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.client.renderer.texture.TextureAtlas;
+import net.minecraft.resources.Identifier;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Invoker;
 
-@Mixin(SpriteAtlasTexture.class)
+@Mixin(TextureAtlas.class)
 public interface SpriteAtlasHolderInvoker {
 
     @Invoker("getSprite")
-    public Sprite invokeGetSprite(Identifier objectId);
+    public TextureAtlasSprite invokeGetSprite(Identifier objectId);
 }

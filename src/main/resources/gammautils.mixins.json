@@ -4,15 +4,15 @@
   "package": "io.github.sjouwer.gammautils.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "MixinClientPlayNetworkHandler",
+    "MixinClientPacketListener",
     "MixinFogRenderer",
-    "MixinGameOptions",
+    "MixinOptions",
     "MixinGameRenderer",
-    "MixinInGameHud",
-    "MixinLightmapTextureManager",
-    "MixinMinecraftClient",
-    "MixinSimpleOption",
-    "MixinStatusEffectUtil",
+    "MixinGui",
+    "MixinLightTexture",
+    "MixinMinecraft",
+    "MixinOptionInstance",
+    "MixinMobEffectUtil",
     "SpriteAtlasHolderInvoker"
   ],
   "injectors": {

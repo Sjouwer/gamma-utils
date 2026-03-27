@@ -4,7 +4,7 @@ import io.github.sjouwer.gammautils.config.ModConfig;
 import io.github.sjouwer.gammautils.statuseffect.StatusEffectManager;
 import io.github.sjouwer.gammautils.util.InfoProvider;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
-import net.minecraft.text.Text;
+import net.minecraft.network.chat.Component;
 
 import static net.fabricmc.fabric.api.client.command.v2.ClientCommandManager.*;
 import static com.mojang.brigadier.arguments.IntegerArgumentType.*;
@@ -86,13 +86,13 @@ public class Commands {
                     .then(literal("enable")
                         .executes(ctx -> {
                             config.gamma.setDynamicStatus(true);
-                            InfoProvider.sendMessage(Text.translatable("text.gammautils.message.dynamicGammaOn"));
+                            InfoProvider.sendMessage(Component.translatable("text.gammautils.message.dynamicGammaOn"));
                             return 1;
                         }))
                     .then(literal("disable")
                         .executes(ctx -> {
                             config.gamma.setDynamicStatus(false);
-                            InfoProvider.sendMessage(Text.translatable("text.gammautils.message.dynamicGammaOff"));
+                            InfoProvider.sendMessage(Component.translatable("text.gammautils.message.dynamicGammaOff"));
                             return 1;
                         })))
                 .then(literal("statuseffect")
@@ -109,14 +109,14 @@ public class Commands {
                         .executes(ctx -> {
                             config.gamma.setStatusEffectStatus(true);
                             StatusEffectManager.updateGammaStatusEffect();
-                            InfoProvider.sendMessage(Text.translatable("text.gammautils.message.statusEffectGammaOn"));
+                            InfoProvider.sendMessage(Component.translatable("text.gammautils.message.statusEffectGammaOn"));
                             return 1;
                         }))
                     .then(literal("disable")
                         .executes(ctx -> {
                             config.gamma.setStatusEffectStatus(false);
                             StatusEffectManager.updateGammaStatusEffect();
-                            InfoProvider.sendMessage(Text.translatable("text.gammautils.message.statusEffectGammaOff"));
+                            InfoProvider.sendMessage(Component.translatable("text.gammautils.message.statusEffectGammaOff"));
                             return 1;
                         })))
                 .then(literal("transition")
@@ -132,13 +132,13 @@ public class Commands {
                     .then(literal("smooth")
                         .executes(ctx -> {
                             config.gamma.setSmoothTransitionStatus(true);
-                            InfoProvider.sendMessage(Text.translatable("text.gammautils.message.transitionGammaOn"));
+                            InfoProvider.sendMessage(Component.translatable("text.gammautils.message.transitionGammaOn"));
                             return 1;
                         }))
                     .then(literal("none")
                         .executes(ctx -> {
                             config.gamma.setSmoothTransitionStatus(false);
-                            InfoProvider.sendMessage(Text.translatable("text.gammautils.message.transitionGammaOff"));
+                            InfoProvider.sendMessage(Component.translatable("text.gammautils.message.transitionGammaOff"));
                             return 1;
                         })))));
     }
@@ -209,13 +209,13 @@ public class Commands {
                     .then(literal("enable")
                         .executes(ctx -> {
                             config.nightVision.setDynamicStatus(true);
-                            InfoProvider.sendMessage(Text.translatable("text.gammautils.message.dynamicNightVisionOn"));
+                            InfoProvider.sendMessage(Component.translatable("text.gammautils.message.dynamicNightVisionOn"));
                             return 1;
                         }))
                     .then(literal("disable")
                         .executes(ctx -> {
                             config.nightVision.setDynamicStatus(false);
-                            InfoProvider.sendMessage(Text.translatable("text.gammautils.message.dynamicNightVisionOff"));
+                            InfoProvider.sendMessage(Component.translatable("text.gammautils.message.dynamicNightVisionOff"));
                             return 1;
                         })))
                 .then(literal("statuseffect")
@@ -232,14 +232,14 @@ public class Commands {
                         .executes(ctx -> {
                             config.nightVision.setStatusEffectStatus(true);
                             StatusEffectManager.updateNightVision();
-                            InfoProvider.sendMessage(Text.translatable("text.gammautils.message.statusEffectNightVisionOn"));
+                            InfoProvider.sendMessage(Component.translatable("text.gammautils.message.statusEffectNightVisionOn"));
                             return 1;
                         }))
                     .then(literal("disable")
                         .executes(ctx -> {
                             config.nightVision.setStatusEffectStatus(false);
                             StatusEffectManager.updateNightVision();
-                            InfoProvider.sendMessage(Text.translatable("text.gammautils.message.statusEffectNightVisionOff"));
+                            InfoProvider.sendMessage(Component.translatable("text.gammautils.message.statusEffectNightVisionOff"));
                             return 1;
                         })))
                 .then(literal("transition")
@@ -255,13 +255,13 @@ public class Commands {
                     .then(literal("smooth")
                         .executes(ctx -> {
                             config.nightVision.setSmoothTransitionStatus(true);
-                            InfoProvider.sendMessage(Text.translatable("text.gammautils.message.transitionNightVisionOn"));
+                            InfoProvider.sendMessage(Component.translatable("text.gammautils.message.transitionNightVisionOn"));
                             return 1;
                         }))
                     .then(literal("none")
                         .executes(ctx -> {
                             config.nightVision.setSmoothTransitionStatus(false);
-                            InfoProvider.sendMessage(Text.translatable("text.gammautils.message.transitionNightVisionOff"));
+                            InfoProvider.sendMessage(Component.translatable("text.gammautils.message.transitionNightVisionOff"));
                             return 1;
                         })))));
     }

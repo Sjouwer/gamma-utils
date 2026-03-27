@@ -7,7 +7,7 @@ import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.minecraft.util.ActionResult;
+import net.minecraft.world.InteractionResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,7 +29,7 @@ public class GammaUtils implements ClientModInitializer {
         configHolder = AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
         configHolder.registerSaveListener((manager, data) -> {
             StatusEffectManager.updateAllEffects();
-            return ActionResult.SUCCESS;
+            return InteractionResult.SUCCESS;
         });
 
         KeyBindings.registerBindings();

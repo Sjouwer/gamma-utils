@@ -1,23 +1,23 @@
 package io.github.sjouwer.gammautils.mixin;
 
 import io.github.sjouwer.gammautils.statuseffect.GammaStatusEffect;
-import net.minecraft.client.gui.hud.InGameHud;
-import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.util.Identifier;
+import net.minecraft.client.gui.Gui;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.core.Holder;
+import net.minecraft.resources.Identifier;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(InGameHud.class)
-public class MixinInGameHud {
+@Mixin(Gui.class)
+public class MixinGui {
 
     /**
      * Mixin to provide the gamma StutusEffect Identifier, is needed because they aren't actually registered
      */
-    @Inject(method = "getEffectTexture", at = @At("HEAD"), cancellable = true)
-    private static void getGammaTexture(RegistryEntry<StatusEffect> effect, CallbackInfoReturnable<Identifier> info) {
+    @Inject(method = "getMobEffectSprite", at = @At("HEAD"), cancellable = true)
+    private static void getGammaTexture(Holder<MobEffect> effect, CallbackInfoReturnable<Identifier> info) {
         if (effect.value() instanceof GammaStatusEffect gammaEffect) {
             info.setReturnValue(gammaEffect.getIdentifier());
         }

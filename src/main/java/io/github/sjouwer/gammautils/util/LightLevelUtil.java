@@ -1,9 +1,9 @@
 package io.github.sjouwer.gammautils.util;
 
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.world.LightType;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.attribute.EnvironmentAttributes;
 
 import java.util.ArrayList;
@@ -13,18 +13,18 @@ public class LightLevelUtil {
     private LightLevelUtil() {
     }
 
-    private static final MinecraftClient client = MinecraftClient.getInstance();
+    private static final Minecraft client = Minecraft.getInstance();
 
     public static Double getAverageLightLevel(int range) {
         return getAverageLightLevel(range, 0);
     }
 
     public static Double getAverageLightLevel(int range, float skyBrightnessOverride) {
-        if (client.world == null || client.player == null) {
+        if (client.level == null || client.player == null) {
             return 15.0;
         }
 
-        BlockPos playerPos = client.player.getBlockPos().up();
+        BlockPos playerPos = client.player.blockPosition().above();
         List<Double> lightLevels = new ArrayList<>();
         lightLevels.add(getLightLevel(playerPos, skyBrightnessOverride));
         if (range > 0) {
@@ -38,8 +38,8 @@ public class LightLevelUtil {
 
     private static void addLightLevelsInDirection(List<Double> lightLevels, BlockPos blockPos, Direction direction, int range, float skyBrightnessOverride) {
         for (int i = 0; i < range; i++) {
-            BlockPos offsetPos = blockPos.offset(direction, i);
-            if(!client.world.getBlockState(offsetPos).isAir()) {
+            BlockPos offsetPos = blockPos.relative(direction, i);
+            if(!client.level.getBlockState(offsetPos).isAir()) {
                 break;
             }
 
@@ -48,16 +48,16 @@ public class LightLevelUtil {
     }
 
     public static double getLightLevel(BlockPos blockPos, float skyBrightnessOverride) {
-        if (client.world == null) {
+        if (client.level == null) {
             return 15.0;
         }
 
-        int blockLight = client.world.getLightingProvider().get(LightType.BLOCK).getLightLevel(blockPos);
-        int skyLight = client.world.getLightingProvider().get(LightType.SKY).getLightLevel(blockPos);
+        int blockLight = client.level.getLightEngine().getLayerListener(LightLayer.BLOCK).getLightValue(blockPos);
+        int skyLight = client.level.getLightEngine().getLayerListener(LightLayer.SKY).getLightValue(blockPos);
 
-        float tickProgress = client.getRenderTickCounter().getTickProgress(true);
-        float skyBrightness = client.gameRenderer.getCamera().getEnvironmentAttributeInterpolator()
-                .get(EnvironmentAttributes.SKY_LIGHT_FACTOR_VISUAL, tickProgress);
+        float tickProgress = client.getDeltaTracker().getGameTimeDeltaPartialTick(true);
+        float skyBrightness = client.gameRenderer.getMainCamera().attributeProbe()
+                .getValue(EnvironmentAttributes.SKY_LIGHT_FACTOR, tickProgress);
 
         float correctedSkyLight = skyLight * Math.max(skyBrightness, skyBrightnessOverride);
 
