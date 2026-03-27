@@ -1,8 +1,4 @@
 {
-    "modmenu.nameTranslation.gammautils": "Gamma Utils",
-    "modmenu.summaryTranslation.gammautils": "伽马/亮度/夜视 模组，让你在黑暗中轻松看清",
-    "modmenu.descriptionTranslation.gammautils": "伽马/亮度/夜视 模组，让你在黑暗中轻松看清",
-
     "key.category.gammautils.gamma": "Gamma Utils - Gamma",
     "key.category.gammautils.nightvision": "Gamma Utils - Night Vision",
     "key.gammautils.gammaToggle": "切换伽马值",

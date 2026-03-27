@@ -1,8 +1,4 @@
 {
-    "modmenu.nameTranslation.gammautils": "Gamma Utils",
-    "modmenu.summaryTranslation.gammautils": "暗い場所を見やすくする ガンマ/明るさ/暗視MOD",
-    "modmenu.descriptionTranslation.gammautils": "暗い場所を見やすくする ガンマ/明るさ/暗視MOD",
-
     "key.category.gammautils.gamma": "Gamma Utils - Gamma",
     "key.category.gammautils.nightvision": "Gamma Utils - Night Vision",
     "key.gammautils.gammaToggle": "ガンマ切り替え",

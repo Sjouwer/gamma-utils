@@ -3,11 +3,13 @@ package io.github.sjouwer.gammautils;
 import io.github.sjouwer.gammautils.config.ModConfig;
 import io.github.sjouwer.gammautils.statuseffect.StatusEffectManager;
 import io.github.sjouwer.gammautils.util.InfoProvider;
-import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback;
 import net.minecraft.network.chat.Component;
+import net.neoforged.neoforge.client.event.RegisterClientCommandsEvent;
 
-import static net.fabricmc.fabric.api.client.command.v2.ClientCommands.*;
-import static com.mojang.brigadier.arguments.IntegerArgumentType.*;
+import static com.mojang.brigadier.arguments.IntegerArgumentType.getInteger;
+import static com.mojang.brigadier.arguments.IntegerArgumentType.integer;
+import static net.minecraft.commands.Commands.argument;
+import static net.minecraft.commands.Commands.literal;
 
 public class Commands {
     private static final ModConfig config = GammaUtils.getConfig();
@@ -15,14 +17,8 @@ public class Commands {
     private Commands() {
     }
 
-    public static void registerCommands() {
-        registerGammaCommands();
-        registerNightVisionCommands();
-    }
-
-    public static void registerGammaCommands() {
-        ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) ->
-            dispatcher.register(literal(config.other.namespacedCommandsEnabled() ? (GammaUtils.NAMESPACE + ":gamma") : "gamma")
+    public static void registerGammaCommands(RegisterClientCommandsEvent event) {
+        event.getDispatcher().register(literal(config.other.namespacedCommandsEnabled() ? (GammaUtils.NAMESPACE + ":gamma") : "gamma")
                 .executes(ctx -> {
                     GammaManager.toggleGamma();
                     return 1;
@@ -140,12 +136,11 @@ public class Commands {
                             config.gamma.setSmoothTransitionStatus(false);
                             InfoProvider.sendMessage(Component.translatable("text.gammautils.message.transitionGammaOff"));
                             return 1;
-                        })))));
+                        }))));
     }
 
-    public static void registerNightVisionCommands() {
-        ClientCommandRegistrationCallback.EVENT.register((dispatcher, registryAccess) ->
-            dispatcher.register(literal(config.other.namespacedCommandsEnabled() ? (GammaUtils.NAMESPACE + ":nightvision") : "nightvision")
+    public static void registerNightVisionCommands(RegisterClientCommandsEvent event) {
+        event.getDispatcher().register(literal(config.other.namespacedCommandsEnabled() ? (GammaUtils.NAMESPACE + ":nightvision") : "nightvision")
                 .executes(ctx -> {
                     NightVisionManager.toggleNightVision();
                     return 1;
@@ -263,6 +258,6 @@ public class Commands {
                             config.nightVision.setSmoothTransitionStatus(false);
                             InfoProvider.sendMessage(Component.translatable("text.gammautils.message.transitionNightVisionOff"));
                             return 1;
-                        })))));
+                        }))));
     }
 }

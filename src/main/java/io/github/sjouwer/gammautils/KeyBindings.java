@@ -1,15 +1,14 @@
 package io.github.sjouwer.gammautils;
 
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
-import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
-import net.minecraft.client.KeyMapping;
 import com.mojang.blaze3d.platform.InputConstants;
+import net.minecraft.client.KeyMapping;
 import net.minecraft.resources.Identifier;
+import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import org.lwjgl.glfw.GLFW;
 
 public class KeyBindings {
-    private static final KeyMapping.Category GAMMA_CATEGORY = KeyMapping.Category.register(Identifier.fromNamespaceAndPath(GammaUtils.NAMESPACE, "gamma"));
-    private static final KeyMapping.Category NIGHT_VISION_CATEGORY = KeyMapping.Category.register(Identifier.fromNamespaceAndPath(GammaUtils.NAMESPACE, "nightvision"));
+    private static final KeyMapping.Category GAMMA_CATEGORY = new KeyMapping.Category(Identifier.fromNamespaceAndPath(GammaUtils.NAMESPACE, "gamma"));
+    private static final KeyMapping.Category NIGHT_VISION_CATEGORY = new KeyMapping.Category(Identifier.fromNamespaceAndPath(GammaUtils.NAMESPACE, "nightvision"));
     private static final String BASE_KEY = "key." + GammaUtils.NAMESPACE + ".";
 
     public static final KeyMapping GAMMA_TOGGLE = new KeyMapping(BASE_KEY + "gammaToggle", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_G, GAMMA_CATEGORY);
@@ -24,94 +23,51 @@ public class KeyBindings {
     private KeyBindings() {
     }
 
-    public static void registerBindings() {
-        registerGammaToggleKey();
-        registerIncreaseGammaKey();
-        registerDecreaseGammaKey();
-        registerMaxGammaKey();
-        registerMinGammaKey();
-        registerNightVisionToggleKey();
-        registerIncreaseNightVisionKey();
-        registerDecreaseNightVisionKey();
+    public static void registerBindings(RegisterKeyMappingsEvent event) {
+        event.registerCategory(GAMMA_CATEGORY);
+        event.registerCategory(NIGHT_VISION_CATEGORY);
+
+        event.register(GAMMA_TOGGLE);
+        event.register(GAMMA_INCREASE);
+        event.register(GAMMA_DECREASE);
+        event.register(GAMMA_MAX);
+        event.register(GAMMA_MIN);
+        event.register(NIGHT_VISION_TOGGLE);
+        event.register(NIGHT_VISION_INCREASE);
+        event.register(NIGHT_VISION_DECREASE);
     }
 
-    private static void registerGammaToggleKey() {
-        KeyMappingHelper.registerKeyMapping(GAMMA_TOGGLE);
+    public static void handleBindings() {
+        while (GAMMA_TOGGLE.consumeClick()) {
+            GammaManager.toggleGamma();
+        }
 
-        ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (GAMMA_TOGGLE.consumeClick()) {
-                GammaManager.toggleGamma();
-            }
-        });
-    }
+        while (GAMMA_INCREASE.consumeClick()) {
+            GammaManager.increaseGamma(0);
+        }
 
-    private static void registerIncreaseGammaKey() {
-        KeyMappingHelper.registerKeyMapping(GAMMA_INCREASE);
+        while (GAMMA_DECREASE.consumeClick()) {
+            GammaManager.decreaseGamma(0);
+        }
 
-        ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (GAMMA_INCREASE.consumeClick()) {
-                GammaManager.increaseGamma(0);
-            }
-        });
-    }
+        while (GAMMA_MAX.consumeClick()) {
+            GammaManager.maxGamma();
+        }
 
-    private static void registerDecreaseGammaKey() {
-        KeyMappingHelper.registerKeyMapping(GAMMA_DECREASE);
+        while (GAMMA_MIN.consumeClick()) {
+            GammaManager.minGamma();
+        }
 
-        ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (GAMMA_DECREASE.consumeClick()) {
-                GammaManager.decreaseGamma(0);
-            }
-        });
-    }
+        while (NIGHT_VISION_TOGGLE.consumeClick()) {
+            NightVisionManager.toggleNightVision();
+        }
 
-    private static void registerMaxGammaKey() {
-        KeyMappingHelper.registerKeyMapping(GAMMA_MAX);
+        while (NIGHT_VISION_INCREASE.consumeClick()) {
+            NightVisionManager.increaseNightVision(0);
+        }
 
-        ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (GAMMA_MAX.consumeClick()) {
-                GammaManager.maxGamma();
-            }
-        });
-    }
-
-    private static void registerMinGammaKey() {
-        KeyMappingHelper.registerKeyMapping(GAMMA_MIN);
-
-        ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (GAMMA_MIN.consumeClick()) {
-                GammaManager.minGamma();
-            }
-        });
-    }
-
-    private static void registerNightVisionToggleKey() {
-        KeyMappingHelper.registerKeyMapping(NIGHT_VISION_TOGGLE);
-
-        ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (NIGHT_VISION_TOGGLE.consumeClick()) {
-                NightVisionManager.toggleNightVision();
-            }
-        });
-    }
-
-    private static void registerIncreaseNightVisionKey() {
-        KeyMappingHelper.registerKeyMapping(NIGHT_VISION_INCREASE);
-
-        ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (NIGHT_VISION_INCREASE.consumeClick()) {
-                NightVisionManager.increaseNightVision(0);
-            }
-        });
-    }
-
-    private static void registerDecreaseNightVisionKey() {
-        KeyMappingHelper.registerKeyMapping(NIGHT_VISION_DECREASE);
-
-        ClientTickEvents.END_CLIENT_TICK.register(client -> {
-            while (NIGHT_VISION_DECREASE.consumeClick()) {
-                NightVisionManager.decreaseNightVision(0);
-            }
-        });
+        while (NIGHT_VISION_DECREASE.consumeClick()) {
+            NightVisionManager.decreaseNightVision(0);
+        }
     }
 }
