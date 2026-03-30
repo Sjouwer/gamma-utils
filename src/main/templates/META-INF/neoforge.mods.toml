@@ -10,12 +10,17 @@ logoFile="assets/gammautils/icon.png"
 authors="Sjouwer"
 description="Gamma / Brightness / Night Vision mod, making it easy to see in the dark."
 
-
 [[mixins]]
 config="${mod_id}.mixins.json"
 
 [[accessTransformers]]
 file="META-INF/accesstransformer.cfg"
+
+[modproperties.${mod_id}]
+"sodium:config_api_user" = "io.github.sjouwer.gammautils.compat.SodiumConfigBuilder"
+
+["badoptimizations:cache_hooks"]
+lightmap = "io.github.sjouwer.gammautils.compat.BadOptimizationsHook"
 
 [[dependencies.${mod_id}]]
     modId="neoforge"
