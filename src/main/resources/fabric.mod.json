@@ -48,7 +48,7 @@
     "gammautils.mixins.json"
   ],
 
-  "accessWidener" : "gammautils.accesswidener",
+  "accessWidener" : "gammautils.classtweaker",
 
   "custom": {
     "badoptimizations:cache_hooks": {
@@ -57,7 +57,7 @@
   },
 
   "depends": {
-    "minecraft": ">=26.1",
+    "minecraft": ">=26.2-beta",
     "fabricloader": ">=0.16.0",
     "fabric-api": "*",
     "cloth-config": "*"

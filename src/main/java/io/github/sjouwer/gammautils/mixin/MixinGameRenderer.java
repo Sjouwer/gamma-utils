@@ -14,7 +14,7 @@ public abstract class MixinGameRenderer {
     /**
      * Mixin to adjust the night vision strength
      */
-    @WrapMethod(method = "getNightVisionScale")
+    @WrapMethod(method = "nightVisionScale")
     private static float adjustNightVisionStrength(LivingEntity entity, float tickProgress, Operation<Float> original) {
         ModConfig config = GammaUtils.getConfig();
         float strength;

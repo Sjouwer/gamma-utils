@@ -2,13 +2,13 @@
   "required": true,
   "minVersion": "0.8",
   "package": "io.github.sjouwer.gammautils.mixin",
-  "compatibilityLevel": "JAVA_21",
+  "compatibilityLevel": "JAVA_25",
   "client": [
     "MixinClientPacketListener",
     "MixinFogRenderer",
     "MixinOptions",
     "MixinGameRenderer",
-    "MixinGui",
+    "MixinHud",
     "MixinLightmapRenderStateExtractor",
     "MixinMinecraft",
     "MixinOptionInstance",
@@ -17,5 +17,8 @@
   ],
   "injectors": {
     "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
   }
 }

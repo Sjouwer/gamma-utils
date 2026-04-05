@@ -56,7 +56,7 @@ public class LightLevelUtil {
         int skyLight = client.level.getLightEngine().getLayerListener(LightLayer.SKY).getLightValue(blockPos);
 
         float tickProgress = client.getDeltaTracker().getGameTimeDeltaPartialTick(true);
-        float skyBrightness = client.gameRenderer.getMainCamera().attributeProbe()
+        float skyBrightness = client.gameRenderer.mainCamera().attributeProbe()
                 .getValue(EnvironmentAttributes.SKY_LIGHT_FACTOR, tickProgress);
 
         float correctedSkyLight = skyLight * Math.max(skyBrightness, skyBrightnessOverride);

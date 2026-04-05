@@ -26,7 +26,7 @@ repositories {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/gammautils.accesswidener")
+    accessWidenerPath = file("src/main/resources/gammautils.classtweaker")
 }
 
 dependencies {
@@ -37,13 +37,13 @@ dependencies {
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
     //Mod Menu
-    implementation "com.terraformersmc:modmenu:${project.modmenu_version}"
+    compileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
 
     //Cloth Config
     implementation "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}"
 
     //Sodium
-    implementation "net.caffeinemc:sodium-fabric-api:${project.sodium_fabric_api_version}"
+    compileOnly "net.caffeinemc:sodium-fabric-api:${project.sodium_fabric_api_version}"
 }
 
 processResources {
@@ -73,23 +73,5 @@ jar {
 
     from("LICENSE") {
         rename { "${it}_${inputs.properties.archivesName}"}
-    }
-}
-
-// configure the maven publication
-publishing {
-    publications {
-        create("mavenJava", MavenPublication) {
-            artifactId = project.archives_base_name
-            from components.java
-        }
-    }
-
-    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-    repositories {
-        // Add repositories to publish to here.
-        // Notice: This block does NOT have the same function as the block in the top level.
-        // The repositories here will be used for publishing your artifact, not for
-        // retrieving dependencies.
     }
 }

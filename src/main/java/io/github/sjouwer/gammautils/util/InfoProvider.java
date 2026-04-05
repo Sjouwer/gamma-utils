@@ -44,7 +44,7 @@ public final class InfoProvider {
         }
 
         message.withColor(color);
-        client.gui.setOverlayMessage(message, false);
+        client.gui.hud.setOverlayMessage(message, false);
     }
 
     public static void showDynamicGammaHudMessage() {
@@ -62,7 +62,7 @@ public final class InfoProvider {
             message.withColor(config.nightVision.getEnabledHudColor());
         }
 
-        client.gui.setOverlayMessage(message, false);
+        client.gui.hud.setOverlayMessage(message, false);
     }
 
     public static void showDynamicNightVisionHudMessage() {
@@ -80,7 +80,7 @@ public final class InfoProvider {
             message.withColor(config.nightVision.getEnabledHudColor());
         }
 
-        client.gui.setOverlayMessage(message, false);
+        client.gui.hud.setOverlayMessage(message, false);
     }
 
     public static void showNightVisionStatusHudMessage() {
@@ -94,7 +94,7 @@ public final class InfoProvider {
         else {
             MutableComponent message = Component.translatable("text.gammautils.message.nightVisionDisabled");
             message.withColor(config.nightVision.getDisabledHudColor());
-            client.gui.setOverlayMessage(message, false);
+            client.gui.hud.setOverlayMessage(message, false);
         }
     }
 
@@ -114,6 +114,6 @@ public final class InfoProvider {
         }
 
         message.withColor(color);
-        client.gui.setOverlayMessage(message, false);
+        client.gui.hud.setOverlayMessage(message, false);
     }
 }

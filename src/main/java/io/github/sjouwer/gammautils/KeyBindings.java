@@ -8,8 +8,8 @@ import net.minecraft.resources.Identifier;
 import org.lwjgl.glfw.GLFW;
 
 public class KeyBindings {
-    private static final KeyMapping.Category GAMMA_CATEGORY = KeyMapping.Category.register(Identifier.fromNamespaceAndPath(GammaUtils.NAMESPACE, "gamma"));
-    private static final KeyMapping.Category NIGHT_VISION_CATEGORY = KeyMapping.Category.register(Identifier.fromNamespaceAndPath(GammaUtils.NAMESPACE, "nightvision"));
+    private static final KeyMapping.Category GAMMA_CATEGORY = new KeyMapping.Category(Identifier.fromNamespaceAndPath(GammaUtils.NAMESPACE, "gamma"));
+    private static final KeyMapping.Category NIGHT_VISION_CATEGORY = new KeyMapping.Category(Identifier.fromNamespaceAndPath(GammaUtils.NAMESPACE, "nightvision"));
     private static final String BASE_KEY = "key." + GammaUtils.NAMESPACE + ".";
 
     public static final KeyMapping GAMMA_TOGGLE = new KeyMapping(BASE_KEY + "gammaToggle", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_G, GAMMA_CATEGORY);
