@@ -30,6 +30,14 @@ repositories {
         name = "CaffeineMC"
         url = "https://maven.caffeinemc.net/releases"
     }
+    maven {
+        name = "Maven for PR #3198" // https://github.com/neoforged/NeoForge/pull/3198
+        url = uri("https://prmaven.neoforged.net/NeoForge/pr3198")
+        content {
+            includeModule("net.neoforged", "neoforge")
+            includeModule("net.neoforged", "testframework")
+        }
+    }
 }
 
 base {
@@ -96,7 +104,7 @@ dependencies {
     implementation "me.shedaniel.cloth:cloth-config-neoforge:${project.cloth_config_version}"
 
     //Sodium
-    implementation "net.caffeinemc:sodium-neoforge-api:${project.sodium_neoforge_api_version}"
+    compileOnly "net.caffeinemc:sodium-neoforge-api:${project.sodium_neoforge_api_version}"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

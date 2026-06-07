@@ -7,7 +7,7 @@
     "MixinFogRenderer",
     "MixinOptions",
     "MixinGameRenderer",
-    "MixinGui",
+    "MixinHud",
     "MixinLightmapRenderStateExtractor",
     "MixinMinecraft",
     "MixinOptionInstance",
