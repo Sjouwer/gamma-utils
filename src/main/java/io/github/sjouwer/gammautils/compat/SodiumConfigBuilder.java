@@ -19,7 +19,7 @@ public class SodiumConfigBuilder implements ConfigEntryPoint {
         }
 
         int step = gamma.getStep();
-        if (min % step != 0 || max % step != 0) {
+        if (step == 0 || min % step != 0 || max % step != 0) {
             step = 1;
         }
 
