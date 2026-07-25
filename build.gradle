@@ -37,7 +37,7 @@ dependencies {
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
     //Mod Menu
-    compileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+    implementation "com.terraformersmc:modmenu:${project.modmenu_version}"
 
     //Cloth Config
     implementation "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}"
