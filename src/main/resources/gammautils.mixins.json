@@ -5,13 +5,14 @@
   "client": [
     "MixinClientPacketListener",
     "MixinFogRenderer",
-    "MixinOptions",
     "MixinGameRenderer",
     "MixinHud",
     "MixinLightmapRenderStateExtractor",
+    "MixinLivingEntity",
     "MixinMinecraft",
-    "MixinOptionInstance",
     "MixinMobEffectUtil",
+    "MixinOptionInstance",
+    "MixinOptions",
     "SpriteAtlasHolderInvoker"
   ],
   "injectors": {
