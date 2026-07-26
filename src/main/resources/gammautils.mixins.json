@@ -5,15 +5,15 @@
   "compatibilityLevel": "JAVA_21",
   "client": [
     "MixinClientPacketListener",
+    "MixinEffectsInInventory",
     "MixinFogRenderer",
-    "MixinOptions",
     "MixinGameRenderer",
     "MixinGui",
     "MixinLightmapRenderStateExtractor",
     "MixinMinecraft",
-    "MixinOptionInstance",
     "MixinMobEffectUtil",
-    "SpriteAtlasHolderInvoker"
+    "MixinOptionInstance",
+    "MixinOptions"
   ],
   "injectors": {
     "defaultRequire": 1
