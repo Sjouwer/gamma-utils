@@ -167,7 +167,7 @@ public class NightVisionManager {
     protected static void toggleStatusEffect() {
         boolean newStatus = !nightVision.isStatusEffectEnabled();
         nightVision.setStatusEffectStatus(newStatus);
-        StatusEffectManager.updateNightVision();
+        StatusEffectManager.updateNightVisionEffect();
         Component message = Component.translatable("text.gammautils.message.statusEffectNightVision" + (newStatus ? "On" : "Off"));
         InfoProvider.sendMessage(message);
     }
@@ -181,7 +181,7 @@ public class NightVisionManager {
 
     private static void setNightVisionStatus(boolean status) {
         nightVision.setStatus(status);
-        StatusEffectManager.updateNightVision();
+        StatusEffectManager.updateNightVisionEffect();
     }
 
     private static void startTransitionTimer(double newValue, double valueChangePerTick, boolean showMessage) {

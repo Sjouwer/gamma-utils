@@ -46,6 +46,7 @@ public class GammaUtils {
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
         loadConfigFile();
+        StatusEffectManager.updateAllEffects();
 
         ModLoadingContext.get().registerExtensionPoint(IConfigScreenFactory.class, () ->
                 (_, parent) -> AutoConfigClient.getConfigScreen(ModConfig.class, parent).get());
