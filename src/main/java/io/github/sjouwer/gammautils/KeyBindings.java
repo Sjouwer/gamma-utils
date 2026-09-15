@@ -5,21 +5,20 @@ import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.minecraft.client.KeyMapping;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.resources.Identifier;
-import org.lwjgl.glfw.GLFW;
 
 public class KeyBindings {
     private static final KeyMapping.Category GAMMA_CATEGORY = KeyMapping.Category.register(Identifier.fromNamespaceAndPath(GammaUtils.NAMESPACE, "gamma"));
     private static final KeyMapping.Category NIGHT_VISION_CATEGORY = KeyMapping.Category.register(Identifier.fromNamespaceAndPath(GammaUtils.NAMESPACE, "nightvision"));
     private static final String BASE_KEY = "key." + GammaUtils.NAMESPACE + ".";
 
-    public static final KeyMapping GAMMA_TOGGLE = new KeyMapping(BASE_KEY + "gammaToggle", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_G, GAMMA_CATEGORY);
-    public static final KeyMapping GAMMA_INCREASE = new KeyMapping(BASE_KEY + "increaseGamma", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_UP, GAMMA_CATEGORY);
-    public static final KeyMapping GAMMA_DECREASE = new KeyMapping(BASE_KEY + "decreaseGamma", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_DOWN, GAMMA_CATEGORY);
-    public static final KeyMapping GAMMA_MAX = new KeyMapping(BASE_KEY + "maxGamma", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, GAMMA_CATEGORY);
-    public static final KeyMapping GAMMA_MIN = new KeyMapping(BASE_KEY + "minGamma", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_UNKNOWN, GAMMA_CATEGORY);
-    public static final KeyMapping NIGHT_VISION_TOGGLE = new KeyMapping(BASE_KEY + "nightVisionToggle", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_H, NIGHT_VISION_CATEGORY);
-    public static final KeyMapping NIGHT_VISION_INCREASE = new KeyMapping(BASE_KEY + "increaseNightVision", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_RIGHT, NIGHT_VISION_CATEGORY);
-    public static final KeyMapping NIGHT_VISION_DECREASE = new KeyMapping(BASE_KEY + "decreaseNightVision", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_LEFT, NIGHT_VISION_CATEGORY);
+    public static final KeyMapping GAMMA_TOGGLE = new KeyMapping(BASE_KEY + "gammaToggle", InputConstants.Type.KEYBOARD, InputConstants.KEY_G, GAMMA_CATEGORY);
+    public static final KeyMapping GAMMA_INCREASE = new KeyMapping(BASE_KEY + "increaseGamma", InputConstants.Type.KEYBOARD, InputConstants.KEY_UP, GAMMA_CATEGORY);
+    public static final KeyMapping GAMMA_DECREASE = new KeyMapping(BASE_KEY + "decreaseGamma", InputConstants.Type.KEYBOARD, InputConstants.KEY_DOWN, GAMMA_CATEGORY);
+    public static final KeyMapping GAMMA_MAX = new KeyMapping(BASE_KEY + "maxGamma", InputConstants.Type.KEYBOARD, InputConstants.UNKNOWN.getValue(), GAMMA_CATEGORY);
+    public static final KeyMapping GAMMA_MIN = new KeyMapping(BASE_KEY + "minGamma", InputConstants.Type.KEYBOARD, InputConstants.UNKNOWN.getValue(), GAMMA_CATEGORY);
+    public static final KeyMapping NIGHT_VISION_TOGGLE = new KeyMapping(BASE_KEY + "nightVisionToggle", InputConstants.Type.KEYBOARD, InputConstants.KEY_H, NIGHT_VISION_CATEGORY);
+    public static final KeyMapping NIGHT_VISION_INCREASE = new KeyMapping(BASE_KEY + "increaseNightVision", InputConstants.Type.KEYBOARD, InputConstants.KEY_RIGHT, NIGHT_VISION_CATEGORY);
+    public static final KeyMapping NIGHT_VISION_DECREASE = new KeyMapping(BASE_KEY + "decreaseNightVision", InputConstants.Type.KEYBOARD, InputConstants.KEY_LEFT, NIGHT_VISION_CATEGORY);
 
     private KeyBindings() {
     }
