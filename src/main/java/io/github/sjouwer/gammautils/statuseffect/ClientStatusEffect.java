@@ -5,10 +5,10 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.resources.Identifier;
 
-public class GammaStatusEffect extends MobEffect {
+public class ClientStatusEffect extends MobEffect {
     private final String key;
 
-    public GammaStatusEffect(String key, MobEffectCategory category, int color) {
+    public ClientStatusEffect(String key, MobEffectCategory category, int color) {
         super(category, color);
         this.key = key;
     }

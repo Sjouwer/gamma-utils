@@ -2,12 +2,10 @@ package io.github.sjouwer.gammautils.mixin;
 
 import io.github.sjouwer.gammautils.GammaManager;
 import io.github.sjouwer.gammautils.NightVisionManager;
-import io.github.sjouwer.gammautils.statuseffect.GammaStatusEffect;
+import io.github.sjouwer.gammautils.statuseffect.ClientStatusEffect;
 import io.github.sjouwer.gammautils.statuseffect.StatusEffectManager;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectUtil;
-import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -22,9 +20,8 @@ public class MixinMobEffectUtil {
      */
     @Inject(method = "formatDuration", at = @At(value = "HEAD"), cancellable = true)
     private static void getPercentageText(MobEffectInstance effect, float multiplier, float tickRate, CallbackInfoReturnable<Component> info) {
-        Holder<MobEffect> type = effect.getEffect();
-        if ((type.value() instanceof GammaStatusEffect)) {
-            int percentage = type.equals(StatusEffectManager.NIGHT_VISION)
+        if ((effect.getEffect().value() instanceof ClientStatusEffect)) {
+            int percentage = effect.is(StatusEffectManager.NIGHT_VISION)
                     ? NightVisionManager.getNightVisionPercentage()
                     : GammaManager.getGammaPercentage();
 
