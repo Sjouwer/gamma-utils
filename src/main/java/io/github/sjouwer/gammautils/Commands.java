@@ -110,14 +110,14 @@ public class Commands {
                     .then(literal("enable")
                         .executes(ctx -> {
                             config.gamma.setStatusEffectStatus(true);
-                            StatusEffectManager.updateGammaStatusEffect();
+                            StatusEffectManager.updateGammaEffect();
                             InfoProvider.sendMessage(Component.translatable("text.gammautils.message.statusEffectGammaOn"));
                             return 1;
                         }))
                     .then(literal("disable")
                         .executes(ctx -> {
                             config.gamma.setStatusEffectStatus(false);
-                            StatusEffectManager.updateGammaStatusEffect();
+                            StatusEffectManager.updateGammaEffect();
                             InfoProvider.sendMessage(Component.translatable("text.gammautils.message.statusEffectGammaOff"));
                             return 1;
                         })))
@@ -233,14 +233,14 @@ public class Commands {
                     .then(literal("enable")
                         .executes(ctx -> {
                             config.nightVision.setStatusEffectStatus(true);
-                            StatusEffectManager.updateNightVision();
+                            StatusEffectManager.updateNightVisionEffect();
                             InfoProvider.sendMessage(Component.translatable("text.gammautils.message.statusEffectNightVisionOn"));
                             return 1;
                         }))
                     .then(literal("disable")
                         .executes(ctx -> {
                             config.nightVision.setStatusEffectStatus(false);
-                            StatusEffectManager.updateNightVision();
+                            StatusEffectManager.updateNightVisionEffect();
                             InfoProvider.sendMessage(Component.translatable("text.gammautils.message.statusEffectNightVisionOff"));
                             return 1;
                         })))

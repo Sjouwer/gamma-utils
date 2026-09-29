@@ -32,6 +32,7 @@ public class GammaUtils implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         loadConfigFile();
+        StatusEffectManager.updateAllEffects();
 
         KeyBindings.registerBindings();
         Commands.registerCommands();

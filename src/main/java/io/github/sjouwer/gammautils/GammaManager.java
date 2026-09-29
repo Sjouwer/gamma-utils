@@ -130,7 +130,7 @@ public class GammaManager {
         }
         else {
             gamma.setValue(newValue);
-            StatusEffectManager.updateGammaStatusEffect();
+            StatusEffectManager.updateGammaEffect();
             if (showMessage) {
                 InfoProvider.showGammaHudMessage();
             }
@@ -151,7 +151,7 @@ public class GammaManager {
     protected static void toggleStatusEffect() {
         boolean newStatus = !gamma.isStatusEffectEnabled();
         gamma.setStatusEffectStatus(newStatus);
-        StatusEffectManager.updateGammaStatusEffect();
+        StatusEffectManager.updateGammaEffect();
         Component message = Component.translatable("text.gammautils.message.statusEffectGamma" + (newStatus ? "On" : "Off"));
         InfoProvider.sendMessage(message);
     }
@@ -178,7 +178,7 @@ public class GammaManager {
                     gamma.setValue(nextValue);
                 }
 
-                StatusEffectManager.updateGammaStatusEffect();
+                StatusEffectManager.updateGammaEffect();
                 if (showMessage) {
                     InfoProvider.showGammaHudMessage();
                 }
