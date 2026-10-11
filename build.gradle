@@ -96,7 +96,7 @@ dependencies {
     implementation "me.shedaniel.cloth:cloth-config-neoforge:${project.cloth_config_version}"
 
     //Sodium
-    implementation "net.caffeinemc:sodium-neoforge-api:${project.sodium_neoforge_api_version}"
+    compileOnly "net.caffeinemc:sodium-neoforge-api:${project.sodium_neoforge_api_version}"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
