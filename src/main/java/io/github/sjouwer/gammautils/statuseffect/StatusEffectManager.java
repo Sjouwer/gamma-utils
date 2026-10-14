@@ -50,7 +50,9 @@ public class StatusEffectManager {
 
     public static void updateNightVisionEffect() {
         if (config.nightVision.isEnabled() && config.nightVision.isStatusEffectEnabled()) {
-            ACTIVE_EFFECTS.add(NIGHT_VISION_INSTANCE);
+            if (!ACTIVE_EFFECTS.contains(NIGHT_VISION_INSTANCE)) {
+                ACTIVE_EFFECTS.add(NIGHT_VISION_INSTANCE);
+            }
         }
         else {
             ACTIVE_EFFECTS.remove(NIGHT_VISION_INSTANCE);
